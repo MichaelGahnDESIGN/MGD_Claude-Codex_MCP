@@ -43,3 +43,20 @@ Startversion dieser Vorlage pro neuem Projekt:
 - Rücknahme oder Wiederherstellung: Über Git-Diff nachvollziehbar. Die Datei
   kann entfernt werden, wenn eine andere zentrale Übersichtsstruktur eingeführt
   wird.
+
+## 0.0.4 - Finale Vorlagenbereinigung
+
+- Datum: `2026-06-07`
+- Version: `0.0.4`
+- Beschreibung: Lokale Artefakte wurden entfernt, damit neue Projekte keine
+  unnötigen Abhängigkeiten, Secrets, temporären Backups oder veralteten
+  Strukturhinweise übernehmen. Entfernt wurden unter anderem
+  `DEMOS/OPENROUTER/node_modules/`, `DEMOS/OPENROUTER/.env`, das temporäre
+  Doku-Git-Backup und eine alte Historien-Datei.
+- Begründung: Die Vorlage soll als sauberer, sicherer und direkt kopierbarer
+  Startpunkt für Claude Code, Claude Cowork und ChatGPT Codex dienen.
+- Betroffene Bereiche: `DEMOS/OPENROUTER/`, `BACKUPS/`, `VORLAGE/`,
+  `DOKUMENTATION/`.
+- Rücknahme oder Wiederherstellung: Über Git-Diff nachvollziehbar. Gelöschte
+  lokale Abhängigkeiten können mit `npm --prefix DEMOS/OPENROUTER install`
+  erneut erzeugt werden.

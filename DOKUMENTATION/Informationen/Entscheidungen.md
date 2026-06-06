@@ -33,16 +33,17 @@ Jeder Eintrag soll mindestens enthalten:
 - Folgen oder Trade-offs: Änderungen können künftig am Root nachvollzogen
   werden.
 
-## 2026-06-07 - Verschachteltes Doku-Git gesichert
+## 2026-06-07 - Verschachteltes Doku-Git bereinigt
 
 - Datum: `2026-06-07`
-- Entscheidung: Die innere Git-Historie von `DOKUMENTATION/` wurde nach
-  `BACKUPS/dokumentation-git-backup-2026-06-07.git/` verschoben.
+- Entscheidung: Die innere Git-Historie von `DOKUMENTATION/` wurde aus der
+  aktiven Vorlage entfernt.
 - Begründung: Die Vorlage soll als ein sauberer Git-Root funktionieren und beim
   Kopieren neuer Projekte keine Embedded-Repository-Warnung erzeugen.
 - Betroffene Bereiche: `DOKUMENTATION/`, `BACKUPS/`, Root-Git.
-- Folgen oder Trade-offs: Die frühere Doku-Historie bleibt lokal gesichert,
-  wird aber nicht mehr als aktives verschachteltes Repository genutzt.
+- Folgen oder Trade-offs: Die frühere isolierte Doku-Historie wird nicht mehr
+  separat weitergeführt. Die relevante aktuelle Historie liegt im
+  Root-Git-Repository.
 
 ## 2026-06-07 - Tool-Adapter für Agenten ergänzt
 
@@ -68,3 +69,18 @@ Jeder Eintrag soll mindestens enthalten:
   `DOKUMENTATION/Informationen/`, Dokumentationsgenerator.
 - Folgen oder Trade-offs: Die Orientierung ist besser gebündelt. Die Datei muss
   bei strukturellen Änderungen mit gepflegt werden.
+
+## 2026-06-07 - Finale Vorlagenbereinigung
+
+- Datum: `2026-06-07`
+- Entscheidung: Lokale Laufzeit- und Sicherungsartefakte wurden aus der
+  Vorlage entfernt. Dazu gehören `DEMOS/OPENROUTER/node_modules/`,
+  `DEMOS/OPENROUTER/.env`, das temporäre Doku-Git-Backup unter `BACKUPS/` und
+  eine veraltete Implementierungs-Historie.
+- Begründung: Neue Projekte sollen keine lokalen Abhängigkeiten, Secrets,
+  temporären Backups oder überholten Strukturhinweise mitkopieren.
+- Betroffene Bereiche: `DEMOS/OPENROUTER/`, `BACKUPS/`,
+  `VORLAGE/`, `DOKUMENTATION/`.
+- Folgen oder Trade-offs: Die Vorlage ist schlanker und sicherer. Abhängigkeiten
+  werden bei Bedarf frisch installiert, und echte Backups bleiben lokale,
+  bewusst dokumentierte Arbeitsartefakte.

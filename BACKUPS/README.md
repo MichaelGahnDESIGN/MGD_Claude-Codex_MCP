@@ -19,6 +19,6 @@ Zu jedem relevanten Backup soll in `DOKUMENTATION/Projektbetrieb/Backups.md` dok
 
 Aktueller Hinweis:
 
-- `dokumentation-git-backup-2026-06-07.git/` enthält die frühere innere
-  Git-Historie von `DOKUMENTATION/`. Sie wurde gesichert, damit die
-  Vorlage als ein aufgeräumtes Root-Git-Repository funktionieren kann.
+- Aktuell enthält die Vorlage keine Backup-Artefakte.
+- Temporäre oder projektspezifische Sicherungen sollen bewusst lokal abgelegt
+  und in `DOKUMENTATION/Projektbetrieb/Backups.md` beschrieben werden.

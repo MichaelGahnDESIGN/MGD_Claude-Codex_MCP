@@ -26,9 +26,9 @@ Pro Eintrag festhalten:
 - Risiko: Die frühere innere Git-Historie von `DOKUMENTATION/` könnte
   mit dem neuen Root-Git verwechselt werden.
 - Eintrittswahrscheinlichkeit: Niedrig.
-- Auswirkung: Alte Doku-Historie wird nicht automatisch mit dem Root-Git
-  fortgeführt.
+- Auswirkung: Alte Einzelhistorie der Dokumentation ist nicht mehr separat
+  verfügbar.
 - Betroffene Bereiche: Projektroot, Projektdokumentation.
-- Absicherung oder nächste Maßnahme: Die alte Doku-Historie liegt gesichert
-  unter `BACKUPS/dokumentation-git-backup-2026-06-07.git/`; künftig ist
-  das Root-Git die aktive Versionierung.
+- Absicherung oder nächste Maßnahme: Das Root-Git ist die aktive und
+  maßgebliche Versionierung. Relevante Strukturänderungen werden zusätzlich in
+  Entscheidungen, Versionen und Backups dokumentiert.

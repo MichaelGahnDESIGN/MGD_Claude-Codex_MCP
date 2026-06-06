@@ -33,7 +33,7 @@ bewussten und dokumentierten Grund.
 
 | Ordner | Inhalt | Wichtigste Regel |
 | --- | --- | --- |
-| `VORLAGE/` | Regeln, Agenten, Skills, Tooling und Historie | Hier liegt die Logik der Vorlage, nicht der Projektcode. |
+| `VORLAGE/` | Regeln, Agenten, Skills und Tooling | Hier liegt die Logik der Vorlage, nicht der Projektcode. |
 | `PROJEKT/WORKSPACE/` | Code, Apps, Websites, Plugins, Assets | Hier entsteht das konkrete neue Projekt. |
 | `DOKUMENTATION/` | Entscheidungen, Risiken, Setup, Versionen, Rechtliches | Jede relevante Änderung nachvollziehbar dokumentieren. |
 | `BACKUPS/` | Lokale Sicherungen | Wird nicht versioniert, außer die README. |

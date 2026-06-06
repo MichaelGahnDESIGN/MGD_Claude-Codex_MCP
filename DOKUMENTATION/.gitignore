@@ -1,8 +1,0 @@
-# macOS-Zwischenstände haben keinen Dokumentationswert.
-.DS_Store
-**/.DS_Store
-
-# Generische lokale Laufzeit- und Editor-Dateien.
-*.log
-.vscode/
-.idea/
