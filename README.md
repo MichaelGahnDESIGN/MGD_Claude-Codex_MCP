@@ -84,6 +84,64 @@ Arbeitsregeln, Skills, Dokumentationsbereiche und Sicherheitsgrenzen finden.
 9. Relevante Entscheidungen, Risiken und Versionen in `DOKUMENTATION/`
    pflegen.
 
+### Prompt-Beispiele Für Den Projektstart
+
+Die folgenden Prompts können nach dem Kopieren der Vorlage direkt im jeweiligen
+KI-Werkzeug verwendet werden. Ersetze die Platzhalter durch dein echtes
+Projektziel.
+
+#### Claude Cowork
+
+```text
+Bitte richte dieses Projekt als neue Arbeitsgrundlage ein.
+
+Lies zuerst claude.md, index.md und
+DOKUMENTATION/Informationen/Start_und_Orientierung.md.
+
+Ziel des neuen Projekts:
+<kurze Beschreibung des Projekts>
+
+Bitte prüfe die vorhandene Ordnerstruktur, fülle den Projektkontext in
+VORLAGE/AI/PROJEKTREGELN/ARBEITSKONTEXT.md sinnvoll vor, dokumentiere offene
+Fragen in DOKUMENTATION/ToDo/Offene_Punkte.md und lege noch keinen Produktcode
+an, bevor der Arbeitskontext klar ist.
+```
+
+#### Claude Code
+
+```text
+Starte dieses Projekt aus der Vorlage heraus.
+
+Lies claude.md, index.md, VORLAGE/REGELN/GRUNDREGELN.md und
+VORLAGE/AI/PROJEKTREGELN/PROJEKTREGELN.md.
+
+Projektidee:
+<kurze Beschreibung des Projekts>
+
+Bitte bereite PROJEKT/WORKSPACE/ als sauberen Projektarbeitsbereich vor,
+notiere Entscheidungen in DOKUMENTATION/Informationen/Entscheidungen.md,
+beachte Datenschutz und Sicherheit, und halte alle neuen Dateien in passenden
+Ordnern.
+```
+
+#### ChatGPT Codex
+
+```text
+Nutze diese Vorlage als Startpunkt für ein neues Projekt.
+
+Lies zuerst AGENTS.md, index.md,
+DOKUMENTATION/Informationen/Start_und_Orientierung.md und die Regeln unter
+VORLAGE/AI/PROJEKTREGELN/.
+
+Projektziel:
+<kurze Beschreibung des Projekts>
+
+Bitte analysiere die Struktur, erstelle einen kurzen Umsetzungsplan, fülle
+fehlende Projektkontext-Dateien soweit möglich allgemein aus und beginne erst
+danach mit Code in PROJEKT/WORKSPACE/. Keine Secrets oder personenbezogenen
+Daten speichern oder ausgeben.
+```
+
 ## Arbeiten Mit KI-Agenten
 
 ### ChatGPT Codex
