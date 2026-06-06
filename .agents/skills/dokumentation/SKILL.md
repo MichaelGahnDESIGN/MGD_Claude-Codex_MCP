@@ -10,18 +10,18 @@ Workspace-Projekts konsistent.
 
 ## Ablauf
 
-1. Lies `PROJEKT/DOKUMENTATION/SKILL.md`.
+1. Lies `DOKUMENTATION/SKILL.md`.
 2. Sortiere neue Informationen in passende Unterordner ein.
 3. Dokumentiere Entscheidungen in
-   `PROJEKT/DOKUMENTATION/Informationen/Entscheidungen.md`.
+   `DOKUMENTATION/Informationen/Entscheidungen.md`.
 4. Dokumentiere Risiken in
-   `PROJEKT/DOKUMENTATION/Informationen/Risiken.md`.
+   `DOKUMENTATION/Informationen/Risiken.md`.
 5. Dokumentiere Versionsstände in
-   `PROJEKT/DOKUMENTATION/Projektbetrieb/Versionen.md`.
+   `DOKUMENTATION/Projektbetrieb/Versionen.md`.
 6. Aktualisiere bei Strukturänderungen die generierten Dokumentationsdaten:
 
 ```bash
-python3 PROJEKT/DOKUMENTATION/Dokumentation-Skills/generate_dokumentationsdaten.py
+python3 DOKUMENTATION/Dokumentation-Skills/generate_dokumentationsdaten.py
 ```
 
 7. Prüfe danach Git-Status, Platzhalter und sensible Dateien.

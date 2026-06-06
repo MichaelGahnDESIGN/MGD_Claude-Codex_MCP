@@ -9,17 +9,17 @@ Dieser Skill richtet eine neue Projektkopie sauber ein.
 
 ## Ablauf
 
-1. Lies zuerst `AGENTS.md`, `GRUNDREGELN.md` und
-   `AI/PROJEKTREGELN/PROJEKTREGELN.md`.
+1. Lies zuerst `codex.md`, `VORLAGE/REGELN/GRUNDREGELN.md` und
+   `VORLAGE/AI/PROJEKTREGELN/PROJEKTREGELN.md`.
 2. Prüfe, ob `OPENROUTER/` separat bleiben soll. Standard: ja.
 3. Fülle den konkreten Arbeitskontext in
-   `AI/PROJEKTREGELN/ARBEITSKONTEXT.md`.
+   `VORLAGE/AI/PROJEKTREGELN/ARBEITSKONTEXT.md`.
 4. Dokumentiere Freigaben und harte Grenzen in
-   `AI/PROJEKTREGELN/FREIGABEN_UND_GRENZEN.md`.
-5. Lege neuen Projektcode ausschließlich in `WORKSPACE/` an.
-6. Halte `PROJEKT/DOKUMENTATION/` für Vorlagen- und Entwicklungsdoku aktuell.
-7. Wenn in `WORKSPACE/` ein echtes Produkt entsteht, lege zusätzlich
-   `WORKSPACE/DOKUMENTATION/` an.
+   `VORLAGE/AI/PROJEKTREGELN/FREIGABEN_UND_GRENZEN.md`.
+5. Lege neuen Projektcode ausschließlich in `PROJEKT/WORKSPACE/` an.
+6. Halte `DOKUMENTATION/` für Vorlagen- und Entwicklungsdoku aktuell.
+7. Wenn in `PROJEKT/WORKSPACE/` ein echtes Produkt entsteht, lege zusätzlich
+   `PROJEKT/WORKSPACE/DOKUMENTATION/` an.
 8. Prüfe `.env`, Tokens und personenbezogene Daten bewusst, bevor Dateien
    versioniert oder ausgegeben werden.
 

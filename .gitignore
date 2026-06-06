@@ -22,8 +22,8 @@ coverage/
 logs/
 
 # Backups bleiben lokal, außer die bewusst gepflegte README.
-PROJEKT/BACKUPS/*
-!PROJEKT/BACKUPS/README.md
+BACKUPS/*
+!BACKUPS/README.md
 
 # Editor- und Betriebssystem-Zwischenstände.
 .vscode/
