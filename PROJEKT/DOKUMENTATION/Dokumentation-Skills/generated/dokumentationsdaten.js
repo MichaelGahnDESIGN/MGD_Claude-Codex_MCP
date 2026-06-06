@@ -1,0 +1,1243 @@
+window.DOKU_DATA = {
+  "schemaVersion": 4,
+  "generatedAt": "2026-06-07T00:54:23+02:00",
+  "projectRoot": "/Volumes/AI-Workspace/Coding Sandbox/Claude-Codex-MCP",
+  "documentationRoot": "/Volumes/AI-Workspace/Coding Sandbox/Claude-Codex-MCP/PROJEKT/DOKUMENTATION",
+  "tabs": {
+    "dev": {
+      "key": "dev",
+      "tabLabel": "Dev Dokumentation",
+      "title": "Klare Übersicht für Struktur, Regeln und laufende Änderungen.",
+      "eyebrow": "Dev Dokumentation",
+      "lead": "Diese Seite bündelt die Entwicklungs-, Vorlagen- und Systemdokumentation. Im Root von DOKUMENTATION liegen bewusst nur diese Übersicht und die begleitende SKILL.md.",
+      "defaultDocumentHref": "SKILL.md",
+      "quickAccess": [
+        {
+          "label": "DOKUMENTATION/SKILL.md",
+          "path": "PROJEKT/DOKUMENTATION/SKILL.md",
+          "sourceHref": "SKILL.md",
+          "href": "SKILL.md"
+        },
+        {
+          "label": "Projektueberblick",
+          "path": "PROJEKT/DOKUMENTATION/Informationen/Projektueberblick.md",
+          "sourceHref": "Informationen/Projektueberblick.md",
+          "href": "Informationen/Projektueberblick.md"
+        },
+        {
+          "label": "AGENTEN/AGENTS.md",
+          "path": "AI/AGENTEN/AGENTS.md",
+          "sourceHref": "../../AI/AGENTEN/AGENTS.md",
+          "href": "../../AI/AGENTEN/AGENTS.md"
+        },
+        {
+          "label": "SKILLS/SKILL.md",
+          "path": "AI/SKILLS/SKILL.md",
+          "sourceHref": "../../AI/SKILLS/SKILL.md",
+          "href": "../../AI/SKILLS/SKILL.md"
+        },
+        {
+          "label": "Rechtliches",
+          "path": "PROJEKT/DOKUMENTATION/Rechtliches/Rechtliches.md",
+          "sourceHref": "Rechtliches/Rechtliches.md",
+          "href": "Rechtliches/Rechtliches.md"
+        },
+        {
+          "label": "Versionen",
+          "path": "PROJEKT/DOKUMENTATION/Projektbetrieb/Versionen.md",
+          "sourceHref": "Projektbetrieb/Versionen.md",
+          "href": "Projektbetrieb/Versionen.md"
+        },
+        {
+          "label": "Offene_Punkte",
+          "path": "PROJEKT/DOKUMENTATION/ToDo/Offene_Punkte.md",
+          "sourceHref": "ToDo/Offene_Punkte.md",
+          "href": "ToDo/Offene_Punkte.md"
+        }
+      ],
+      "folderOverview": {
+        "intro": "Diese Übersicht zeigt die Vorlage als Systemkarte mit Einstieg, Hauptsäulen und optionalen Details.",
+        "start": {
+          "title": "Start dieser Vorlage",
+          "description": "Diese vier Einstiegspunkte erklären die Grundlogik der Vorlage, bevor du in Agenten, Regeln oder Projektarbeit gehst.",
+          "entries": [
+            {
+              "label": "Grundregeln",
+              "technicalName": "GRUNDREGELN.md",
+              "description": "Allgemein gültige Regeln, Qualitätsmaßstäbe und Pflichtlogik.",
+              "href": "../../GRUNDREGELN.md"
+            },
+            {
+              "label": "Root-Skill",
+              "technicalName": "SKILL.md",
+              "description": "Kurzer Einstieg in die Struktur und die wichtigsten Startpunkte.",
+              "href": "../../SKILL.md"
+            },
+            {
+              "label": "AI",
+              "technicalName": "AI/",
+              "description": "Agenten, Skills und projektspezifische Regeln für die Arbeitslogik.",
+              "href": "../../AI/AGENTEN/AGENTS.md"
+            },
+            {
+              "label": "PROJEKT",
+              "technicalName": "PROJEKT/",
+              "description": "Umsetzung, Dokumentation, Backups und eigentliche Arbeitsstände.",
+              "href": "SKILL.md"
+            }
+          ]
+        },
+        "systems": [
+          {
+            "title": "AI",
+            "subtitle": "Arbeitslogik mit Rollen, Skills und Regeln",
+            "purpose": "Hier wird festgelegt, wie KI-Agenten arbeiten, welche Skills sie nutzen und welche projektspezifischen Grenzen gelten.",
+            "counts": {
+              "subareas": 3,
+              "directories": 9,
+              "files": 41
+            },
+            "primaryLinks": [
+              {
+                "label": "Agenten",
+                "technicalName": "AGENTEN/",
+                "description": "Rollen, Teams und Spezialagenten.",
+                "href": "../../AI/AGENTEN/AGENTS.md"
+              },
+              {
+                "label": "Skills",
+                "technicalName": "SKILLS/",
+                "description": "Fachliche Hilfen und Arbeitsmuster.",
+                "href": "../../AI/SKILLS/SKILL.md"
+              },
+              {
+                "label": "Projektregeln",
+                "technicalName": "PROJEKTREGELN/",
+                "description": "Abweichungen, Grenzen und Projektbesonderheiten.",
+                "href": "../../AI/PROJEKTREGELN/PROJEKTREGELN.md"
+              }
+            ],
+            "detailsTree": [
+              {
+                "name": "AGENTEN",
+                "path": "AI/AGENTEN",
+                "sourceHref": "../../AI/AGENTEN",
+                "href": "../../AI/AGENTEN",
+                "type": "dir",
+                "children": [
+                  {
+                    "name": "AGENTS.md",
+                    "path": "AI/AGENTEN/AGENTS.md",
+                    "sourceHref": "../../AI/AGENTEN/AGENTS.md",
+                    "href": "../../AI/AGENTEN/AGENTS.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "API-Architekt.md",
+                    "path": "AI/AGENTEN/API-Architekt.md",
+                    "sourceHref": "../../AI/AGENTEN/API-Architekt.md",
+                    "href": "../../AI/AGENTEN/API-Architekt.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "Barrierefreiheit-EU-DE.md",
+                    "path": "AI/AGENTEN/Barrierefreiheit-EU-DE.md",
+                    "sourceHref": "../../AI/AGENTEN/Barrierefreiheit-EU-DE.md",
+                    "href": "../../AI/AGENTEN/Barrierefreiheit-EU-DE.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "Brainstorming-und-Konzept.md",
+                    "path": "AI/AGENTEN/Brainstorming-und-Konzept.md",
+                    "sourceHref": "../../AI/AGENTEN/Brainstorming-und-Konzept.md",
+                    "href": "../../AI/AGENTEN/Brainstorming-und-Konzept.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "Content-und-Blog.md",
+                    "path": "AI/AGENTEN/Content-und-Blog.md",
+                    "sourceHref": "../../AI/AGENTEN/Content-und-Blog.md",
+                    "href": "../../AI/AGENTEN/Content-und-Blog.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "Controller.md",
+                    "path": "AI/AGENTEN/Controller.md",
+                    "sourceHref": "../../AI/AGENTEN/Controller.md",
+                    "href": "../../AI/AGENTEN/Controller.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "Datenbank-Architekt.md",
+                    "path": "AI/AGENTEN/Datenbank-Architekt.md",
+                    "sourceHref": "../../AI/AGENTEN/Datenbank-Architekt.md",
+                    "href": "../../AI/AGENTEN/Datenbank-Architekt.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "Datenschutz-DSGVO.md",
+                    "path": "AI/AGENTEN/Datenschutz-DSGVO.md",
+                    "sourceHref": "../../AI/AGENTEN/Datenschutz-DSGVO.md",
+                    "href": "../../AI/AGENTEN/Datenschutz-DSGVO.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "Debug.md",
+                    "path": "AI/AGENTEN/Debug.md",
+                    "sourceHref": "../../AI/AGENTEN/Debug.md",
+                    "href": "../../AI/AGENTEN/Debug.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "Designer.md",
+                    "path": "AI/AGENTEN/Designer.md",
+                    "sourceHref": "../../AI/AGENTEN/Designer.md",
+                    "href": "../../AI/AGENTEN/Designer.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "Dokumentation-QA.md",
+                    "path": "AI/AGENTEN/Dokumentation-QA.md",
+                    "sourceHref": "../../AI/AGENTEN/Dokumentation-QA.md",
+                    "href": "../../AI/AGENTEN/Dokumentation-QA.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "eCommerce-Recht-DE-EU.md",
+                    "path": "AI/AGENTEN/eCommerce-Recht-DE-EU.md",
+                    "sourceHref": "../../AI/AGENTEN/eCommerce-Recht-DE-EU.md",
+                    "href": "../../AI/AGENTEN/eCommerce-Recht-DE-EU.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "Frontend-Design-Lead.md",
+                    "path": "AI/AGENTEN/Frontend-Design-Lead.md",
+                    "sourceHref": "../../AI/AGENTEN/Frontend-Design-Lead.md",
+                    "href": "../../AI/AGENTEN/Frontend-Design-Lead.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "Hauptagent.md",
+                    "path": "AI/AGENTEN/Hauptagent.md",
+                    "sourceHref": "../../AI/AGENTEN/Hauptagent.md",
+                    "href": "../../AI/AGENTEN/Hauptagent.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "Impressum-und-DDG.md",
+                    "path": "AI/AGENTEN/Impressum-und-DDG.md",
+                    "sourceHref": "../../AI/AGENTEN/Impressum-und-DDG.md",
+                    "href": "../../AI/AGENTEN/Impressum-und-DDG.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "JTL-Shop-5.md",
+                    "path": "AI/AGENTEN/JTL-Shop-5.md",
+                    "sourceHref": "../../AI/AGENTEN/JTL-Shop-5.md",
+                    "href": "../../AI/AGENTEN/JTL-Shop-5.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "Kundenprojekt.md",
+                    "path": "AI/AGENTEN/Kundenprojekt.md",
+                    "sourceHref": "../../AI/AGENTEN/Kundenprojekt.md",
+                    "href": "../../AI/AGENTEN/Kundenprojekt.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "Programmierer.md",
+                    "path": "AI/AGENTEN/Programmierer.md",
+                    "sourceHref": "../../AI/AGENTEN/Programmierer.md",
+                    "href": "../../AI/AGENTEN/Programmierer.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "Projektmanager.md",
+                    "path": "AI/AGENTEN/Projektmanager.md",
+                    "sourceHref": "../../AI/AGENTEN/Projektmanager.md",
+                    "href": "../../AI/AGENTEN/Projektmanager.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "Recherche.md",
+                    "path": "AI/AGENTEN/Recherche.md",
+                    "sourceHref": "../../AI/AGENTEN/Recherche.md",
+                    "href": "../../AI/AGENTEN/Recherche.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "Recht-und-Compliance.md",
+                    "path": "AI/AGENTEN/Recht-und-Compliance.md",
+                    "sourceHref": "../../AI/AGENTEN/Recht-und-Compliance.md",
+                    "href": "../../AI/AGENTEN/Recht-und-Compliance.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "Responsive-QA.md",
+                    "path": "AI/AGENTEN/Responsive-QA.md",
+                    "sourceHref": "../../AI/AGENTEN/Responsive-QA.md",
+                    "href": "../../AI/AGENTEN/Responsive-QA.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "Shopify.md",
+                    "path": "AI/AGENTEN/Shopify.md",
+                    "sourceHref": "../../AI/AGENTEN/Shopify.md",
+                    "href": "../../AI/AGENTEN/Shopify.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "Shopware-6.md",
+                    "path": "AI/AGENTEN/Shopware-6.md",
+                    "sourceHref": "../../AI/AGENTEN/Shopware-6.md",
+                    "href": "../../AI/AGENTEN/Shopware-6.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "Social-Media.md",
+                    "path": "AI/AGENTEN/Social-Media.md",
+                    "sourceHref": "../../AI/AGENTEN/Social-Media.md",
+                    "href": "../../AI/AGENTEN/Social-Media.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "Tester.md",
+                    "path": "AI/AGENTEN/Tester.md",
+                    "sourceHref": "../../AI/AGENTEN/Tester.md",
+                    "href": "../../AI/AGENTEN/Tester.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "UX-Design.md",
+                    "path": "AI/AGENTEN/UX-Design.md",
+                    "sourceHref": "../../AI/AGENTEN/UX-Design.md",
+                    "href": "../../AI/AGENTEN/UX-Design.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "Web-Design-QA.md",
+                    "path": "AI/AGENTEN/Web-Design-QA.md",
+                    "sourceHref": "../../AI/AGENTEN/Web-Design-QA.md",
+                    "href": "../../AI/AGENTEN/Web-Design-QA.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "WordPress-Divi5.md",
+                    "path": "AI/AGENTEN/WordPress-Divi5.md",
+                    "sourceHref": "../../AI/AGENTEN/WordPress-Divi5.md",
+                    "href": "../../AI/AGENTEN/WordPress-Divi5.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "WordPress-Plugin.md",
+                    "path": "AI/AGENTEN/WordPress-Plugin.md",
+                    "sourceHref": "../../AI/AGENTEN/WordPress-Plugin.md",
+                    "href": "../../AI/AGENTEN/WordPress-Plugin.md",
+                    "type": "file"
+                  }
+                ]
+              },
+              {
+                "name": "PROJEKTREGELN",
+                "path": "AI/PROJEKTREGELN",
+                "sourceHref": "../../AI/PROJEKTREGELN",
+                "href": "../../AI/PROJEKTREGELN",
+                "type": "dir",
+                "children": [
+                  {
+                    "name": "ARBEITSKONTEXT.md",
+                    "path": "AI/PROJEKTREGELN/ARBEITSKONTEXT.md",
+                    "sourceHref": "../../AI/PROJEKTREGELN/ARBEITSKONTEXT.md",
+                    "href": "../../AI/PROJEKTREGELN/ARBEITSKONTEXT.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "ENTSCHEIDUNGEN_UND_AUSNAHMEN.md",
+                    "path": "AI/PROJEKTREGELN/ENTSCHEIDUNGEN_UND_AUSNAHMEN.md",
+                    "sourceHref": "../../AI/PROJEKTREGELN/ENTSCHEIDUNGEN_UND_AUSNAHMEN.md",
+                    "href": "../../AI/PROJEKTREGELN/ENTSCHEIDUNGEN_UND_AUSNAHMEN.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "FREIGABEN_UND_GRENZEN.md",
+                    "path": "AI/PROJEKTREGELN/FREIGABEN_UND_GRENZEN.md",
+                    "sourceHref": "../../AI/PROJEKTREGELN/FREIGABEN_UND_GRENZEN.md",
+                    "href": "../../AI/PROJEKTREGELN/FREIGABEN_UND_GRENZEN.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "PROJEKTREGELN.md",
+                    "path": "AI/PROJEKTREGELN/PROJEKTREGELN.md",
+                    "sourceHref": "../../AI/PROJEKTREGELN/PROJEKTREGELN.md",
+                    "href": "../../AI/PROJEKTREGELN/PROJEKTREGELN.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "SKILL.md",
+                    "path": "AI/PROJEKTREGELN/SKILL.md",
+                    "sourceHref": "../../AI/PROJEKTREGELN/SKILL.md",
+                    "href": "../../AI/PROJEKTREGELN/SKILL.md",
+                    "type": "file"
+                  }
+                ]
+              },
+              {
+                "name": "SKILLS",
+                "path": "AI/SKILLS",
+                "sourceHref": "../../AI/SKILLS",
+                "href": "../../AI/SKILLS",
+                "type": "dir",
+                "children": [
+                  {
+                    "name": "Allgemein",
+                    "path": "AI/SKILLS/Allgemein",
+                    "sourceHref": "../../AI/SKILLS/Allgemein",
+                    "href": "../../AI/SKILLS/Allgemein",
+                    "type": "dir"
+                  },
+                  {
+                    "name": "APP kompilieren",
+                    "path": "AI/SKILLS/APP kompilieren",
+                    "sourceHref": "../../AI/SKILLS/APP kompilieren",
+                    "href": "../../AI/SKILLS/APP kompilieren",
+                    "type": "dir"
+                  },
+                  {
+                    "name": "Content",
+                    "path": "AI/SKILLS/Content",
+                    "sourceHref": "../../AI/SKILLS/Content",
+                    "href": "../../AI/SKILLS/Content",
+                    "type": "dir"
+                  },
+                  {
+                    "name": "Shopsysteme",
+                    "path": "AI/SKILLS/Shopsysteme",
+                    "sourceHref": "../../AI/SKILLS/Shopsysteme",
+                    "href": "../../AI/SKILLS/Shopsysteme",
+                    "type": "dir"
+                  },
+                  {
+                    "name": "WordPress",
+                    "path": "AI/SKILLS/WordPress",
+                    "sourceHref": "../../AI/SKILLS/WordPress",
+                    "href": "../../AI/SKILLS/WordPress",
+                    "type": "dir"
+                  },
+                  {
+                    "name": "DESIGN-Skill.md",
+                    "path": "AI/SKILLS/DESIGN-Skill.md",
+                    "sourceHref": "../../AI/SKILLS/DESIGN-Skill.md",
+                    "href": "../../AI/SKILLS/DESIGN-Skill.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "SKILL.md",
+                    "path": "AI/SKILLS/SKILL.md",
+                    "sourceHref": "../../AI/SKILLS/SKILL.md",
+                    "href": "../../AI/SKILLS/SKILL.md",
+                    "type": "file"
+                  }
+                ]
+              },
+              {
+                "name": "TOOLING",
+                "path": "AI/TOOLING",
+                "sourceHref": "../../AI/TOOLING",
+                "href": "../../AI/TOOLING",
+                "type": "dir",
+                "children": [
+                  {
+                    "name": "ChatGPT-Codex.md",
+                    "path": "AI/TOOLING/ChatGPT-Codex.md",
+                    "sourceHref": "../../AI/TOOLING/ChatGPT-Codex.md",
+                    "href": "../../AI/TOOLING/ChatGPT-Codex.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "Claude-Code.md",
+                    "path": "AI/TOOLING/Claude-Code.md",
+                    "sourceHref": "../../AI/TOOLING/Claude-Code.md",
+                    "href": "../../AI/TOOLING/Claude-Code.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "Claude-Cowork.md",
+                    "path": "AI/TOOLING/Claude-Cowork.md",
+                    "sourceHref": "../../AI/TOOLING/Claude-Cowork.md",
+                    "href": "../../AI/TOOLING/Claude-Cowork.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "SKILL.md",
+                    "path": "AI/TOOLING/SKILL.md",
+                    "sourceHref": "../../AI/TOOLING/SKILL.md",
+                    "href": "../../AI/TOOLING/SKILL.md",
+                    "type": "file"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "PROJEKT",
+            "subtitle": "Projektarbeit, Nachweise und Sicherung",
+            "purpose": "Hier liegt die eigentliche technische Arbeit sowie die laufende Dokumentation und Absicherung des Projekts.",
+            "counts": {
+              "subareas": 3,
+              "directories": 14,
+              "files": 3
+            },
+            "primaryLinks": [
+              {
+                "label": "Workspace",
+                "technicalName": "WORKSPACE/",
+                "description": "Technische Ergebnisse, Code und KI-erstellte Projektartefakte.",
+                "href": "../WORKSPACE"
+              },
+              {
+                "label": "Dokumentation",
+                "technicalName": "DOKUMENTATION/",
+                "description": "Projektwissen, Rechtliches, Changelog und Nachweise.",
+                "href": "SKILL.md"
+              },
+              {
+                "label": "Backups",
+                "technicalName": "BACKUPS/",
+                "description": "Sicherungen und Hinweise zur Wiederherstellung.",
+                "href": "../BACKUPS/README.md"
+              }
+            ],
+            "detailsTree": [
+              {
+                "name": "BACKUPS",
+                "path": "PROJEKT/BACKUPS",
+                "sourceHref": "../BACKUPS",
+                "href": "../BACKUPS",
+                "type": "dir",
+                "children": [
+                  {
+                    "name": "dokumentation-git-backup-2026-06-07.git",
+                    "path": "PROJEKT/BACKUPS/dokumentation-git-backup-2026-06-07.git",
+                    "sourceHref": "../BACKUPS/dokumentation-git-backup-2026-06-07.git",
+                    "href": "../BACKUPS/dokumentation-git-backup-2026-06-07.git",
+                    "type": "dir"
+                  },
+                  {
+                    "name": "README.md",
+                    "path": "PROJEKT/BACKUPS/README.md",
+                    "sourceHref": "../BACKUPS/README.md",
+                    "href": "../BACKUPS/README.md",
+                    "type": "file"
+                  }
+                ]
+              },
+              {
+                "name": "DOKUMENTATION",
+                "path": "PROJEKT/DOKUMENTATION",
+                "sourceHref": ".",
+                "href": ".",
+                "type": "dir",
+                "children": [
+                  {
+                    "name": "Bilder",
+                    "path": "PROJEKT/DOKUMENTATION/Bilder",
+                    "sourceHref": "Bilder",
+                    "href": "Bilder",
+                    "type": "dir"
+                  },
+                  {
+                    "name": "Dokumentation-Skills",
+                    "path": "PROJEKT/DOKUMENTATION/Dokumentation-Skills",
+                    "sourceHref": "Dokumentation-Skills",
+                    "href": "Dokumentation-Skills",
+                    "type": "dir"
+                  },
+                  {
+                    "name": "Fonts",
+                    "path": "PROJEKT/DOKUMENTATION/Fonts",
+                    "sourceHref": "Fonts",
+                    "href": "Fonts",
+                    "type": "dir"
+                  },
+                  {
+                    "name": "Icons",
+                    "path": "PROJEKT/DOKUMENTATION/Icons",
+                    "sourceHref": "Icons",
+                    "href": "Icons",
+                    "type": "dir"
+                  },
+                  {
+                    "name": "Informationen",
+                    "path": "PROJEKT/DOKUMENTATION/Informationen",
+                    "sourceHref": "Informationen",
+                    "href": "Informationen",
+                    "type": "dir"
+                  },
+                  {
+                    "name": "Logos",
+                    "path": "PROJEKT/DOKUMENTATION/Logos",
+                    "sourceHref": "Logos",
+                    "href": "Logos",
+                    "type": "dir"
+                  },
+                  {
+                    "name": "Projektbetrieb",
+                    "path": "PROJEKT/DOKUMENTATION/Projektbetrieb",
+                    "sourceHref": "Projektbetrieb",
+                    "href": "Projektbetrieb",
+                    "type": "dir"
+                  },
+                  {
+                    "name": "Rechtliches",
+                    "path": "PROJEKT/DOKUMENTATION/Rechtliches",
+                    "sourceHref": "Rechtliches",
+                    "href": "Rechtliches",
+                    "type": "dir"
+                  },
+                  {
+                    "name": "Screenshots",
+                    "path": "PROJEKT/DOKUMENTATION/Screenshots",
+                    "sourceHref": "Screenshots",
+                    "href": "Screenshots",
+                    "type": "dir"
+                  },
+                  {
+                    "name": "Styles",
+                    "path": "PROJEKT/DOKUMENTATION/Styles",
+                    "sourceHref": "Styles",
+                    "href": "Styles",
+                    "type": "dir"
+                  },
+                  {
+                    "name": "ToDo",
+                    "path": "PROJEKT/DOKUMENTATION/ToDo",
+                    "sourceHref": "ToDo",
+                    "href": "ToDo",
+                    "type": "dir"
+                  },
+                  {
+                    "name": "index.html",
+                    "path": "PROJEKT/DOKUMENTATION/index.html",
+                    "sourceHref": "index.html",
+                    "href": "index.html",
+                    "type": "file"
+                  },
+                  {
+                    "name": "SKILL.md",
+                    "path": "PROJEKT/DOKUMENTATION/SKILL.md",
+                    "sourceHref": "SKILL.md",
+                    "href": "SKILL.md",
+                    "type": "file"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "documentationAreas": [
+        {
+          "key": "informationen",
+          "title": "Informationen",
+          "description": "Projektbeschreibung, Entscheidungen, Risiken und Kosten für die fachliche und strategische Einordnung.",
+          "links": [
+            {
+              "label": "Entscheidungen",
+              "path": "PROJEKT/DOKUMENTATION/Informationen/Entscheidungen.md",
+              "sourceHref": "Informationen/Entscheidungen.md",
+              "href": "Informationen/Entscheidungen.md"
+            },
+            {
+              "label": "Kosten_und_Lizenzen",
+              "path": "PROJEKT/DOKUMENTATION/Informationen/Kosten_und_Lizenzen.md",
+              "sourceHref": "Informationen/Kosten_und_Lizenzen.md",
+              "href": "Informationen/Kosten_und_Lizenzen.md"
+            },
+            {
+              "label": "Projektueberblick",
+              "path": "PROJEKT/DOKUMENTATION/Informationen/Projektueberblick.md",
+              "sourceHref": "Informationen/Projektueberblick.md",
+              "href": "Informationen/Projektueberblick.md"
+            },
+            {
+              "label": "Risiken",
+              "path": "PROJEKT/DOKUMENTATION/Informationen/Risiken.md",
+              "sourceHref": "Informationen/Risiken.md",
+              "href": "Informationen/Risiken.md"
+            }
+          ]
+        },
+        {
+          "key": "projektbetrieb",
+          "title": "Projektbetrieb",
+          "description": "Setup, Deployment, Backups und Versionen für den laufenden Betrieb und die Nachvollziehbarkeit.",
+          "links": [
+            {
+              "label": "Backups",
+              "path": "PROJEKT/DOKUMENTATION/Projektbetrieb/Backups.md",
+              "sourceHref": "Projektbetrieb/Backups.md",
+              "href": "Projektbetrieb/Backups.md"
+            },
+            {
+              "label": "Deployment",
+              "path": "PROJEKT/DOKUMENTATION/Projektbetrieb/Deployment.md",
+              "sourceHref": "Projektbetrieb/Deployment.md",
+              "href": "Projektbetrieb/Deployment.md"
+            },
+            {
+              "label": "Setup",
+              "path": "PROJEKT/DOKUMENTATION/Projektbetrieb/Setup.md",
+              "sourceHref": "Projektbetrieb/Setup.md",
+              "href": "Projektbetrieb/Setup.md"
+            },
+            {
+              "label": "Versionen",
+              "path": "PROJEKT/DOKUMENTATION/Projektbetrieb/Versionen.md",
+              "sourceHref": "Projektbetrieb/Versionen.md",
+              "href": "Projektbetrieb/Versionen.md"
+            }
+          ]
+        },
+        {
+          "key": "rechtliches",
+          "title": "Rechtliches",
+          "description": "Vorhandenes, Bedenken, Empfehlungen und Quellen für rechtlich sensible Projektpunkte.",
+          "links": [
+            {
+              "label": "Pflicht-Checkliste_DE-EU",
+              "path": "PROJEKT/DOKUMENTATION/Rechtliches/Pflicht-Checkliste_DE-EU.md",
+              "sourceHref": "Rechtliches/Pflicht-Checkliste_DE-EU.md",
+              "href": "Rechtliches/Pflicht-Checkliste_DE-EU.md"
+            },
+            {
+              "label": "Rechtliches",
+              "path": "PROJEKT/DOKUMENTATION/Rechtliches/Rechtliches.md",
+              "sourceHref": "Rechtliches/Rechtliches.md",
+              "href": "Rechtliches/Rechtliches.md"
+            }
+          ]
+        },
+        {
+          "key": "todo",
+          "title": "ToDo",
+          "description": "Offene Punkte, Rückfragen, Freigaben und noch nicht erledigte Aufgaben.",
+          "links": [
+            {
+              "label": "Offene_Punkte",
+              "path": "PROJEKT/DOKUMENTATION/ToDo/Offene_Punkte.md",
+              "sourceHref": "ToDo/Offene_Punkte.md",
+              "href": "ToDo/Offene_Punkte.md"
+            }
+          ]
+        },
+        {
+          "key": "dokumentation_skills",
+          "title": "Dokumentation-Skills",
+          "description": "Hilfen, Vorlagen und Spezialanleitungen für die Dokumentationsarbeit selbst.",
+          "links": [
+            {
+              "label": "Uebersicht",
+              "path": "PROJEKT/DOKUMENTATION/Dokumentation-Skills/Uebersicht.md",
+              "sourceHref": "Dokumentation-Skills/Uebersicht.md",
+              "href": "Dokumentation-Skills/Uebersicht.md"
+            }
+          ]
+        }
+      ],
+      "showAiTools": true,
+      "rechtliches": {
+        "href": "Rechtliches/Rechtliches.md",
+        "label": "Rechtliches/Rechtliches.md"
+      },
+      "changelog": {
+        "href": "Projektbetrieb/Versionen.md",
+        "label": "Projektbetrieb/Versionen.md"
+      },
+      "resources": {
+        "title": "Medien und Gestaltungsressourcen",
+        "lead": "Visuelle und gestalterische Materialien werden in eigenen Ordnern gehalten, damit sie nicht mit Textdokumentation oder Projektdateien vermischt werden.",
+        "items": [
+          {
+            "title": "Bilder",
+            "text": "für allgemeine Bildmaterialien und Referenzen"
+          },
+          {
+            "title": "Screenshots",
+            "text": "für Zustandsnachweise, Tests und Freigaben"
+          },
+          {
+            "title": "Logos",
+            "text": "für Marken- und Projektlogos"
+          },
+          {
+            "title": "Fonts",
+            "text": "für Schriften und Font-bezogene Hinweise"
+          },
+          {
+            "title": "Icons",
+            "text": "für Iconsets oder einzelne Symbole"
+          },
+          {
+            "title": "Styles",
+            "text": "für visuelle Richtlinien, Tokens oder Styling-Hilfen"
+          }
+        ]
+      }
+    },
+    "projekt": {
+      "key": "projekt",
+      "tabLabel": "Projekt Dokumentation",
+      "title": "Klare Übersicht für das entstandene Projekt im Workspace.",
+      "eyebrow": "Projekt Dokumentation",
+      "lead": "Diese Sicht dokumentiert das konkret entstandene Projekt in WORKSPACE, inklusive Struktur, Versionierung, Versions-Log und projektbezogener Betriebsdokumentation.",
+      "defaultDocumentHref": "../../WORKSPACE/DOKUMENTATION/SKILL.md",
+      "quickAccess": [],
+      "folderOverview": {
+        "intro": "Diese Übersicht erklärt das tatsächlich entstandene Projekt im Workspace und die dazugehörige Projektdokumentation.",
+        "start": {
+          "title": "Start des Workspace-Projekts",
+          "description": "Diese Einstiege helfen dir, das konkret gebaute Projekt, seine Dokumentation und den Versionsstand schnell zu erfassen.",
+          "entries": [
+            {
+              "label": "Workspace-Doku",
+              "technicalName": "WORKSPACE/DOKUMENTATION/SKILL.md",
+              "description": "Einstieg in die Dokumentation des konkreten Projekts.",
+              "href": "../../WORKSPACE/DOKUMENTATION/SKILL.md"
+            },
+            {
+              "label": "Projektüberblick",
+              "technicalName": "WORKSPACE/DOKUMENTATION/Informationen/Projektueberblick.md",
+              "description": "Kurzbeschreibung, Ziel und Status des entstandenen Projekts.",
+              "href": "../../WORKSPACE/DOKUMENTATION/Informationen/Projektueberblick.md"
+            },
+            {
+              "label": "Versionen",
+              "technicalName": "WORKSPACE/DOKUMENTATION/Projektbetrieb/Versionen.md",
+              "description": "Technischer Versionsstand und Änderungsverlauf des Projekts.",
+              "href": "../../WORKSPACE/DOKUMENTATION/Projektbetrieb/Versionen.md"
+            },
+            {
+              "label": "Versions-Log",
+              "technicalName": "WORKSPACE/DOKUMENTATION/Projektbetrieb/Versions-Log.md",
+              "description": "Lesbare Verlaufssicht für Releases, Änderungen und Freigaben.",
+              "href": "../../WORKSPACE/DOKUMENTATION/Projektbetrieb/Versions-Log.md"
+            }
+          ]
+        },
+        "systems": [
+          {
+            "title": "WORKSPACE",
+            "subtitle": "Konkrete technische Projektumsetzung",
+            "purpose": "Hier liegt das tatsächlich erstellte Projekt mit Code, Assets, Konfigurationen und seiner konkreten technischen Struktur.",
+            "counts": {
+              "subareas": 1,
+              "directories": 0,
+              "files": 1
+            },
+            "primaryLinks": [
+              {
+                "label": "Projektordner",
+                "technicalName": "WORKSPACE/",
+                "description": "Gesamter Arbeitsbereich des entstandenen Projekts.",
+                "href": "../../WORKSPACE"
+              },
+              {
+                "label": "Projekt-Dokumentation",
+                "technicalName": "WORKSPACE/DOKUMENTATION/",
+                "description": "Die projektbezogene Dokumentationsschicht des Workspace.",
+                "href": "../../WORKSPACE/DOKUMENTATION/SKILL.md"
+              }
+            ],
+            "detailsTree": [
+              {
+                "name": "README.md",
+                "path": "WORKSPACE/README.md",
+                "sourceHref": "../../WORKSPACE/README.md",
+                "href": "../../WORKSPACE/README.md",
+                "type": "file"
+              }
+            ]
+          },
+          {
+            "title": "Projekt-Dokumentation",
+            "subtitle": "Dokumentation, Versionierung und Verlauf",
+            "purpose": "Hier werden Entscheidungen, Risiken, Setup, Deployment, Versionen und Änderungsverlauf des gebauten Projekts dokumentiert.",
+            "counts": {
+              "subareas": 0,
+              "directories": 0,
+              "files": 0
+            },
+            "primaryLinks": [
+              {
+                "label": "Projektüberblick",
+                "technicalName": "Informationen/Projektueberblick.md",
+                "description": "Überblick über Ziel, Scope und Status des Projekts.",
+                "href": "../../WORKSPACE/DOKUMENTATION/Informationen/Projektueberblick.md"
+              },
+              {
+                "label": "Versionen",
+                "technicalName": "Projektbetrieb/Versionen.md",
+                "description": "Führende Datei für Versionierung und Änderungen.",
+                "href": "../../WORKSPACE/DOKUMENTATION/Projektbetrieb/Versionen.md"
+              },
+              {
+                "label": "Versions-Log",
+                "technicalName": "Projektbetrieb/Versions-Log.md",
+                "description": "Kompakte Verlaufssicht für das entstandene Projekt.",
+                "href": "../../WORKSPACE/DOKUMENTATION/Projektbetrieb/Versions-Log.md"
+              }
+            ],
+            "detailsTree": []
+          }
+        ]
+      },
+      "documentationAreas": [],
+      "showAiTools": false,
+      "rechtliches": {
+        "href": "../../WORKSPACE/DOKUMENTATION/Rechtliches/Rechtliches.md",
+        "label": "WORKSPACE/DOKUMENTATION/Rechtliches/Rechtliches.md"
+      },
+      "changelog": {
+        "href": "../../WORKSPACE/DOKUMENTATION/Projektbetrieb/Versions-Log.md",
+        "label": "WORKSPACE/DOKUMENTATION/Projektbetrieb/Versions-Log.md",
+        "secondaryHref": "../../WORKSPACE/DOKUMENTATION/Projektbetrieb/Versionen.md",
+        "secondaryLabel": "WORKSPACE/DOKUMENTATION/Projektbetrieb/Versionen.md"
+      },
+      "resources": {
+        "title": "Projektbezogene Arbeitsbereiche",
+        "lead": "Diese Sicht konzentriert sich auf das entstandene Produkt, seine Doku und seinen Änderungsverlauf innerhalb des Workspace.",
+        "items": [
+          {
+            "title": "Projektüberblick",
+            "text": "für Ziel, Scope, Status und Hauptbestandteile des Projekts"
+          },
+          {
+            "title": "Entscheidungen",
+            "text": "für Architektur-, UI- und Technikentscheidungen des konkreten Produkts"
+          },
+          {
+            "title": "Versionen",
+            "text": "für den führenden technischen Änderungsverlauf"
+          },
+          {
+            "title": "Versions-Log",
+            "text": "für die kompakte, lesbare Verlaufssicht"
+          },
+          {
+            "title": "Deployment",
+            "text": "für Release- und Ausrollhinweise des Projekts"
+          },
+          {
+            "title": "Backups",
+            "text": "für Sicherungs- und Wiederherstellungsnotizen"
+          }
+        ]
+      }
+    }
+  },
+  "activeTab": "projekt",
+  "agents": [
+    {
+      "label": "AGENTEN/AGENTS.md",
+      "path": "AI/AGENTEN/AGENTS.md",
+      "sourceHref": "../../AI/AGENTEN/AGENTS.md",
+      "href": "../../AI/AGENTEN/AGENTS.md"
+    },
+    {
+      "label": "API-Architekt",
+      "path": "AI/AGENTEN/API-Architekt.md",
+      "sourceHref": "../../AI/AGENTEN/API-Architekt.md",
+      "href": "../../AI/AGENTEN/API-Architekt.md"
+    },
+    {
+      "label": "Barrierefreiheit-EU-DE",
+      "path": "AI/AGENTEN/Barrierefreiheit-EU-DE.md",
+      "sourceHref": "../../AI/AGENTEN/Barrierefreiheit-EU-DE.md",
+      "href": "../../AI/AGENTEN/Barrierefreiheit-EU-DE.md"
+    },
+    {
+      "label": "Brainstorming-und-Konzept",
+      "path": "AI/AGENTEN/Brainstorming-und-Konzept.md",
+      "sourceHref": "../../AI/AGENTEN/Brainstorming-und-Konzept.md",
+      "href": "../../AI/AGENTEN/Brainstorming-und-Konzept.md"
+    },
+    {
+      "label": "Content-und-Blog",
+      "path": "AI/AGENTEN/Content-und-Blog.md",
+      "sourceHref": "../../AI/AGENTEN/Content-und-Blog.md",
+      "href": "../../AI/AGENTEN/Content-und-Blog.md"
+    },
+    {
+      "label": "Controller",
+      "path": "AI/AGENTEN/Controller.md",
+      "sourceHref": "../../AI/AGENTEN/Controller.md",
+      "href": "../../AI/AGENTEN/Controller.md"
+    },
+    {
+      "label": "Datenbank-Architekt",
+      "path": "AI/AGENTEN/Datenbank-Architekt.md",
+      "sourceHref": "../../AI/AGENTEN/Datenbank-Architekt.md",
+      "href": "../../AI/AGENTEN/Datenbank-Architekt.md"
+    },
+    {
+      "label": "Datenschutz-DSGVO",
+      "path": "AI/AGENTEN/Datenschutz-DSGVO.md",
+      "sourceHref": "../../AI/AGENTEN/Datenschutz-DSGVO.md",
+      "href": "../../AI/AGENTEN/Datenschutz-DSGVO.md"
+    },
+    {
+      "label": "Debug",
+      "path": "AI/AGENTEN/Debug.md",
+      "sourceHref": "../../AI/AGENTEN/Debug.md",
+      "href": "../../AI/AGENTEN/Debug.md"
+    },
+    {
+      "label": "Designer",
+      "path": "AI/AGENTEN/Designer.md",
+      "sourceHref": "../../AI/AGENTEN/Designer.md",
+      "href": "../../AI/AGENTEN/Designer.md"
+    },
+    {
+      "label": "Dokumentation-QA",
+      "path": "AI/AGENTEN/Dokumentation-QA.md",
+      "sourceHref": "../../AI/AGENTEN/Dokumentation-QA.md",
+      "href": "../../AI/AGENTEN/Dokumentation-QA.md"
+    },
+    {
+      "label": "Frontend-Design-Lead",
+      "path": "AI/AGENTEN/Frontend-Design-Lead.md",
+      "sourceHref": "../../AI/AGENTEN/Frontend-Design-Lead.md",
+      "href": "../../AI/AGENTEN/Frontend-Design-Lead.md"
+    },
+    {
+      "label": "Hauptagent",
+      "path": "AI/AGENTEN/Hauptagent.md",
+      "sourceHref": "../../AI/AGENTEN/Hauptagent.md",
+      "href": "../../AI/AGENTEN/Hauptagent.md"
+    },
+    {
+      "label": "Impressum-und-DDG",
+      "path": "AI/AGENTEN/Impressum-und-DDG.md",
+      "sourceHref": "../../AI/AGENTEN/Impressum-und-DDG.md",
+      "href": "../../AI/AGENTEN/Impressum-und-DDG.md"
+    },
+    {
+      "label": "JTL-Shop-5",
+      "path": "AI/AGENTEN/JTL-Shop-5.md",
+      "sourceHref": "../../AI/AGENTEN/JTL-Shop-5.md",
+      "href": "../../AI/AGENTEN/JTL-Shop-5.md"
+    },
+    {
+      "label": "Kundenprojekt",
+      "path": "AI/AGENTEN/Kundenprojekt.md",
+      "sourceHref": "../../AI/AGENTEN/Kundenprojekt.md",
+      "href": "../../AI/AGENTEN/Kundenprojekt.md"
+    },
+    {
+      "label": "Programmierer",
+      "path": "AI/AGENTEN/Programmierer.md",
+      "sourceHref": "../../AI/AGENTEN/Programmierer.md",
+      "href": "../../AI/AGENTEN/Programmierer.md"
+    },
+    {
+      "label": "Projektmanager",
+      "path": "AI/AGENTEN/Projektmanager.md",
+      "sourceHref": "../../AI/AGENTEN/Projektmanager.md",
+      "href": "../../AI/AGENTEN/Projektmanager.md"
+    },
+    {
+      "label": "Recherche",
+      "path": "AI/AGENTEN/Recherche.md",
+      "sourceHref": "../../AI/AGENTEN/Recherche.md",
+      "href": "../../AI/AGENTEN/Recherche.md"
+    },
+    {
+      "label": "Recht-und-Compliance",
+      "path": "AI/AGENTEN/Recht-und-Compliance.md",
+      "sourceHref": "../../AI/AGENTEN/Recht-und-Compliance.md",
+      "href": "../../AI/AGENTEN/Recht-und-Compliance.md"
+    },
+    {
+      "label": "Responsive-QA",
+      "path": "AI/AGENTEN/Responsive-QA.md",
+      "sourceHref": "../../AI/AGENTEN/Responsive-QA.md",
+      "href": "../../AI/AGENTEN/Responsive-QA.md"
+    },
+    {
+      "label": "Shopify",
+      "path": "AI/AGENTEN/Shopify.md",
+      "sourceHref": "../../AI/AGENTEN/Shopify.md",
+      "href": "../../AI/AGENTEN/Shopify.md"
+    },
+    {
+      "label": "Shopware-6",
+      "path": "AI/AGENTEN/Shopware-6.md",
+      "sourceHref": "../../AI/AGENTEN/Shopware-6.md",
+      "href": "../../AI/AGENTEN/Shopware-6.md"
+    },
+    {
+      "label": "Social-Media",
+      "path": "AI/AGENTEN/Social-Media.md",
+      "sourceHref": "../../AI/AGENTEN/Social-Media.md",
+      "href": "../../AI/AGENTEN/Social-Media.md"
+    },
+    {
+      "label": "Tester",
+      "path": "AI/AGENTEN/Tester.md",
+      "sourceHref": "../../AI/AGENTEN/Tester.md",
+      "href": "../../AI/AGENTEN/Tester.md"
+    },
+    {
+      "label": "UX-Design",
+      "path": "AI/AGENTEN/UX-Design.md",
+      "sourceHref": "../../AI/AGENTEN/UX-Design.md",
+      "href": "../../AI/AGENTEN/UX-Design.md"
+    },
+    {
+      "label": "Web-Design-QA",
+      "path": "AI/AGENTEN/Web-Design-QA.md",
+      "sourceHref": "../../AI/AGENTEN/Web-Design-QA.md",
+      "href": "../../AI/AGENTEN/Web-Design-QA.md"
+    },
+    {
+      "label": "WordPress-Divi5",
+      "path": "AI/AGENTEN/WordPress-Divi5.md",
+      "sourceHref": "../../AI/AGENTEN/WordPress-Divi5.md",
+      "href": "../../AI/AGENTEN/WordPress-Divi5.md"
+    },
+    {
+      "label": "WordPress-Plugin",
+      "path": "AI/AGENTEN/WordPress-Plugin.md",
+      "sourceHref": "../../AI/AGENTEN/WordPress-Plugin.md",
+      "href": "../../AI/AGENTEN/WordPress-Plugin.md"
+    },
+    {
+      "label": "eCommerce-Recht-DE-EU",
+      "path": "AI/AGENTEN/eCommerce-Recht-DE-EU.md",
+      "sourceHref": "../../AI/AGENTEN/eCommerce-Recht-DE-EU.md",
+      "href": "../../AI/AGENTEN/eCommerce-Recht-DE-EU.md"
+    }
+  ],
+  "skills": [
+    {
+      "label": "Tauri-App-kompilieren-skill",
+      "path": "AI/SKILLS/APP kompilieren/Tauri-App-kompilieren-skill.md",
+      "sourceHref": "../../AI/SKILLS/APP kompilieren/Tauri-App-kompilieren-skill.md",
+      "href": "../../AI/SKILLS/APP kompilieren/Tauri-App-kompilieren-skill.md"
+    },
+    {
+      "label": "DESIGN-Skill",
+      "path": "AI/SKILLS/Allgemein/DESIGN-Skill.md",
+      "sourceHref": "../../AI/SKILLS/Allgemein/DESIGN-Skill.md",
+      "href": "../../AI/SKILLS/Allgemein/DESIGN-Skill.md"
+    },
+    {
+      "label": "Allgemein/SKILL.md",
+      "path": "AI/SKILLS/Allgemein/SKILL.md",
+      "sourceHref": "../../AI/SKILLS/Allgemein/SKILL.md",
+      "href": "../../AI/SKILLS/Allgemein/SKILL.md"
+    },
+    {
+      "label": "doku-skill",
+      "path": "AI/SKILLS/Allgemein/doku-skill.md",
+      "sourceHref": "../../AI/SKILLS/Allgemein/doku-skill.md",
+      "href": "../../AI/SKILLS/Allgemein/doku-skill.md"
+    },
+    {
+      "label": "kundenprojekt-skill",
+      "path": "AI/SKILLS/Allgemein/kundenprojekt-skill.md",
+      "sourceHref": "../../AI/SKILLS/Allgemein/kundenprojekt-skill.md",
+      "href": "../../AI/SKILLS/Allgemein/kundenprojekt-skill.md"
+    },
+    {
+      "label": "recherche-skill",
+      "path": "AI/SKILLS/Allgemein/recherche-skill.md",
+      "sourceHref": "../../AI/SKILLS/Allgemein/recherche-skill.md",
+      "href": "../../AI/SKILLS/Allgemein/recherche-skill.md"
+    },
+    {
+      "label": "release-skill",
+      "path": "AI/SKILLS/Allgemein/release-skill.md",
+      "sourceHref": "../../AI/SKILLS/Allgemein/release-skill.md",
+      "href": "../../AI/SKILLS/Allgemein/release-skill.md"
+    },
+    {
+      "label": "website-skill",
+      "path": "AI/SKILLS/Allgemein/website-skill.md",
+      "sourceHref": "../../AI/SKILLS/Allgemein/website-skill.md",
+      "href": "../../AI/SKILLS/Allgemein/website-skill.md"
+    },
+    {
+      "label": "Content/SKILL.md",
+      "path": "AI/SKILLS/Content/SKILL.md",
+      "sourceHref": "../../AI/SKILLS/Content/SKILL.md",
+      "href": "../../AI/SKILLS/Content/SKILL.md"
+    },
+    {
+      "label": "blog-skill",
+      "path": "AI/SKILLS/Content/blog-skill.md",
+      "sourceHref": "../../AI/SKILLS/Content/blog-skill.md",
+      "href": "../../AI/SKILLS/Content/blog-skill.md"
+    },
+    {
+      "label": "social-media-skill",
+      "path": "AI/SKILLS/Content/social-media-skill.md",
+      "sourceHref": "../../AI/SKILLS/Content/social-media-skill.md",
+      "href": "../../AI/SKILLS/Content/social-media-skill.md"
+    },
+    {
+      "label": "DESIGN-Skill",
+      "path": "AI/SKILLS/DESIGN-Skill.md",
+      "sourceHref": "../../AI/SKILLS/DESIGN-Skill.md",
+      "href": "../../AI/SKILLS/DESIGN-Skill.md"
+    },
+    {
+      "label": "SKILLS/SKILL.md",
+      "path": "AI/SKILLS/SKILL.md",
+      "sourceHref": "../../AI/SKILLS/SKILL.md",
+      "href": "../../AI/SKILLS/SKILL.md"
+    },
+    {
+      "label": "Shopsysteme/SKILL.md",
+      "path": "AI/SKILLS/Shopsysteme/SKILL.md",
+      "sourceHref": "../../AI/SKILLS/Shopsysteme/SKILL.md",
+      "href": "../../AI/SKILLS/Shopsysteme/SKILL.md"
+    },
+    {
+      "label": "jtl-shop-5-skill",
+      "path": "AI/SKILLS/Shopsysteme/jtl-shop-5-skill.md",
+      "sourceHref": "../../AI/SKILLS/Shopsysteme/jtl-shop-5-skill.md",
+      "href": "../../AI/SKILLS/Shopsysteme/jtl-shop-5-skill.md"
+    },
+    {
+      "label": "shopify-skill",
+      "path": "AI/SKILLS/Shopsysteme/shopify-skill.md",
+      "sourceHref": "../../AI/SKILLS/Shopsysteme/shopify-skill.md",
+      "href": "../../AI/SKILLS/Shopsysteme/shopify-skill.md"
+    },
+    {
+      "label": "shopware-6-plugin-skill",
+      "path": "AI/SKILLS/Shopsysteme/shopware-6-plugin-skill.md",
+      "sourceHref": "../../AI/SKILLS/Shopsysteme/shopware-6-plugin-skill.md",
+      "href": "../../AI/SKILLS/Shopsysteme/shopware-6-plugin-skill.md"
+    },
+    {
+      "label": "WordPress/SKILL.md",
+      "path": "AI/SKILLS/WordPress/SKILL.md",
+      "sourceHref": "../../AI/SKILLS/WordPress/SKILL.md",
+      "href": "../../AI/SKILLS/WordPress/SKILL.md"
+    },
+    {
+      "label": "wordpress-divi5-skill",
+      "path": "AI/SKILLS/WordPress/wordpress-divi5-skill.md",
+      "sourceHref": "../../AI/SKILLS/WordPress/wordpress-divi5-skill.md",
+      "href": "../../AI/SKILLS/WordPress/wordpress-divi5-skill.md"
+    },
+    {
+      "label": "wordpress-plugin-skill",
+      "path": "AI/SKILLS/WordPress/wordpress-plugin-skill.md",
+      "sourceHref": "../../AI/SKILLS/WordPress/wordpress-plugin-skill.md",
+      "href": "../../AI/SKILLS/WordPress/wordpress-plugin-skill.md"
+    }
+  ]
+};

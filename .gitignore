@@ -1,0 +1,32 @@
+# macOS legt diese Dateien automatisch an; sie haben keinen Projektwert.
+.DS_Store
+**/.DS_Store
+
+# Geheimnisse und lokale Umgebung dürfen niemals versioniert werden.
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Abhängigkeiten und Build-Ausgaben werden reproduzierbar erzeugt.
+node_modules/
+**/node_modules/
+dist/
+build/
+coverage/
+
+# Laufzeit- und Diagnoseausgaben gehören nicht ins Repository.
+*.log
+logs/
+
+# Backups bleiben lokal, außer die bewusst gepflegte README.
+PROJEKT/BACKUPS/*
+!PROJEKT/BACKUPS/README.md
+
+# Editor- und Betriebssystem-Zwischenstände.
+.vscode/
+.idea/
+*.swp
+*.swo

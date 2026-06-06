@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="de" data-theme="dark" data-menu="closed">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projekt-Dokumentation</title>
+    <meta
+      name="description"
+      content="Übersicht über Struktur, Ordner, AI Tools, Regeln, Rechtliches, Changelog und wichtige Inhalte der Projektdokumentation."
+    />
+    <link rel="stylesheet" href="./Styles/dokumentation.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+    <div class="backdrop" aria-hidden="true"></div>
+    <div class="shell">
+      <div class="mobile-bar">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="seitenmenue">
+          Menü öffnen
+        </button>
+        <p class="mobile-title">Projekt-Dokumentation</p>
+      </div>
+
+      <div class="layout">
+        <aside class="sidebar" id="seitenmenue" aria-label="Seitennavigation">
+          <div class="brand">
+            <h1>Projekt-Dokumentation</h1>
+            <p>Ruhige Übersicht für Struktur, Ordner, AI Tools, Rechtliches, Changelog und wichtige Arbeitsstände.</p>
+          </div>
+
+          <details class="menu-group">
+            <summary><p class="menu-label">Navigation</p></summary>
+            <div class="menu-panel">
+              <nav class="side-nav">
+                <a href="#uebersicht">Übersicht</a>
+                <a href="#ordneruebersicht">Ordnerübersicht</a>
+                <a href="#bereiche">Bereiche</a>
+                <a href="#ai-tools">AI Tools</a>
+                <a href="#rechtliches">Rechtliches</a>
+                <a href="#changelog">Changelog</a>
+                <a href="#ressourcen">Ressourcen</a>
+                <a href="#einstellungen">Einstellungen</a>
+                <a href="#dokumentenansicht">Dokumentenansicht</a>
+                <a href="#standards">Standards</a>
+              </nav>
+            </div>
+          </details>
+
+          <details class="menu-group">
+            <summary><p class="menu-label">Schnellzugriff</p></summary>
+            <div class="menu-panel">
+              <div class="utility-links" id="quick-access-list"></div>
+            </div>
+          </details>
+
+          <details class="menu-group">
+            <summary><p class="menu-label">Werkzeuge</p></summary>
+            <div class="menu-panel">
+              <div class="utility-links">
+                <button class="theme-toggle" type="button" aria-pressed="true" aria-label="Zwischen Dark Mode und Light Mode wechseln">
+                  Light Mode aktivieren
+                </button>
+                <a href="#einstellungen">Einstellungen</a>
+                <a href="https://chatgpt.com/codex/settings/usage" target="_blank" rel="noreferrer">
+                  Codex-Nutzung prüfen
+                </a>
+                <a href="https://claude.ai/settings/usage" target="_blank" rel="noreferrer">
+                  Claude Nutzung prüfen
+                </a>
+              </div>
+            </div>
+          </details>
+        </aside>
+
+        <main class="main" id="inhalt">
+          <section class="wide top-tabs" aria-label="Dokumentationsbereiche">
+            <div class="tab-switch" id="doc-tab-switch">
+              <button class="doc-tab" type="button" data-doc-tab="dev">Dev Dokumentation</button>
+              <button class="doc-tab is-active" type="button" data-doc-tab="projekt">Projekt Dokumentation</button>
+            </div>
+          </section>
+
+          <section class="hero" id="uebersicht" aria-labelledby="hero-title">
+            <div class="section-header">
+              <span class="eyebrow" id="hero-eyebrow">Übersicht</span>
+            </div>
+            <h1 id="hero-title"></h1>
+            <p class="lead" id="hero-lead"></p>
+            <div class="chips" id="hero-quick-access"></div>
+          </section>
+
+          <section class="wide" id="ordneruebersicht" aria-labelledby="ordneruebersicht-title">
+            <div class="section-header">
+              <h2 id="ordneruebersicht-title">Ordnerübersicht</h2>
+              <span class="eyebrow">Gesamtstruktur</span>
+            </div>
+            <p class="muted folder-overview-intro" id="folder-overview-intro"></p>
+            <div class="folder-start" id="folder-overview-start"></div>
+            <div class="folder-systems" id="folder-overview-systems"></div>
+          </section>
+
+          <section class="grid" id="bereiche" aria-label="Dokumentationsbereiche"></section>
+
+          <section class="wide" id="ai-tools" aria-labelledby="ai-tools-title">
+            <div class="section-header">
+              <h2 id="ai-tools-title">AI Tools</h2>
+              <span class="eyebrow">Agenten und Skills</span>
+            </div>
+            <div class="mini-grid">
+              <article class="panel">
+                <h3>Agenten</h3>
+                <p>
+                  Diese Liste wird direkt aus den generierten Dokumentationsdaten aufgebaut und
+                  bildet die aktuelle Agentenstruktur der Vorlage ab.
+                </p>
+                <div class="generated-list" id="agent-list" style="margin-top: 12px"></div>
+              </article>
+              <article class="panel">
+                <h3>Skills</h3>
+                <p>
+                  Auch die Skills werden automatisch aus den generierten Daten angezeigt, statt
+                  manuell in der HTML gepflegt zu werden.
+                </p>
+                <div class="generated-list" id="skill-list" style="margin-top: 12px"></div>
+              </article>
+            </div>
+            <p class="muted" id="generator-status" style="margin-top: 12px"></p>
+          </section>
+
+          <section class="wide" id="rechtliches" aria-labelledby="rechtliches-title">
+            <div class="section-header">
+              <h2 id="rechtliches-title">Rechtliches</h2>
+              <span class="eyebrow">Prüfstand und Quellen</span>
+            </div>
+            <div class="mini-grid">
+              <article class="panel">
+                <h3>Vorhanden</h3>
+                <p>
+                  Bereits vorhandene Pflichtseiten, Hinweise, Banner, Erklärungen oder andere
+                  rechtlich relevante Bestandteile werden hier nachvollziehbar gesammelt.
+                </p>
+              </article>
+              <article class="panel">
+                <h3>Bedenken</h3>
+                <p>
+                  Rechtliche Unsicherheiten, erkennbare Lücken und offene Prüfbedarfe werden klar
+                  benannt, statt stillschweigend als erledigt zu gelten.
+                </p>
+              </article>
+              <article class="panel">
+                <h3>Empfehlungen</h3>
+                <p>
+                  Empfohlene nächste Schritte sollen knapp, verständlich und umsetzungsnah notiert
+                  werden, inklusive Quellenangaben und möglicher Freigabebedarfe.
+                </p>
+              </article>
+            </div>
+            <p class="muted" id="rechtliches-link-hint" style="margin-top: 12px"></p>
+          </section>
+
+          <section class="wide" id="changelog" aria-labelledby="changelog-title">
+            <div class="section-header">
+              <h2 id="changelog-title">Changelog</h2>
+              <span class="eyebrow">Verlauf und Nachvollziehbarkeit</span>
+            </div>
+            <div class="mini-grid">
+              <article class="panel">
+                <h3>Was hier wichtig ist</h3>
+                <p>
+                  Der Changelog muss Änderungen akkurat, sauber, detailliert und trotzdem einfach
+                  verständlich festhalten. Er ist die zentrale Verlaufsdokumentation.
+                </p>
+              </article>
+              <article class="panel">
+                <h3>Wo er gepflegt wird</h3>
+                <p id="changelog-link-hint"></p>
+              </article>
+              <article class="panel">
+                <h3>Was jeder Eintrag enthalten soll</h3>
+                <p>
+                  Datum, Version, Änderung, Begründung, betroffene Bereiche und bei Bedarf Hinweise
+                  zur Rücknahme oder Wiederherstellung.
+                </p>
+              </article>
+            </div>
+          </section>
+
+          <section class="wide" id="ressourcen">
+            <h2 id="resources-title"></h2>
+            <p id="resources-lead"></p>
+            <ul id="resources-list" style="margin-top: 12px"></ul>
+          </section>
+
+          <section class="settings-lightbox" id="einstellungen" aria-labelledby="einstellungen-title" hidden>
+            <div class="settings-dialog">
+              <div class="section-header settings-header">
+                <div>
+                  <h2 id="einstellungen-title">Einstellungen</h2>
+                  <span class="eyebrow">Farben und Hinweise</span>
+                </div>
+                <button type="button" class="settings-close" id="settings-close" aria-label="Einstellungen schließen">Schließen</button>
+              </div>
+              <div class="settings-grid">
+                <article class="panel">
+                  <h3>Dokumentationsfarben</h3>
+                  <p class="muted">
+                    Diese Einstellungen wirken lokal in der Dokumentation und bleiben im Browser gespeichert.
+                  </p>
+                  <div class="settings-controls">
+                    <label class="settings-field">
+                      <span>Hintergrund</span>
+                      <input type="color" id="setting-bg" value="#0f1720" />
+                    </label>
+                    <label class="settings-field">
+                      <span>Fläche</span>
+                      <input type="color" id="setting-surface" value="#161b22" />
+                    </label>
+                    <label class="settings-field">
+                      <span>Text</span>
+                      <input type="color" id="setting-ink" value="#f8fafc" />
+                    </label>
+                    <label class="settings-field">
+                      <span>Akzent</span>
+                      <input type="color" id="setting-active" value="#123322" />
+                    </label>
+                    <label class="settings-field">
+                      <span>Viewer-Rahmen</span>
+                      <input type="color" id="setting-viewer-line" value="#1dec1d" />
+                    </label>
+                  </div>
+                  <div class="settings-actions">
+                    <button type="button" class="settings-button" id="settings-reset">Farben zurücksetzen</button>
+                  </div>
+                </article>
+                <article class="panel prompt-note">
+                  <h3>Hinweis für Farbangleichung</h3>
+                  <p class="muted">
+                    Wenn die Doku farblich zum eigentlichen Projekt im <strong>WORKSPACE</strong> passen soll, kannst du diesen Prompt verwenden.
+                  </p>
+                  <div class="prompt-box" id="workspace-color-prompt"></div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section class="wide doc-viewer" id="dokumentenansicht" aria-labelledby="dokumentenansicht-title">
+            <div class="section-header">
+              <h2 id="dokumentenansicht-title">Dokumentenansicht</h2>
+              <span class="eyebrow">Eingebettete Vorschau</span>
+            </div>
+            <p class="muted" style="margin-bottom: 12px">
+              Links aus Schnellzugriff, Bereichen und AI Tools werden hier direkt innerhalb der
+              Dokumentation geöffnet.
+            </p>
+            <iframe
+              class="doc-viewer-frame"
+              name="dokumentenansicht-frame"
+              title="Eingebettete Dokumentenansicht"
+              src="about:blank"
+            ></iframe>
+          </section>
+
+          <section class="wide" id="standards" aria-labelledby="standards-title">
+            <h2 id="standards-title">Standards dieser Übersicht</h2>
+            <ul>
+              <li>Dezentes und neutrales Design statt unnötiger visueller Lautstärke.</li>
+              <li>Zurückhaltende Typografie ohne übergroße Überschriften.</li>
+              <li>Lokale Funktion vor unnötiger Komplexität.</li>
+              <li>Responsive Struktur für Desktop, Tablet und Mobilgeräte.</li>
+              <li>Standardmäßige Unterstützung von Light- und Dark-Mode.</li>
+              <li>Barrierearme Grundstruktur mit klarer Navigation, Fokuszuständen und Sprunglink.</li>
+              <li>Aktiver Menüpunkt wird farblich hervorgehoben.</li>
+              <li>Markdown-Ansicht mit schwarzem Hintergrund und grüner Schrift.</li>
+              <li>Möglichst viele Doku-Bausteine kommen direkt aus generierten Daten.</li>
+            </ul>
+          </section>
+        </main>
+      </div>
+    </div>
+    <script src="./Dokumentation-Skills/generated/dokumentationsdaten.js"></script>
+    <script src="./Dokumentation-Skills/dokumentation-ui.js"></script>
+  </body>
+</html>

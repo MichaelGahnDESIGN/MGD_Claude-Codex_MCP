@@ -1,0 +1,31 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.md]
+charset = utf-8
+
+[*.html]
+charset = utf-8
+
+[*.css]
+charset = utf-8
+
+[*.js]
+charset = utf-8
+
+[*.ts]
+charset = utf-8
+
+[*.json]
+charset = utf-8
+
+[*.yml]
+charset = utf-8
+
+[*.yaml]
+charset = utf-8
