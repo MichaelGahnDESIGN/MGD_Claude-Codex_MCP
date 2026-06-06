@@ -57,12 +57,36 @@ jobs:
             echo "$lokale_artefakte"
             exit 1
           fi
-          if grep -RInE '(/Volumes/|/Users/|smb://|quickconnect|SynoToken|192-168|AI-Workspace|Coding Sandbox)' \
-            --exclude-dir=.git \
-            --exclude='package-lock.json' \
-            .; then
-            exit 1
-          fi
+          python3 - <<'PY'
+          from pathlib import Path
+
+          suchbegriffe = [
+              "/" + "Volumes/",
+              "/" + "Users/",
+              "smb:" + "//",
+              "quick" + "connect",
+              "Syno" + "Token",
+              "192" + "-168",
+          ]
+          ausnahmen = {Path("DEMOS/OPENROUTER/package-lock.json")}
+          treffer = []
+
+          for pfad in Path(".").rglob("*"):
+              if ".git" in pfad.parts or pfad in ausnahmen or not pfad.is_file():
+                  continue
+              try:
+                  inhalt = pfad.read_text(encoding="utf-8")
+              except UnicodeDecodeError:
+                  continue
+              for suchbegriff in suchbegriffe:
+                  if suchbegriff in inhalt:
+                      treffer.append(f"{pfad}: enthält privaten oder lokalen Hinweis")
+                      break
+
+          if treffer:
+              print("\n".join(treffer))
+              raise SystemExit(1)
+          PY
 
       - name: Dokumentationsdaten aktualisieren
         run: python3 DOKUMENTATION/Dokumentation-Skills/generate_dokumentationsdaten.py
