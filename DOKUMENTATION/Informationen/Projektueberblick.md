@@ -32,6 +32,10 @@ Wichtige Bereiche:
 - `DOKUMENTATION/`
 - `BACKUPS/`
 
+Wichtigster Einstieg:
+
+- `DOKUMENTATION/Informationen/Start_und_Orientierung.md`
+
 Besondere Entscheidung:
 
 - `DEMOS/OPENROUTER/` bleibt ein separater Demonstrationsbereich und wird nicht in

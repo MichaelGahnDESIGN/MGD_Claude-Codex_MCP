@@ -1,6 +1,6 @@
 {
   "schemaVersion": 4,
-  "generatedAt": "2026-06-07T01:11:51+02:00",
+  "generatedAt": "2026-06-07T01:16:06+02:00",
   "projectRoot": "/Volumes/AI-Workspace/Coding Sandbox/Claude-Codex-MCP",
   "documentationRoot": "/Volumes/AI-Workspace/Coding Sandbox/Claude-Codex-MCP/DOKUMENTATION",
   "tabs": {
@@ -17,6 +17,12 @@
           "path": "DOKUMENTATION/SKILL.md",
           "sourceHref": "SKILL.md",
           "href": "SKILL.md"
+        },
+        {
+          "label": "Start_und_Orientierung",
+          "path": "DOKUMENTATION/Informationen/Start_und_Orientierung.md",
+          "sourceHref": "Informationen/Start_und_Orientierung.md",
+          "href": "Informationen/Start_und_Orientierung.md"
         },
         {
           "label": "Projektueberblick",
@@ -521,7 +527,7 @@
             "counts": {
               "subareas": 6,
               "directories": 12,
-              "files": 15
+              "files": 16
             },
             "primaryLinks": [
               {
@@ -619,6 +625,13 @@
                     "path": "DOKUMENTATION/Informationen/Risiken.md",
                     "sourceHref": "Informationen/Risiken.md",
                     "href": "Informationen/Risiken.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "Start_und_Orientierung.md",
+                    "path": "DOKUMENTATION/Informationen/Start_und_Orientierung.md",
+                    "sourceHref": "Informationen/Start_und_Orientierung.md",
+                    "href": "Informationen/Start_und_Orientierung.md",
                     "type": "file"
                   }
                 ]
@@ -868,6 +881,12 @@
               "path": "DOKUMENTATION/Informationen/Risiken.md",
               "sourceHref": "Informationen/Risiken.md",
               "href": "Informationen/Risiken.md"
+            },
+            {
+              "label": "Start_und_Orientierung",
+              "path": "DOKUMENTATION/Informationen/Start_und_Orientierung.md",
+              "sourceHref": "Informationen/Start_und_Orientierung.md",
+              "href": "Informationen/Start_und_Orientierung.md"
             }
           ]
         },

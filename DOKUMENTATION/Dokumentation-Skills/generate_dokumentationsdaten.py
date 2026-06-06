@@ -419,6 +419,7 @@ def build_dev_documentation() -> dict:
             build_link_entry(path)
             for path in [
                 DEV_DOKU_ROOT / "SKILL.md",
+                DEV_DOKU_ROOT / "Informationen" / "Start_und_Orientierung.md",
                 DEV_DOKU_ROOT / "Informationen" / "Projektueberblick.md",
                 AI_ROOT / "AGENTEN" / "AGENTS.md",
                 AI_ROOT / "SKILLS" / "SKILL.md",

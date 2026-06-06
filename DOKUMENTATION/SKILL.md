@@ -40,6 +40,8 @@ Typische Beispiele:
 ## Einsortierungslogik
 
 - Projektwissen, Entscheidungen und Risiken gehören nach `Informationen/`.
+- Die zentrale Start- und Orientierungsdatei liegt unter
+  `Informationen/Start_und_Orientierung.md`.
 - rechtlich sensible Dokumentation, Prüflisten, Quellen und Bewertungen gehören nach `Rechtliches/`.
 - Setup, Deployment, Versionen und Backups gehören nach `Projektbetrieb/`.
 - offene Aufgaben und Sammellisten gehören nach `ToDo/`.

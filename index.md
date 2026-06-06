@@ -26,15 +26,22 @@ Root bleiben, weil sie von den jeweiligen Werkzeugen erwartet werden.
 ## Neues Projekt Starten
 
 1. Diesen Ordner kopieren und passend benennen.
-2. `AGENTS.md` oder `claude.md` vom verwendeten Tool lesen lassen.
-3. Projektkontext in
+2. `DOKUMENTATION/Informationen/Start_und_Orientierung.md` lesen.
+3. `AGENTS.md` oder `claude.md` vom verwendeten Tool lesen lassen.
+4. Projektkontext in
    `VORLAGE/AI/PROJEKTREGELN/ARBEITSKONTEXT.md` ausfüllen.
-4. Freigaben und Grenzen in
+5. Freigaben und Grenzen in
    `VORLAGE/AI/PROJEKTREGELN/FREIGABEN_UND_GRENZEN.md` dokumentieren.
-5. Projektcode ausschließlich in `PROJEKT/WORKSPACE/` anlegen.
-6. Wenn ein echtes Produkt entsteht, zusätzlich
+6. Projektcode ausschließlich in `PROJEKT/WORKSPACE/` anlegen.
+7. Wenn ein echtes Produkt entsteht, zusätzlich
    `PROJEKT/WORKSPACE/DOKUMENTATION/` pflegen.
-7. Entscheidungen, Risiken und Versionen in `DOKUMENTATION/` aktualisieren.
+8. Entscheidungen, Risiken und Versionen in `DOKUMENTATION/` aktualisieren.
+
+## Beste Übersicht
+
+Die ausführliche, nutzerfreundliche Gesamtübersicht liegt hier:
+
+`DOKUMENTATION/Informationen/Start_und_Orientierung.md`
 
 ## Dokumentation Aktualisieren
 

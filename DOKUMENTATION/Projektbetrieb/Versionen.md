@@ -27,3 +27,19 @@ Startversion dieser Vorlage pro neuem Projekt:
 - Rücknahme oder Wiederherstellung: Über Git-Diff nachvollziehbar. Bei Bedarf
   können die geänderten Dokumentationsdateien auf den vorherigen Stand
   zurückgeführt werden.
+
+## 0.0.3 - Zentrale Start- und Orientierungsdokumentation
+
+- Datum: `2026-06-07`
+- Version: `0.0.3`
+- Beschreibung: Eine zentrale, gut lesbare Orientierung für Menschen und
+  KI-Agenten wurde unter
+  `DOKUMENTATION/Informationen/Start_und_Orientierung.md` ergänzt und in den
+  Root-Einstiegen verlinkt.
+- Begründung: Die Vorlage soll als kopierbarer Projektstart schneller
+  verständlich, nutzerfreundlicher und für KI-Agenten eindeutiger sein.
+- Betroffene Bereiche: `index.md`, `AGENTS.md`, `claude.md`,
+  `DOKUMENTATION/Informationen/`, `DOKUMENTATION/Dokumentation-Skills/`.
+- Rücknahme oder Wiederherstellung: Über Git-Diff nachvollziehbar. Die Datei
+  kann entfernt werden, wenn eine andere zentrale Übersichtsstruktur eingeführt
+  wird.

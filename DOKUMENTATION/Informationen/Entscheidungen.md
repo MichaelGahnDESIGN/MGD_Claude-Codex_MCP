@@ -55,3 +55,16 @@ Jeder Eintrag soll mindestens enthalten:
   `VORLAGE/AI/TOOLING/`, Root-Dateien.
 - Folgen oder Trade-offs: Die Root-Dateien bleiben kurz, während
   tool-spezifische Details geordnet in eigenen Adapterordnern liegen.
+
+## 2026-06-07 - Zentrale Orientierungsdatei ergänzt
+
+- Datum: `2026-06-07`
+- Entscheidung: Die Vorlage erhält mit
+  `DOKUMENTATION/Informationen/Start_und_Orientierung.md` eine zentrale
+  Übersichtsdatei für Menschen und KI-Agenten.
+- Begründung: Neue Projektkopien sollen schneller verständlich sein, ohne den
+  Root mit zusätzlichen Dateien zu belasten.
+- Betroffene Bereiche: `index.md`, `AGENTS.md`, `claude.md`,
+  `DOKUMENTATION/Informationen/`, Dokumentationsgenerator.
+- Folgen oder Trade-offs: Die Orientierung ist besser gebündelt. Die Datei muss
+  bei strukturellen Änderungen mit gepflegt werden.
