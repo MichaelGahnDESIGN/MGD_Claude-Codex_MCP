@@ -142,6 +142,224 @@ danach mit Code in PROJEKT/WORKSPACE/. Keine Secrets oder personenbezogenen
 Daten speichern oder ausgeben.
 ```
 
+## Prompt-Cheatsheet Für Die Arbeit Mit Der Vorlage
+
+Diese Prompts helfen beim täglichen Arbeiten mit der Ordnerstruktur. Sie sind
+bewusst allgemein formuliert und können in Claude Cowork, Claude Code oder
+ChatGPT Codex angepasst verwendet werden.
+
+### Struktur Prüfen Und Aufräumen
+
+```text
+Bitte prüfe die komplette Projektstruktur.
+
+Ziel:
+- Root nur mit erlaubten Start- und GitHub-Dateien
+- Projektcode nur in PROJEKT/WORKSPACE/
+- Dokumentation sauber in DOKUMENTATION/
+- Demos getrennt in DEMOS/
+- keine Secrets, Logs, .env-Dateien, node_modules oder privaten Pfade
+
+Erstelle zuerst eine kurze Fundliste, behebe eindeutige Strukturfehler und
+dokumentiere relevante Änderungen in DOKUMENTATION/Informationen/Entscheidungen.md.
+```
+
+### Projektkontext Nachschärfen
+
+```text
+Bitte hilf mir, den Projektkontext sauber auszufüllen.
+
+Lies VORLAGE/AI/PROJEKTREGELN/ARBEITSKONTEXT.md und
+VORLAGE/AI/PROJEKTREGELN/FREIGABEN_UND_GRENZEN.md.
+
+Stelle mir nacheinander kurze Fragen zu Ziel, Zielgruppe, Technik, Grenzen,
+Risiken, Datenschutz, Budget und Erfolgskriterien. Aktualisiere die Dateien
+erst, wenn die Antworten klar genug sind.
+```
+
+### Neuen Skill Erstellen
+
+```text
+Bitte erstelle einen neuen wiederverwendbaren Skill für diese Vorlage.
+
+Skill-Zweck:
+<Was soll der Skill leisten?>
+
+Bitte lege den Skill in einem passenden Ordner unter VORLAGE/AI/SKILLS/ an,
+schreibe ihn auf Deutsch, erkläre Auslöser, Ablauf, Sicherheitsregeln und
+Prüfschritte. Ergänze bei Bedarf auch einen Codex-kompatiblen Repo-Skill unter
+.agents/skills/.
+```
+
+### Skill Für Backup Erstellen
+
+```text
+Bitte erstelle einen Skill "Backup erstellen".
+
+Der Skill soll erklären:
+- wann ein Backup sinnvoll ist
+- welche Ordner gesichert werden sollen
+- welche Dateien nie ins Backup gehören, zum Beispiel echte .env-Dateien
+- wie ein Backup benannt wird
+- wie das Backup in DOKUMENTATION/Projektbetrieb/Backups.md dokumentiert wird
+- welche Prüfung nach dem Backup erfolgen soll
+
+Bitte schreibe alles so, dass auch Nicht-Programmierer den Ablauf verstehen.
+```
+
+### Backup Erstellen
+
+```text
+Bitte erstelle ein lokales Backup dieses Projektordners.
+
+Wichtig:
+- keine echten .env-Dateien, node_modules, Logs oder temporären Dateien sichern
+- Backup sauber benennen
+- Backup nicht ungefragt in Git aufnehmen
+- Ergebnis in DOKUMENTATION/Projektbetrieb/Backups.md dokumentieren
+- nach dem Backup git status --short --branch prüfen
+```
+
+### Backup Laden Oder Wiederherstellen
+
+```text
+Bitte hilf mir, ein Backup kontrolliert wiederherzustellen.
+
+Backup:
+<Name oder Pfad des Backups>
+
+Bitte prüfe zuerst den aktuellen Git-Status, erkläre mögliche Risiken, erstelle
+einen Wiederherstellungsplan und überschreibe keine vorhandenen Änderungen ohne
+ausdrückliche Freigabe.
+```
+
+### Dokumentation Aktualisieren
+
+```text
+Bitte aktualisiere die Projektdokumentation nach den letzten Änderungen.
+
+Prüfe:
+- DOKUMENTATION/Informationen/Entscheidungen.md
+- DOKUMENTATION/Informationen/Risiken.md
+- DOKUMENTATION/Projektbetrieb/Versionen.md
+- DOKUMENTATION/ToDo/Offene_Punkte.md
+- README.md, falls die Änderung für Menschen wichtig ist
+
+Führe danach den Dokumentationsgenerator aus und prüfe, ob die generierten Daten
+reproduzierbar bleiben.
+```
+
+### Versionierung Und Changelog Pflegen
+
+```text
+Bitte bereite eine neue Version vor.
+
+Neue Version:
+<Versionsnummer>
+
+Bitte prüfe die bisherigen Änderungen, schlage eine sinnvolle Kurzbeschreibung
+vor, aktualisiere VERSION, CHANGELOG.md und
+DOKUMENTATION/Projektbetrieb/Versionen.md. Erstelle danach einen Commit-Vorschlag
+und nenne die passenden Prüfkommandos.
+```
+
+### Release Für GitHub Vorbereiten
+
+```text
+Bitte bereite einen GitHub-Release vor.
+
+Version:
+<Versionsnummer>
+
+Bitte prüfe:
+- Arbeitsbaum sauber?
+- VERSION und CHANGELOG.md aktuell?
+- README.md verständlich?
+- GitHub Actions grün?
+- keine Secrets oder privaten Pfade?
+
+Erstelle danach den Tag, pushe Branch und Tag und erstelle den GitHub-Release
+mit klaren Release Notes.
+```
+
+### Sicherheitsprüfung
+
+```text
+Bitte führe eine Sicherheits- und Datenschutzprüfung für dieses Projekt durch.
+
+Suche nach:
+- Secrets, Tokens, Passwörtern und API-Schlüsseln
+- personenbezogenen Daten
+- Zahlungs-, Rechnungs- oder Kundendaten
+- unsicheren Logs
+- privaten lokalen Pfaden
+- riskanten Drittanbieter-Abhängigkeiten
+
+Bitte nichts Sensibles ausgeben. Fasse nur Fundorte, Risiko und empfohlene
+Maßnahmen zusammen.
+```
+
+### OpenRouter-Demo Prüfen
+
+```text
+Bitte prüfe die OpenRouter-Demo.
+
+Wichtig:
+- DEMOS/OPENROUTER/ bleibt getrennt von PROJEKT/WORKSPACE/
+- echte API-Schlüssel bleiben nur lokal in .env
+- .env darf nicht versioniert werden
+- npm --prefix DEMOS/OPENROUTER run check ausführen
+- Risiken oder Kostenhinweise in DOKUMENTATION/Informationen/Risiken.md und
+  DOKUMENTATION/Informationen/Kosten_und_Lizenzen.md dokumentieren
+```
+
+### Übergabe An Einen Anderen KI-Agenten
+
+```text
+Bitte erstelle eine kurze Übergabe für einen anderen KI-Agenten.
+
+Die Übergabe soll enthalten:
+- Ziel des Projekts
+- aktueller Stand
+- wichtige Dateien
+- offene Aufgaben
+- Risiken
+- zuletzt ausgeführte Prüfungen
+- klare nächste Schritte
+
+Keine Secrets, privaten Pfade oder personenbezogenen Daten aufnehmen.
+```
+
+### Code Oder App Im Workspace Starten
+
+```text
+Bitte starte eine neue technische Umsetzung in PROJEKT/WORKSPACE/.
+
+Projektidee:
+<kurze Beschreibung>
+
+Bitte lies zuerst die Regeln, schlage eine klare Ordnerstruktur vor, lege
+Funktionen, Komponenten, Views, Services und Konfigurationen in getrennten
+Dateien an und dokumentiere Architekturentscheidungen verständlich auf Deutsch.
+```
+
+### Projekt Für Kopie Bereinigen
+
+```text
+Bitte bereite dieses Projekt darauf vor, als Vorlage kopiert zu werden.
+
+Entferne oder ignoriere:
+- node_modules
+- Build-Ausgaben
+- Logs
+- echte .env-Dateien
+- lokale Backups
+- temporäre Dateien
+- private Pfade
+
+Prüfe danach Root-Struktur, Dokumentationsstruktur, Git-Status und README.
+```
+
 ## Arbeiten Mit KI-Agenten
 
 ### ChatGPT Codex
