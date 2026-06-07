@@ -1,500 +1,423 @@
-# AI Basic Projektordner
+# Claude-Codex-MCP
 
-Eine saubere, deutsch dokumentierte Projektvorlage für KI-gestützte Arbeit mit
-Claude Code, Claude Cowork, ChatGPT Codex und ähnlichen Agenten.
+**Version:** `0.2.0`
 
-Diese Vorlage ist dafür gedacht, als kompletter Projektordner heruntergeladen,
-kopiert und für neue Projekte wiederverwendet zu werden. Menschen sollen sich
-schnell orientieren können, und KI-Agenten sollen klare Startdateien,
-Arbeitsregeln, Skills, Dokumentationsbereiche und Sicherheitsgrenzen finden.
+Ein lokales MCP-System, mit dem mehrere KI-Agenten wie ChatGPT Codex, Claude
+Code, Claude Cowork und weitere Werkzeuge über ein gemeinsames Aufgaben-,
+Chat- und Übergabeprotokoll zusammenarbeiten können.
 
-Wichtig: Das ist keine App-, Framework- oder Website-Vorlage. Es ist eine
-neutrale KI-Projektordner-Vorlage, die vor dem eigentlichen Bauen Ordnung,
-Kontext, Dokumentation und Arbeitsregeln bereitstellt.
+Das Projekt ist aus einer praktischen Arbeitsweise entstanden: In TINTLING hat
+sich eine gemeinsame Markdown-Datei als Kommunikationskanal zwischen Claude und
+Codex bewährt. `Claude-Codex-MCP` macht daraus ein wiederverwendbares,
+strukturiertes und trotzdem menschenlesbares Werkzeug.
 
-## Für Wen Ist Diese Vorlage Gedacht?
+## Kurzfassung
 
-- Menschen, die neue Software-, Web-, App-, Automations- oder KI-Projekte
-  sauber starten möchten.
-- Teams, die mit Claude Code, Claude Cowork oder ChatGPT Codex arbeiten.
-- Agenten, die eine eindeutige Ordnerstruktur, klare Anweisungen und eine
-  nachvollziehbare Dokumentation benötigen.
-- Projekte, bei denen Datenschutz, Sicherheit, Wartbarkeit und verständliche
-  Ablage wichtiger sind als schnelle Sammeldateien.
+`Claude-Codex-MCP` ist ein lokaler MCP-Server für Agenten-Zusammenarbeit.
 
-## Was Ist Enthalten?
+Er verwaltet:
 
-- Startdateien für Menschen, Claude und Codex.
-- Eine klare Trennung zwischen Vorlage, Projektcode, Dokumentation, Demos und
-  Backups.
-- Wiederverwendbare Agentenregeln und Skills.
-- Eine HTML-Dokumentationsübersicht.
-- Eine separate OpenRouter-Demo als Beispiel für API-Tests.
-- Sicherheitsregeln für Secrets, personenbezogene Daten, Zahlungen,
-  Authentifizierung, Logs und Admin-Funktionen.
-- GitHub-Dateien für Prüfung, Release-Hinweise, Sicherheitsrichtlinie und
-  öffentliche Nutzung.
-- GitHub Wiki mit Schnellstart, Ordnerstruktur, Prompt-Cheatsheet,
-  Sicherheits-, Backup- und Release-Hinweisen.
+- Chat-Nachrichten
+- Aufgaben-Queue
+- Aufgabenstatus
+- Übergaben
+- Done-Bereich
+- Blocker und Rückfragen
+- Entscheidungen
+- Log und History
+- Sicherheitsprüfung gegen offensichtliche Secrets
 
-## Ordnerstruktur
+Der wichtigste Grundsatz:
+
+> Lokal-first. Menschenlesbar. Keine Cloud-Pflicht. Keine sensiblen Daten.
+
+## Für Wen Ist Das Projekt Gedacht?
+
+Dieses Projekt ist sinnvoll für:
+
+- Entwicklerinnen und Entwickler, die mit mehreren KI-Agenten arbeiten.
+- Teams, die Codex und Claude parallel oder nacheinander nutzen.
+- Projekte, in denen KI-Agenten Aufgaben sauber übergeben sollen.
+- lokale Entwicklungsumgebungen ohne Cloud-Zwang.
+- Experimente mit MCP, Agenten-Kommunikation und KI-Projektsteuerung.
+- Menschen, die weiterhin Markdown lesen möchten, aber strukturierte Tools
+  brauchen.
+
+## Problem
+
+Wenn mehrere KI-Agenten am selben Projekt arbeiten, gehen Informationen leicht
+verloren:
+
+- Wer arbeitet gerade woran?
+- Welche Aufgabe ist offen?
+- Was wurde erledigt?
+- Welche Rückfrage blockiert die Arbeit?
+- Welche Entscheidung gilt dauerhaft?
+- Welche Dateien wurden geändert?
+- Welche Tests wurden ausgeführt?
+- Was darf aus Sicherheitsgründen nicht gespeichert werden?
+
+Eine einfache Markdown-Datei ist gut lesbar, aber nicht ideal für strukturierte
+Tool-Aufrufe. Ein reines JSON-System ist strukturiert, aber für Menschen
+unangenehm. Dieses Projekt verbindet beides.
+
+## Lösung
+
+Der MCP-Server schreibt zwei lokale Dateien:
+
+- `agent_comms.md`
+- `agent_comms.state.json`
+
+`agent_comms.md` bleibt für Menschen und Agenten lesbar.  
+`agent_comms.state.json` enthält den strukturierten Zustand für MCP-Tools.
+
+Die Tools verändern den State kontrolliert. Danach wird Markdown neu gerendert.
+Dadurch kann ein Agent strukturiert arbeiten, während Menschen weiterhin eine
+normale Markdown-Datei lesen können.
+
+## Aktueller Stand
+
+Phase 1 ist umgesetzt.
+
+Enthalten sind:
+
+- lokaler MCP-Server über stdio
+- dateibasierter Speicher
+- menschenlesbare Markdown-Ausgabe
+- strukturierter JSON-State
+- 12 MCP-Tools
+- Safety-Check vor Schreibvorgängen
+- Tests für Safety, Task-Statuswechsel, Markdown und Storage
+- Smoke-Test für Tool-Registrierung
+- deutschsprachige Dokumentation
+
+Noch nicht enthalten:
+
+- NPM-Release
+- offizielles MCP-SDK
+- SQLite-Backend
+- Cloud- oder Remote-Betrieb
+- automatische Skill-Generierung
+- vollständiger Import alter `AI_COMMS.md`-Dateien
+
+## MCP-Tools
+
+Phase 1 registriert diese Tools:
+
+| Tool | Zweck |
+| --- | --- |
+| `read_context` | Liest Projektkontext, aktive Tasks, letzte Logs und offene Blocker. |
+| `list_tasks` | Gibt Aufgaben aus der Queue mit Status, Ziel-Agent und Priorität zurück. |
+| `create_task` | Erstellt eine neue Aufgabe mit Kontext und Akzeptanzkriterien. |
+| `claim_task` | Setzt eine Aufgabe auf `IN_PROGRESS`. |
+| `complete_task` | Verschiebt eine Aufgabe nach `DONE`. |
+| `append_chat` | Fügt eine Chat-, Hinweis- oder Frage-Nachricht hinzu. |
+| `add_blocker` | Dokumentiert eine Blockade oder Rückfrage. |
+| `resolve_blocker` | Markiert eine Blockade als gelöst. |
+| `add_decision` | Dokumentiert eine dauerhafte Entscheidung. |
+| `write_handoff` | Schreibt eine klare Übergabe. |
+| `validate_safety` | Prüft Inhalte auf riskante Muster. |
+| `reset_round` | Setzt Queue und Done-Bereich nach einer Runde zurück. |
+
+Ausführliche Tool-Dokumentation:
 
 ```text
-.
-├── README.md
-├── LICENSE
-├── CHANGELOG.md
-├── VERSION
-├── SECURITY.md
-├── index.md
-├── CLAUDE.md
-├── claude.md
-├── AGENTS.md
-├── .agents/
-├── .claude/
-├── .codex/
-├── .github/
-├── VORLAGE/
-├── PROJEKT/
-├── DOKUMENTATION/
-├── DEMOS/
-└── BACKUPS/
+PROJEKT/WORKSPACE/docs/mcp_tools.md
 ```
 
-## Die Wichtigsten Bereiche
+## Statuswerte
+
+Aufgaben können diese Statuswerte haben:
+
+- `PENDING`
+- `IN_PROGRESS`
+- `DONE`
+- `BLOCKED`
+- `CANCELED`
+
+## Task-Typen
+
+Unterstützte Typen:
+
+- `CODE`
+- `REVIEW`
+- `PIXEL_ART`
+- `IMAGE_GENERATION`
+- `UI_CONCEPT`
+- `DOCS`
+- `BRAINSTORM`
+- `DEPLOY`
+- `QA`
+- `SECURITY`
+
+## Sicherheit
+
+Datenschutz und Sicherheit sind zentrale Projektziele.
+
+Das System soll keine sensiblen Daten speichern, loggen oder weitergeben.
+Schreibende Tools prüfen Eingaben vor dem Speichern.
+
+Blockiert werden unter anderem offensichtliche Hinweise auf:
+
+- `.env`-Dateien
+- API-Keys
+- Tokens
+- Passwörter
+- private Schlüssel
+- Datenbank-URLs
+- SSH-Schlüssel
+- Datenbank-Dumps oder Backup-Dateien
+
+Wichtig:
+
+Der Safety-Check ist ein Schutz gegen offensichtliche Fehler. Er ersetzt keine
+vollständige Datenschutzprüfung, kein Secret-Scanning und keine Rechtsberatung.
+Agenten und Menschen sollen sensible Daten weiterhin konsequent vermeiden.
+
+Mehr dazu:
+
+```text
+PROJEKT/WORKSPACE/docs/sicherheitsregeln.md
+```
+
+## Installation Für Lokale Nutzung
+
+Aktuell ist das Projekt dependency-frei umgesetzt. Es braucht keine
+Paketinstallation.
+
+Voraussetzung:
+
+- Node.js ab `22.6.0`
+
+Repository klonen:
+
+```bash
+git clone https://github.com/MichaelGahnDESIGN/Claude-Codex-MCP.git
+cd Claude-Codex-MCP
+```
+
+Prüfung ausführen:
+
+```bash
+npm --prefix PROJEKT/WORKSPACE run check
+```
+
+Server starten:
+
+```bash
+cd PROJEKT/WORKSPACE
+npm start
+```
+
+Der Server nutzt dann den aktuellen Ordner als Speicherort.
+
+## Speicherort Festlegen
+
+Für ein konkretes Projekt kann der Speicherort gesetzt werden:
+
+```bash
+AGENT_COMMS_DIR=/pfad/zum/projekt npm --prefix PROJEKT/WORKSPACE start
+```
+
+Dann entstehen im Zielprojekt:
+
+```text
+agent_comms.md
+agent_comms.state.json
+```
+
+Diese Dateien enthalten die gemeinsame Agenten-Kommunikation.
+
+## Beispiel: Wie Agenten Damit Arbeiten
+
+Typischer Ablauf:
+
+1. Codex ruft `read_context` auf.
+2. Codex erstellt mit `create_task` eine Aufgabe für Claude.
+3. Claude prüft mit `list_tasks` die Queue.
+4. Claude übernimmt mit `claim_task`.
+5. Claude dokumentiert Rückfragen mit `add_blocker`.
+6. Claude schließt die Aufgabe mit `complete_task`.
+7. Codex liest den neuen Stand mit `read_context`.
+8. Beide Agenten können Entscheidungen mit `add_decision` festhalten.
+9. Eine klare Übergabe entsteht mit `write_handoff`.
+
+## Beispiel-Datei
+
+Ein Beispiel für die menschenlesbare Markdown-Ausgabe liegt hier:
+
+```text
+PROJEKT/WORKSPACE/examples/agent_comms.md
+```
+
+## Projektstruktur
+
+Der eigentliche MCP-Code liegt im Workspace:
+
+```text
+PROJEKT/WORKSPACE/
+├── README.md
+├── package.json
+├── tsconfig.json
+├── docs/
+├── examples/
+├── src/
+│   ├── domain/
+│   ├── markdown/
+│   ├── mcp/
+│   ├── safety/
+│   ├── scripts/
+│   ├── storage/
+│   └── tools/
+└── tests/
+```
+
+Wichtige Bereiche:
 
 | Bereich | Zweck |
 | --- | --- |
-| `README.md` | Öffentliche Erklärung für GitHub und Menschen. |
-| `SECURITY.md` | Sicherheitsrichtlinie und Meldeweg. |
-| `index.md` | Kurzer Einstieg in die lokale Vorlage. |
-| `CLAUDE.md` | Automatisch erkannter Einstieg für Claude Code. |
-| `claude.md` | Menschenfreundliche Claude-Erklärung. |
-| `AGENTS.md` | Startanweisung für ChatGPT Codex. |
-| `.agents/skills/` | Repo-Skills für Codex-kompatible Arbeitsabläufe. |
-| `.claude/` | Claude-spezifische Adapter und Hilfen. |
-| `.codex/` | Codex-Konfiguration. |
-| `.github/` | GitHub-Workflows, Release-Konfiguration und Issue-Vorlagen. |
-| `VORLAGE/` | Regeln, Agenten, Skills und Tooling-Dokumentation. |
-| `PROJEKT/WORKSPACE/` | Hier entsteht der konkrete Projektcode. |
-| `DOKUMENTATION/` | Entscheidungen, Risiken, Setup, Versionen und Rechtliches. |
-| `DEMOS/OPENROUTER/` | Separater Demo- und Testbereich für OpenRouter. |
-| `BACKUPS/` | Lokale Sicherungen, standardmäßig nicht versioniert. |
+| `src/domain/` | Aufgaben, Statuswechsel, Chat, Blocker, Entscheidungen. |
+| `src/storage/` | Dateibasiertes Laden und Speichern. |
+| `src/markdown/` | Ausgabe in menschenlesbares Markdown. |
+| `src/safety/` | Sicherheitsprüfung. |
+| `src/tools/` | Tool-Handler und Eingabeprüfung. |
+| `src/mcp/` | Lokaler JSON-RPC/MCP-Server über stdio. |
+| `tests/` | Tests für Phase 1. |
+| `docs/` | Deutsche Projektdokumentation. |
+| `examples/` | Beispiel-Protokolle. |
 
-## Schnellstart
+## Lokaler MCP-Betrieb
 
-1. Repository herunterladen oder klonen.
-2. Ordner für dein neues Projekt kopieren.
-3. Projektordner passend umbenennen.
-4. `index.md` lesen.
-5. Je nach Tool zusätzlich `CLAUDE.md`, `claude.md` oder `AGENTS.md` lesen
-   lassen.
-6. Projektkontext in `VORLAGE/AI/PROJEKTREGELN/ARBEITSKONTEXT.md` ausfüllen.
-7. Freigaben und Grenzen in
-   `VORLAGE/AI/PROJEKTREGELN/FREIGABEN_UND_GRENZEN.md` dokumentieren.
-8. Eigenen Code ausschließlich in `PROJEKT/WORKSPACE/` anlegen.
-9. Relevante Entscheidungen, Risiken und Versionen in `DOKUMENTATION/`
-   pflegen.
+Das System läuft in Phase 1 lokal.
 
-### Prompt-Beispiele Für Den Projektstart
+Es läuft nicht automatisch über:
 
-Die folgenden Prompts können nach dem Kopieren der Vorlage direkt im jeweiligen
-KI-Werkzeug verwendet werden. Ersetze die Platzhalter durch dein echtes
-Projektziel.
+- GitHub
+- all-inkl
+- einen Cloud-Server
+- einen zentralen Dienst
 
-#### Claude Cowork
+GitHub verteilt den Code. Der MCP-Prozess läuft bei der Person oder auf dem
+System, das ihn startet.
+
+Zielmodell:
 
 ```text
-Bitte richte dieses Projekt als neue Arbeitsgrundlage ein.
-
-Lies zuerst claude.md, index.md und
-DOKUMENTATION/Informationen/Start_und_Orientierung.md.
-
-Ziel des neuen Projekts:
-<kurze Beschreibung des Projekts>
-
-Bitte prüfe die vorhandene Ordnerstruktur, fülle den Projektkontext in
-VORLAGE/AI/PROJEKTREGELN/ARBEITSKONTEXT.md sinnvoll vor, dokumentiere offene
-Fragen in DOKUMENTATION/ToDo/Offene_Punkte.md und lege noch keinen Produktcode
-an, bevor der Arbeitskontext klar ist.
+Codex / Claude / anderer MCP-Client
+        ↓
+lokaler MCP-Prozess
+        ↓
+agent_comms.md
+agent_comms.state.json
+        ↓
+lokales Projekt
 ```
 
-#### Claude Code
+## Warum Nicht Direkt Cloud?
 
-```text
-Starte dieses Projekt aus der Vorlage heraus.
+Weil Agenten-Kommunikation schnell sensible Informationen enthalten kann:
 
-Lies CLAUDE.md, claude.md, index.md, VORLAGE/REGELN/GRUNDREGELN.md und
-VORLAGE/AI/PROJEKTREGELN/PROJEKTREGELN.md.
+- Dateipfade
+- interne Aufgaben
+- Bugreports
+- technische Entscheidungen
+- Testnotizen
+- potenziell vertrauliche Projektinformationen
 
-Projektidee:
-<kurze Beschreibung des Projekts>
+Darum ist lokal-first der sichere Standard. Ein optionaler Remote-Betrieb kann
+später entstehen, muss aber gesondert abgesichert und dokumentiert werden.
 
-Bitte bereite PROJEKT/WORKSPACE/ als sauberen Projektarbeitsbereich vor,
-notiere Entscheidungen in DOKUMENTATION/Informationen/Entscheidungen.md,
-beachte Datenschutz und Sicherheit, und halte alle neuen Dateien in passenden
-Ordnern.
+## Tests
+
+Alle Phase-1-Tests:
+
+```bash
+npm --prefix PROJEKT/WORKSPACE test
 ```
 
-#### ChatGPT Codex
+Smoke-Test:
 
-```text
-Nutze diese Vorlage als Startpunkt für ein neues Projekt.
-
-Lies zuerst AGENTS.md, index.md,
-DOKUMENTATION/Informationen/Start_und_Orientierung.md und die Regeln unter
-VORLAGE/AI/PROJEKTREGELN/.
-
-Projektziel:
-<kurze Beschreibung des Projekts>
-
-Bitte analysiere die Struktur, erstelle einen kurzen Umsetzungsplan, fülle
-fehlende Projektkontext-Dateien soweit möglich allgemein aus und beginne erst
-danach mit Code in PROJEKT/WORKSPACE/. Keine Secrets oder personenbezogenen
-Daten speichern oder ausgeben.
+```bash
+npm --prefix PROJEKT/WORKSPACE run smoke
 ```
 
-## Prompt-Cheatsheet Für Die Arbeit Mit Der Vorlage
+Gesamtprüfung:
 
-Diese Prompts helfen beim täglichen Arbeiten mit der Ordnerstruktur. Sie sind
-bewusst allgemein formuliert und können in Claude Cowork, Claude Code oder
-ChatGPT Codex angepasst verwendet werden.
-
-### Struktur Prüfen Und Aufräumen
-
-```text
-Bitte prüfe die komplette Projektstruktur.
-
-Ziel:
-- Root nur mit erlaubten Start- und GitHub-Dateien
-- Projektcode nur in PROJEKT/WORKSPACE/
-- Dokumentation sauber in DOKUMENTATION/
-- Demos getrennt in DEMOS/
-- keine Secrets, Logs, .env-Dateien, node_modules oder privaten Pfade
-
-Erstelle zuerst eine kurze Fundliste, behebe eindeutige Strukturfehler und
-dokumentiere relevante Änderungen in DOKUMENTATION/Informationen/Entscheidungen.md.
+```bash
+npm --prefix PROJEKT/WORKSPACE run check
 ```
 
-### Projektkontext Nachschärfen
-
-```text
-Bitte hilf mir, den Projektkontext sauber auszufüllen.
-
-Lies VORLAGE/AI/PROJEKTREGELN/ARBEITSKONTEXT.md und
-VORLAGE/AI/PROJEKTREGELN/FREIGABEN_UND_GRENZEN.md.
-
-Stelle mir nacheinander kurze Fragen zu Ziel, Zielgruppe, Technik, Grenzen,
-Risiken, Datenschutz, Budget und Erfolgskriterien. Aktualisiere die Dateien
-erst, wenn die Antworten klar genug sind.
-```
-
-### Neuen Skill Erstellen
-
-```text
-Bitte erstelle einen neuen wiederverwendbaren Skill für diese Vorlage.
-
-Skill-Zweck:
-<Was soll der Skill leisten?>
-
-Bitte lege den Skill in einem passenden Ordner unter VORLAGE/AI/SKILLS/ an,
-schreibe ihn auf Deutsch, erkläre Auslöser, Ablauf, Sicherheitsregeln und
-Prüfschritte. Ergänze bei Bedarf auch einen Codex-kompatiblen Repo-Skill unter
-.agents/skills/.
-```
-
-### Skill Für Backup Erstellen
-
-```text
-Bitte erstelle einen Skill "Backup erstellen".
-
-Der Skill soll erklären:
-- wann ein Backup sinnvoll ist
-- welche Ordner gesichert werden sollen
-- welche Dateien nie ins Backup gehören, zum Beispiel echte .env-Dateien
-- wie ein Backup benannt wird
-- wie das Backup in DOKUMENTATION/Projektbetrieb/Backups.md dokumentiert wird
-- welche Prüfung nach dem Backup erfolgen soll
-
-Bitte schreibe alles so, dass auch Nicht-Programmierer den Ablauf verstehen.
-```
-
-### Backup Erstellen
-
-```text
-Bitte erstelle ein lokales Backup dieses Projektordners.
-
-Wichtig:
-- keine echten .env-Dateien, node_modules, Logs oder temporären Dateien sichern
-- Backup sauber benennen
-- Backup nicht ungefragt in Git aufnehmen
-- Ergebnis in DOKUMENTATION/Projektbetrieb/Backups.md dokumentieren
-- nach dem Backup git status --short --branch prüfen
-```
-
-### Backup Laden Oder Wiederherstellen
-
-```text
-Bitte hilf mir, ein Backup kontrolliert wiederherzustellen.
-
-Backup:
-<Name oder Pfad des Backups>
-
-Bitte prüfe zuerst den aktuellen Git-Status, erkläre mögliche Risiken, erstelle
-einen Wiederherstellungsplan und überschreibe keine vorhandenen Änderungen ohne
-ausdrückliche Freigabe.
-```
-
-### Dokumentation Aktualisieren
-
-```text
-Bitte aktualisiere die Projektdokumentation nach den letzten Änderungen.
-
-Prüfe:
-- DOKUMENTATION/Informationen/Entscheidungen.md
-- DOKUMENTATION/Informationen/Risiken.md
-- DOKUMENTATION/Projektbetrieb/Versionen.md
-- DOKUMENTATION/ToDo/Offene_Punkte.md
-- README.md, falls die Änderung für Menschen wichtig ist
-
-Führe danach den Dokumentationsgenerator aus und prüfe, ob die generierten Daten
-reproduzierbar bleiben.
-```
-
-### Versionierung Und Changelog Pflegen
-
-```text
-Bitte bereite eine neue Version vor.
-
-Neue Version:
-<Versionsnummer>
-
-Bitte prüfe die bisherigen Änderungen, schlage eine sinnvolle Kurzbeschreibung
-vor, aktualisiere VERSION, CHANGELOG.md und
-DOKUMENTATION/Projektbetrieb/Versionen.md. Erstelle danach einen Commit-Vorschlag
-und nenne die passenden Prüfkommandos.
-```
-
-### Release Für GitHub Vorbereiten
-
-```text
-Bitte bereite einen GitHub-Release vor.
-
-Version:
-<Versionsnummer>
-
-Bitte prüfe:
-- Arbeitsbaum sauber?
-- VERSION und CHANGELOG.md aktuell?
-- README.md verständlich?
-- GitHub Actions grün?
-- keine Secrets oder privaten Pfade?
-
-Erstelle danach den Tag, pushe Branch und Tag und erstelle den GitHub-Release
-mit klaren Release Notes.
-```
-
-### Sicherheitsprüfung
-
-```text
-Bitte führe eine Sicherheits- und Datenschutzprüfung für dieses Projekt durch.
-
-Suche nach:
-- Secrets, Tokens, Passwörtern und API-Schlüsseln
-- personenbezogenen Daten
-- Zahlungs-, Rechnungs- oder Kundendaten
-- unsicheren Logs
-- privaten lokalen Pfaden
-- riskanten Drittanbieter-Abhängigkeiten
-
-Bitte nichts Sensibles ausgeben. Fasse nur Fundorte, Risiko und empfohlene
-Maßnahmen zusammen.
-```
-
-### OpenRouter-Demo Prüfen
-
-```text
-Bitte prüfe die OpenRouter-Demo.
-
-Wichtig:
-- DEMOS/OPENROUTER/ bleibt getrennt von PROJEKT/WORKSPACE/
-- echte API-Schlüssel bleiben nur lokal in .env
-- .env darf nicht versioniert werden
-- npm --prefix DEMOS/OPENROUTER run check ausführen
-- Risiken oder Kostenhinweise in DOKUMENTATION/Informationen/Risiken.md und
-  DOKUMENTATION/Informationen/Kosten_und_Lizenzen.md dokumentieren
-```
-
-### Übergabe An Einen Anderen KI-Agenten
-
-```text
-Bitte erstelle eine kurze Übergabe für einen anderen KI-Agenten.
-
-Die Übergabe soll enthalten:
-- Ziel des Projekts
-- aktueller Stand
-- wichtige Dateien
-- offene Aufgaben
-- Risiken
-- zuletzt ausgeführte Prüfungen
-- klare nächste Schritte
-
-Keine Secrets, privaten Pfade oder personenbezogenen Daten aufnehmen.
-```
-
-### Code Oder App Im Workspace Starten
-
-```text
-Bitte starte eine neue technische Umsetzung in PROJEKT/WORKSPACE/.
-
-Projektidee:
-<kurze Beschreibung>
-
-Bitte lies zuerst die Regeln, schlage eine klare Ordnerstruktur vor, lege
-Funktionen, Komponenten, Views, Services und Konfigurationen in getrennten
-Dateien an und dokumentiere Architekturentscheidungen verständlich auf Deutsch.
-```
-
-### Projekt Für Kopie Bereinigen
-
-```text
-Bitte bereite dieses Projekt darauf vor, als Vorlage kopiert zu werden.
-
-Entferne oder ignoriere:
-- node_modules
-- Build-Ausgaben
-- Logs
-- echte .env-Dateien
-- lokale Backups
-- temporäre Dateien
-- private Pfade
-
-Prüfe danach Root-Struktur, Dokumentationsstruktur, Git-Status und README.
-```
-
-## Arbeiten Mit KI-Agenten
-
-### ChatGPT Codex
-
-Codex startet über `AGENTS.md`. Zusätzlich sind die Repo-Skills unter
-`.agents/skills/` für wiederkehrende Aufgaben vorbereitet.
-
-### Claude Code Und Claude Cowork
-
-Claude Code erkennt `CLAUDE.md` automatisch. Diese Datei importiert `AGENTS.md`
-und verweist zusätzlich auf `claude.md`, damit die gemeinsame Agentenlogik nicht
-doppelt gepflegt werden muss. `claude.md` bleibt als menschenfreundliche
-Erklärung erhalten.
-
-### Gemeinsame Agentenlogik
-
-Die operative Agentenlogik liegt in `VORLAGE/AI/AGENTEN/`. Regeln und
-projektspezifische Grenzen liegen in `VORLAGE/AI/PROJEKTREGELN/`.
+Der aktuelle Stand wurde mit 7 Tests und einem Smoke-Test geprüft.
 
 ## Dokumentation
 
-Die zentrale Leseseite für Menschen und KI-Agenten liegt hier:
+Wichtige Dokumente:
 
 ```text
-DOKUMENTATION/Informationen/Start_und_Orientierung.md
+PROJEKT/WORKSPACE/docs/konzept.md
+PROJEKT/WORKSPACE/docs/mcp_tools.md
+PROJEKT/WORKSPACE/docs/sicherheitsregeln.md
+PROJEKT/WORKSPACE/docs/codex_integration.md
+PROJEKT/WORKSPACE/docs/claude_integration.md
 ```
 
-Die visuelle HTML-Übersicht liegt hier:
+Zusätzlich enthält das Repository Vorlagen- und Projektdokumentation unter:
 
 ```text
-DOKUMENTATION/index.html
+DOKUMENTATION/
+VORLAGE/
 ```
 
-Nach Strukturänderungen können die Dokumentationsdaten aktualisiert werden:
+Diese Bereiche sind bewusst noch vorhanden, weil das Projekt aus einer
+KI-Projektvorlage heraus entstanden ist und die Agenten-Regeln weiter nutzbar
+bleiben.
 
-```bash
-python3 DOKUMENTATION/Dokumentation-Skills/generate_dokumentationsdaten.py
-```
+## Roadmap
 
-## Sicherheit Und Datenschutz
+Geplante nächste Schritte:
 
-Diese Vorlage ist bewusst sicherheitsorientiert. Folgende Inhalte dürfen nicht
-in Code, Dokumentation, Logs, Prompts oder Git abgelegt werden:
+- README und GitHub-Projekt weiter für öffentliche Nutzung schärfen.
+- offiziellen MCP-SDK-Einsatz prüfen.
+- NPM-Paket vorbereiten.
+- einfache CLI für lokale Tool-Tests ergänzen.
+- Import bestehender `AI_COMMS.md`-Dateien bauen.
+- atomare Schreibvorgänge für Storage ergänzen.
+- Eingabevalidierung weiter härten.
+- optional SQLite-Backend vorbereiten.
+- Skills/Prompts für Codex und Claude automatisch erzeugen.
+- öffentliche Beispiele und kurze Video-/Screenshot-Anleitung ergänzen.
 
-- API-Schlüssel
-- Tokens
-- Passwörter
-- Sessiondaten
-- Zahlungsdaten
-- personenbezogene Daten
-- Kundendaten
-- private Rechnungs- oder Vertragsdaten
+## Öffentliche Nutzung
 
-Lokale `.env`-Dateien bleiben lokal. Öffentliche Beispiele dürfen nur
-Platzhalter enthalten.
+Das Projekt soll später nicht nur lokal für eine Person nutzbar sein, sondern
+als allgemein verfügbares Werkzeug.
 
-## OpenRouter-Demo
+Der geplante Veröffentlichungsweg:
 
-Die OpenRouter-Demo liegt bewusst getrennt vom eigentlichen Projektbereich:
-
-```text
-DEMOS/OPENROUTER/
-```
-
-Sie dient als isolierter Testbereich und ist kein Pflichtbestandteil eines
-neuen Projekts. Vor produktiver Nutzung müssen Kosten, Datenschutz,
-Modellverfügbarkeit und Anbieterbedingungen geprüft werden.
-
-Prüfung:
-
-```bash
-npm --prefix DEMOS/OPENROUTER run check
-```
-
-## GitHub Und Releases
-
-Diese Vorlage enthält GitHub-Dateien für öffentliche Nutzung:
-
-- `.github/workflows/quality-check.yml`: prüft Struktur, sensible lokale
-  Artefakte, generierte Dokumentationsdaten und die OpenRouter-Demo.
-- `.github/release.yml`: Konfiguration für automatisch erzeugte Release Notes.
-- `.github/ISSUE_TEMPLATE/`: einfache Vorlagen für Fehler und Vorschläge.
-- `SECURITY.md`: Sicherheitsrichtlinie und Kontaktweg für Sicherheitsprobleme.
-
-Wiki:
-
-```text
-https://github.com/MichaelGahnDESIGN/AI-Basic-Projektordner/wiki
-```
-
-Versionierte Wiki-Quellen:
-
-```text
-DOKUMENTATION/GitHub-Wiki/
-```
-
-Aktuelle Version:
-
-```text
-1.0.1
-```
+1. GitHub als öffentlicher Quellcode- und Dokumentationsort.
+2. Releases mit klaren Versionen.
+3. Optional NPM-Paket für einfache Installation.
+4. Weiterhin lokal-first als Standardbetrieb.
 
 ## Lizenz
 
-Diese Projektvorlage steht unter der MIT-Lizenz. Details stehen in `LICENSE`.
+MIT-Lizenz. Siehe:
 
-Abhängigkeiten, Dienste und Drittanbieter, die in Beispielen erwähnt werden,
-unterliegen ihren eigenen Lizenz- und Nutzungsbedingungen.
+```text
+LICENSE
+```
 
-## Impressum
+## Mitmachen
 
-Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz)
+Feedback, Issues und Verbesserungsvorschläge sind willkommen.
 
-Michael Gahn DESIGN  
-Michael Gahn  
-Dr.-Theodor-Brugsch Str. 12  
-08529 Plauen  
-Sachsen  
-Deutschland
+Besonders hilfreich sind:
 
-Tel.: +49 (0) 176 557 647 48  
-E-Mail: Anfrage@Michael-Gahn.de
+- reale Integrationsberichte mit Codex und Claude
+- Verbesserungsvorschläge für Tool-Namen
+- Safety-Regeln für weitere riskante Muster
+- Beispiele für Agenten-Übergaben
+- Ideen für gute öffentliche Dokumentation
 
-Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz:  
-Steuernummer: 223/222/02451  
-Ust-ID: DE288143343
+Bitte keine Secrets, Tokens, personenbezogenen Daten oder privaten Logs in
+Issues, Pull Requests oder Beispielen veröffentlichen.

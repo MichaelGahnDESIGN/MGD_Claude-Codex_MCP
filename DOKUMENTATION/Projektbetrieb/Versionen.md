@@ -110,3 +110,19 @@ Startversion dieser Vorlage pro neuem Projekt:
   externen Dienste und keine installierten Abhängigkeiten verwendet werden,
   kann die Phase-1-Umsetzung durch Entfernen der Workspace-Dateien rückgängig
   gemacht werden.
+
+## 0.2.0 - GitHub-Projektstand Claude-Codex-MCP
+
+- Datum: `2026-06-07`
+- Version: `0.2.0`
+- Beschreibung: Das Repository wurde für das GitHub-Projekt
+  `MichaelGahnDESIGN/Claude-Codex-MCP` vorbereitet. Die Root-README erklärt nun
+  ausführlich Zweck, lokale Nutzung, MCP-Tools, Sicherheit, Tests,
+  Dokumentation, Roadmap und geplanten Veröffentlichungsweg.
+- Begründung: Das Projekt soll für weitere Nutzer verständlich werden und nicht
+  nur als interne lokale Arbeitsgrundlage dienen.
+- Betroffene Bereiche: `README.md`, `VERSION`, `CHANGELOG.md`,
+  `PROJEKT/WORKSPACE/package.json`, `PROJEKT/WORKSPACE/src/mcp/createServer.ts`.
+- Rücknahme oder Wiederherstellung: Über Git-Diff nachvollziehbar. Die README
+  kann bei Bedarf auf einen stärker vorlagenorientierten Text zurückgeführt
+  werden.

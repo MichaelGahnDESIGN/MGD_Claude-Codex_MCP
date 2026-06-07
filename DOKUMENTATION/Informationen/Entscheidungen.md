@@ -139,3 +139,19 @@ Jeder Eintrag soll mindestens enthalten:
 - Folgen oder Trade-offs: Der Server bleibt sehr schlank und lokal
   nachvollziehbar. Später kann das offizielle MCP-SDK ergänzt werden, wenn ein
   stabiler Paketinstallationsprozess und ein Lockfile vorliegen.
+
+## 2026-06-07 - GitHub-Projekt Claude-Codex-MCP wird eigener Projektstand
+
+- Datum: `2026-06-07`
+- Entscheidung: Das GitHub-Zielprojekt
+  `MichaelGahnDESIGN/Claude-Codex-MCP` erhält eine eigene ausführliche
+  Projekt-README und die Versionsnummer `0.2.0`.
+- Begründung: Das Projekt soll nicht nur als private lokale Arbeitsgrundlage
+  dienen, sondern für weitere Nutzer verständlich und später öffentlich
+  verfügbar werden.
+- Betroffene Bereiche: `README.md`, `VERSION`, `CHANGELOG.md`,
+  `PROJEKT/WORKSPACE/package.json`, `PROJEKT/WORKSPACE/src/mcp/createServer.ts`.
+- Folgen oder Trade-offs: Die Root-README beschreibt nun das MCP-Projekt statt
+  primär die alte allgemeine Projektvorlage. Die Vorlagenstruktur bleibt im
+  Repository erhalten, wird aber im README als Herkunft und Arbeitsumgebung
+  eingeordnet.

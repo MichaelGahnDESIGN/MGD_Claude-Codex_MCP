@@ -2,6 +2,18 @@
 
 Alle wichtigen Änderungen dieser öffentlichen Vorlage werden hier dokumentiert.
 
+## 0.2.0 - GitHub-Projekt README und öffentlicher Projektstand
+
+Datum: 2026-06-07
+
+- Root-README auf das konkrete Projekt `Claude-Codex-MCP` umgestellt.
+- Lokales MCP-Ziel, Tool-Liste, Sicherheitsmodell, Installation,
+  Speicherlogik, Tests, Dokumentation und Roadmap ausführlich erklärt.
+- Versionsnummer des GitHub-Projekts auf `0.2.0` gesetzt.
+- Workspace-Paketversion und MCP-Server-Info auf `0.2.0` gesetzt.
+- Öffentlichen Nutzungsweg über GitHub, spätere Releases und optional NPM
+  beschrieben.
+
 ## 1.0.1 - Öffentliche GitHub-Vorlage
 
 Datum: 2026-06-07
