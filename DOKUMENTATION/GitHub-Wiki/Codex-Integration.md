@@ -33,6 +33,24 @@ Bei Unklarheiten:
 2. keine sensiblen Details speichern
 3. auf Klärung warten
 
+## Lokale Registrierung
+
+Codex kann den MCP-Server über `codex mcp add` registrieren:
+
+```bash
+codex mcp add claude-codex-mcp \
+  --env AGENT_COMMS_DIR="/pfad/zum/projekt" \
+  -- "/pfad/zu/Claude-Codex-MCP/PROJEKT/WORKSPACE/bin/start-agent-comms-mcp.sh"
+```
+
+Prüfen:
+
+```bash
+codex mcp get claude-codex-mcp
+```
+
+Eine bereits laufende Codex-Sitzung muss eventuell neu gestartet werden.
+
 ## Beispiel-Prompt Für Codex
 
 ```text

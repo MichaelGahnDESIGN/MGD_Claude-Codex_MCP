@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "claude-codex-mcp": {
+      "command": "/pfad/zu/Claude-Codex-MCP/PROJEKT/WORKSPACE/bin/start-agent-comms-mcp.sh",
+      "env": {
+        "AGENT_COMMS_DIR": "/pfad/zum/projekt"
+      }
+    }
+  }
+}

@@ -1,6 +1,7 @@
 node_modules/
 dist/
 agent_comms.state.json
+local-agent-comms/
 *.log
 .env
 .env.*

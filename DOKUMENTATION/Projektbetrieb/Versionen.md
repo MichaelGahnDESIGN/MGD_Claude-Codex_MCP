@@ -142,3 +142,21 @@ Startversion dieser Vorlage pro neuem Projekt:
 - Betroffene Bereiche: `DOKUMENTATION/GitHub-Wiki/`, private
   Repository-Dokumentation.
 - Rücknahme oder Wiederherstellung: Über Git-Diff nachvollziehbar.
+
+### Ergänzung zu 0.2.0 - Zwei-Agenten-Demo und Codex-Registrierung
+
+- Datum: `2026-06-07`
+- Version: `0.2.0`
+- Beschreibung: Ein Zwei-Agenten-Integrationstest, ein lokales Demo-Skript,
+  ein stabiles MCP-Startskript und Beispielkonfigurationen für Codex und Claude
+  wurden ergänzt. Codex wurde lokal als MCP-Client für
+  `claude-codex-mcp` registriert.
+- Begründung: Die Zusammenarbeit zwischen Codex und Claude soll praktisch
+  nachvollziehbar und nicht nur theoretisch dokumentiert sein.
+- Betroffene Bereiche: `PROJEKT/WORKSPACE/bin/`,
+  `PROJEKT/WORKSPACE/src/scripts/`, `PROJEKT/WORKSPACE/tests/integration/`,
+  `PROJEKT/WORKSPACE/examples/mcp-configs/`,
+  `PROJEKT/WORKSPACE/docs/`.
+- Rücknahme oder Wiederherstellung: Lokale Codex-Registrierung kann mit
+  `codex mcp remove claude-codex-mcp` entfernt werden. Repository-Änderungen
+  sind über Git-Diff nachvollziehbar.

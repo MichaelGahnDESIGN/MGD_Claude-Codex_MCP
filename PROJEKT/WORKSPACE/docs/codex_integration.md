@@ -21,6 +21,42 @@ Für ein konkretes Projekt empfiehlt sich:
 AGENT_COMMS_DIR=/pfad/zum/projekt npm start
 ```
 
+## Codex Lokal Registrieren
+
+Codex bringt lokal ein `codex mcp`-Kommando mit. Der Server kann so als
+globaler MCP-Server registriert werden:
+
+```bash
+codex mcp add claude-codex-mcp \
+  --env AGENT_COMMS_DIR="/pfad/zum/projekt" \
+  -- "/pfad/zu/Claude-Codex-MCP/PROJEKT/WORKSPACE/bin/start-agent-comms-mcp.sh"
+```
+
+Prüfen:
+
+```bash
+codex mcp get claude-codex-mcp
+codex mcp list
+```
+
+Entfernen:
+
+```bash
+codex mcp remove claude-codex-mcp
+```
+
+Wichtig: Eine bereits laufende Codex-Sitzung muss eventuell neu gestartet
+werden, damit der neue MCP-Server als Tool verfügbar wird.
+
+## Lokaler Test
+
+```bash
+npm run demo:agents
+```
+
+Diese Demo simuliert Codex und Claude über denselben MCP-Server. Codex erstellt
+eine Aufgabe, Claude übernimmt und schließt sie ab.
+
 ## Empfohlene Nutzung
 
 - Vor Arbeit: `read_context`

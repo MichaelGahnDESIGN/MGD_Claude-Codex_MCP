@@ -6,6 +6,7 @@ Phase 1 enthält Tests für:
 
 - Safety-Check
 - Aufgaben-Lebenszyklus
+- Zwei-Agenten-MCP-Workflow
 - Markdown-Rendering
 - dateibasierten Storage
 - Tool-Registrierung per Smoke-Test
@@ -27,9 +28,22 @@ npm run smoke
 
 Aktueller Stand:
 
-- 7 Tests
-- 4 Test-Suites
+- 8 Tests
+- 5 Test-Suites
 - Smoke-Test für 12 Tools
+
+## Zwei-Agenten-Demo
+
+```bash
+npm --prefix PROJEKT/WORKSPACE run demo:agents
+```
+
+Diese Demo zeigt lokal:
+
+1. Codex erstellt eine Aufgabe.
+2. Claude übernimmt dieselbe Aufgabe.
+3. Claude schließt sie ab.
+4. Markdown und JSON-State enthalten denselben Ablauf.
 
 ## Was Noch Getestet Werden Muss
 

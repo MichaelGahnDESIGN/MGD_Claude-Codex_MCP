@@ -172,3 +172,18 @@ Jeder Eintrag soll mindestens enthalten:
 - Folgen oder Trade-offs: Private Tester können bereits mit der
   Wiki-Dokumentation und dem Code arbeiten. Nach öffentlicher Freigabe kann der
   Bereich in ein echtes GitHub-Wiki gespiegelt werden.
+
+## 2026-06-07 - Lokale Codex-MCP-Registrierung getestet
+
+- Datum: `2026-06-07`
+- Entscheidung: `claude-codex-mcp` wurde lokal in Codex als stdio-MCP-Server
+  registriert. Der gemeinsame Speicher zeigt auf
+  `PROJEKT/WORKSPACE/local-agent-comms/live`.
+- Begründung: Der nächste Praxisschritt ist ein echter Codex-/Claude-
+  Integrationslauf mit demselben lokalen Kommunikationsordner.
+- Betroffene Bereiche: lokale Codex-Konfiguration, `PROJEKT/WORKSPACE/bin/`,
+  `PROJEKT/WORKSPACE/docs/`, `PROJEKT/WORKSPACE/examples/mcp-configs/`.
+- Folgen oder Trade-offs: Codex kann den MCP nach Neustart der Sitzung nutzen.
+  Claude ist auf diesem Rechner nicht als CLI verfügbar und muss später in
+  Claude Code oder Claude Desktop mit demselben Startskript und demselben
+  `AGENT_COMMS_DIR` registriert werden.

@@ -19,6 +19,41 @@ Mit projektspezifischem Speicher:
 AGENT_COMMS_DIR=/pfad/zum/projekt npm start
 ```
 
+## Claude Lokal Registrieren
+
+In dieser Umgebung ist die Claude-CLI nicht installiert. Für Claude Code oder
+Claude Desktop muss derselbe stdio-Startbefehl eingetragen werden, den auch
+Codex nutzt:
+
+```bash
+/pfad/zu/Claude-Codex-MCP/PROJEKT/WORKSPACE/bin/start-agent-comms-mcp.sh
+```
+
+Dabei muss `AGENT_COMMS_DIR` auf denselben Projektordner zeigen wie bei Codex.
+Nur dann teilen beide Agenten dieselbe `agent_comms.md` und denselben
+`agent_comms.state.json`.
+
+Beispiel für Claude Desktop:
+
+```json
+{
+  "mcpServers": {
+    "claude-codex-mcp": {
+      "command": "/pfad/zu/Claude-Codex-MCP/PROJEKT/WORKSPACE/bin/start-agent-comms-mcp.sh",
+      "env": {
+        "AGENT_COMMS_DIR": "/pfad/zum/projekt"
+      }
+    }
+  }
+}
+```
+
+Ein Beispiel liegt unter:
+
+```text
+PROJEKT/WORKSPACE/examples/mcp-configs/claude-desktop.example.json
+```
+
 ## Empfohlener Ablauf
 
 1. `read_context` lesen.

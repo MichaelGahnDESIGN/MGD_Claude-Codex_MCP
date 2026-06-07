@@ -82,9 +82,33 @@ src/
 cd PROJEKT/WORKSPACE
 npm test
 npm run smoke
+npm run demo:agents
 ```
 
 `npm run check` führt beides zusammen aus.
+
+## Zwei-Agenten-Demo
+
+Mit dieser Demo wird der Ablauf lokal simuliert:
+
+```bash
+npm run demo:agents
+```
+
+Dabei passiert:
+
+1. Codex erstellt eine Aufgabe.
+2. Claude übernimmt dieselbe Aufgabe.
+3. Claude schließt sie ab.
+4. `agent_comms.md` enthält den kompletten Ablauf.
+
+Die Demo schreibt standardmäßig nach:
+
+```text
+PROJEKT/WORKSPACE/local-agent-comms/demo/
+```
+
+Der Ordner wird von Git ignoriert.
 
 ## Integration
 

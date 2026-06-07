@@ -16,6 +16,9 @@ Datum: 2026-06-07
 - Ausführliche interne Wiki-Dokumentation im Repository vorbereitet mit
   Schnellstart, Architektur, Installation, MCP-Tools, Agenten-Workflows,
   Sicherheit, Tests, Roadmap und Veröffentlichungsfreigabe.
+- Zwei-Agenten-Integrationstest und lokale Demo ergänzt:
+  Codex erstellt eine Aufgabe, Claude übernimmt und schließt sie ab.
+- Codex-MCP-Registrierungsbeispiel und Claude-Konfigurationsbeispiele ergänzt.
 
 ## 1.0.1 - Öffentliche GitHub-Vorlage
 

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 4,
-  "generatedAt": "2026-06-07T03:30:26+02:00",
+  "generatedAt": "2026-06-07T04:10:31+02:00",
   "projectRoot": ".",
   "documentationRoot": "DOKUMENTATION",
   "tabs": {
@@ -526,7 +526,7 @@
             "purpose": "Hier liegt die eigentliche technische Arbeit des neu entstehenden Projekts.",
             "counts": {
               "subareas": 3,
-              "directories": 3,
+              "directories": 4,
               "files": 3
             },
             "primaryLinks": [
@@ -557,6 +557,13 @@
                     "path": "PROJEKT/WORKSPACE/examples",
                     "sourceHref": "../PROJEKT/WORKSPACE/examples",
                     "href": "../PROJEKT/WORKSPACE/examples",
+                    "type": "dir"
+                  },
+                  {
+                    "name": "local-agent-comms",
+                    "path": "PROJEKT/WORKSPACE/local-agent-comms",
+                    "sourceHref": "../PROJEKT/WORKSPACE/local-agent-comms",
+                    "href": "../PROJEKT/WORKSPACE/local-agent-comms",
                     "type": "dir"
                   },
                   {
@@ -1176,8 +1183,8 @@
             "subtitle": "Konkrete technische Projektumsetzung",
             "purpose": "Hier liegt das tatsächlich erstellte Projekt mit Code, Assets, Konfigurationen und seiner konkreten technischen Struktur.",
             "counts": {
-              "subareas": 5,
-              "directories": 2,
+              "subareas": 6,
+              "directories": 5,
               "files": 9
             },
             "primaryLinks": [
@@ -1247,11 +1254,34 @@
                 "type": "dir",
                 "children": [
                   {
+                    "name": "mcp-configs",
+                    "path": "PROJEKT/WORKSPACE/examples/mcp-configs",
+                    "sourceHref": "../PROJEKT/WORKSPACE/examples/mcp-configs",
+                    "href": "../PROJEKT/WORKSPACE/examples/mcp-configs",
+                    "type": "dir"
+                  },
+                  {
                     "name": "agent_comms.md",
                     "path": "PROJEKT/WORKSPACE/examples/agent_comms.md",
                     "sourceHref": "../PROJEKT/WORKSPACE/examples/agent_comms.md",
                     "href": "../PROJEKT/WORKSPACE/examples/agent_comms.md",
                     "type": "file"
+                  }
+                ]
+              },
+              {
+                "name": "local-agent-comms",
+                "path": "PROJEKT/WORKSPACE/local-agent-comms",
+                "sourceHref": "../PROJEKT/WORKSPACE/local-agent-comms",
+                "href": "../PROJEKT/WORKSPACE/local-agent-comms",
+                "type": "dir",
+                "children": [
+                  {
+                    "name": "demo",
+                    "path": "PROJEKT/WORKSPACE/local-agent-comms/demo",
+                    "sourceHref": "../PROJEKT/WORKSPACE/local-agent-comms/demo",
+                    "href": "../PROJEKT/WORKSPACE/local-agent-comms/demo",
+                    "type": "dir"
                   }
                 ]
               },

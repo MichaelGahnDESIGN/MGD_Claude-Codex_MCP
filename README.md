@@ -341,6 +341,12 @@ Smoke-Test:
 npm --prefix PROJEKT/WORKSPACE run smoke
 ```
 
+Zwei-Agenten-Demo:
+
+```bash
+npm --prefix PROJEKT/WORKSPACE run demo:agents
+```
+
 Gesamtprüfung:
 
 ```bash
@@ -348,6 +354,9 @@ npm --prefix PROJEKT/WORKSPACE run check
 ```
 
 Der aktuelle Stand wurde mit 7 Tests und einem Smoke-Test geprüft.
+Zusätzlich gibt es einen Integrationstest und eine Demo, die den Ablauf
+`Codex erstellt Aufgabe -> Claude übernimmt -> Claude schließt ab` lokal
+nachvollziehen.
 
 ## Dokumentation
 

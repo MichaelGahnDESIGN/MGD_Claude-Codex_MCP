@@ -16,6 +16,29 @@ weiter lesbar bleibt.
 6. Aufgabe mit `complete_task` abschließen.
 7. Übergabe mit `write_handoff` schreiben.
 
+## Gemeinsamer Speicher Mit Codex
+
+Claude muss denselben `AGENT_COMMS_DIR` nutzen wie Codex. Nur dann lesen und
+schreiben beide Agenten denselben lokalen Kommunikationsstand.
+
+Startbefehl:
+
+```bash
+/pfad/zu/Claude-Codex-MCP/PROJEKT/WORKSPACE/bin/start-agent-comms-mcp.sh
+```
+
+Umgebungsvariable:
+
+```bash
+AGENT_COMMS_DIR=/pfad/zum/projekt
+```
+
+Ein Claude-Desktop-Beispiel liegt unter:
+
+```text
+PROJEKT/WORKSPACE/examples/mcp-configs/claude-desktop.example.json
+```
+
 ## Beispiel-Prompt Für Claude
 
 ```text
