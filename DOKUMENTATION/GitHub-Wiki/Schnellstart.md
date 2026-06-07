@@ -8,8 +8,9 @@ Diese Seite erklärt den schnellsten lokalen Start von Claude-Codex-MCP.
 - Node.js ab `22.6.0`
 - ein MCP-fähiger Client, zum Beispiel Codex oder Claude
 
-Aktuell braucht Phase 1 keine NPM-Paketinstallation. Der Server nutzt
-Node.js-Type-Stripping und den eingebauten Node-Test-Runner.
+Der MCP-Server selbst bleibt schlank und hat keine Laufzeitabhängigkeiten.
+Für die Entwicklungs- und Playwright-Tests werden die im Workspace
+versionierten NPM-Dev-Abhängigkeiten installiert.
 
 ## Repository Klonen
 
@@ -29,8 +30,9 @@ npm --prefix PROJEKT/WORKSPACE run check
 
 Erwartung:
 
-- 7 Tests bestehen
+- 8 Node-Tests bestehen
 - Smoke-Test besteht
+- 3 Playwright-Audits bestehen
 
 ## Server Starten
 

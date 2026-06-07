@@ -182,8 +182,9 @@ PROJEKT/WORKSPACE/docs/sicherheitsregeln.md
 
 ## Installation Für Lokale Nutzung
 
-Aktuell ist das Projekt dependency-frei umgesetzt. Es braucht keine
-Paketinstallation.
+Der MCP-Server selbst nutzt keine externen Laufzeitabhängigkeiten. Für Tests
+und Playwright-Audits werden die Dev-Abhängigkeiten aus dem Workspace-Lockfile
+installiert.
 
 Voraussetzung:
 
@@ -194,6 +195,12 @@ Repository klonen:
 ```bash
 git clone https://github.com/MichaelGahnDESIGN/Claude-Codex-MCP.git
 cd Claude-Codex-MCP
+```
+
+Dev-Abhängigkeiten installieren:
+
+```bash
+npm --prefix PROJEKT/WORKSPACE install
 ```
 
 Prüfung ausführen:
@@ -353,10 +360,10 @@ Gesamtprüfung:
 npm --prefix PROJEKT/WORKSPACE run check
 ```
 
-Der aktuelle Stand wurde mit 7 Tests und einem Smoke-Test geprüft.
-Zusätzlich gibt es einen Integrationstest und eine Demo, die den Ablauf
-`Codex erstellt Aufgabe -> Claude übernimmt -> Claude schließt ab` lokal
-nachvollziehen.
+Der aktuelle Stand wurde mit 8 Node-Tests, einem Smoke-Test und 3
+Playwright-Audits geprüft. Zusätzlich gibt es einen Integrationstest und eine
+Demo, die den Ablauf `Codex erstellt Aufgabe -> Claude übernimmt -> Claude
+schließt ab` lokal nachvollziehen.
 
 ## Dokumentation
 

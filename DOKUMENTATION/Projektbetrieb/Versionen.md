@@ -106,10 +106,9 @@ Startversion dieser Vorlage pro neuem Projekt:
 - Betroffene Bereiche: `PROJEKT/WORKSPACE/src/`,
   `PROJEKT/WORKSPACE/tests/`, `PROJEKT/WORKSPACE/docs/`,
   `PROJEKT/WORKSPACE/examples/`.
-- Rücknahme oder Wiederherstellung: Über Git-Diff nachvollziehbar. Da keine
-  externen Dienste und keine installierten Abhängigkeiten verwendet werden,
-  kann die Phase-1-Umsetzung durch Entfernen der Workspace-Dateien rückgängig
-  gemacht werden.
+- Rücknahme oder Wiederherstellung: Über Git-Diff nachvollziehbar. Da der
+  Server keine externen Laufzeitdienste verwendet, kann die Phase-1-Umsetzung
+  durch Entfernen der Workspace-Dateien rückgängig gemacht werden.
 
 ## 0.2.0 - GitHub-Projektstand Claude-Codex-MCP
 
@@ -175,3 +174,19 @@ Startversion dieser Vorlage pro neuem Projekt:
   `DOKUMENTATION/Informationen/`, `DOKUMENTATION/Projektbetrieb/`.
 - Rücknahme oder Wiederherstellung: Über Git-Diff nachvollziehbar. Das
   Impressum kann bei geänderter Veröffentlichungsstrategie angepasst werden.
+
+### Ergänzung zu 0.2.0 - Playwright-Audit und JSON-Parse-Fehler
+
+- Datum: `2026-06-07`
+- Version: `0.2.0`
+- Beschreibung: Ein Playwright-Audit startet den MCP als echten stdio-Prozess
+  und prüft Protokollfehler. Dabei wurde behoben, dass fehlerhaftes JSON oder
+  ungültige JSON-RPC-Requests den MCP-Prozess beenden konnten. Der Server
+  antwortet nun mit JSON-RPC-Protokollfehlern und bleibt empfangsbereit.
+- Begründung: Codex und Claude sollen den MCP robust nutzen können, auch wenn
+  ein Client einmal eine beschädigte JSON-Zeile sendet.
+- Betroffene Bereiche: `PROJEKT/WORKSPACE/src/mcp/`,
+  `PROJEKT/WORKSPACE/tests/playwright/`, `PROJEKT/WORKSPACE/package.json`,
+  `PROJEKT/WORKSPACE/package-lock.json`, Dokumentation.
+- Rücknahme oder Wiederherstellung: Über Git-Diff nachvollziehbar. Ohne
+  Playwright-Audit bliebe der Fehler nur manuell prüfbar.

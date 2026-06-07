@@ -1,5 +1,6 @@
 import readline from "node:readline";
 import type { JsonRpcError, JsonRpcRequest, JsonRpcSuccess } from "./jsonRpcTypes.ts";
+import { parseJsonRpcLine } from "./parseJsonRpcLine.ts";
 import type { RegisteredTool } from "../tools/toolTypes.ts";
 
 export interface McpServerOptions {
@@ -32,7 +33,12 @@ export class McpServer {
       if (!line.trim()) {
         continue;
       }
-      const response = await this.handle(JSON.parse(line) as JsonRpcRequest);
+      const parsedLine = parseJsonRpcLine(line);
+      if (parsedLine.kind === "error") {
+        process.stdout.write(`${JSON.stringify(parsedLine.error)}\n`);
+        continue;
+      }
+      const response = await this.handle(parsedLine.request);
       if (response) {
         process.stdout.write(`${JSON.stringify(response)}\n`);
       }

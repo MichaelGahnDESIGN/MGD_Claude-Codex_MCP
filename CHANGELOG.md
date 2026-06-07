@@ -21,6 +21,9 @@ Datum: 2026-06-07
 - Codex-MCP-Registrierungsbeispiel und Claude-Konfigurationsbeispiele ergänzt.
 - Vertrauliche Herkunftsreferenzen aus README und Dokumentation entfernt.
 - Impressum in der Root-README ergänzt.
+- Playwright-Audit für den stdio-MCP-Prozess ergänzt.
+- Fehler behoben: fehlerhaftes JSON oder ungültige JSON-RPC-Requests beenden
+  den MCP-Prozess nicht mehr, sondern erzeugen Protokollfehler.
 
 ## 1.0.1 - Öffentliche GitHub-Vorlage
 

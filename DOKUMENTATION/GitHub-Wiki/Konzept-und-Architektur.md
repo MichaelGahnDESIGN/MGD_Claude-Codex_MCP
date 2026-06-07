@@ -105,8 +105,9 @@ Schreibende Tools:
 
 `src/mcp/` enthält einen kleinen JSON-RPC/MCP-Server über stdio.
 
-Phase 1 nutzt bewusst eine schlanke Implementierung ohne externe Abhängigkeit.
-Das offizielle MCP-SDK kann später geprüft und ergänzt werden.
+Phase 1 nutzt bewusst eine schlanke Server-Implementierung ohne externe
+Laufzeitabhängigkeit. Playwright ist nur als Dev-Abhängigkeit für Tests
+ergänzt. Das offizielle MCP-SDK kann später geprüft und ergänzt werden.
 
 ## Datenfluss
 

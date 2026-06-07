@@ -56,7 +56,8 @@ geschrieben.
 
 ## Braucht Phase 1 NPM-Abhängigkeiten?
 
-Nein. Phase 1 ist dependency-frei umgesetzt und nutzt Node.js-Funktionen.
+Der MCP-Server selbst nutzt keine externen Laufzeitabhängigkeiten.
+Für Tests ist Playwright als Dev-Abhängigkeit ergänzt.
 
 ## Was ist für die öffentliche Freigabe noch nötig?
 

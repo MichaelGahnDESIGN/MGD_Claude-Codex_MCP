@@ -20,6 +20,10 @@ coverage/
 # Laufzeit- und Diagnoseausgaben gehören nicht ins Repository.
 *.log
 logs/
+test-results/
+playwright-report/
+**/test-results/
+**/playwright-report/
 
 # Backups bleiben lokal, außer die bewusst gepflegte README.
 BACKUPS/*

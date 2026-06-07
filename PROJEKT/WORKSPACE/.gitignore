@@ -1,5 +1,7 @@
 node_modules/
 dist/
+test-results/
+playwright-report/
 agent_comms.state.json
 local-agent-comms/
 *.log

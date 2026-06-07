@@ -82,10 +82,11 @@ src/
 cd PROJEKT/WORKSPACE
 npm test
 npm run smoke
+npm run playwright:audit
 npm run demo:agents
 ```
 
-`npm run check` führt beides zusammen aus.
+`npm run check` führt Node-Tests, Smoke-Test und Playwright-Audit zusammen aus.
 
 ## Zwei-Agenten-Demo
 

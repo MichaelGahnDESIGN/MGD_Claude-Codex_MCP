@@ -42,9 +42,10 @@ Pro Eintrag festhalten:
   Entwicklungsdateien während eines abgebrochenen Installationslaufs entfernen.
 - Betroffene Bereiche: `PROJEKT/WORKSPACE/`, lokale Tests,
   spätere SDK-Integration.
-- Absicherung oder nächste Maßnahme: Phase 1 nutzt keine NPM-Abhängigkeiten.
-  Vor späterer SDK-Nutzung zuerst Paketinstallation und Lockfile in einem
-  isolierten Testlauf prüfen.
+- Absicherung oder nächste Maßnahme: Der MCP-Server nutzt keine externen
+  Laufzeitabhängigkeiten. Playwright ist als Dev-Abhängigkeit mit Lockfile
+  dokumentiert. Vor späterer SDK-Nutzung zuerst Paketinstallation und Lockfile
+  in einem isolierten Testlauf prüfen.
 
 ## Safety-Check ist kein vollständiger DLP-Ersatz
 

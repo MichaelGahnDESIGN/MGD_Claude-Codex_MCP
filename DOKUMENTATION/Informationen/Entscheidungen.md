@@ -126,20 +126,20 @@ Jeder Eintrag soll mindestens enthalten:
 - Folgen oder Trade-offs: Die Inhalte sind im Repository verfügbar. Ein echtes
   GitHub-Wiki kann erst nach öffentlicher Freigabe oder Upgrade genutzt werden.
 
-## 2026-06-07 - Phase 1 MCP lokal und dependency-frei umgesetzt
+## 2026-06-07 - Phase 1 MCP lokal und ohne Laufzeitabhängigkeiten umgesetzt
 
 - Datum: `2026-06-07`
 - Entscheidung: Der konkrete Workspace erhält einen lokalen TypeScript/Node.js
   MCP-Server unter `PROJEKT/WORKSPACE/`, der ohne externe Laufzeitdienste und
-  ohne installierte NPM-Abhängigkeiten startet.
+  ohne externe Laufzeitabhängigkeiten startet.
 - Begründung: Die Phase-1-Anforderung ist lokal-first. Auf dem lokalen Volume
   war eine Paketinstallation unzuverlässig; deshalb nutzt die erste Version den
   Node-Test-Runner und einen kleinen JSON-RPC/MCP-Server über stdio.
 - Betroffene Bereiche: `PROJEKT/WORKSPACE/src/`,
   `PROJEKT/WORKSPACE/tests/`, `PROJEKT/WORKSPACE/docs/`.
 - Folgen oder Trade-offs: Der Server bleibt sehr schlank und lokal
-  nachvollziehbar. Später kann das offizielle MCP-SDK ergänzt werden, wenn ein
-  stabiler Paketinstallationsprozess und ein Lockfile vorliegen.
+  nachvollziehbar. Später kann das offizielle MCP-SDK ergänzt werden, wenn der
+  Paketinstallationsprozess stabil bleibt.
 
 ## 2026-06-07 - GitHub-Projekt Claude-Codex-MCP wird eigener Projektstand
 
@@ -202,3 +202,17 @@ Jeder Eintrag soll mindestens enthalten:
   `DOKUMENTATION/Projektbetrieb/`.
 - Folgen oder Trade-offs: Die öffentliche Dokumentation bleibt verständlich,
   verzichtet aber bewusst auf interne Herkunftsdetails.
+
+## 2026-06-07 - Playwright-Audit für MCP-Prozess ergänzt
+
+- Datum: `2026-06-07`
+- Entscheidung: Der Workspace erhält Playwright als Dev-Abhängigkeit und einen
+  eigenen Audit für stdio-MCP-Prozessverhalten.
+- Begründung: Der MCP soll nicht nur über direkte Unit-Tests geprüft werden.
+  Playwright startet den Server als echten Prozess, sendet JSON-RPC-Zeilen und
+  prüft, ob Fehlerfälle den Server nicht beenden.
+- Betroffene Bereiche: `PROJEKT/WORKSPACE/package.json`,
+  `PROJEKT/WORKSPACE/package-lock.json`,
+  `PROJEKT/WORKSPACE/tests/playwright/`, `PROJEKT/WORKSPACE/src/mcp/`.
+- Folgen oder Trade-offs: Die Laufzeit des MCP bleibt schlank. Für
+  Entwicklungstests gibt es nun eine kleine Dev-Abhängigkeit mit Lockfile.

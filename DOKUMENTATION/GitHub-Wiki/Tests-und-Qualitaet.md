@@ -10,6 +10,7 @@ Phase 1 enthält Tests für:
 - Markdown-Rendering
 - dateibasierten Storage
 - Tool-Registrierung per Smoke-Test
+- stdio-Protokollverhalten per Playwright-Audit
 
 ## Gesamtprüfung
 
@@ -22,6 +23,7 @@ Diese Prüfung führt aus:
 ```bash
 npm run test
 npm run smoke
+npm run playwright:audit
 ```
 
 ## Erwartetes Ergebnis
@@ -31,6 +33,7 @@ Aktueller Stand:
 - 8 Tests
 - 5 Test-Suites
 - Smoke-Test für 12 Tools
+- 3 Playwright-Audits für MCP-Prozessverhalten
 
 ## Zwei-Agenten-Demo
 
@@ -71,6 +74,7 @@ Neue Funktionen sollen:
 
 ## Bekannte Technische Entscheidung
 
-Phase 1 nutzt keine externen NPM-Abhängigkeiten. Das reduziert Risiko und
-Installationsprobleme. Später kann das offizielle MCP-SDK ergänzt werden, wenn
-Paketinstallation und Lockfile stabil geprüft sind.
+Der MCP-Server nutzt weiterhin keine externen Laufzeitabhängigkeiten.
+Playwright ist als Dev-Abhängigkeit für Protokoll- und Prozessprüfungen
+ergänzt. Später kann das offizielle MCP-SDK geprüft werden, wenn der
+Paketinstallationsprozess stabil bleibt.

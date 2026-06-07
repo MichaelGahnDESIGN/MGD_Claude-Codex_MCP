@@ -1,6 +1,6 @@
 window.DOKU_DATA = {
   "schemaVersion": 4,
-  "generatedAt": "2026-06-07T04:10:31+02:00",
+  "generatedAt": "2026-06-07T06:51:59+02:00",
   "projectRoot": ".",
   "documentationRoot": "DOKUMENTATION",
   "tabs": {
@@ -527,7 +527,7 @@ window.DOKU_DATA = {
             "counts": {
               "subareas": 3,
               "directories": 4,
-              "files": 3
+              "files": 4
             },
             "primaryLinks": [
               {
@@ -565,6 +565,13 @@ window.DOKU_DATA = {
                     "sourceHref": "../PROJEKT/WORKSPACE/local-agent-comms",
                     "href": "../PROJEKT/WORKSPACE/local-agent-comms",
                     "type": "dir"
+                  },
+                  {
+                    "name": "package-lock.json",
+                    "path": "PROJEKT/WORKSPACE/package-lock.json",
+                    "sourceHref": "../PROJEKT/WORKSPACE/package-lock.json",
+                    "href": "../PROJEKT/WORKSPACE/package-lock.json",
+                    "type": "file"
                   },
                   {
                     "name": "package.json",
@@ -1183,9 +1190,9 @@ window.DOKU_DATA = {
             "subtitle": "Konkrete technische Projektumsetzung",
             "purpose": "Hier liegt das tatsächlich erstellte Projekt mit Code, Assets, Konfigurationen und seiner konkreten technischen Struktur.",
             "counts": {
-              "subareas": 6,
+              "subareas": 7,
               "directories": 5,
-              "files": 9
+              "files": 10
             },
             "primaryLinks": [
               {
@@ -1284,6 +1291,13 @@ window.DOKU_DATA = {
                     "type": "dir"
                   }
                 ]
+              },
+              {
+                "name": "package-lock.json",
+                "path": "PROJEKT/WORKSPACE/package-lock.json",
+                "sourceHref": "../PROJEKT/WORKSPACE/package-lock.json",
+                "href": "../PROJEKT/WORKSPACE/package-lock.json",
+                "type": "file"
               },
               {
                 "name": "package.json",
