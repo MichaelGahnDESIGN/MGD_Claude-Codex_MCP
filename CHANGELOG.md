@@ -2,6 +2,18 @@
 
 Alle wichtigen Änderungen dieser öffentlichen Vorlage werden hier dokumentiert.
 
+## 0.2.1 - Einfacher Setup-Assistent
+
+Datum: 2026-06-07
+
+- Versionsnummer des GitHub-Projekts auf `0.2.1` erhöht.
+- `npm run setup` als lokaler Setup-Assistent für Nicht-Programmierer ergänzt.
+- Assistent erzeugt Kommunikationsordner, `agent_comms.md`,
+  `agent_comms.state.json`, einfache Anleitung, Codex-Skript und Claude-
+  Konfigurationshilfen.
+- Tests für den Setup-Assistenten ergänzt.
+- Dokumentation und Wiki-Quellen auf den leichteren Start aktualisiert.
+
 ## 0.2.0 - GitHub-Projekt README und öffentlicher Projektstand
 
 Datum: 2026-06-07

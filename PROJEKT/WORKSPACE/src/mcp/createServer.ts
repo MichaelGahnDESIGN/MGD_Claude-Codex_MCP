@@ -10,5 +10,5 @@ export interface CreateServerOptions {
 export function createServer(options: CreateServerOptions): McpServer {
   const storage = new FileStorage({ baseDir: options.baseDir, markdownFileName: "agent_comms.md", stateFileName: "agent_comms.state.json" });
   const service = new AgentCommsService(storage);
-  return new McpServer({ name: "claude-codex-local-comms", version: "0.2.0", tools: registerTools(service) });
+  return new McpServer({ name: "claude-codex-local-comms", version: "0.2.1", tools: registerTools(service) });
 }

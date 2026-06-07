@@ -34,7 +34,7 @@ test("MCP-Prozess bleibt nach fehlerhaftem JSON empfangsbereit", async () => {
     result: {
       serverInfo: {
         name: "claude-codex-local-comms",
-        version: "0.2.0"
+        version: "0.2.1"
       }
     }
   });

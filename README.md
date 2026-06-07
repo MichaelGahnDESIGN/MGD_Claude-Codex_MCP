@@ -1,6 +1,6 @@
 # Claude-Codex-MCP
 
-**Version:** `0.2.0`
+**Version:** `0.2.1`
 
 Ein lokales MCP-System, mit dem mehrere KI-Agenten wie ChatGPT Codex, Claude
 Code, Claude Cowork und weitere Werkzeuge über ein gemeinsames Aufgaben-,
@@ -180,7 +180,7 @@ Mehr dazu:
 PROJEKT/WORKSPACE/docs/sicherheitsregeln.md
 ```
 
-## Installation Für Lokale Nutzung
+## Leichter Start Für Nicht-Programmierer
 
 Der MCP-Server selbst nutzt keine externen Laufzeitabhängigkeiten. Für Tests
 und Playwright-Audits werden die Dev-Abhängigkeiten aus dem Workspace-Lockfile
@@ -201,6 +201,27 @@ Dev-Abhängigkeiten installieren:
 
 ```bash
 npm --prefix PROJEKT/WORKSPACE install
+```
+
+Setup-Assistent starten:
+
+```bash
+npm --prefix PROJEKT/WORKSPACE run setup
+```
+
+Der Assistent fragt nach dem Projektordner und erzeugt:
+
+- `agent_comms.md`
+- `agent_comms.state.json`
+- eine einfache `ANLEITUNG.md`
+- einen fertigen Codex-Einrichtungsbefehl
+- eine Claude-Code-Anleitung
+- eine Claude-Cowork-/Claude-Desktop-Konfiguration
+
+Ohne Rückfragen, mit Standardwerten:
+
+```bash
+npm --prefix PROJEKT/WORKSPACE run setup -- --yes
 ```
 
 Prüfung ausführen:
@@ -360,7 +381,7 @@ Gesamtprüfung:
 npm --prefix PROJEKT/WORKSPACE run check
 ```
 
-Der aktuelle Stand wurde mit 8 Node-Tests, einem Smoke-Test und 3
+Der aktuelle Stand wurde mit 12 Node-Tests, einem Smoke-Test und 3
 Playwright-Audits geprüft. Zusätzlich gibt es einen Integrationstest und eine
 Demo, die den Ablauf `Codex erstellt Aufgabe -> Claude übernimmt -> Claude
 schließt ab` lokal nachvollziehen.

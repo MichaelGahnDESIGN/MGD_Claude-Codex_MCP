@@ -25,16 +25,36 @@ haben.
 ## Lokale Prüfung
 
 ```bash
+npm --prefix PROJEKT/WORKSPACE install
 npm --prefix PROJEKT/WORKSPACE run check
 ```
 
 Erwartung:
 
-- 8 Node-Tests bestehen
+- 12 Node-Tests bestehen
 - Smoke-Test besteht
 - 3 Playwright-Audits bestehen
 
-## Server Starten
+## Einfacher Setup-Assistent
+
+Für Nicht-Programmierer ist der Setup-Assistent der einfachste Start:
+
+```bash
+npm --prefix PROJEKT/WORKSPACE install
+npm --prefix PROJEKT/WORKSPACE run setup
+```
+
+Er fragt nach dem Projektordner und erzeugt dort `agent_comms.md` und
+`agent_comms.state.json`. Zusätzlich schreibt er einfache Hilfe-Dateien für
+Codex, Claude Code und Claude Cowork.
+
+Ohne Rückfragen:
+
+```bash
+npm --prefix PROJEKT/WORKSPACE run setup -- --yes
+```
+
+## Server Manuell Starten
 
 ```bash
 cd PROJEKT/WORKSPACE

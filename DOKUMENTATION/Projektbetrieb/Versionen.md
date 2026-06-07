@@ -9,6 +9,23 @@ Startversion dieser Vorlage pro neuem Projekt:
 - Betroffene Bereiche: `Grundstruktur`
 - Rücknahme oder Wiederherstellung: `Aus Vorlage erneut erzeugbar`
 
+## 0.2.1 - Einfacher Setup-Assistent
+
+- Datum: `2026-06-07`
+- Version: `0.2.1`
+- Beschreibung: Ein lokaler Setup-Assistent wurde ergänzt. Er kann mit
+  `npm run setup` gestartet werden, fragt Nicht-Programmierer nach den
+  wichtigsten Angaben und erzeugt Kommunikationsdateien sowie fertige
+  Einrichtungshilfen für Codex, Claude Code und Claude Cowork.
+- Begründung: Die bisherige Einrichtung war noch stark terminal- und
+  pfadorientiert. Der neue Assistent reduziert manuelle Schritte und macht die
+  lokale Nutzung verständlicher.
+- Betroffene Bereiche: `VERSION`, `README.md`, `CHANGELOG.md`,
+  `PROJEKT/WORKSPACE/src/setup/`, `PROJEKT/WORKSPACE/tests/setup/`,
+  `PROJEKT/WORKSPACE/package.json`, Wiki- und Projektbetrieb-Dokumentation.
+- Rücknahme oder Wiederherstellung: Über Git-Diff nachvollziehbar. Der
+  Assistent kann entfernt werden, ohne den eigentlichen MCP-Server zu verändern.
+
 ## 0.0.2 - Struktur- und Sicherheitsbereinigung
 
 - Datum: `2026-06-07`

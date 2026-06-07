@@ -27,8 +27,26 @@ cd Claude-Codex-MCP
 ## Prüfen
 
 ```bash
+npm --prefix PROJEKT/WORKSPACE install
 npm --prefix PROJEKT/WORKSPACE run check
 ```
+
+## Einfach Einrichten
+
+Für Menschen ohne Programmierhintergrund:
+
+```bash
+npm --prefix PROJEKT/WORKSPACE install
+npm --prefix PROJEKT/WORKSPACE run setup
+```
+
+Der Assistent erzeugt:
+
+- den lokalen Kommunikationsordner
+- `agent_comms.md`
+- `agent_comms.state.json`
+- `ANLEITUNG.md`
+- fertige Codex- und Claude-Konfigurationshilfen
 
 ## Start Im Workspace
 

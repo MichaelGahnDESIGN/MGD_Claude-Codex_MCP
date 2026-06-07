@@ -13,8 +13,33 @@ Cloud-Pflicht, keine externen Dienste und keine Speicherung sensibler Daten.
 Voraussetzung ist Node.js mit TypeScript-Type-Stripping, empfohlen ab Node
 `22.6.0`.
 
+Wenn du im Repository-Root bist:
+
+```bash
+npm --prefix PROJEKT/WORKSPACE install
+npm --prefix PROJEKT/WORKSPACE run setup
+```
+
+Wenn du bereits direkt in `PROJEKT/WORKSPACE` bist:
+
+```bash
+npm install
+npm run setup
+```
+
+Der Assistent erstellt den Kommunikationsordner und fertige Hilfe-Dateien für
+Codex, Claude Code und Claude Cowork.
+
+Gesamtprüfung aus dem Repository-Root:
+
 ```bash
 npm --prefix PROJEKT/WORKSPACE run check
+```
+
+Gesamtprüfung direkt im Workspace:
+
+```bash
+npm run check
 ```
 
 Server lokal starten:
