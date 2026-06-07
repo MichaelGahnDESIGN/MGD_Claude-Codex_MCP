@@ -7,9 +7,9 @@ Alle wichtigen Änderungen dieser öffentlichen Vorlage werden hier dokumentiert
 Datum: 2026-06-07
 
 - Öffentliche `README.md` für Menschen ergänzt.
-- Wiki-Inhalte mit Schnellstart, Ordnerstruktur, KI-Agenten,
+- GitHub Wiki mit Schnellstart, Ordnerstruktur, KI-Agenten,
   Prompt-Cheatsheet, Dokumentation, Backups, Releases, Sicherheit, OpenRouter
-  und FAQ vorbereitet.
+  und FAQ veröffentlicht.
 - `CLAUDE.md` als automatisch erkannter Claude-Code-Einstieg ergänzt.
 - `SECURITY.md` als öffentliche Sicherheitsrichtlinie ergänzt.
 - MIT-Lizenz ergänzt.

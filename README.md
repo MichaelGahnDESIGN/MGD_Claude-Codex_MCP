@@ -34,8 +34,8 @@ Kontext, Dokumentation und Arbeitsregeln bereitstellt.
   Authentifizierung, Logs und Admin-Funktionen.
 - GitHub-Dateien für Prüfung, Release-Hinweise, Sicherheitsrichtlinie und
   öffentliche Nutzung.
-- Vorbereitete Wiki-Inhalte mit Schnellstart, Ordnerstruktur,
-  Prompt-Cheatsheet, Sicherheits-, Backup- und Release-Hinweisen.
+- GitHub Wiki mit Schnellstart, Ordnerstruktur, Prompt-Cheatsheet,
+  Sicherheits-, Backup- und Release-Hinweisen.
 
 ## Ordnerstruktur
 
@@ -456,16 +456,16 @@ Diese Vorlage enthält GitHub-Dateien für öffentliche Nutzung:
 - `.github/ISSUE_TEMPLATE/`: einfache Vorlagen für Fehler und Vorschläge.
 - `SECURITY.md`: Sicherheitsrichtlinie und Kontaktweg für Sicherheitsprobleme.
 
-Vorbereitete Wiki-Inhalte:
-
-```text
-DOKUMENTATION/GitHub-Wiki/
-```
-
-Geplanter GitHub-Wiki-Zielort:
+Wiki:
 
 ```text
 https://github.com/MichaelGahnDESIGN/AI-Basic-Projektordner/wiki
+```
+
+Versionierte Wiki-Quellen:
+
+```text
+DOKUMENTATION/GitHub-Wiki/
 ```
 
 Aktuelle Version:

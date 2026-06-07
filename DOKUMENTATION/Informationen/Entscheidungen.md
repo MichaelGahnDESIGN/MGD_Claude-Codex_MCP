@@ -113,15 +113,29 @@ Jeder Eintrag soll mindestens enthalten:
   die bewusst erlaubt sind. Die Vorlage wird dadurch besser verständlich und
   kompatibler für Anwender.
 
-## 2026-06-07 - GitHub-Wiki-Inhalte vorbereitet
+## 2026-06-07 - GitHub Wiki veröffentlicht
 
 - Datum: `2026-06-07`
-- Entscheidung: Wiki-Inhalte werden unter `DOKUMENTATION/GitHub-Wiki/`
-  versioniert vorbereitet.
-- Begründung: GitHub stellt das separate `.wiki.git`-Repository erst bereit,
-  wenn das Wiki-Backend initialisiert ist. Die Inhalte sollen trotzdem
-  nachvollziehbar im Hauptrepository liegen.
-- Betroffene Bereiche: README, Dokumentation, vorbereitete Wiki-Seiten.
-- Folgen oder Trade-offs: Die Inhalte sind sofort verfügbar und können nach
-  Wiki-Initialisierung in das GitHub Wiki gepusht werden. Bis dahin ist der
-  GitHub-Wiki-Link der Zielort, aber die versionierten Quellen liegen im Repo.
+- Entscheidung: Das GitHub Wiki wurde veröffentlicht und zusätzlich unter
+  `DOKUMENTATION/GitHub-Wiki/` als versionierte Quelle gespiegelt.
+- Begründung: Anwender sollen die Vorlage direkt im GitHub Wiki lesen können,
+  während die Wiki-Inhalte im Hauptrepository nachvollziehbar pflegbar bleiben.
+- Betroffene Bereiche: README, Dokumentation, GitHub Wiki,
+  `DOKUMENTATION/GitHub-Wiki/`.
+- Folgen oder Trade-offs: Das Wiki ist öffentlich nutzbar. Änderungen an
+  Wiki-Inhalten sollten künftig im Repo und im Wiki synchron gehalten werden.
+
+## 2026-06-07 - Phase 1 MCP lokal und dependency-frei umgesetzt
+
+- Datum: `2026-06-07`
+- Entscheidung: Der konkrete Workspace erhält einen lokalen TypeScript/Node.js
+  MCP-Server unter `PROJEKT/WORKSPACE/`, der ohne externe Laufzeitdienste und
+  ohne installierte NPM-Abhängigkeiten startet.
+- Begründung: Die Phase-1-Anforderung ist lokal-first. Auf dem lokalen Volume
+  war eine Paketinstallation unzuverlässig; deshalb nutzt die erste Version den
+  Node-Test-Runner und einen kleinen JSON-RPC/MCP-Server über stdio.
+- Betroffene Bereiche: `PROJEKT/WORKSPACE/src/`,
+  `PROJEKT/WORKSPACE/tests/`, `PROJEKT/WORKSPACE/docs/`.
+- Folgen oder Trade-offs: Der Server bleibt sehr schlank und lokal
+  nachvollziehbar. Später kann das offizielle MCP-SDK ergänzt werden, wenn ein
+  stabiler Paketinstallationsprozess und ein Lockfile vorliegen.
