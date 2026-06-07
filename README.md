@@ -227,7 +227,9 @@ npm --prefix PROJEKT/WORKSPACE run setup -- --yes
 ## Lokale macOS-DMG Für Tests
 
 Für lokale Tests kann aus dem aktuellen Git-Stand ein macOS-DMG gebaut werden.
-Dieses DMG ist ein CLI-Testpaket, keine signierte Desktop-App.
+Dieses DMG enthält `Claude-Codex-MCP Setup.app`, also ein echtes macOS-
+Programm für den lokalen Setup-Start. Die App ist noch nicht signiert oder
+notarisiert.
 
 ```bash
 npm --prefix PROJEKT/WORKSPACE run build:cli-dmg

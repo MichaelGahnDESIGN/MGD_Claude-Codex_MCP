@@ -11,7 +11,13 @@ const version = (await readFile(join(repoRoot, "VERSION"), "utf8")).trim();
 const outputDir = join(workspaceDir, "CLI-DMG");
 const stagingDir = join(outputDir, "staging");
 const volumeRoot = join(stagingDir, "Claude-Codex-MCP CLI");
-const bundledRepoDir = join(volumeRoot, "Claude-Codex-MCP");
+const appName = "Claude-Codex-MCP Setup.app";
+const appRoot = join(volumeRoot, appName);
+const appContentsDir = join(appRoot, "Contents");
+const appMacOsDir = join(appContentsDir, "MacOS");
+const appResourcesDir = join(appContentsDir, "Resources");
+const appExecutablePath = join(appMacOsDir, "Claude-Codex-MCP Setup");
+const bundledRepoDir = join(appResourcesDir, "Claude-Codex-MCP");
 const dmgPath = join(outputDir, `Claude-Codex-MCP-CLI_v${version}.dmg`);
 const checksumPath = `${dmgPath}.sha256`;
 
@@ -40,13 +46,12 @@ async function copyRepositorySnapshot(): Promise<void> {
 }
 
 async function writeVolumeFiles(): Promise<void> {
-  const setupCommandPath = join(volumeRoot, "Setup starten.command");
-  const checkCommandPath = join(volumeRoot, "MCP prüfen.command");
   await writeFile(join(volumeRoot, "START_HIER.md"), renderStartHere(), "utf8");
-  await writeFile(setupCommandPath, renderSetupCommand(), "utf8");
-  await writeFile(checkCommandPath, renderCheckCommand(), "utf8");
-  await chmod(setupCommandPath, 0o755);
-  await chmod(checkCommandPath, 0o755);
+  await mkdir(appMacOsDir, { recursive: true });
+  await mkdir(appResourcesDir, { recursive: true });
+  await writeFile(join(appContentsDir, "Info.plist"), renderInfoPlist(), "utf8");
+  await writeFile(appExecutablePath, renderAppExecutable(), "utf8");
+  await chmod(appExecutablePath, 0o755);
 }
 
 function renderStartHere(): string {
@@ -57,10 +62,10 @@ function renderStartHere(): string {
     "",
     "## So Startest Du",
     "",
-    "1. Öffne `Setup starten.command`.",
-    "2. Das Projekt wird in deinen Benutzerordner kopiert.",
-    "3. Danach startet der einfache Setup-Assistent.",
-    "4. Der Assistent erzeugt die Hilfe-Dateien für Codex, Claude Code und Claude Cowork.",
+    "1. Öffne `Claude-Codex-MCP Setup.app`.",
+    "2. Die App fragt nach Projektname und Projektordner.",
+    "3. Das Projekt wird in deinen Benutzerordner kopiert.",
+    "4. Danach erzeugt die App die Hilfe-Dateien für Codex, Claude Code und Claude Cowork.",
     "",
     "## Wichtig",
     "",
@@ -72,51 +77,71 @@ function renderStartHere(): string {
   ].join("\n");
 }
 
-function renderSetupCommand(): string {
+function renderInfoPlist(): string {
+  return [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">',
+    '<plist version="1.0">',
+    "<dict>",
+    "  <key>CFBundleDevelopmentRegion</key>",
+    "  <string>de</string>",
+    "  <key>CFBundleDisplayName</key>",
+    "  <string>Claude-Codex-MCP Setup</string>",
+    "  <key>CFBundleExecutable</key>",
+    "  <string>Claude-Codex-MCP Setup</string>",
+    "  <key>CFBundleIdentifier</key>",
+    "  <string>de.michaelgahn.claude-codex-mcp.setup</string>",
+    "  <key>CFBundleInfoDictionaryVersion</key>",
+    "  <string>6.0</string>",
+    "  <key>CFBundleName</key>",
+    "  <string>Claude-Codex-MCP Setup</string>",
+    "  <key>CFBundlePackageType</key>",
+    "  <string>APPL</string>",
+    "  <key>CFBundleShortVersionString</key>",
+    `  <string>${version}</string>`,
+    "  <key>CFBundleVersion</key>",
+    `  <string>${version}</string>`,
+    "  <key>LSMinimumSystemVersion</key>",
+    "  <string>12.0</string>",
+    "</dict>",
+    "</plist>",
+    ""
+  ].join("\n");
+}
+
+function renderAppExecutable(): string {
   return [
     "#!/usr/bin/env bash",
     "set -euo pipefail",
     "",
-    "DMG_DIR=\"$(cd \"$(dirname \"$0\")\" && pwd)\"",
-    "SOURCE_DIR=\"$DMG_DIR/Claude-Codex-MCP\"",
+    "export PATH=\"/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin\"",
+    "APP_MACOS_DIR=\"$(cd \"$(dirname \"$0\")\" && pwd)\"",
+    "APP_CONTENTS_DIR=\"$(cd \"$APP_MACOS_DIR/..\" && pwd)\"",
+    "SOURCE_DIR=\"$APP_CONTENTS_DIR/Resources/Claude-Codex-MCP\"",
     "TARGET_BASE=\"$HOME/Claude-Codex-MCP-CLI\"",
     "TARGET_DIR=\"$TARGET_BASE\"",
     "if [[ -e \"$TARGET_DIR\" ]]; then",
     "  TARGET_DIR=\"${TARGET_BASE}-$(date +%Y%m%d-%H%M%S)\"",
     "fi",
     "",
-    "echo \"Kopiere Claude-Codex-MCP nach: $TARGET_DIR\"",
-    "ditto \"$SOURCE_DIR\" \"$TARGET_DIR\"",
-    "cd \"$TARGET_DIR\"",
+    "osascript -e 'display dialog \"Claude-Codex-MCP wird lokal eingerichtet. Es werden keine Cloud-Daten übertragen.\" buttons {\"Weiter\"} default button \"Weiter\" with title \"Claude-Codex-MCP Setup\"'",
+    "PROJECT_NAME=$(osascript -e 'text returned of (display dialog \"Wie heißt dein Agenten-Projekt?\" default answer \"Mein Agenten-Projekt\" buttons {\"Abbrechen\", \"Weiter\"} default button \"Weiter\" with title \"Claude-Codex-MCP Setup\")')",
+    "PROJECT_DIR=$(osascript -e 'POSIX path of (choose folder with prompt \"Wähle den Projektordner, in dem agent_comms.md liegen soll.\")')",
+    "OUTPUT_DIR=\"$PROJECT_DIR/setup-hilfe-claude-codex\"",
     "",
-    "echo \"Installiere lokale Dev-Abhängigkeiten...\"",
-    "npm --prefix PROJEKT/WORKSPACE install",
-    "",
-    "echo \"Starte Setup-Assistent...\"",
-    "npm --prefix PROJEKT/WORKSPACE run setup",
-    "",
-    "echo \"Fertig. Installierter Ordner: $TARGET_DIR\"",
-    "read -r -p \"Drücke Enter zum Schließen.\"",
-    ""
-  ].join("\n");
-}
-
-function renderCheckCommand(): string {
-  return [
-    "#!/usr/bin/env bash",
-    "set -euo pipefail",
-    "",
-    "TARGET_DIR=\"$HOME/Claude-Codex-MCP-CLI\"",
-    "if [[ ! -d \"$TARGET_DIR\" ]]; then",
-    "  echo \"Claude-Codex-MCP-CLI wurde noch nicht unter $TARGET_DIR gefunden.\"",
-    "  echo \"Bitte zuerst 'Setup starten.command' ausführen.\"",
-    "  read -r -p \"Drücke Enter zum Schließen.\"",
+    "if ! command -v node >/dev/null 2>&1 || ! command -v npm >/dev/null 2>&1; then",
+    "  osascript -e 'display dialog \"Node.js oder npm wurde nicht gefunden. Bitte installiere Node.js ab Version 22.6.0 und starte die App danach erneut.\" buttons {\"OK\"} default button \"OK\" with icon caution with title \"Claude-Codex-MCP Setup\"'",
     "  exit 1",
     "fi",
     "",
+    "osascript -e 'display notification \"Kopiere Projekt und installiere lokale Abhängigkeiten.\" with title \"Claude-Codex-MCP Setup\"'",
+    "ditto \"$SOURCE_DIR\" \"$TARGET_DIR\"",
     "cd \"$TARGET_DIR\"",
-    "npm --prefix PROJEKT/WORKSPACE run check",
-    "read -r -p \"Drücke Enter zum Schließen.\"",
+    "npm --prefix PROJEKT/WORKSPACE install",
+    "npm --prefix PROJEKT/WORKSPACE run setup -- --yes --project-name \"$PROJECT_NAME\" --project-dir \"$PROJECT_DIR\" --output-dir \"$OUTPUT_DIR\"",
+    "",
+    "open \"$OUTPUT_DIR/ANLEITUNG.md\"",
+    "osascript -e 'display dialog \"Setup fertig. Die Anleitung wurde geöffnet.\" buttons {\"OK\"} default button \"OK\" with title \"Claude-Codex-MCP Setup\"'",
     ""
   ].join("\n");
 }

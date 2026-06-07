@@ -5,9 +5,9 @@
 Das CLI-DMG ist ein lokales macOS-Testpaket für Menschen, die nicht direkt mit
 dem Repository arbeiten möchten.
 
-Es ist aktuell keine signierte Desktop-App. Es enthält eine einfache
-Startdatei, die das Projekt lokal in einen beschreibbaren Benutzerordner
-kopiert und danach den Setup-Assistenten startet.
+Es enthält eine echte macOS-App im `.app`-Format. Die App kopiert das Projekt
+lokal in einen beschreibbaren Benutzerordner, fragt Projektname und
+Projektordner ab und startet danach den Setup-Assistenten.
 
 ## Aktueller Stand
 
@@ -41,12 +41,11 @@ Erzeugt werden:
 
 Das DMG enthält:
 
+- `Claude-Codex-MCP Setup.app`
 - `START_HIER.md`
-- `Setup starten.command`
-- `MCP prüfen.command`
-- einen Snapshot des Repository-Stands ohne `.git`
+- einen Snapshot des Repository-Stands ohne `.git` innerhalb der App-Ressourcen
 
-`Setup starten.command` kopiert den Snapshot nach:
+`Claude-Codex-MCP Setup.app` kopiert den Snapshot nach:
 
 ```text
 ~/Claude-Codex-MCP-CLI
@@ -59,8 +58,8 @@ neuen Ordnernamen angehängt.
 
 1. DMG öffnen.
 2. `START_HIER.md` lesen.
-3. `Setup starten.command` ausführen.
-4. Den Anweisungen des Setup-Assistenten folgen.
+3. `Claude-Codex-MCP Setup.app` öffnen.
+4. Projektname und Projektordner im Dialog auswählen.
 5. Danach die erzeugte `ANLEITUNG.md` für Codex, Claude Code oder Claude Cowork
    verwenden.
 
