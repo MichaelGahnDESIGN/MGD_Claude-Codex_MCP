@@ -67,7 +67,7 @@ prüfen und nicht in das MCP schreiben.
 Vor einer öffentlichen Freigabe müssen mindestens geprüft werden:
 
 - Git-Historie
-- Wiki
+- interne Wiki-Dokumentation
 - README
 - Beispiele
 - Tests

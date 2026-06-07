@@ -25,7 +25,7 @@ Geplant:
 - bessere Fehlerausgaben
 - beschädigte State-Dateien sicher behandeln
 - Reset-Round weiter testen
-- Wiki und README gegenlesen
+- interne Wiki-Dokumentation und README gegenlesen
 
 ## Phase 1.2
 
@@ -55,6 +55,6 @@ Das Repository soll erst öffentlich werden, wenn:
 - lokale Tests grün sind
 - echte Integrationen funktionieren
 - keine sensiblen Inhalte vorhanden sind
-- Wiki und README verständlich sind
+- interne Wiki-Dokumentation und README verständlich sind
 - Sicherheitsregeln geprüft wurden
 - ein klarer Release-Stand existiert

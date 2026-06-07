@@ -59,17 +59,15 @@ Pro Eintrag festhalten:
   Datenminimierung. Sensible Details sollen als neutraler Blocker beschrieben
   statt gespeichert werden.
 
-## GitHub-Wiki ist trotz Aktivierungsversuch noch nicht als Wiki-Git erreichbar
+## GitHub-Wiki ist im privaten Repository nicht verfügbar
 
-- Risiko: GitHub meldet das Wiki in der CLI teilweise als aktiviert, die direkte
-  API gibt aber weiterhin `has_wiki: false` zurück und
-  `Claude-Codex-MCP.wiki.git` ist nicht erreichbar.
+- Risiko: GitHub stellt Wikis für dieses private Repository im aktuellen Setup
+  nur nach Upgrade oder nach öffentlicher Freigabe bereit.
 - Eintrittswahrscheinlichkeit: Aktuell eingetreten.
-- Auswirkung: Die ausführlichen Wiki-Seiten können zunächst nur als
-  versionierte Quelle unter `DOKUMENTATION/GitHub-Wiki/` gepflegt werden.
+- Auswirkung: Die ausführlichen Wiki-Seiten können zunächst nicht im echten
+  GitHub-Wiki erscheinen.
 - Betroffene Bereiche: GitHub-Wiki, öffentliche/private Dokumentation,
   Freigabeprozess.
-- Absicherung oder nächste Maßnahme: Wiki-Inhalte im Hauptrepository
-  versionieren. Vor öffentlicher Freigabe GitHub-Repository-Einstellungen im
-  Web-Interface prüfen und das Wiki manuell initialisieren oder erneut per
-  GitHub-API aktivieren.
+- Absicherung oder nächste Maßnahme: Wiki-Inhalte im Hauptrepository unter
+  `DOKUMENTATION/GitHub-Wiki/` versionieren. Nach öffentlicher Freigabe oder
+  Upgrade können die Seiten in das echte GitHub-Wiki gespiegelt werden.

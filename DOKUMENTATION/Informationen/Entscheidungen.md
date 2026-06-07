@@ -113,17 +113,18 @@ Jeder Eintrag soll mindestens enthalten:
   die bewusst erlaubt sind. Die Vorlage wird dadurch besser verständlich und
   kompatibler für Anwender.
 
-## 2026-06-07 - GitHub Wiki veröffentlicht
+## 2026-06-07 - GitHub-Wiki-Inhalte vorbereitet
 
 - Datum: `2026-06-07`
-- Entscheidung: Das GitHub Wiki wurde veröffentlicht und zusätzlich unter
-  `DOKUMENTATION/GitHub-Wiki/` als versionierte Quelle gespiegelt.
-- Begründung: Anwender sollen die Vorlage direkt im GitHub Wiki lesen können,
-  während die Wiki-Inhalte im Hauptrepository nachvollziehbar pflegbar bleiben.
-- Betroffene Bereiche: README, Dokumentation, GitHub Wiki,
+- Entscheidung: Wiki-Inhalte wurden unter `DOKUMENTATION/GitHub-Wiki/` als
+  versionierte Quelle vorbereitet.
+- Begründung: Anwender sollen später eine ausführliche Wiki-Dokumentation lesen
+  können, während die Inhalte im Hauptrepository nachvollziehbar pflegbar
+  bleiben.
+- Betroffene Bereiche: README, Dokumentation, GitHub-Wiki-Inhalte,
   `DOKUMENTATION/GitHub-Wiki/`.
-- Folgen oder Trade-offs: Das Wiki ist öffentlich nutzbar. Änderungen an
-  Wiki-Inhalten sollten künftig im Repo und im Wiki synchron gehalten werden.
+- Folgen oder Trade-offs: Die Inhalte sind im Repository verfügbar. Ein echtes
+  GitHub-Wiki kann erst nach öffentlicher Freigabe oder Upgrade genutzt werden.
 
 ## 2026-06-07 - Phase 1 MCP lokal und dependency-frei umgesetzt
 
@@ -156,16 +157,18 @@ Jeder Eintrag soll mindestens enthalten:
   Repository erhalten, wird aber im README als Herkunft und Arbeitsumgebung
   eingeordnet.
 
-## 2026-06-07 - GitHub-Wiki bleibt privat bis zur Freigabe
+## 2026-06-07 - Interne Wiki-Dokumentation bis zur Freigabe
 
 - Datum: `2026-06-07`
-- Entscheidung: Das GitHub-Wiki wird ausführlich für `Claude-Codex-MCP`
-  aufgebaut, aber das Repository bleibt zunächst privat.
+- Entscheidung: Die ausführliche Wiki-Dokumentation für `Claude-Codex-MCP`
+  wird zunächst als versionierter Markdown-Bereich unter
+  `DOKUMENTATION/GitHub-Wiki/` gepflegt.
 - Begründung: Das Projekt soll erst öffentlich werden, wenn echte Codex- und
   Claude-Integrationen getestet, Sicherheitsregeln geprüft und Dokumentation
-  gegengelesen sind.
+  gegengelesen sind. GitHub-Wikis sind im aktuellen privaten Repository nicht
+  verfügbar.
 - Betroffene Bereiche: `DOKUMENTATION/GitHub-Wiki/`, GitHub-Repository-
   Einstellungen, Veröffentlichungsprozess.
-- Folgen oder Trade-offs: Private Tester können bereits mit Wiki und Code
-  arbeiten. Öffentliche Nutzer erhalten das Projekt erst nach einer bewussten
-  Freigabe.
+- Folgen oder Trade-offs: Private Tester können bereits mit der
+  Wiki-Dokumentation und dem Code arbeiten. Nach öffentlicher Freigabe kann der
+  Bereich in ein echtes GitHub-Wiki gespiegelt werden.

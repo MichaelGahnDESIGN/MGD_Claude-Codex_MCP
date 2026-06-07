@@ -13,7 +13,7 @@ Datum: 2026-06-07
 - Workspace-Paketversion und MCP-Server-Info auf `0.2.0` gesetzt.
 - Öffentlichen Nutzungsweg über GitHub, spätere Releases und optional NPM
   beschrieben.
-- Ausführliches GitHub-Wiki für das private Projekt vorbereitet mit
+- Ausführliche interne Wiki-Dokumentation im Repository vorbereitet mit
   Schnellstart, Architektur, Installation, MCP-Tools, Agenten-Workflows,
   Sicherheit, Tests, Roadmap und Veröffentlichungsfreigabe.
 
@@ -22,9 +22,9 @@ Datum: 2026-06-07
 Datum: 2026-06-07
 
 - Öffentliche `README.md` für Menschen ergänzt.
-- GitHub Wiki mit Schnellstart, Ordnerstruktur, KI-Agenten,
+- GitHub-Wiki-Inhalte mit Schnellstart, Ordnerstruktur, KI-Agenten,
   Prompt-Cheatsheet, Dokumentation, Backups, Releases, Sicherheit, OpenRouter
-  und FAQ veröffentlicht.
+  und FAQ versioniert vorbereitet.
 - `CLAUDE.md` als automatisch erkannter Claude-Code-Einstieg ergänzt.
 - `SECURITY.md` als öffentliche Sicherheitsrichtlinie ergänzt.
 - MIT-Lizenz ergänzt.

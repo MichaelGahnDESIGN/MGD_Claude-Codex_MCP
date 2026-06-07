@@ -4,6 +4,25 @@ Das Repository bleibt zunächst privat.
 
 Öffentlich wird es erst, wenn alles getestet ist und funktioniert.
 
+## Hinweis Zum GitHub-Wiki
+
+Im aktuellen privaten Repository ist das echte GitHub-Wiki nicht verfügbar.
+GitHub zeigt in den Repository-Einstellungen:
+
+```text
+Upgrade or make this repository public to enable Wikis
+```
+
+Darum werden die Wiki-Inhalte bis zur Freigabe als normale Markdown-Dateien im
+Repository gepflegt:
+
+```text
+DOKUMENTATION/GitHub-Wiki/
+```
+
+Diese Lösung ist für die private Testphase sogar besser nachvollziehbar, weil
+alle Dokumentationsänderungen zusammen mit dem Code versioniert werden.
+
 ## Warum Privat Bleiben?
 
 Das Projekt ist noch jung. Vor einer öffentlichen Freigabe müssen Technik,
@@ -29,7 +48,7 @@ Vor `public` müssen diese Punkte erledigt sein:
 - [ ] `write_handoff` funktioniert im echten Client.
 - [ ] Safety-Check blockiert offensichtliche Secrets.
 - [ ] README ist für externe Nutzer verständlich.
-- [ ] Wiki ist vollständig und verständlich.
+- [ ] Interne Wiki-Dokumentation ist vollständig und verständlich.
 - [ ] Beispiele enthalten keine sensiblen Daten.
 - [ ] Git-Historie wurde auf sensible Inhalte geprüft.
 - [ ] Repository-Settings sind geprüft.
@@ -49,6 +68,8 @@ Einzelne Nutzer bekommen Zugriff auf das private Repository.
 ### Stufe 3: Öffentliche Beta
 
 Repository wird öffentlich, aber klar als frühe Beta gekennzeichnet.
+Ab diesem Zeitpunkt kann das echte GitHub-Wiki aktiviert und mit den
+vorbereiteten Seiten befüllt werden.
 
 ### Stufe 4: Stabiler Release
 

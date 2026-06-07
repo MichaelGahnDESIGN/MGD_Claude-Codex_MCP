@@ -82,9 +82,9 @@ Startversion dieser Vorlage pro neuem Projekt:
 - Datum: `2026-06-07`
 - Version: `1.0.1`
 - Beschreibung: `CLAUDE.md` als automatisch erkannter Claude-Code-Einstieg,
-  `SECURITY.md` als Sicherheitsrichtlinie, das veröffentlichte GitHub Wiki und
-  eine klarere öffentliche Positionierung als KI-Projektordner-Vorlage wurden
-  ergänzt.
+  `SECURITY.md` als Sicherheitsrichtlinie, vorbereitete GitHub-Wiki-Inhalte
+  und eine klarere öffentliche Positionierung als KI-Projektordner-Vorlage
+  wurden ergänzt.
 - Begründung: Die Vorlage soll für Anwender praktischer, sicherer und
   tool-kompatibler sein.
 - Betroffene Bereiche: Root-Dateien, README, GitHub-Workflow,
@@ -127,17 +127,18 @@ Startversion dieser Vorlage pro neuem Projekt:
   kann bei Bedarf auf einen stärker vorlagenorientierten Text zurückgeführt
   werden.
 
-### Ergänzung zu 0.2.0 - Privates GitHub-Wiki
+### Ergänzung zu 0.2.0 - Interne Wiki-Dokumentation
 
 - Datum: `2026-06-07`
 - Version: `0.2.0`
-- Beschreibung: Das GitHub-Wiki wurde als ausführliche interne
-  Projektdokumentation für `Claude-Codex-MCP` vorbereitet. Enthalten sind
+- Beschreibung: Eine ausführliche interne Wiki-Dokumentation für
+  `Claude-Codex-MCP` wurde unter `DOKUMENTATION/GitHub-Wiki/` vorbereitet.
+  Enthalten sind
   Schnellstart, Architektur, Betrieb, MCP-Tools, Agenten-Workflows,
   Integrationen, Sicherheit, Tests, Roadmap und Freigabecheckliste.
 - Begründung: Das Projekt soll vor der öffentlichen Freigabe intern sauber
-  testbar und verständlich dokumentiert sein.
-- Betroffene Bereiche: `DOKUMENTATION/GitHub-Wiki/`, GitHub-Wiki des privaten
-  Repositorys.
-- Rücknahme oder Wiederherstellung: Über Git-Diff und Wiki-Git-Historie
-  nachvollziehbar.
+  testbar und verständlich dokumentiert sein. Das echte GitHub-Wiki ist im
+  privaten Repository aktuell nicht verfügbar.
+- Betroffene Bereiche: `DOKUMENTATION/GitHub-Wiki/`, private
+  Repository-Dokumentation.
+- Rücknahme oder Wiederherstellung: Über Git-Diff nachvollziehbar.

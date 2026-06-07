@@ -31,6 +31,12 @@ Weil das Projekt erst getestet und gehärtet werden soll. Öffentlich wird es
 erst, wenn Tests, Sicherheit, Dokumentation und echte Integrationen geprüft
 sind.
 
+## Warum gibt es noch kein echtes GitHub-Wiki?
+
+GitHub erlaubt Wikis in diesem Setup erst nach einem Upgrade oder wenn das
+Repository öffentlich ist. Deshalb liegt die Wiki-Dokumentation vorerst als
+versionierter Markdown-Bereich im Repository unter `DOKUMENTATION/GitHub-Wiki/`.
+
 ## Kann das Projekt später öffentlich werden?
 
 Ja. Geplant ist ein öffentlicher GitHub-Stand und später optional ein NPM-Paket.
@@ -58,7 +64,7 @@ Mindestens:
 
 - echte Codex-/Claude-Integration testen
 - Safety-Regeln prüfen
-- Dokumentation gegenlesen
+- interne Wiki-Dokumentation gegenlesen
 - Repository auf sensible Daten prüfen
 - Release-Prozess definieren
 - optional NPM-Veröffentlichung vorbereiten

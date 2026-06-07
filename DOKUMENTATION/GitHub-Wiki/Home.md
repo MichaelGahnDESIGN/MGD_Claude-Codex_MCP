@@ -1,6 +1,12 @@
-# Claude-Codex-MCP Wiki
+# Claude-Codex-MCP Dokumentation
 
-Willkommen im Wiki zu **Claude-Codex-MCP**.
+Willkommen in der internen Wiki-Dokumentation zu **Claude-Codex-MCP**.
+
+Wichtig: Solange das Repository privat bleibt, ist das echte GitHub-Wiki im
+aktuellen GitHub-Setup nicht verfügbar. Diese Seiten liegen deshalb
+versioniert im Repository unter `DOKUMENTATION/GitHub-Wiki/`. Sobald das
+Repository öffentlich freigegeben wird oder ein GitHub-Plan mit privaten Wikis
+genutzt wird, können diese Seiten in ein echtes GitHub-Wiki gespiegelt werden.
 
 Dieses Projekt baut ein lokales MCP-System, mit dem mehrere KI-Agenten wie
 ChatGPT Codex, Claude Code, Claude Cowork und weitere MCP-Clients sauber über
