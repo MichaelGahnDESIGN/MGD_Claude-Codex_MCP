@@ -97,3 +97,31 @@ Jeder Eintrag soll mindestens enthalten:
 - Folgen oder Trade-offs: Der Root enthält nun bewusst einige öffentliche
   GitHub-Dateien. Die allgemeine Aufräumregel bleibt erhalten: Weitere
   Root-Dateien brauchen einen dokumentierten Grund.
+
+## 2026-06-07 - Claude-Code-Kompatibilität und Sicherheitsrichtlinie ergänzt
+
+- Datum: `2026-06-07`
+- Entscheidung: Die Vorlage erhält zusätzlich `CLAUDE.md` als automatisch
+  erkennbaren Claude-Code-Einstieg und `SECURITY.md` als öffentliche
+  Sicherheitsrichtlinie.
+- Begründung: Claude Code arbeitet zuverlässig mit `CLAUDE.md`. Durch den
+  Import von `AGENTS.md` bleibt die gemeinsame Agentenlogik dennoch gebündelt.
+  `SECURITY.md` macht den Sicherheitsfokus für GitHub-Nutzer sofort sichtbar.
+- Betroffene Bereiche: Root-Dateien, README, GitHub-Workflow,
+  Dokumentationsgenerator, Start- und Orientierungsdokumentation.
+- Folgen oder Trade-offs: Der Root enthält zwei zusätzliche sichtbare Dateien,
+  die bewusst erlaubt sind. Die Vorlage wird dadurch besser verständlich und
+  kompatibler für Anwender.
+
+## 2026-06-07 - GitHub-Wiki-Inhalte vorbereitet
+
+- Datum: `2026-06-07`
+- Entscheidung: Wiki-Inhalte werden unter `DOKUMENTATION/GitHub-Wiki/`
+  versioniert vorbereitet.
+- Begründung: GitHub stellt das separate `.wiki.git`-Repository erst bereit,
+  wenn das Wiki-Backend initialisiert ist. Die Inhalte sollen trotzdem
+  nachvollziehbar im Hauptrepository liegen.
+- Betroffene Bereiche: README, Dokumentation, vorbereitete Wiki-Seiten.
+- Folgen oder Trade-offs: Die Inhalte sind sofort verfügbar und können nach
+  Wiki-Initialisierung in das GitHub Wiki gepusht werden. Bis dahin ist der
+  GitHub-Wiki-Link der Zielort, aber die versionierten Quellen liegen im Repo.

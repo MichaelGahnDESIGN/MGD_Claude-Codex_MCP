@@ -76,3 +76,18 @@ Startversion dieser Vorlage pro neuem Projekt:
 - Rücknahme oder Wiederherstellung: Über Git-Diff nachvollziehbar. Die
   GitHub-spezifischen Dateien können entfernt werden, wenn die Vorlage nicht
   öffentlich bereitgestellt werden soll.
+
+### Ergänzung zu 1.0.1 - Claude-Code- und Sicherheitsverbesserung
+
+- Datum: `2026-06-07`
+- Version: `1.0.1`
+- Beschreibung: `CLAUDE.md` als automatisch erkannter Claude-Code-Einstieg,
+  `SECURITY.md` als Sicherheitsrichtlinie, vorbereitete Wiki-Inhalte und eine
+  klarere öffentliche Positionierung als KI-Projektordner-Vorlage wurden
+  ergänzt.
+- Begründung: Die Vorlage soll für Anwender praktischer, sicherer und
+  tool-kompatibler sein.
+- Betroffene Bereiche: Root-Dateien, README, GitHub-Workflow,
+  Dokumentationsgenerator, Start- und Orientierungsdokumentation,
+  `DOKUMENTATION/GitHub-Wiki/`.
+- Rücknahme oder Wiederherstellung: Über Git-Diff nachvollziehbar.
