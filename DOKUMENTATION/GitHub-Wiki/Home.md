@@ -1,51 +1,75 @@
-# AI Basic Projektordner Wiki
+# Claude-Codex-MCP Wiki
 
-Willkommen im Wiki zur Vorlage **AI Basic Projektordner**.
+Willkommen im Wiki zu **Claude-Codex-MCP**.
 
-Diese Vorlage ist ein sauberer Startpunkt für KI-gestützte Projekte mit Claude
-Code, Claude Cowork, ChatGPT Codex und ähnlichen Agenten.
+Dieses Projekt baut ein lokales MCP-System, mit dem mehrere KI-Agenten wie
+ChatGPT Codex, Claude Code, Claude Cowork und weitere MCP-Clients sauber über
+ein gemeinsames Aufgaben-, Chat- und Übergabeprotokoll zusammenarbeiten können.
 
-Wichtig: Die Vorlage ist keine fertige App und kein Framework-Boilerplate. Sie
-ist eine neutrale Projektordner-Struktur, die vor dem eigentlichen Bauen für
-Ordnung, Kontext, Dokumentation, Sicherheit und klare Agentenregeln sorgt.
+Der aktuelle Projektstand ist **Version `0.2.0`**.
+
+## Wichtigster Grundsatz
+
+Claude-Codex-MCP ist lokal-first:
+
+- keine Cloud-Pflicht
+- keine zentrale Datensammlung
+- keine sensiblen Daten in Aufgaben, Chats, Logs oder Übergaben
+- menschenlesbares Markdown bleibt erhalten
+- strukturierte MCP-Tools ergänzen die Markdown-Kommunikation
+
+## Was Das System Löst
+
+Wenn mehrere KI-Agenten am selben Projekt arbeiten, gehen Informationen leicht
+verloren. Das betrifft besonders Aufgabenstatus, Rückfragen, Blocker,
+Entscheidungen, Testergebnisse und Übergaben.
+
+Claude-Codex-MCP verwaltet dafür lokal:
+
+- Chat-Nachrichten
+- Aufgaben-Queue
+- Statuswerte
+- Done-Bereich
+- Blocker und Rückfragen
+- Entscheidungen
+- Übergaben
+- Log und History
+- Safety-Check gegen offensichtliche Secrets
 
 ## Schnellnavigation
 
 - [Schnellstart](Schnellstart)
-- [Ordnerstruktur](Ordnerstruktur)
-- [KI-Agenten](KI-Agenten)
-- [Prompt-Cheatsheet](Prompt-Cheatsheet)
-- [Dokumentation pflegen](Dokumentation-pflegen)
-- [Backups](Backups)
-- [Versionierung und Releases](Versionierung-und-Releases)
-- [Sicherheit](Sicherheit)
-- [OpenRouter-Demo](OpenRouter-Demo)
+- [Konzept und Architektur](Konzept-und-Architektur)
+- [Installation und Betrieb](Installation-und-Betrieb)
+- [MCP Tools](MCP-Tools)
+- [Agenten Workflows](Agenten-Workflows)
+- [Codex Integration](Codex-Integration)
+- [Claude Integration](Claude-Integration)
+- [Sicherheit und Datenschutz](Sicherheit-und-Datenschutz)
+- [Tests und Qualität](Tests-und-Qualitaet)
+- [Roadmap](Roadmap)
+- [Freigabe zur Veröffentlichung](Freigabe-zur-Veroeffentlichung)
 - [FAQ](FAQ)
 
-## Grundidee
+## Aktueller Status
 
-- Menschen starten über `README.md` und `index.md`.
-- Claude Code startet über `CLAUDE.md`.
-- ChatGPT Codex startet über `AGENTS.md`.
-- Konkreter Projektcode gehört nach `PROJEKT/WORKSPACE/`.
-- Vorlagenlogik, Agenten und Skills liegen in `VORLAGE/`.
-- Entscheidungen, Risiken und Setup-Hinweise liegen in `DOKUMENTATION/`.
-- Demos bleiben getrennt in `DEMOS/`.
-- Lokale Sicherungen bleiben in `BACKUPS/` und werden nicht automatisch
-  versioniert.
+Phase 1 ist umgesetzt und lokal getestet.
 
-## Für Wen Ist Das Nützlich?
+Verfügbar sind:
 
-- Solo-Selbstständige und kleine Teams.
-- Menschen, die KI-Agenten regelmäßig in Projekten einsetzen.
-- Projekte, bei denen Dokumentation und Nachvollziehbarkeit wichtig sind.
-- Anwender, die eine klare Startstruktur suchen, bevor Code entsteht.
+- lokaler MCP-Server über stdio
+- dateibasierter Speicher
+- `agent_comms.md` als menschenlesbares Protokoll
+- `agent_comms.state.json` als strukturierter Zustand
+- 12 MCP-Tools
+- Safety-Check vor Schreibvorgängen
+- Tests für Safety, Statuswechsel, Markdown und Storage
+- Smoke-Test für Tool-Registrierung
 
-## Empfohlener Einstieg
+Noch offen sind:
 
-1. Repository herunterladen oder als Vorlage kopieren.
-2. `README.md` lesen.
-3. `index.md` lesen.
-4. Je nach Tool `CLAUDE.md`, `claude.md` oder `AGENTS.md` verwenden.
-5. Projektkontext ausfüllen.
-6. Erst danach Code in `PROJEKT/WORKSPACE/` anlegen.
+- längere Praxistests mit echten Codex-/Claude-Clients
+- offizielles MCP-SDK prüfen
+- NPM-Paket vorbereiten
+- Import bestehender `AI_COMMS.md`-Dateien
+- öffentliche Freigabe erst nach Abschluss der Test- und Sicherheitsprüfung

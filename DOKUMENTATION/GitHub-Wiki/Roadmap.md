@@ -1,0 +1,60 @@
+# Roadmap
+
+## Phase 1
+
+Status: umgesetzt.
+
+Enthalten:
+
+- lokaler MCP-Server
+- 12 Tools
+- dateibasierter Speicher
+- Markdown-Ausgabe
+- JSON-State
+- Safety-Check
+- Tests
+- deutsche Dokumentation
+
+## Phase 1.1
+
+Geplant:
+
+- echte Codex-/Claude-Integration testen
+- atomare Schreibvorgänge
+- strengere Eingabevalidierung
+- bessere Fehlerausgaben
+- beschädigte State-Dateien sicher behandeln
+- Reset-Round weiter testen
+- Wiki und README gegenlesen
+
+## Phase 1.2
+
+Geplant:
+
+- Import bestehender `AI_COMMS.md`-Dateien
+- CLI-Testwerkzeug
+- Beispielkonfigurationen für MCP-Clients
+- ausführlichere Beispiele
+- erste private Testnutzer vorbereiten
+
+## Phase 2
+
+Mögliche Erweiterungen:
+
+- offizielles MCP-SDK
+- NPM-Paket
+- optionale SQLite-Speicherung
+- Skill-/Prompt-Generator für Codex und Claude
+- Multi-Projekt-Unterstützung
+- bessere History und Archivierung
+
+## Öffentliche Freigabe
+
+Das Repository soll erst öffentlich werden, wenn:
+
+- lokale Tests grün sind
+- echte Integrationen funktionieren
+- keine sensiblen Inhalte vorhanden sind
+- Wiki und README verständlich sind
+- Sicherheitsregeln geprüft wurden
+- ein klarer Release-Stand existiert

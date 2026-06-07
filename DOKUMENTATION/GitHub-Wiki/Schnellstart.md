@@ -1,52 +1,99 @@
 # Schnellstart
 
-## Projekt Aus Der Vorlage Starten
+Diese Seite erklärt den schnellsten lokalen Start von Claude-Codex-MCP.
 
-1. Repository herunterladen, klonen oder als Vorlage verwenden.
-2. Ordner für das neue Projekt kopieren.
-3. Ordner passend zum Projekt benennen.
-4. `README.md` und `index.md` lesen.
-5. Für Claude Code `CLAUDE.md` verwenden.
-6. Für ChatGPT Codex `AGENTS.md` verwenden.
-7. Projektkontext in `VORLAGE/AI/PROJEKTREGELN/ARBEITSKONTEXT.md` ausfüllen.
-8. Freigaben und Grenzen in
-   `VORLAGE/AI/PROJEKTREGELN/FREIGABEN_UND_GRENZEN.md` dokumentieren.
-9. Code nur in `PROJEKT/WORKSPACE/` anlegen.
+## Voraussetzungen
 
-## Erster Prompt Für Claude Code
+- Git
+- Node.js ab `22.6.0`
+- ein MCP-fähiger Client, zum Beispiel Codex oder Claude
 
-```text
-Lies CLAUDE.md, claude.md und index.md.
+Aktuell braucht Phase 1 keine NPM-Paketinstallation. Der Server nutzt
+Node.js-Type-Stripping und den eingebauten Node-Test-Runner.
 
-Richte diese Vorlage als neue Projektbasis ein.
-
-Projektziel:
-<kurze Beschreibung>
-
-Bitte prüfe die Struktur, fülle den Projektkontext soweit möglich vor,
-dokumentiere offene Fragen und lege noch keinen Produktcode an, bevor der
-Arbeitskontext klar ist.
-```
-
-## Erster Prompt Für ChatGPT Codex
-
-```text
-Lies AGENTS.md, index.md und
-DOKUMENTATION/Informationen/Start_und_Orientierung.md.
-
-Nutze diese Vorlage als Startpunkt für ein neues Projekt.
-
-Projektziel:
-<kurze Beschreibung>
-
-Bitte analysiere die Struktur, erstelle einen kurzen Plan und beginne erst
-danach mit Dateien in PROJEKT/WORKSPACE/.
-```
-
-## Nach Dem Start Prüfen
+## Repository Klonen
 
 ```bash
-git status --short --branch
-python3 DOKUMENTATION/Dokumentation-Skills/generate_dokumentationsdaten.py
-npm --prefix DEMOS/OPENROUTER run check
+git clone https://github.com/MichaelGahnDESIGN/Claude-Codex-MCP.git
+cd Claude-Codex-MCP
+```
+
+Solange das Repository privat ist, muss dein GitHub-Konto Zugriff auf das Repo
+haben.
+
+## Lokale Prüfung
+
+```bash
+npm --prefix PROJEKT/WORKSPACE run check
+```
+
+Erwartung:
+
+- 7 Tests bestehen
+- Smoke-Test besteht
+
+## Server Starten
+
+```bash
+cd PROJEKT/WORKSPACE
+npm start
+```
+
+Der Server wartet dann über stdio auf MCP-/JSON-RPC-Anfragen.
+
+## Speicherort Festlegen
+
+Wenn die Kommunikationsdateien in einem konkreten Projektordner liegen sollen:
+
+```bash
+AGENT_COMMS_DIR=/pfad/zum/projekt npm --prefix PROJEKT/WORKSPACE start
+```
+
+Dann entstehen dort:
+
+```text
+agent_comms.md
+agent_comms.state.json
+```
+
+## Minimaler Arbeitsablauf
+
+1. `read_context` aufrufen.
+2. Mit `create_task` eine Aufgabe anlegen.
+3. Mit `claim_task` übernehmen.
+4. Mit `complete_task` abschließen.
+5. `agent_comms.md` lesen und prüfen.
+
+## Beispiel Für Einen Ersten Codex-Prompt
+
+```text
+Nutze das lokale Claude-Codex-MCP.
+
+1. Lies mit read_context den aktuellen Projektkontext.
+2. Erstelle mit create_task eine kleine Testaufgabe an Claude.
+3. Achte darauf, keine sensiblen Daten zu speichern.
+4. Prüfe danach agent_comms.md.
+```
+
+## Beispiel Für Einen Ersten Claude-Prompt
+
+```text
+Nutze das lokale Claude-Codex-MCP.
+
+1. Rufe list_tasks auf.
+2. Übernimm eine passende Aufgabe mit claim_task.
+3. Schließe sie mit complete_task ab.
+4. Wenn etwas unklar ist, lege einen neutral formulierten Blocker an.
+```
+
+## Wichtige Sicherheitsregel
+
+Keine echten Secrets, Tokens, privaten Schlüssel, `.env`-Inhalte,
+personenbezogenen Detaildaten oder privaten Logs in Tool-Eingaben schreiben.
+
+Wenn sensible Daten relevant wirken, neutral formulieren:
+
+```text
+Blocker: Für diese Aufgabe werden Zugangsdaten benötigt. Bitte lokal prüfen und
+nicht in das MCP schreiben.
 ```

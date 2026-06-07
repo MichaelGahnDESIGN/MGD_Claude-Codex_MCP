@@ -1,36 +1,64 @@
 # FAQ
 
-## Ist Das Eine App-Vorlage?
+## Ist Claude-Codex-MCP ein Cloud-Dienst?
 
-Nein. Es ist eine Projektordner-Vorlage für KI-gestützte Arbeit. Der konkrete
-App-Code entsteht später in `PROJEKT/WORKSPACE/`.
+Nein. Phase 1 ist lokal-first. Der MCP läuft auf dem Rechner oder Server, auf
+dem er gestartet wird.
 
-## Warum Gibt Es CLAUDE.md Und AGENTS.md?
+## Läuft das über GitHub?
 
-`CLAUDE.md` ist der automatische Einstieg für Claude Code.
+GitHub verteilt den Code, die Dokumentation und später Releases. Der laufende
+MCP-Prozess läuft nicht auf GitHub.
 
-`AGENTS.md` ist der automatische Einstieg für ChatGPT Codex und dient als
-gemeinsame Agentenlogik.
+## Läuft das über all-inkl?
 
-## Warum Gibt Es Zusätzlich claude.md?
+Nein, nicht in Phase 1. all-inkl wäre nur für eine Website, Dokumentation oder
+einen späteren optionalen Remote-Dienst relevant.
 
-`claude.md` ist eine menschenfreundliche Erklärung für Claude-Nutzer. Sie kann
-gelesen werden, ohne die technische Importlogik in `CLAUDE.md` verstehen zu
-müssen.
+## Warum gibt es Markdown und JSON?
 
-## Wohin Kommt Projektcode?
+Markdown bleibt für Menschen lesbar. JSON ist für strukturierte Tool-Aufrufe
+zuverlässiger. Der Server hält beide Dateien synchron.
 
-Nach `PROJEKT/WORKSPACE/`.
+## Kann ich bestehende `AI_COMMS.md`-Dateien importieren?
 
-## Wohin Kommen Entscheidungen?
+Noch nicht automatisch. Ein Import alter Kommunikationsdateien ist für eine
+spätere Version geplant.
 
-Nach `DOKUMENTATION/Informationen/Entscheidungen.md`.
+## Warum ist das Repository aktuell privat?
 
-## Dürfen .env-Dateien Ins Repository?
+Weil das Projekt erst getestet und gehärtet werden soll. Öffentlich wird es
+erst, wenn Tests, Sicherheit, Dokumentation und echte Integrationen geprüft
+sind.
 
-Nein. Echte `.env`-Dateien bleiben lokal. Nur Beispiel-Dateien mit Platzhaltern
-sind erlaubt.
+## Kann das Projekt später öffentlich werden?
 
-## Muss OpenRouter Verwendet Werden?
+Ja. Geplant ist ein öffentlicher GitHub-Stand und später optional ein NPM-Paket.
+Der Standardbetrieb soll trotzdem lokal bleiben.
 
-Nein. `DEMOS/OPENROUTER/` ist nur ein separater Demo- und Testbereich.
+## Speichert das System sensible Daten?
+
+Es soll keine sensiblen Daten speichern. Schreibende Tools nutzen einen
+Safety-Check gegen offensichtliche Muster. Trotzdem müssen Menschen und Agenten
+sensible Daten aktiv vermeiden.
+
+## Was passiert, wenn der Safety-Check anschlägt?
+
+Der Schreibvorgang wird blockiert und es wird ein Fehler zurückgegeben. Der
+Inhalt wird nicht in `agent_comms.md` oder `agent_comms.state.json`
+geschrieben.
+
+## Braucht Phase 1 NPM-Abhängigkeiten?
+
+Nein. Phase 1 ist dependency-frei umgesetzt und nutzt Node.js-Funktionen.
+
+## Was ist für die öffentliche Freigabe noch nötig?
+
+Mindestens:
+
+- echte Codex-/Claude-Integration testen
+- Safety-Regeln prüfen
+- Dokumentation gegenlesen
+- Repository auf sensible Daten prüfen
+- Release-Prozess definieren
+- optional NPM-Veröffentlichung vorbereiten

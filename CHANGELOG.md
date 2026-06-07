@@ -13,6 +13,9 @@ Datum: 2026-06-07
 - Workspace-Paketversion und MCP-Server-Info auf `0.2.0` gesetzt.
 - Öffentlichen Nutzungsweg über GitHub, spätere Releases und optional NPM
   beschrieben.
+- Ausführliches GitHub-Wiki für das private Projekt vorbereitet mit
+  Schnellstart, Architektur, Installation, MCP-Tools, Agenten-Workflows,
+  Sicherheit, Tests, Roadmap und Veröffentlichungsfreigabe.
 
 ## 1.0.1 - Öffentliche GitHub-Vorlage
 

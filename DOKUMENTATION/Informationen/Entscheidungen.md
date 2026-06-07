@@ -155,3 +155,17 @@ Jeder Eintrag soll mindestens enthalten:
   primär die alte allgemeine Projektvorlage. Die Vorlagenstruktur bleibt im
   Repository erhalten, wird aber im README als Herkunft und Arbeitsumgebung
   eingeordnet.
+
+## 2026-06-07 - GitHub-Wiki bleibt privat bis zur Freigabe
+
+- Datum: `2026-06-07`
+- Entscheidung: Das GitHub-Wiki wird ausführlich für `Claude-Codex-MCP`
+  aufgebaut, aber das Repository bleibt zunächst privat.
+- Begründung: Das Projekt soll erst öffentlich werden, wenn echte Codex- und
+  Claude-Integrationen getestet, Sicherheitsregeln geprüft und Dokumentation
+  gegengelesen sind.
+- Betroffene Bereiche: `DOKUMENTATION/GitHub-Wiki/`, GitHub-Repository-
+  Einstellungen, Veröffentlichungsprozess.
+- Folgen oder Trade-offs: Private Tester können bereits mit Wiki und Code
+  arbeiten. Öffentliche Nutzer erhalten das Projekt erst nach einer bewussten
+  Freigabe.

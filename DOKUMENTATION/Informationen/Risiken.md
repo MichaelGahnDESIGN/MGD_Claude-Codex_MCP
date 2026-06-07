@@ -58,3 +58,18 @@ Pro Eintrag festhalten:
 - Absicherung oder nächste Maßnahme: Agentenregeln und Dokumentation betonen
   Datenminimierung. Sensible Details sollen als neutraler Blocker beschrieben
   statt gespeichert werden.
+
+## GitHub-Wiki ist trotz Aktivierungsversuch noch nicht als Wiki-Git erreichbar
+
+- Risiko: GitHub meldet das Wiki in der CLI teilweise als aktiviert, die direkte
+  API gibt aber weiterhin `has_wiki: false` zurück und
+  `Claude-Codex-MCP.wiki.git` ist nicht erreichbar.
+- Eintrittswahrscheinlichkeit: Aktuell eingetreten.
+- Auswirkung: Die ausführlichen Wiki-Seiten können zunächst nur als
+  versionierte Quelle unter `DOKUMENTATION/GitHub-Wiki/` gepflegt werden.
+- Betroffene Bereiche: GitHub-Wiki, öffentliche/private Dokumentation,
+  Freigabeprozess.
+- Absicherung oder nächste Maßnahme: Wiki-Inhalte im Hauptrepository
+  versionieren. Vor öffentlicher Freigabe GitHub-Repository-Einstellungen im
+  Web-Interface prüfen und das Wiki manuell initialisieren oder erneut per
+  GitHub-API aktivieren.

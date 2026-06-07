@@ -126,3 +126,18 @@ Startversion dieser Vorlage pro neuem Projekt:
 - Rücknahme oder Wiederherstellung: Über Git-Diff nachvollziehbar. Die README
   kann bei Bedarf auf einen stärker vorlagenorientierten Text zurückgeführt
   werden.
+
+### Ergänzung zu 0.2.0 - Privates GitHub-Wiki
+
+- Datum: `2026-06-07`
+- Version: `0.2.0`
+- Beschreibung: Das GitHub-Wiki wurde als ausführliche interne
+  Projektdokumentation für `Claude-Codex-MCP` vorbereitet. Enthalten sind
+  Schnellstart, Architektur, Betrieb, MCP-Tools, Agenten-Workflows,
+  Integrationen, Sicherheit, Tests, Roadmap und Freigabecheckliste.
+- Begründung: Das Projekt soll vor der öffentlichen Freigabe intern sauber
+  testbar und verständlich dokumentiert sein.
+- Betroffene Bereiche: `DOKUMENTATION/GitHub-Wiki/`, GitHub-Wiki des privaten
+  Repositorys.
+- Rücknahme oder Wiederherstellung: Über Git-Diff und Wiki-Git-Historie
+  nachvollziehbar.

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 4,
-  "generatedAt": "2026-06-07T03:19:29+02:00",
+  "generatedAt": "2026-06-07T03:30:26+02:00",
   "projectRoot": ".",
   "documentationRoot": "DOKUMENTATION",
   "tabs": {
@@ -591,7 +591,7 @@
             "counts": {
               "subareas": 6,
               "directories": 7,
-              "files": 28
+              "files": 30
             },
             "primaryLinks": [
               {
@@ -647,17 +647,24 @@
                     "type": "file"
                   },
                   {
-                    "name": "Backups.md",
-                    "path": "DOKUMENTATION/GitHub-Wiki/Backups.md",
-                    "sourceHref": "GitHub-Wiki/Backups.md",
-                    "href": "GitHub-Wiki/Backups.md",
+                    "name": "Agenten-Workflows.md",
+                    "path": "DOKUMENTATION/GitHub-Wiki/Agenten-Workflows.md",
+                    "sourceHref": "GitHub-Wiki/Agenten-Workflows.md",
+                    "href": "GitHub-Wiki/Agenten-Workflows.md",
                     "type": "file"
                   },
                   {
-                    "name": "Dokumentation-pflegen.md",
-                    "path": "DOKUMENTATION/GitHub-Wiki/Dokumentation-pflegen.md",
-                    "sourceHref": "GitHub-Wiki/Dokumentation-pflegen.md",
-                    "href": "GitHub-Wiki/Dokumentation-pflegen.md",
+                    "name": "Claude-Integration.md",
+                    "path": "DOKUMENTATION/GitHub-Wiki/Claude-Integration.md",
+                    "sourceHref": "GitHub-Wiki/Claude-Integration.md",
+                    "href": "GitHub-Wiki/Claude-Integration.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "Codex-Integration.md",
+                    "path": "DOKUMENTATION/GitHub-Wiki/Codex-Integration.md",
+                    "sourceHref": "GitHub-Wiki/Codex-Integration.md",
+                    "href": "GitHub-Wiki/Codex-Integration.md",
                     "type": "file"
                   },
                   {
@@ -668,6 +675,13 @@
                     "type": "file"
                   },
                   {
+                    "name": "Freigabe-zur-Veroeffentlichung.md",
+                    "path": "DOKUMENTATION/GitHub-Wiki/Freigabe-zur-Veroeffentlichung.md",
+                    "sourceHref": "GitHub-Wiki/Freigabe-zur-Veroeffentlichung.md",
+                    "href": "GitHub-Wiki/Freigabe-zur-Veroeffentlichung.md",
+                    "type": "file"
+                  },
+                  {
                     "name": "Home.md",
                     "path": "DOKUMENTATION/GitHub-Wiki/Home.md",
                     "sourceHref": "GitHub-Wiki/Home.md",
@@ -675,31 +689,31 @@
                     "type": "file"
                   },
                   {
-                    "name": "KI-Agenten.md",
-                    "path": "DOKUMENTATION/GitHub-Wiki/KI-Agenten.md",
-                    "sourceHref": "GitHub-Wiki/KI-Agenten.md",
-                    "href": "GitHub-Wiki/KI-Agenten.md",
+                    "name": "Installation-und-Betrieb.md",
+                    "path": "DOKUMENTATION/GitHub-Wiki/Installation-und-Betrieb.md",
+                    "sourceHref": "GitHub-Wiki/Installation-und-Betrieb.md",
+                    "href": "GitHub-Wiki/Installation-und-Betrieb.md",
                     "type": "file"
                   },
                   {
-                    "name": "OpenRouter-Demo.md",
-                    "path": "DOKUMENTATION/GitHub-Wiki/OpenRouter-Demo.md",
-                    "sourceHref": "GitHub-Wiki/OpenRouter-Demo.md",
-                    "href": "GitHub-Wiki/OpenRouter-Demo.md",
+                    "name": "Konzept-und-Architektur.md",
+                    "path": "DOKUMENTATION/GitHub-Wiki/Konzept-und-Architektur.md",
+                    "sourceHref": "GitHub-Wiki/Konzept-und-Architektur.md",
+                    "href": "GitHub-Wiki/Konzept-und-Architektur.md",
                     "type": "file"
                   },
                   {
-                    "name": "Ordnerstruktur.md",
-                    "path": "DOKUMENTATION/GitHub-Wiki/Ordnerstruktur.md",
-                    "sourceHref": "GitHub-Wiki/Ordnerstruktur.md",
-                    "href": "GitHub-Wiki/Ordnerstruktur.md",
+                    "name": "MCP-Tools.md",
+                    "path": "DOKUMENTATION/GitHub-Wiki/MCP-Tools.md",
+                    "sourceHref": "GitHub-Wiki/MCP-Tools.md",
+                    "href": "GitHub-Wiki/MCP-Tools.md",
                     "type": "file"
                   },
                   {
-                    "name": "Prompt-Cheatsheet.md",
-                    "path": "DOKUMENTATION/GitHub-Wiki/Prompt-Cheatsheet.md",
-                    "sourceHref": "GitHub-Wiki/Prompt-Cheatsheet.md",
-                    "href": "GitHub-Wiki/Prompt-Cheatsheet.md",
+                    "name": "Roadmap.md",
+                    "path": "DOKUMENTATION/GitHub-Wiki/Roadmap.md",
+                    "sourceHref": "GitHub-Wiki/Roadmap.md",
+                    "href": "GitHub-Wiki/Roadmap.md",
                     "type": "file"
                   },
                   {
@@ -710,17 +724,17 @@
                     "type": "file"
                   },
                   {
-                    "name": "Sicherheit.md",
-                    "path": "DOKUMENTATION/GitHub-Wiki/Sicherheit.md",
-                    "sourceHref": "GitHub-Wiki/Sicherheit.md",
-                    "href": "GitHub-Wiki/Sicherheit.md",
+                    "name": "Sicherheit-und-Datenschutz.md",
+                    "path": "DOKUMENTATION/GitHub-Wiki/Sicherheit-und-Datenschutz.md",
+                    "sourceHref": "GitHub-Wiki/Sicherheit-und-Datenschutz.md",
+                    "href": "GitHub-Wiki/Sicherheit-und-Datenschutz.md",
                     "type": "file"
                   },
                   {
-                    "name": "Versionierung-und-Releases.md",
-                    "path": "DOKUMENTATION/GitHub-Wiki/Versionierung-und-Releases.md",
-                    "sourceHref": "GitHub-Wiki/Versionierung-und-Releases.md",
-                    "href": "GitHub-Wiki/Versionierung-und-Releases.md",
+                    "name": "Tests-und-Qualitaet.md",
+                    "path": "DOKUMENTATION/GitHub-Wiki/Tests-und-Qualitaet.md",
+                    "sourceHref": "GitHub-Wiki/Tests-und-Qualitaet.md",
+                    "href": "GitHub-Wiki/Tests-und-Qualitaet.md",
                     "type": "file"
                   }
                 ]
