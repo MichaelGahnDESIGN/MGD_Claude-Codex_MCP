@@ -40,7 +40,7 @@ describe("runSetup", () => {
     assert.match(codexCommand, /codex mcp add claude-codex-mcp/);
     assert.match(codexCommand, new RegExp(escapeRegExp(projectDir)));
     assert.match(claudeConfig, /claude-codex-mcp/);
-    assert.match(guide, /Nicht-Programmierer/);
+    assert.match(guide, /ohne Programmierkenntnisse/);
     assert.match(guide, /AGENT_COMMS_DIR/);
   });
 

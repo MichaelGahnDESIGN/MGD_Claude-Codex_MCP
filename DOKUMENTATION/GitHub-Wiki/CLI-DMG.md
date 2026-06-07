@@ -56,12 +56,37 @@ neuen Ordnernamen angehängt.
 
 ## Nutzung
 
-1. DMG öffnen.
-2. `START_HIER.md` lesen.
-3. `Claude-Codex-MCP Setup.app` öffnen.
-4. Projektname und Projektordner im Dialog auswählen.
-5. Danach die erzeugte `ANLEITUNG.md` für Codex, Claude Code oder Claude Cowork
-   verwenden.
+Diese Schritte sind für einfache Nutzer gedacht:
+
+1. Lade die DMG-Datei auf deinen Mac.
+2. Öffne die DMG mit einem Doppelklick.
+3. Lies kurz `START_HIER.md`.
+4. Öffne `Claude-Codex-MCP Setup.app` mit einem Doppelklick.
+5. Bestätige den Willkommenshinweis.
+6. Gib einen einfachen Projektnamen ein, zum Beispiel `Mein Agenten-Projekt`.
+7. Wähle den Projektordner aus. In diesem Ordner entsteht später
+   `agent_comms.md`.
+8. Warte, bis die App fertig ist. Das kann kurz dauern.
+9. Danach öffnet sich automatisch `ANLEITUNG.md`.
+10. Folge dort den Schritten für ChatGPT Codex, Claude Code oder Claude Cowork.
+
+## Wenn Etwas Schiefgeht
+
+Die App legt bei Fehlern diese Logdatei an und öffnet sie automatisch:
+
+```text
+~/Claude-Codex-MCP-Setup.log
+```
+
+Diese Datei soll nur zur Fehlersuche genutzt werden. Vor dem Weitergeben bitte
+prüfen, dass keine privaten Daten enthalten sind.
+
+## Was Nutzer Nicht Tun Müssen
+
+- keine JSON-Dateien von Hand schreiben
+- keine MCP-Pfade selbst ausdenken
+- keine Programmierung verstehen
+- keine Secrets oder Zugangsdaten eintragen
 
 ## Sicherheit
 
