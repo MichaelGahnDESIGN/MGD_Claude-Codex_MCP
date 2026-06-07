@@ -19,6 +19,8 @@ Datum: 2026-06-07
 - Zwei-Agenten-Integrationstest und lokale Demo ergänzt:
   Codex erstellt eine Aufgabe, Claude übernimmt und schließt sie ab.
 - Codex-MCP-Registrierungsbeispiel und Claude-Konfigurationsbeispiele ergänzt.
+- Vertrauliche Herkunftsreferenzen aus README und Dokumentation entfernt.
+- Impressum in der Root-README ergänzt.
 
 ## 1.0.1 - Öffentliche GitHub-Vorlage
 

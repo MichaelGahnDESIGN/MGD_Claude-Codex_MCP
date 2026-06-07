@@ -187,3 +187,18 @@ Jeder Eintrag soll mindestens enthalten:
   Claude ist auf diesem Rechner nicht als CLI verfügbar und muss später in
   Claude Code oder Claude Desktop mit demselben Startskript und demselben
   `AGENT_COMMS_DIR` registriert werden.
+
+## 2026-06-07 - Öffentliche Herkunftsreferenzen neutralisiert
+
+- Datum: `2026-06-07`
+- Entscheidung: Die öffentliche README und begleitende Dokumentation nennen
+  keine vertraulichen internen Projektbezüge mehr. Die Entstehungsgeschichte
+  wird neutral als praktische Agenten-Arbeitsweise beschrieben. Zusätzlich
+  wurde das Impressum in der Root-README ergänzt.
+- Begründung: Das Repository soll später öffentlich nutzbar sein, ohne
+  vertrauliche Produkt- oder Entwicklungsinformationen offenzulegen.
+- Betroffene Bereiche: `README.md`, `CHANGELOG.md`,
+  `PROJEKT/WORKSPACE/docs/`, `DOKUMENTATION/GitHub-Wiki/`,
+  `DOKUMENTATION/Projektbetrieb/`.
+- Folgen oder Trade-offs: Die öffentliche Dokumentation bleibt verständlich,
+  verzichtet aber bewusst auf interne Herkunftsdetails.

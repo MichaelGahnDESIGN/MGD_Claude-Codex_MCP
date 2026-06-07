@@ -3,8 +3,8 @@
 ## Ziel
 
 Claude-Codex-MCP ist ein lokales Kommunikationssystem für mehrere KI-Agenten.
-Es soll die bewährte Idee einer gemeinsamen `AI_COMMS.md` aus TINTLING in ein
-wiederverwendbares Werkzeug überführen.
+Es soll die bewährte Idee einer gemeinsamen, menschenlesbaren Agenten-Kommunikationsdatei
+in ein wiederverwendbares Werkzeug überführen.
 
 Phase 1 konzentriert sich auf:
 

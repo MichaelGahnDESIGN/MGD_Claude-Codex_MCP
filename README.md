@@ -6,10 +6,10 @@ Ein lokales MCP-System, mit dem mehrere KI-Agenten wie ChatGPT Codex, Claude
 Code, Claude Cowork und weitere Werkzeuge über ein gemeinsames Aufgaben-,
 Chat- und Übergabeprotokoll zusammenarbeiten können.
 
-Das Projekt ist aus einer praktischen Arbeitsweise entstanden: In TINTLING hat
-sich eine gemeinsame Markdown-Datei als Kommunikationskanal zwischen Claude und
-Codex bewährt. `Claude-Codex-MCP` macht daraus ein wiederverwendbares,
-strukturiertes und trotzdem menschenlesbares Werkzeug.
+Das Projekt ist aus einer praktischen Agenten-Arbeitsweise entstanden: Eine
+gemeinsame Markdown-Datei hat sich als einfacher Kommunikationskanal zwischen
+Claude und Codex bewährt. `Claude-Codex-MCP` macht daraus ein
+wiederverwendbares, strukturiertes und trotzdem menschenlesbares Werkzeug.
 
 ## Kurzfassung
 
@@ -407,6 +407,24 @@ Der geplante Veröffentlichungsweg:
 2. Releases mit klaren Versionen.
 3. Optional NPM-Paket für einfache Installation.
 4. Weiterhin lokal-first als Standardbetrieb.
+
+## Impressum
+
+Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz)
+
+Michael Gahn DESIGN  
+Michael Gahn  
+Dr.-Theodor-Brugsch Str. 12  
+08529 Plauen  
+Sachsen  
+Deutschland
+
+Tel.: +49 (0) 176 557 647 48  
+E-Mail: Anfrage@Michael-Gahn.de
+
+Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz:  
+Steuernummer: 223/222/02451  
+Ust-ID: DE288143343
 
 ## Lizenz
 

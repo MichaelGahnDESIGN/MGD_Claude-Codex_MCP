@@ -11,8 +11,8 @@ ein stabiles lokales Fundament schaffen.
 
 ## Ausgangsidee
 
-Im Projekt TINTLING hat sich eine Datei `AI_COMMS.md` als gemeinsamer Chat
-zwischen Claude und Codex bewährt. Das war einfach, verständlich und schnell.
+Eine gemeinsame Markdown-Datei als Chat zwischen Claude und Codex hat sich in
+der praktischen Arbeit bewährt. Das war einfach, verständlich und schnell.
 
 Die Schwächen:
 

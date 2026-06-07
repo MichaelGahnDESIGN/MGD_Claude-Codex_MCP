@@ -100,9 +100,9 @@ Startversion dieser Vorlage pro neuem Projekt:
   Blocker, Entscheidungen, Übergaben, Done-Bereich, History und Safety-Check
   umgesetzt. Die erste Version nutzt dateibasierten Speicher mit
   `agent_comms.md` und `agent_comms.state.json`.
-- Begründung: Die bewährte `AI_COMMS.md`-Zusammenarbeit aus TINTLING soll als
-  wiederverwendbares lokales Werkzeug für Codex, Claude und weitere Agenten
-  verfügbar werden.
+- Begründung: Die bewährte Zusammenarbeit über eine gemeinsame
+  Agenten-Kommunikationsdatei soll als wiederverwendbares lokales Werkzeug für
+  Codex, Claude und weitere Agenten verfügbar werden.
 - Betroffene Bereiche: `PROJEKT/WORKSPACE/src/`,
   `PROJEKT/WORKSPACE/tests/`, `PROJEKT/WORKSPACE/docs/`,
   `PROJEKT/WORKSPACE/examples/`.
@@ -160,3 +160,18 @@ Startversion dieser Vorlage pro neuem Projekt:
 - Rücknahme oder Wiederherstellung: Lokale Codex-Registrierung kann mit
   `codex mcp remove claude-codex-mcp` entfernt werden. Repository-Änderungen
   sind über Git-Diff nachvollziehbar.
+
+### Ergänzung zu 0.2.0 - Öffentliche README bereinigt
+
+- Datum: `2026-06-07`
+- Version: `0.2.0`
+- Beschreibung: Vertrauliche Herkunftsreferenzen wurden aus README,
+  Workspace-Dokumentation und interner Wiki-Quelle entfernt. Die Root-README
+  enthält nun außerdem ein Impressum.
+- Begründung: Das Projekt soll privat vorbereitet und erst später öffentlich
+  freigegeben werden, ohne interne Produktinformationen offenzulegen.
+- Betroffene Bereiche: `README.md`, `CHANGELOG.md`,
+  `PROJEKT/WORKSPACE/docs/`, `DOKUMENTATION/GitHub-Wiki/`,
+  `DOKUMENTATION/Informationen/`, `DOKUMENTATION/Projektbetrieb/`.
+- Rücknahme oder Wiederherstellung: Über Git-Diff nachvollziehbar. Das
+  Impressum kann bei geänderter Veröffentlichungsstrategie angepasst werden.
