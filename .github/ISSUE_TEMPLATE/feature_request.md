@@ -1,19 +1,20 @@
-# Vorschlag
+---
+name: Feature request
+about: Suggest an idea for this project
+title: ''
+labels: ''
+assignees: ''
 
-## Ziel
+---
 
-Was soll die Vorlage künftig besser können?
+**Is your feature request related to a problem? Please describe.**
+A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
 
-## Nutzen
+**Describe the solution you'd like**
+A clear and concise description of what you want to happen.
 
-Warum hilft diese Änderung Menschen oder KI-Agenten?
+**Describe alternatives you've considered**
+A clear and concise description of any alternative solutions or features you've considered.
 
-## Betroffener Bereich
-
-Zum Beispiel `VORLAGE/`, `DOKUMENTATION/`, `PROJEKT/WORKSPACE/`,
-`DEMOS/OPENROUTER/` oder `.github/`.
-
-## Zusätzliche Hinweise
-
-Bitte keine Secrets, Tokens, Passwörter, personenbezogenen Daten oder privaten
-Pfade einfügen.
+**Additional context**
+Add any other context or screenshots about the feature request here.
