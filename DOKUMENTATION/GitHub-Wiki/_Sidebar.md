@@ -4,6 +4,7 @@
 - [Schnellstart](Schnellstart)
 - [Konzept und Architektur](Konzept-und-Architektur)
 - [Installation und Betrieb](Installation-und-Betrieb)
+- [CLI-DMG](CLI-DMG)
 - [MCP Tools](MCP-Tools)
 - [Agenten Workflows](Agenten-Workflows)
 - [Codex Integration](Codex-Integration)

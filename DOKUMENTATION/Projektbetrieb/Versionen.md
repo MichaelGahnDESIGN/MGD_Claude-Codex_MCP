@@ -16,13 +16,15 @@ Startversion dieser Vorlage pro neuem Projekt:
 - Beschreibung: Ein lokaler Setup-Assistent wurde ergänzt. Er kann mit
   `npm run setup` gestartet werden, fragt Nicht-Programmierer nach den
   wichtigsten Angaben und erzeugt Kommunikationsdateien sowie fertige
-  Einrichtungshilfen für Codex, Claude Code und Claude Cowork.
+  Einrichtungshilfen für Codex, Claude Code und Claude Cowork. Zusätzlich kann
+  lokal ein macOS-CLI-DMG-Testpaket gebaut werden.
 - Begründung: Die bisherige Einrichtung war noch stark terminal- und
   pfadorientiert. Der neue Assistent reduziert manuelle Schritte und macht die
   lokale Nutzung verständlicher.
 - Betroffene Bereiche: `VERSION`, `README.md`, `CHANGELOG.md`,
   `PROJEKT/WORKSPACE/src/setup/`, `PROJEKT/WORKSPACE/tests/setup/`,
-  `PROJEKT/WORKSPACE/package.json`, Wiki- und Projektbetrieb-Dokumentation.
+  `PROJEKT/WORKSPACE/src/scripts/`, `PROJEKT/WORKSPACE/package.json`, Wiki-
+  und Projektbetrieb-Dokumentation.
 - Rücknahme oder Wiederherstellung: Über Git-Diff nachvollziehbar. Der
   Assistent kann entfernt werden, ohne den eigentlichen MCP-Server zu verändern.
 

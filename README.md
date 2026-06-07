@@ -224,6 +224,25 @@ Ohne Rückfragen, mit Standardwerten:
 npm --prefix PROJEKT/WORKSPACE run setup -- --yes
 ```
 
+## Lokale macOS-DMG Für Tests
+
+Für lokale Tests kann aus dem aktuellen Git-Stand ein macOS-DMG gebaut werden.
+Dieses DMG ist ein CLI-Testpaket, keine signierte Desktop-App.
+
+```bash
+npm --prefix PROJEKT/WORKSPACE run build:cli-dmg
+```
+
+Das Ergebnis liegt lokal hier:
+
+```text
+PROJEKT/WORKSPACE/CLI-DMG/
+```
+
+Der Ordner wird von Git ignoriert. Die DMG wird aktuell nicht auf GitHub
+veröffentlicht. Sie ist für interne Tests gedacht und kann auf macOS
+Sicherheitswarnungen zeigen, weil sie nicht signiert oder notarisiert ist.
+
 Prüfung ausführen:
 
 ```bash

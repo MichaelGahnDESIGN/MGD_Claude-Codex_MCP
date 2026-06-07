@@ -8,11 +8,13 @@ Datum: 2026-06-07
 
 - Versionsnummer des GitHub-Projekts auf `0.2.1` erhöht.
 - `npm run setup` als lokaler Setup-Assistent für Nicht-Programmierer ergänzt.
+- `npm run build:cli-dmg` als lokaler macOS-CLI-DMG-Build ergänzt.
 - Assistent erzeugt Kommunikationsordner, `agent_comms.md`,
   `agent_comms.state.json`, einfache Anleitung, Codex-Skript und Claude-
   Konfigurationshilfen.
 - Tests für den Setup-Assistenten ergänzt.
-- Dokumentation und Wiki-Quellen auf den leichteren Start aktualisiert.
+- Dokumentation und Wiki-Quellen auf den leichteren Start und das lokale
+  CLI-DMG-Testpaket aktualisiert.
 
 ## 0.2.0 - GitHub-Projekt README und öffentlicher Projektstand
 

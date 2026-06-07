@@ -10,6 +10,15 @@ dem er gestartet wird.
 GitHub verteilt den Code, die Dokumentation und später Releases. Der laufende
 MCP-Prozess läuft nicht auf GitHub.
 
+## Gibt Es Schon Eine DMG Oder EXE?
+
+Es gibt aktuell ein lokales macOS-CLI-DMG-Testpaket. Es wird mit
+`npm --prefix PROJEKT/WORKSPACE run build:cli-dmg` gebaut und liegt danach
+unter `PROJEKT/WORKSPACE/CLI-DMG/`.
+
+Dieses DMG ist nicht signiert, nicht notarisiert und wird noch nicht öffentlich
+auf GitHub veröffentlicht. Eine Windows-EXE ist noch nicht umgesetzt.
+
 ## Läuft das über all-inkl?
 
 Nein, nicht in Phase 1. all-inkl wäre nur für eine Website, Dokumentation oder

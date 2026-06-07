@@ -48,6 +48,23 @@ Der Assistent erzeugt:
 - `ANLEITUNG.md`
 - fertige Codex- und Claude-Konfigurationshilfen
 
+## Lokales CLI-DMG Bauen
+
+Für macOS kann lokal ein CLI-DMG-Testpaket gebaut werden:
+
+```bash
+npm --prefix PROJEKT/WORKSPACE run build:cli-dmg
+```
+
+Das Ergebnis liegt unter:
+
+```text
+PROJEKT/WORKSPACE/CLI-DMG/
+```
+
+Dieses Paket ist nicht signiert und nicht notarisiert. Es ist nur für lokale
+Tests gedacht und wird aktuell nicht auf GitHub veröffentlicht.
+
 ## Start Im Workspace
 
 ```bash

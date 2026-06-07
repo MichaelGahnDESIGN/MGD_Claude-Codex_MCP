@@ -7,6 +7,7 @@
   "license": "MIT",
   "scripts": {
     "check": "npm run test && npm run smoke && npm run playwright:audit",
+    "build:cli-dmg": "node --experimental-strip-types src/scripts/buildCliDmg.ts",
     "demo:agents": "node --experimental-strip-types src/scripts/twoAgentDemo.ts",
     "dev": "node --experimental-strip-types src/index.ts",
     "playwright:audit": "playwright test tests/playwright",

@@ -17,7 +17,12 @@ Enthalten:
 
 ## Phase 1.1
 
-Geplant:
+Teilweise umgesetzt:
+
+- einfacher Setup-Assistent für Nicht-Programmierer
+- lokales CLI-DMG-Testpaket für macOS
+
+Weiter geplant:
 
 - echte Codex-/Claude-Integration testen
 - atomare Schreibvorgänge
@@ -43,6 +48,8 @@ Mögliche Erweiterungen:
 
 - offizielles MCP-SDK
 - NPM-Paket
+- signierte macOS-DMG oder Desktop-App
+- Windows-EXE/Installer
 - optionale SQLite-Speicherung
 - Skill-/Prompt-Generator für Codex und Claude
 - Multi-Projekt-Unterstützung

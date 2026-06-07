@@ -47,6 +47,7 @@ Claude-Codex-MCP verwaltet dafür lokal:
 - [Schnellstart](Schnellstart)
 - [Konzept und Architektur](Konzept-und-Architektur)
 - [Installation und Betrieb](Installation-und-Betrieb)
+- [CLI-DMG](CLI-DMG)
 - [MCP Tools](MCP-Tools)
 - [Agenten Workflows](Agenten-Workflows)
 - [Codex Integration](Codex-Integration)
@@ -71,10 +72,12 @@ Verfügbar sind:
 - Safety-Check vor Schreibvorgängen
 - Tests für Safety, Statuswechsel, Markdown und Storage
 - Smoke-Test für Tool-Registrierung
+- lokaler CLI-DMG-Build für macOS-Testpakete
 
 Noch offen sind:
 
 - längere Praxistests mit echten Codex-/Claude-Clients
+- signierte und notarisierte macOS-App oder DMG für öffentliche Downloads
 - offizielles MCP-SDK prüfen
 - NPM-Paket vorbereiten
 - Import bestehender `AI_COMMS.md`-Dateien
