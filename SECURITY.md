@@ -29,9 +29,11 @@ Besonders vorsichtig arbeiten bei:
 Bitte melde Sicherheitsprobleme nicht in öffentlichen Issues, wenn dabei
 sensible Details sichtbar würden.
 
-Kontakt:
+Meldeweg:
 
-- E-Mail: Anfrage@Michael-Gahn.de
+- Nutze, wenn verfügbar, die private Sicherheitsmeldung auf GitHub.
+- Falls GitHub keinen privaten Meldeweg anbietet, nutze die im Impressum
+  genannten Anbieterangaben.
 
 Bitte beschreibe:
 
