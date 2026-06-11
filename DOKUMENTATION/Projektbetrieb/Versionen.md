@@ -9,6 +9,23 @@ Startversion dieser Vorlage pro neuem Projekt:
 - Betroffene Bereiche: `Grundstruktur`
 - Rücknahme oder Wiederherstellung: `Aus Vorlage erneut erzeugbar`
 
+## 0.2.3 - Universeller /comm-Befehl
+
+- Datum: `2026-06-11`
+- Version: `0.2.3`
+- Beschreibung: `/comm` wurde als neutraler universeller Agenten-Befehl
+  vorbereitet. Der Setup-Assistent erzeugt `comm-befehl.md`; Claude Code erhält
+  zusätzlich `.claude/commands/comm.md`.
+- Begründung: `main`, GitHub-Release und DMG sollen denselben Funktionsstand
+  zeigen. `/comm` gehört deshalb in eine eigene Patch-Version statt rückwirkend
+  in den bereits veröffentlichten Stand `0.2.2`.
+- Betroffene Bereiche: `VERSION`, `README.md`, `CHANGELOG.md`,
+  `PROJEKT/WORKSPACE/package.json`, `PROJEKT/WORKSPACE/package-lock.json`,
+  `PROJEKT/WORKSPACE/src/mcp/createServer.ts`, `.claude/commands/`,
+  `PROJEKT/WORKSPACE/src/setup/`, Setup-Tests und Wiki-Dokumentation.
+- Rücknahme oder Wiederherstellung: Über Git-Diff nachvollziehbar. Bei Bedarf
+  kann die `/comm`-Vorlage entfernt werden, ohne den MCP-Serverkern zu ändern.
+
 ## 0.2.2 - Eingabevalidierung und Protokollhärtung
 
 - Datum: `2026-06-11`
@@ -16,15 +33,13 @@ Startversion dieser Vorlage pro neuem Projekt:
 - Beschreibung: Erlaubte Task-Statuswerte, Task-Typen, Prioritäten und
   Chat-Arten werden zentral geführt. Die MCP-Tools validieren diese Werte vor
   dem Schreiben und melden verständliche Fehler, wenn ein Client unbekannte
-  Werte sendet. Zusätzlich wurde `/comm` als neutraler universeller
-  Agenten-Befehl vorbereitet.
+  Werte sendet.
 - Begründung: Das Protokoll soll nicht nur dokumentiert sein, sondern im
   laufenden MCP-Server zuverlässig durchgesetzt werden.
 - Betroffene Bereiche: `VERSION`, `README.md`, `CHANGELOG.md`,
   `PROJEKT/WORKSPACE/package.json`, `PROJEKT/WORKSPACE/package-lock.json`,
   `PROJEKT/WORKSPACE/src/domain/`, `PROJEKT/WORKSPACE/src/tools/`,
-  `PROJEKT/WORKSPACE/src/setup/`, `PROJEKT/WORKSPACE/tests/setup/`,
-  `PROJEKT/WORKSPACE/tests/tools/`, `.claude/commands/`, Wiki-Dokumentation.
+  `PROJEKT/WORKSPACE/tests/tools/`, Wiki-Dokumentation.
 - Rücknahme oder Wiederherstellung: Über Git-Diff nachvollziehbar. Bei Bedarf
   können die Validatoren entfernt werden, dann würden Clients wieder beliebige
   Texte für feste Protokollfelder schreiben.

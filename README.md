@@ -1,6 +1,6 @@
 # Claude-Codex-MCP
 
-**Version:** `0.2.2`
+**Version:** `0.2.3`
 
 Ein lokales MCP-System, mit dem mehrere KI-Agenten wie ChatGPT Codex, Claude
 Code, Claude Cowork und weitere Werkzeuge über ein gemeinsames Aufgaben-,

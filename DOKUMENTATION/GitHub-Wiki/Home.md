@@ -12,7 +12,7 @@ Dieses Projekt baut ein lokales MCP-System, mit dem mehrere KI-Agenten wie
 ChatGPT Codex, Claude Code, Claude Cowork und weitere MCP-Clients sauber über
 ein gemeinsames Aufgaben-, Chat- und Übergabeprotokoll zusammenarbeiten können.
 
-Der aktuelle Projektstand ist **Version `0.2.2`**.
+Der aktuelle Projektstand ist **Version `0.2.3`**.
 
 ## Wichtigster Grundsatz
 

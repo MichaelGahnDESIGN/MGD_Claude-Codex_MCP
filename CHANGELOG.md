@@ -2,13 +2,20 @@
 
 Alle wichtigen Änderungen dieser öffentlichen Vorlage werden hier dokumentiert.
 
+## 0.2.3 - Universeller /comm-Befehl
+
+Datum: 2026-06-11
+
+- Versionsnummer des GitHub-Projekts auf `0.2.3` erhöht.
+- `/comm` als neutraler universeller Agenten-Befehl vorbereitet.
+- Der Setup-Assistent erzeugt `comm-befehl.md`.
+- Claude Code erhält zusätzlich `.claude/commands/comm.md`.
+- Playwright-Audit und vollständige Projektprüfung erneut ausgeführt.
+
 ## 0.2.2 - Eingabevalidierung und Protokollhärtung
 
 Datum: 2026-06-11
 
-- Ergänzung: `/comm` als neutraler universeller Agenten-Befehl vorbereitet.
-  Der Setup-Assistent erzeugt `comm-befehl.md`; Claude Code erhält zusätzlich
-  `.claude/commands/comm.md`.
 - Versionsnummer des GitHub-Projekts auf `0.2.2` erhöht.
 - Zentrale Listen für erlaubte Task-Statuswerte, Task-Typen, Prioritäten und
   Chat-Arten ergänzt.
