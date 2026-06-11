@@ -2,6 +2,19 @@
 
 Alle wichtigen Änderungen dieser öffentlichen Vorlage werden hier dokumentiert.
 
+## 0.2.2 - Eingabevalidierung und Protokollhärtung
+
+Datum: 2026-06-11
+
+- Versionsnummer des GitHub-Projekts auf `0.2.2` erhöht.
+- Zentrale Listen für erlaubte Task-Statuswerte, Task-Typen, Prioritäten und
+  Chat-Arten ergänzt.
+- Tool-Eingaben werden jetzt gegen diese Listen validiert, statt beliebige
+  Texte in den State zu übernehmen.
+- MCP-Tool-Schemas nennen erlaubte Werte nun als `enum`, damit Clients bessere
+  Hinweise anzeigen können.
+- Tests für ungültige Task-Typen, Prioritäten und Chat-Arten ergänzt.
+
 ## 0.2.1 - Einfacher Setup-Assistent
 
 Datum: 2026-06-07

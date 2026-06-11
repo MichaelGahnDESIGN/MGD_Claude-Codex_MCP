@@ -9,6 +9,24 @@ Startversion dieser Vorlage pro neuem Projekt:
 - Betroffene Bereiche: `Grundstruktur`
 - Rücknahme oder Wiederherstellung: `Aus Vorlage erneut erzeugbar`
 
+## 0.2.2 - Eingabevalidierung und Protokollhärtung
+
+- Datum: `2026-06-11`
+- Version: `0.2.2`
+- Beschreibung: Erlaubte Task-Statuswerte, Task-Typen, Prioritäten und
+  Chat-Arten werden zentral geführt. Die MCP-Tools validieren diese Werte vor
+  dem Schreiben und melden verständliche Fehler, wenn ein Client unbekannte
+  Werte sendet.
+- Begründung: Das Protokoll soll nicht nur dokumentiert sein, sondern im
+  laufenden MCP-Server zuverlässig durchgesetzt werden.
+- Betroffene Bereiche: `VERSION`, `README.md`, `CHANGELOG.md`,
+  `PROJEKT/WORKSPACE/package.json`, `PROJEKT/WORKSPACE/package-lock.json`,
+  `PROJEKT/WORKSPACE/src/domain/`, `PROJEKT/WORKSPACE/src/tools/`,
+  `PROJEKT/WORKSPACE/tests/tools/`, Wiki-Dokumentation.
+- Rücknahme oder Wiederherstellung: Über Git-Diff nachvollziehbar. Bei Bedarf
+  können die Validatoren entfernt werden, dann würden Clients wieder beliebige
+  Texte für feste Protokollfelder schreiben.
+
 ## 0.2.1 - Einfacher Setup-Assistent
 
 - Datum: `2026-06-07`

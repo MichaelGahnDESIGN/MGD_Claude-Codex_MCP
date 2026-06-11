@@ -235,3 +235,20 @@ Jeder Eintrag soll mindestens enthalten:
   Root-Ausnahme, weil GitHub-Besucher rechtliche Angaben schnell finden
   müssen. Eine fachliche oder rechtliche Prüfung vor öffentlicher Freigabe
   bleibt sinnvoll.
+
+## 2026-06-11 - Feste MCP-Protokollwerte werden validiert
+
+- Datum: `2026-06-11`
+- Entscheidung: Task-Typen, Prioritäten, Statuswerte und Chat-Arten werden als
+  zentrale Wertelisten geführt. Tool-Eingaben für `create_task` und
+  `append_chat` werden vor dem Schreiben gegen diese Listen geprüft.
+- Begründung: Die Werte waren bereits dokumentiert, wurden aber noch nicht
+  konsequent technisch erzwungen. Das konnte zu uneinheitlichen States führen,
+  wenn ein Client freie Texte sendet.
+- Betroffene Bereiche: `PROJEKT/WORKSPACE/src/domain/allowedValues.ts`,
+  `PROJEKT/WORKSPACE/src/tools/parseEnumValue.ts`,
+  `PROJEKT/WORKSPACE/src/tools/AgentCommsService.ts`,
+  `PROJEKT/WORKSPACE/src/tools/registerTools.ts`,
+  `PROJEKT/WORKSPACE/tests/tools/validateToolInputs.test.ts`.
+- Folgen oder Trade-offs: Clients müssen erlaubte Werte verwenden. Dafür
+  werden Fehler früher und verständlicher gemeldet.

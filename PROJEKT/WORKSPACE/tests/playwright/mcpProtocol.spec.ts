@@ -1,10 +1,11 @@
-import { mkdtemp, rm } from "node:fs/promises";
+import { mkdtemp, readFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
-import { join } from "node:path";
+import { join, resolve } from "node:path";
 import { expect, test } from "@playwright/test";
 import { startMcpProcess } from "./mcpClient.ts";
 
 const tempDirs: string[] = [];
+const repoRoot = resolve(import.meta.dirname, "..", "..", "..", "..");
 
 test.afterEach(async () => {
   for (const dir of tempDirs.splice(0)) {
@@ -34,7 +35,7 @@ test("MCP-Prozess bleibt nach fehlerhaftem JSON empfangsbereit", async () => {
     result: {
       serverInfo: {
         name: "claude-codex-local-comms",
-        version: "0.2.1"
+        version: await readExpectedVersion()
       }
     }
   });
@@ -116,4 +117,8 @@ async function createTempDir(): Promise<string> {
   const dir = await mkdtemp(join(tmpdir(), "agent-comms-playwright-"));
   tempDirs.push(dir);
   return dir;
+}
+
+async function readExpectedVersion(): Promise<string> {
+  return (await readFile(join(repoRoot, "VERSION"), "utf8")).trim();
 }

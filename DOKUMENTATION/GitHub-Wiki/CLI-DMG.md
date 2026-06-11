@@ -34,8 +34,8 @@ PROJEKT/WORKSPACE/CLI-DMG/
 
 Erzeugt werden:
 
-- `Claude-Codex-MCP-CLI_v0.2.1.dmg`
-- `Claude-Codex-MCP-CLI_v0.2.1.dmg.sha256`
+- `Claude-Codex-MCP-CLI_v0.2.2.dmg`
+- `Claude-Codex-MCP-CLI_v0.2.2.dmg.sha256`
 
 ## Inhalt Des DMG
 

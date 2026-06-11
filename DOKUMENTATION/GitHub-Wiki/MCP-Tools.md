@@ -41,6 +41,12 @@ Pflichtfelder:
 - `acceptanceCriteria`
 - `safetyNote`
 
+Erlaubte Werte:
+
+- `type`: `CODE`, `REVIEW`, `PIXEL_ART`, `IMAGE_GENERATION`, `UI_CONCEPT`,
+  `DOCS`, `BRAINSTORM`, `DEPLOY`, `QA`, `SECURITY`
+- `priority`: `LOW`, `NORMAL`, `HIGH`, `URGENT`
+
 Beispiel:
 
 ```json
@@ -90,6 +96,10 @@ Pflichtfelder:
 - `sender`
 - `kind`
 - `message`
+
+Erlaubte Werte:
+
+- `kind`: `Hinweis`, `Frage`, `Antwort`, `Status`, `Warnung`
 
 ## add_blocker
 

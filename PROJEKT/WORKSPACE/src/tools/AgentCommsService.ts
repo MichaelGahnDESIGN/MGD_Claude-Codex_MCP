@@ -4,14 +4,16 @@ import { appendChat } from "../domain/appendChat.ts";
 import { claimTask } from "../domain/claimTask.ts";
 import { completeTask } from "../domain/completeTask.ts";
 import { createTask } from "../domain/createTask.ts";
+import { chatKinds, taskPriorities, taskTypes } from "../domain/allowedValues.ts";
 import { readContext } from "../domain/readContext.ts";
 import { resetRound } from "../domain/resetRound.ts";
 import { resolveBlocker } from "../domain/resolveBlocker.ts";
-import type { CreateTaskInput, TaskPriority, TaskType } from "../domain/types.ts";
+import type { CreateTaskInput } from "../domain/types.ts";
 import { writeHandoff } from "../domain/writeHandoff.ts";
 import { validateSafety } from "../safety/validateSafety.ts";
 import type { FileStorage } from "../storage/FileStorage.ts";
 import { assertSafety } from "./assertSafety.ts";
+import { enumValue } from "./parseEnumValue.ts";
 import { asRecord, optionalStringValue, stringArrayValue, stringValue } from "./parseInput.ts";
 
 export class AgentCommsService {
@@ -35,8 +37,8 @@ export class AgentCommsService {
     const taskInput: CreateTaskInput = {
       sender: stringValue(record, "sender"),
       recipient: stringValue(record, "recipient"),
-      type: stringValue(record, "type") as TaskType,
-      priority: stringValue(record, "priority") as TaskPriority,
+      type: enumValue(record, "type", taskTypes),
+      priority: enumValue(record, "priority", taskPriorities),
       context: stringValue(record, "context"),
       task: stringValue(record, "task"),
       acceptanceCriteria: stringArrayValue(record, "acceptanceCriteria"),
@@ -75,7 +77,7 @@ export class AgentCommsService {
   async appendChat(input: unknown) {
     assertSafety(input);
     const record = asRecord(input);
-    const next = appendChat(await this.storage.load(), { sender: stringValue(record, "sender"), kind: stringValue(record, "kind") as "Hinweis", message: stringValue(record, "message") });
+    const next = appendChat(await this.storage.load(), { sender: stringValue(record, "sender"), kind: enumValue(record, "kind", chatKinds), message: stringValue(record, "message") });
     await this.storage.save(next);
     return next.chat.at(-1);
   }

@@ -10,6 +10,7 @@ Phase 1 enthält Tests für:
 - Markdown-Rendering
 - dateibasierten Storage
 - Setup-Assistent für Nicht-Programmierer
+- Tool-Eingabevalidierung
 - Tool-Registrierung per Smoke-Test
 - stdio-Protokollverhalten per Playwright-Audit
 
@@ -31,8 +32,8 @@ npm run playwright:audit
 
 Aktueller Stand:
 
-- 12 Tests
-- 8 Test-Suites
+- 15 Tests
+- 9 Test-Suites
 - Smoke-Test für 12 Tools
 - 3 Playwright-Audits für MCP-Prozessverhalten
 

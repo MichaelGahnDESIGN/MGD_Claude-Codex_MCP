@@ -1,6 +1,6 @@
 # Claude-Codex-MCP
 
-**Version:** `0.2.1`
+**Version:** `0.2.2`
 
 Ein lokales MCP-System, mit dem mehrere KI-Agenten wie ChatGPT Codex, Claude
 Code, Claude Cowork und weitere Werkzeuge über ein gemeinsames Aufgaben-,
@@ -87,7 +87,8 @@ Enthalten sind:
 - strukturierter JSON-State
 - 12 MCP-Tools
 - Safety-Check vor Schreibvorgängen
-- Tests für Safety, Task-Statuswechsel, Markdown und Storage
+- strukturierte Eingabevalidierung für Task-Typen, Prioritäten und Chat-Arten
+- Tests für Safety, Tool-Eingaben, Task-Statuswechsel, Markdown und Storage
 - Smoke-Test für Tool-Registrierung
 - deutschsprachige Dokumentation
 
