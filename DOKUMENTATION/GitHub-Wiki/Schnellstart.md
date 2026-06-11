@@ -31,7 +31,7 @@ npm --prefix PROJEKT/WORKSPACE run check
 
 Erwartung:
 
-- 16 Node-Tests bestehen
+- 23 Node-Tests bestehen
 - Smoke-Test besteht
 - 3 Playwright-Audits bestehen
 
@@ -41,7 +41,7 @@ Für Nicht-Programmierer ist der Setup-Assistent der einfachste Start:
 
 ```bash
 npm --prefix PROJEKT/WORKSPACE install
-npm --prefix PROJEKT/WORKSPACE run setup
+npm --silent --prefix PROJEKT/WORKSPACE run comm -- setup
 ```
 
 Er fragt nach dem Projektordner und erzeugt dort `agent_comms.md` und
@@ -61,14 +61,28 @@ und Aufgabenbereich. Die passende Vorlage steht nach dem Setup in
 Ohne Rückfragen:
 
 ```bash
-npm --prefix PROJEKT/WORKSPACE run setup -- --yes
+npm --silent --prefix PROJEKT/WORKSPACE run comm -- setup --yes
+```
+
+## Einfache Prüfung
+
+Wenn du prüfen möchtest, ob der Projektordner vorbereitet ist:
+
+```bash
+npm --silent --prefix PROJEKT/WORKSPACE run comm -- doctor --project-dir /pfad/zum/projekt
+```
+
+Wenn du nur den aktuellen Stand sehen möchtest:
+
+```bash
+npm --silent --prefix PROJEKT/WORKSPACE run comm -- status --project-dir /pfad/zum/projekt
 ```
 
 ## Server Manuell Starten
 
 ```bash
 cd PROJEKT/WORKSPACE
-npm start
+npm --silent run comm -- start
 ```
 
 Der Server wartet dann über stdio auf MCP-/JSON-RPC-Anfragen.
@@ -78,7 +92,7 @@ Der Server wartet dann über stdio auf MCP-/JSON-RPC-Anfragen.
 Wenn die Kommunikationsdateien in einem konkreten Projektordner liegen sollen:
 
 ```bash
-AGENT_COMMS_DIR=/pfad/zum/projekt npm --prefix PROJEKT/WORKSPACE start
+npm --silent --prefix PROJEKT/WORKSPACE run comm -- start --project-dir /pfad/zum/projekt
 ```
 
 Dann entstehen dort:

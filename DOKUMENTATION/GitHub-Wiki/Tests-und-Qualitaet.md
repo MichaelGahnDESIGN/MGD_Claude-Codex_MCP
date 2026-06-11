@@ -2,7 +2,7 @@
 
 ## Aktuelle Testabdeckung
 
-Phase 1 enthält Tests für:
+Der aktuelle Stand enthält Tests für:
 
 - Safety-Check
 - Aufgaben-Lebenszyklus
@@ -11,6 +11,7 @@ Phase 1 enthält Tests für:
 - dateibasierten Storage
 - Setup-Assistent für Nicht-Programmierer
 - universelle `/comm`-Vorlage
+- einfache `comm`-CLI
 - Tool-Eingabevalidierung
 - Tool-Registrierung per Smoke-Test
 - stdio-Protokollverhalten per Playwright-Audit
@@ -33,8 +34,8 @@ npm run playwright:audit
 
 Aktueller Stand:
 
-- 16 Tests
-- 10 Test-Suites
+- 23 Tests
+- 13 Test-Suites
 - Smoke-Test für 12 Tools
 - 3 Playwright-Audits für MCP-Prozessverhalten
 

@@ -1,6 +1,6 @@
 # Claude-Codex-MCP
 
-**Version:** `0.2.3`
+**Version:** `0.2.4`
 
 Ein lokales MCP-System, mit dem mehrere KI-Agenten wie ChatGPT Codex, Claude
 Code, Claude Cowork und weitere Werkzeuge über ein gemeinsames Aufgaben-,
@@ -88,13 +88,14 @@ Enthalten sind:
 - 12 MCP-Tools
 - Safety-Check vor Schreibvorgängen
 - strukturierte Eingabevalidierung für Task-Typen, Prioritäten und Chat-Arten
+- einfache `comm`-CLI mit `setup`, `doctor`, `status`, `start` und `help`
 - Tests für Safety, Tool-Eingaben, Task-Statuswechsel, Markdown und Storage
 - Smoke-Test für Tool-Registrierung
 - deutschsprachige Dokumentation
 
 Noch nicht enthalten:
 
-- NPM-Release
+- Veröffentlichung im NPM-Registry
 - offizielles MCP-SDK
 - SQLite-Backend
 - Cloud- oder Remote-Betrieb
@@ -204,10 +205,10 @@ Dev-Abhängigkeiten installieren:
 npm --prefix PROJEKT/WORKSPACE install
 ```
 
-Setup-Assistent starten:
+Setup-Assistent über den einfachen `comm`-Befehl starten:
 
 ```bash
-npm --prefix PROJEKT/WORKSPACE run setup
+npm --silent --prefix PROJEKT/WORKSPACE run comm -- setup
 ```
 
 Der Assistent fragt nach dem Projektordner und erzeugt:
@@ -233,7 +234,27 @@ Claude Code oder ein anderer Agent gemeint ist.
 Ohne Rückfragen, mit Standardwerten:
 
 ```bash
-npm --prefix PROJEKT/WORKSPACE run setup -- --yes
+npm --silent --prefix PROJEKT/WORKSPACE run comm -- setup --yes
+```
+
+Prüfen, ob ein Projektordner bereit ist:
+
+```bash
+npm --silent --prefix PROJEKT/WORKSPACE run comm -- doctor --project-dir /pfad/zum/projekt
+```
+
+Kurzen Status anzeigen:
+
+```bash
+npm --silent --prefix PROJEKT/WORKSPACE run comm -- status --project-dir /pfad/zum/projekt
+```
+
+Später, nach einem NPM-Release, soll daraus werden:
+
+```bash
+comm setup
+comm doctor --project-dir /pfad/zum/projekt
+comm status --project-dir /pfad/zum/projekt
 ```
 
 ## Lokale macOS-DMG Für Tests
@@ -267,7 +288,7 @@ Server starten:
 
 ```bash
 cd PROJEKT/WORKSPACE
-npm start
+npm --silent run comm -- start
 ```
 
 Der Server nutzt dann den aktuellen Ordner als Speicherort.
@@ -277,7 +298,7 @@ Der Server nutzt dann den aktuellen Ordner als Speicherort.
 Für ein konkretes Projekt kann der Speicherort gesetzt werden:
 
 ```bash
-AGENT_COMMS_DIR=/pfad/zum/projekt npm --prefix PROJEKT/WORKSPACE start
+npm --silent --prefix PROJEKT/WORKSPACE run comm -- start --project-dir /pfad/zum/projekt
 ```
 
 Dann entstehen im Zielprojekt:
@@ -423,7 +444,7 @@ Gesamtprüfung:
 npm --prefix PROJEKT/WORKSPACE run check
 ```
 
-Der aktuelle Stand wurde mit 16 Node-Tests, einem Smoke-Test und 3
+Der aktuelle Stand wurde mit 23 Node-Tests, einem Smoke-Test und 3
 Playwright-Audits geprüft. Zusätzlich gibt es einen Integrationstest und eine
 Demo, die den Ablauf `Codex erstellt Aufgabe -> Claude übernimmt -> Claude
 schließt ab` lokal nachvollziehen.
@@ -470,7 +491,7 @@ Geplante nächste Schritte:
 - README und GitHub-Projekt weiter für öffentliche Nutzung schärfen.
 - offiziellen MCP-SDK-Einsatz prüfen.
 - NPM-Paket vorbereiten.
-- einfache CLI für lokale Tool-Tests ergänzen.
+- NPM-Veröffentlichung vorbereiten, sobald Name und Paketumfang final sind.
 - Import bestehender `AI_COMMS.md`-Dateien bauen.
 - atomare Schreibvorgänge für Storage ergänzen.
 - Eingabevalidierung weiter härten.

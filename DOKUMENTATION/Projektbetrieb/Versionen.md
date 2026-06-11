@@ -9,6 +9,22 @@ Startversion dieser Vorlage pro neuem Projekt:
 - Betroffene Bereiche: `Grundstruktur`
 - Rücknahme oder Wiederherstellung: `Aus Vorlage erneut erzeugbar`
 
+## 0.2.4 - Einfache comm-CLI und NPM-Vorbereitung
+
+- Datum: `2026-06-11`
+- Version: `0.2.4`
+- Beschreibung: Eine einfache `comm`-CLI wurde ergänzt. Sie bietet `setup`,
+  `doctor`, `status`, `start` und `help`. Das Workspace-Paket enthält Bin-
+  Einträge für `comm` und `claude-codex-mcp`, bleibt aber unveröffentlicht.
+- Begründung: Nicht-Programmierer sollen einen verständlicheren Einstieg
+  bekommen. Der MCP-Kern bleibt unverändert lokal und dateibasiert.
+- Betroffene Bereiche: `VERSION`, `README.md`, `CHANGELOG.md`,
+  `PROJEKT/WORKSPACE/package.json`, `PROJEKT/WORKSPACE/package-lock.json`,
+  `PROJEKT/WORKSPACE/src/cli/`, `PROJEKT/WORKSPACE/bin/`,
+  `PROJEKT/WORKSPACE/src/scripts/buildCliDmg.ts`, Tests und Wiki-Dokumentation.
+- Rücknahme oder Wiederherstellung: Über Git-Diff nachvollziehbar. Die CLI kann
+  entfernt werden, ohne die MCP-Tools oder die Speicherlogik zu verändern.
+
 ## 0.2.3 - Universeller /comm-Befehl
 
 - Datum: `2026-06-11`

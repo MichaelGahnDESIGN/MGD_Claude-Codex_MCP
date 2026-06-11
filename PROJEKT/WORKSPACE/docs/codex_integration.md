@@ -12,13 +12,13 @@ Im Codex-MCP-Setup kann der Server lokal gestartet werden mit:
 
 ```bash
 cd PROJEKT/WORKSPACE
-npm start
+npm --silent run comm -- start
 ```
 
 Für ein konkretes Projekt empfiehlt sich:
 
 ```bash
-AGENT_COMMS_DIR=/pfad/zum/projekt npm start
+npm --silent run comm -- start --project-dir /pfad/zum/projekt
 ```
 
 ## Codex Lokal Registrieren

@@ -10,13 +10,13 @@ Statuswechsel laufen über strukturierte Tools.
 
 ```bash
 cd PROJEKT/WORKSPACE
-npm start
+npm --silent run comm -- start
 ```
 
 Mit projektspezifischem Speicher:
 
 ```bash
-AGENT_COMMS_DIR=/pfad/zum/projekt npm start
+npm --silent run comm -- start --project-dir /pfad/zum/projekt
 ```
 
 ## Claude Lokal Registrieren

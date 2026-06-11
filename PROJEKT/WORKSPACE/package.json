@@ -1,13 +1,25 @@
 {
   "name": "claude-codex-mcp",
-  "version": "0.2.3",
-  "private": true,
+  "version": "0.2.4",
+  "private": false,
   "type": "module",
   "description": "Lokaler MCP-Server für menschenlesbare Agenten-Kommunikation zwischen Codex, Claude und weiteren KI-Agenten.",
   "license": "MIT",
+  "bin": {
+    "claude-codex-mcp": "bin/comm.mjs",
+    "comm": "bin/comm.mjs"
+  },
+  "files": [
+    "bin/",
+    "docs/",
+    "src/",
+    "README.md",
+    "package.json"
+  ],
   "scripts": {
     "check": "npm run test && npm run smoke && npm run playwright:audit",
     "build:cli-dmg": "node --experimental-strip-types src/scripts/buildCliDmg.ts",
+    "comm": "node --experimental-strip-types src/cli/index.ts",
     "demo:agents": "node --experimental-strip-types src/scripts/twoAgentDemo.ts",
     "dev": "node --experimental-strip-types src/index.ts",
     "playwright:audit": "playwright test tests/playwright",

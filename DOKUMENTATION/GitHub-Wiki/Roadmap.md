@@ -21,6 +21,7 @@ Teilweise umgesetzt:
 
 - einfacher Setup-Assistent für Nicht-Programmierer
 - lokales CLI-DMG-Testpaket für macOS
+- einfache `comm`-CLI mit Setup, Diagnose, Status und Start
 
 Weiter geplant:
 
@@ -37,7 +38,6 @@ Weiter geplant:
 Geplant:
 
 - Import bestehender `AI_COMMS.md`-Dateien
-- CLI-Testwerkzeug
 - Beispielkonfigurationen für MCP-Clients
 - ausführlichere Beispiele
 - erste private Testnutzer vorbereiten

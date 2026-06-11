@@ -15,6 +15,13 @@ Phase 1 konzentriert sich auf:
 - Chat, Blocker, Entscheidungen und Übergaben
 - Safety-Check vor Schreibvorgängen
 
+Phase 2 ergänzt den nutzerfreundlichen Einstieg:
+
+- `comm setup` für das einfache Einrichten.
+- `comm doctor` für verständliche Diagnose.
+- `comm status` für eine kurze Projektübersicht.
+- `comm start` als einfacher MCP-Startbefehl für Clients.
+
 ## Speicher
 
 Der Server nutzt zwei Dateien:
@@ -33,11 +40,12 @@ lesbar, während Tools zuverlässig mit strukturierten Daten arbeiten.
 - `src/safety/`: Prüfung riskanter Inhalte.
 - `src/tools/`: MCP-Tool-Handler.
 - `src/mcp/`: lokaler JSON-RPC-Server über stdio.
+- `src/cli/`: einfache Befehle für Setup, Diagnose, Status und Start.
 
-## Grenzen von Phase 1
+## Grenzen des aktuellen Stands
 
 - Kein Publishing.
-- Kein NPM-Release.
+- Noch kein NPM-Registry-Release.
 - Keine Cloud.
 - Kein SQLite-Backend.
 - Keine automatische Skill-Generierung.

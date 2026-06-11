@@ -2,7 +2,7 @@
 
 ## Aktueller Betriebsmodus
 
-Phase 1 läuft lokal über stdio.
+Der aktuelle Stand läuft lokal über stdio.
 
 Das bedeutet:
 
@@ -37,7 +37,7 @@ Für Menschen ohne Programmierhintergrund:
 
 ```bash
 npm --prefix PROJEKT/WORKSPACE install
-npm --prefix PROJEKT/WORKSPACE run setup
+npm --silent --prefix PROJEKT/WORKSPACE run comm -- setup
 ```
 
 Der Assistent erzeugt:
@@ -47,6 +47,20 @@ Der Assistent erzeugt:
 - `agent_comms.state.json`
 - `ANLEITUNG.md`
 - fertige Codex- und Claude-Konfigurationshilfen
+
+## Diagnose Und Status
+
+Prüfen, ob ein Projektordner bereit ist:
+
+```bash
+npm --silent --prefix PROJEKT/WORKSPACE run comm -- doctor --project-dir /pfad/zum/projekt
+```
+
+Kurzen Projektstatus anzeigen:
+
+```bash
+npm --silent --prefix PROJEKT/WORKSPACE run comm -- status --project-dir /pfad/zum/projekt
+```
 
 ## Lokales CLI-DMG Bauen
 
@@ -69,13 +83,13 @@ Tests gedacht und wird aktuell nicht auf GitHub veröffentlicht.
 
 ```bash
 cd PROJEKT/WORKSPACE
-npm start
+npm --silent run comm -- start
 ```
 
 ## Start Mit Projektordner
 
 ```bash
-AGENT_COMMS_DIR=/pfad/zum/projekt npm --prefix PROJEKT/WORKSPACE start
+npm --silent --prefix PROJEKT/WORKSPACE run comm -- start --project-dir /pfad/zum/projekt
 ```
 
 ## Erwartete Dateien
@@ -109,10 +123,14 @@ Der Server:
 
 ## Spätere Installation Über NPM
 
-Geplant ist später ein einfacherer Start, zum Beispiel:
+Das Paket ist für einfache NPM-Befehle vorbereitet, aber noch nicht im NPM-
+Registry veröffentlicht. Nach einem späteren Release soll ein Start so
+aussehen:
 
 ```bash
-npx claude-codex-mcp
+npx claude-codex-mcp setup
+comm doctor --project-dir /pfad/zum/projekt
 ```
 
-Das ist noch nicht Teil von Phase 1.
+Bis dahin wird lokal der Befehl `npm --silent --prefix PROJEKT/WORKSPACE run comm -- ...`
+verwendet.

@@ -284,3 +284,19 @@ Jeder Eintrag soll mindestens enthalten:
   `DOKUMENTATION/Informationen/Entscheidungen.md`.
 - Folgen oder Trade-offs: Externe Nutzer sehen schneller, wie MCP-Kommunikation
   und Projektstruktur zusammenpassen. Das MCP bleibt trotzdem unabhängig nutzbar.
+
+## 2026-06-11 - Einfache comm-CLI als Phase-2-Grundlage
+
+- Datum: `2026-06-11`
+- Entscheidung: Der Workspace erhält eine einfache `comm`-CLI mit `setup`,
+  `doctor`, `status`, `start` und `help`.
+- Begründung: Nutzer ohne Programmierkenntnisse sollen nicht dauerhaft lange
+  `npm --prefix ...`-Befehle verstehen müssen. Gleichzeitig bleibt der MCP-Kern
+  unverändert und lokal-first.
+- Betroffene Bereiche: `PROJEKT/WORKSPACE/src/cli/`,
+  `PROJEKT/WORKSPACE/bin/comm.mjs`, `PROJEKT/WORKSPACE/package.json`,
+  README, Changelog, Wiki-Dokumentation und Tests.
+- Folgen oder Trade-offs: Das Paket ist technisch auf spätere NPM-Nutzung
+  vorbereitet, wird aber in diesem Schritt noch nicht veröffentlicht. Bis dahin
+  bleibt der lokale Start über `npm --silent --prefix PROJEKT/WORKSPACE run comm -- ...`
+  der dokumentierte Weg.

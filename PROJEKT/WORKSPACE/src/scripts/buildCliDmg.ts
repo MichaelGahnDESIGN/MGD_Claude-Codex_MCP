@@ -169,7 +169,7 @@ function renderAppExecutable(): string {
     "echo \"Installiere lokale Hilfsdateien...\"",
     "npm --prefix PROJEKT/WORKSPACE install",
     "echo \"Erzeuge Anleitung und Konfiguration...\"",
-    "npm --prefix PROJEKT/WORKSPACE run setup -- --yes --project-name \"$PROJECT_NAME\" --project-dir \"$PROJECT_DIR\" --output-dir \"$OUTPUT_DIR\"",
+    "npm --silent --prefix PROJEKT/WORKSPACE run comm -- setup --yes --project-name \"$PROJECT_NAME\" --project-dir \"$PROJECT_DIR\" --output-dir \"$OUTPUT_DIR\"",
     "",
     "open \"$OUTPUT_DIR\"",
     "open \"$OUTPUT_DIR/ANLEITUNG.md\"",

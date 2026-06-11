@@ -2,6 +2,19 @@
 
 Alle wichtigen Änderungen dieser öffentlichen Vorlage werden hier dokumentiert.
 
+## 0.2.4 - Einfache comm-CLI und NPM-Vorbereitung
+
+Datum: 2026-06-11
+
+- Versionsnummer des GitHub-Projekts auf `0.2.4` erhöht.
+- `comm` als einfache lokale CLI ergänzt.
+- Neue Befehle: `comm setup`, `comm doctor`, `comm status`, `comm start` und
+  `comm help`.
+- Paket-Bin-Einträge für spätere NPM-Nutzung vorbereitet:
+  `comm` und `claude-codex-mcp`.
+- macOS-DMG-Setup nutzt intern den neuen `comm setup`-Pfad.
+- Tests für Argumentparser, Diagnoseausgabe und Statusausgabe ergänzt.
+
 ## 0.2.3 - Universeller /comm-Befehl
 
 Datum: 2026-06-11

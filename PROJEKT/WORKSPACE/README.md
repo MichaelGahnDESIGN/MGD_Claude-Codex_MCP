@@ -17,14 +17,14 @@ Wenn du im Repository-Root bist:
 
 ```bash
 npm --prefix PROJEKT/WORKSPACE install
-npm --prefix PROJEKT/WORKSPACE run setup
+npm --silent --prefix PROJEKT/WORKSPACE run comm -- setup
 ```
 
 Wenn du bereits direkt in `PROJEKT/WORKSPACE` bist:
 
 ```bash
 npm install
-npm run setup
+npm run comm -- setup
 ```
 
 Der Assistent erstellt den Kommunikationsordner und fertige Hilfe-Dateien für
@@ -56,13 +56,13 @@ Server lokal starten:
 
 ```bash
 cd PROJEKT/WORKSPACE
-npm start
+npm run comm -- start
 ```
 
 Optional kann der Speicherort gesetzt werden:
 
 ```bash
-AGENT_COMMS_DIR=/pfad/zum/projekt npm start
+npm run comm -- start --project-dir /pfad/zum/projekt
 ```
 
 Dann nutzt der Server dort `agent_comms.md` und
@@ -103,6 +103,7 @@ keine sensiblen Inhalte in Aufgaben, Chat, Logs oder Dokumentation schreiben.
 ```text
 src/
 ├── domain/      # Statuswechsel, Tasks, Chat, Blocker, Entscheidungen
+├── cli/         # einfache Befehle für Setup, Diagnose, Status und Start
 ├── markdown/    # menschenlesbare Markdown-Ausgabe
 ├── mcp/         # kleiner JSON-RPC/MCP-Server über stdio
 ├── safety/      # lokale Sicherheitsprüfung
