@@ -1,6 +1,6 @@
 window.DOKU_DATA = {
   "schemaVersion": 4,
-  "generatedAt": "2026-06-07T19:55:27+02:00",
+  "generatedAt": "2026-06-11T18:50:50+02:00",
   "projectRoot": ".",
   "documentationRoot": "DOKUMENTATION",
   "tabs": {
@@ -526,7 +526,7 @@ window.DOKU_DATA = {
             "purpose": "Hier liegt die eigentliche technische Arbeit des neu entstehenden Projekts.",
             "counts": {
               "subareas": 3,
-              "directories": 4,
+              "directories": 3,
               "files": 4
             },
             "primaryLinks": [
@@ -557,13 +557,6 @@ window.DOKU_DATA = {
                     "path": "PROJEKT/WORKSPACE/examples",
                     "sourceHref": "../PROJEKT/WORKSPACE/examples",
                     "href": "../PROJEKT/WORKSPACE/examples",
-                    "type": "dir"
-                  },
-                  {
-                    "name": "local-agent-comms",
-                    "path": "PROJEKT/WORKSPACE/local-agent-comms",
-                    "sourceHref": "../PROJEKT/WORKSPACE/local-agent-comms",
-                    "href": "../PROJEKT/WORKSPACE/local-agent-comms",
                     "type": "dir"
                   },
                   {
@@ -1197,8 +1190,8 @@ window.DOKU_DATA = {
             "subtitle": "Konkrete technische Projektumsetzung",
             "purpose": "Hier liegt das tatsächlich erstellte Projekt mit Code, Assets, Konfigurationen und seiner konkreten technischen Struktur.",
             "counts": {
-              "subareas": 7,
-              "directories": 5,
+              "subareas": 6,
+              "directories": 3,
               "files": 10
             },
             "primaryLinks": [
@@ -1280,22 +1273,6 @@ window.DOKU_DATA = {
                     "sourceHref": "../PROJEKT/WORKSPACE/examples/agent_comms.md",
                     "href": "../PROJEKT/WORKSPACE/examples/agent_comms.md",
                     "type": "file"
-                  }
-                ]
-              },
-              {
-                "name": "local-agent-comms",
-                "path": "PROJEKT/WORKSPACE/local-agent-comms",
-                "sourceHref": "../PROJEKT/WORKSPACE/local-agent-comms",
-                "href": "../PROJEKT/WORKSPACE/local-agent-comms",
-                "type": "dir",
-                "children": [
-                  {
-                    "name": "demo",
-                    "path": "PROJEKT/WORKSPACE/local-agent-comms/demo",
-                    "sourceHref": "../PROJEKT/WORKSPACE/local-agent-comms/demo",
-                    "href": "../PROJEKT/WORKSPACE/local-agent-comms/demo",
-                    "type": "dir"
                   }
                 ]
               },

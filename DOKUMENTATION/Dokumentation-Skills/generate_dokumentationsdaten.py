@@ -27,6 +27,10 @@ IGNORED_TREE_NAMES = {
     "dist",
     "build",
     "coverage",
+    "CLI-DMG",
+    "local-agent-comms",
+    "playwright-report",
+    "test-results",
 }
 VISIBLE_TREE_SUFFIXES = {".md", ".html", ".json", ".js"}
 
