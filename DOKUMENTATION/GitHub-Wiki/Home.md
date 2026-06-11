@@ -12,7 +12,7 @@ Dieses Projekt baut ein lokales MCP-System, mit dem mehrere KI-Agenten wie
 ChatGPT Codex, Claude Code, Claude Cowork und weitere MCP-Clients sauber über
 ein gemeinsames Aufgaben-, Chat- und Übergabeprotokoll zusammenarbeiten können.
 
-Der aktuelle Projektstand ist **Version `0.2.4`**.
+Der aktuelle Projektstand ist **Version `0.2.5`**.
 
 ## Wichtigster Grundsatz
 
@@ -72,8 +72,9 @@ Verfügbar sind:
 - Safety-Check vor Schreibvorgängen
 - Tests für Safety, Statuswechsel, Markdown und Storage
 - Smoke-Test für Tool-Registrierung
-- lokaler CLI-DMG-Build für macOS-Testpakete
+- GitHub-Release-DMG für macOS plus lokaler DMG-Build
 - einfache `comm`-CLI mit Setup, Diagnose, Status und Start
+- DMG-Startanleitung mit rechter Sidebar für Schritte und Begriffe
 
 Noch offen sind:
 

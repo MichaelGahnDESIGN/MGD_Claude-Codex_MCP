@@ -70,7 +70,7 @@ function renderSetupSuccess(workspaceDir: string, projectDir: string, outputDir:
     `  ${localPrefix} doctor --project-dir ${shellQuote(projectDir)}`,
     `  ${localPrefix} status --project-dir ${shellQuote(projectDir)}`,
     "",
-    `Öffne als Nächstes: ${outputDir}/ANLEITUNG.md`,
+    `Öffne als Nächstes: ${outputDir}/ANLEITUNG.html`,
     ""
   ].join("\n");
 }

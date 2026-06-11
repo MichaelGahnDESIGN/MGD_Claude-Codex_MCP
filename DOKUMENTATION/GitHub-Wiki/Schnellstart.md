@@ -2,6 +2,23 @@
 
 Diese Seite erklärt den schnellsten lokalen Start von Claude-Codex-MCP.
 
+## Einfachster Weg Auf macOS
+
+Für normale Nutzer ist die DMG aus dem aktuellen GitHub-Release der einfachste
+Start:
+
+1. Öffne den Release `v0.2.5`.
+2. Lade `Claude-Codex-MCP-CLI_v0.2.5.dmg` herunter.
+3. Öffne die DMG.
+4. Lies `START_HIER.html`.
+5. Starte `Claude-Codex-MCP Setup.app`.
+6. Folge den drei Setup-Schritten.
+7. Lies danach die automatisch geöffnete `ANLEITUNG.html`.
+
+Die HTML-Anleitungen enthalten rechts eine Sidebar. Dort werden jeder Schritt
+und wichtige Begriffe wie MCP, Projektordner, `agent_comms.md` und `/comm`
+einfach erklärt.
+
 ## Voraussetzungen
 
 - Git
@@ -37,7 +54,8 @@ Erwartung:
 
 ## Einfacher Setup-Assistent
 
-Für Nicht-Programmierer ist der Setup-Assistent der einfachste Start:
+Wenn du ohne DMG arbeitest, ist der Setup-Assistent der einfachste Terminal-
+Start:
 
 ```bash
 npm --prefix PROJEKT/WORKSPACE install

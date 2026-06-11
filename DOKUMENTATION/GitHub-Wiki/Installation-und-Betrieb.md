@@ -33,7 +33,24 @@ npm --prefix PROJEKT/WORKSPACE run check
 
 ## Einfach Einrichten
 
-Für Menschen ohne Programmierhintergrund:
+Für Menschen ohne Programmierhintergrund ist die DMG aus dem aktuellen Release
+der empfohlene Weg:
+
+```text
+https://github.com/MichaelGahnDESIGN/Claude-Codex-MCP/releases/tag/v0.2.5
+```
+
+Die DMG enthält:
+
+- `Claude-Codex-MCP Setup.app`
+- `START_HIER.html` mit rechter Sidebar
+- `START_HIER.md` als einfache Markdown-Variante
+
+Nach dem Setup öffnet sich zusätzlich `ANLEITUNG.html` im gewählten
+Projektordner. Auch diese Anleitung enthält rechts eine Sidebar mit Erklärungen
+zu Schritten und Begriffen.
+
+Für den Terminal-Weg:
 
 ```bash
 npm --prefix PROJEKT/WORKSPACE install
@@ -45,7 +62,8 @@ Der Assistent erzeugt:
 - den lokalen Kommunikationsordner
 - `agent_comms.md`
 - `agent_comms.state.json`
-- `ANLEITUNG.md`
+- `ANLEITUNG.html` mit rechter Sidebar
+- `ANLEITUNG.md` als Markdown-Variante
 - fertige Codex- und Claude-Konfigurationshilfen
 
 ## Diagnose Und Status
@@ -64,7 +82,8 @@ npm --silent --prefix PROJEKT/WORKSPACE run comm -- status --project-dir /pfad/z
 
 ## Lokales CLI-DMG Bauen
 
-Für macOS kann lokal ein CLI-DMG-Testpaket gebaut werden:
+Für macOS kann die Release-DMG lokal aus dem aktuellen Git-Stand neu gebaut
+werden:
 
 ```bash
 npm --prefix PROJEKT/WORKSPACE run build:cli-dmg
@@ -76,8 +95,8 @@ Das Ergebnis liegt unter:
 PROJEKT/WORKSPACE/CLI-DMG/
 ```
 
-Dieses Paket ist nicht signiert und nicht notarisiert. Es ist nur für lokale
-Tests gedacht und wird aktuell nicht auf GitHub veröffentlicht.
+Dieses Paket ist noch nicht signiert und nicht notarisiert. macOS kann deshalb
+eine Sicherheitswarnung anzeigen.
 
 ## Start Im Workspace
 

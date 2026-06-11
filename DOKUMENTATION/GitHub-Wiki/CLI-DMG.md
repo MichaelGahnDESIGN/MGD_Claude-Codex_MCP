@@ -2,8 +2,9 @@
 
 ## Zweck
 
-Das CLI-DMG ist ein lokales macOS-Testpaket für Menschen, die nicht direkt mit
-dem Repository arbeiten möchten.
+Das CLI-DMG ist ein macOS-Paket für Menschen, die nicht direkt mit dem
+Repository oder Terminalbefehlen arbeiten möchten. Es wird im GitHub-Release
+bereitgestellt und kann zusätzlich lokal neu gebaut werden.
 
 Es enthält eine echte macOS-App im `.app`-Format. Die App kopiert das Projekt
 lokal in einen beschreibbaren Benutzerordner, fragt Projektname und
@@ -11,9 +12,9 @@ Projektordner ab und startet danach den Setup-Assistenten.
 
 ## Aktueller Stand
 
-- Das DMG wird nur lokal gebaut.
+- Das DMG wird im GitHub-Release bereitgestellt.
+- Es kann zusätzlich lokal gebaut werden.
 - Es wird im Repository nicht versioniert.
-- Es wird aktuell nicht als öffentlicher GitHub-Download angeboten.
 - Es ist nicht signiert und nicht notarisiert.
 - macOS kann deshalb Sicherheitswarnungen anzeigen.
 
@@ -34,8 +35,8 @@ PROJEKT/WORKSPACE/CLI-DMG/
 
 Erzeugt werden:
 
-- `Claude-Codex-MCP-CLI_v0.2.4.dmg`
-- `Claude-Codex-MCP-CLI_v0.2.4.dmg.sha256`
+- `Claude-Codex-MCP-CLI_v0.2.5.dmg`
+- `Claude-Codex-MCP-CLI_v0.2.5.dmg.sha256`
 
 ## Inhalt Des DMG
 
@@ -43,6 +44,7 @@ Das DMG enthält:
 
 - `Claude-Codex-MCP Setup.app`
 - `START_HIER.md`
+- `START_HIER.html`
 - einen Snapshot des Repository-Stands ohne `.git` innerhalb der App-Ressourcen
 
 `Claude-Codex-MCP Setup.app` kopiert den Snapshot nach:
@@ -60,15 +62,19 @@ Diese Schritte sind für einfache Nutzer gedacht:
 
 1. Lade die DMG-Datei auf deinen Mac.
 2. Öffne die DMG mit einem Doppelklick.
-3. Lies kurz `START_HIER.md`.
+3. Lies kurz `START_HIER.html`.
 4. Öffne `Claude-Codex-MCP Setup.app` mit einem Doppelklick.
 5. Bestätige den Willkommenshinweis.
 6. Gib einen einfachen Projektnamen ein, zum Beispiel `Mein Agenten-Projekt`.
 7. Wähle den Projektordner aus. In diesem Ordner entsteht später
    `agent_comms.md`.
 8. Warte, bis die App fertig ist. Das kann kurz dauern.
-9. Danach öffnet sich automatisch `ANLEITUNG.md`.
+9. Danach öffnet sich automatisch `ANLEITUNG.html`.
 10. Folge dort den Schritten für ChatGPT Codex, Claude Code oder Claude Cowork.
+
+Die HTML-Dateien enthalten rechts eine Sidebar. Dort werden die Schritte und
+wichtige Begriffe wie MCP, Projektordner, `agent_comms.md`, `/comm` und
+Safety-Check erklärt.
 
 ## Wenn Etwas Schiefgeht
 
@@ -99,9 +105,8 @@ Testreports nicht in das DMG übernommen.
 
 ## Öffentliche Nutzung
 
-Für eine spätere öffentliche Veröffentlichung braucht es mindestens:
+Für eine breitere öffentliche Nutzung braucht es mindestens:
 
 - signierte und notarisierte macOS-Builds
 - klare Release-Prüfung
-- dokumentierten Download-Ort
 - erneute Sicherheitsprüfung des Paketinhalts

@@ -1,15 +1,38 @@
 # Claude-Codex-MCP
 
-**Version:** `0.2.4`
+**Version:** `0.2.5`
 
 Ein lokales MCP-System, mit dem mehrere KI-Agenten wie ChatGPT Codex, Claude
 Code, Claude Cowork und weitere Werkzeuge über ein gemeinsames Aufgaben-,
 Chat- und Übergabeprotokoll zusammenarbeiten können.
 
+Kurz gesagt: `Claude-Codex-MCP` ist ein gemeinsames Aufgabenheft für
+KI-Agenten. Codex, Claude und andere Agenten können darin Aufgaben lesen,
+übernehmen, Rückfragen stellen, Entscheidungen festhalten und Ergebnisse
+eintragen.
+
 Das Projekt ist aus einer praktischen Agenten-Arbeitsweise entstanden: Eine
 gemeinsame Markdown-Datei hat sich als einfacher Kommunikationskanal zwischen
 Claude und Codex bewährt. `Claude-Codex-MCP` macht daraus ein
 wiederverwendbares, strukturiertes und trotzdem menschenlesbares Werkzeug.
+
+## Ich Will Es Nur Benutzen
+
+Der einfachste Weg für normale Nutzerinnen und Nutzer ist die macOS-DMG aus
+dem aktuellen GitHub-Release:
+
+1. Öffne den aktuellen Release:
+   [Claude-Codex-MCP 0.2.5](https://github.com/MichaelGahnDESIGN/Claude-Codex-MCP/releases/tag/v0.2.5)
+2. Lade `Claude-Codex-MCP-CLI_v0.2.5.dmg` herunter.
+3. Öffne die DMG-Datei.
+4. Lies `START_HIER.html` oder `START_HIER.md`.
+5. Starte `Claude-Codex-MCP Setup.app`.
+6. Folge den drei Schritten im Setup.
+7. Lies danach die automatisch geöffnete Anleitung.
+
+Wichtig: Die App ist aktuell nicht signiert und nicht notarisiert. macOS kann
+deshalb eine Sicherheitswarnung anzeigen. Der MCP läuft lokal auf deinem
+Rechner und überträgt keine Projektdaten automatisch in eine Cloud.
 
 ## Kurzfassung
 
@@ -92,6 +115,7 @@ Enthalten sind:
 - Tests für Safety, Tool-Eingaben, Task-Statuswechsel, Markdown und Storage
 - Smoke-Test für Tool-Registrierung
 - deutschsprachige Dokumentation
+- macOS-DMG mit Setup-App und HTML-Anleitung mit rechter Begriffserklärung
 
 Noch nicht enthalten:
 
@@ -182,11 +206,12 @@ Mehr dazu:
 PROJEKT/WORKSPACE/docs/sicherheitsregeln.md
 ```
 
-## Leichter Start Für Nicht-Programmierer
+## Leichter Start Über Terminal
 
-Der MCP-Server selbst nutzt keine externen Laufzeitabhängigkeiten. Für Tests
-und Playwright-Audits werden die Dev-Abhängigkeiten aus dem Workspace-Lockfile
-installiert.
+Wenn du nicht die DMG nutzen möchtest, kannst du das Projekt auch über Terminal
+einrichten. Der MCP-Server selbst nutzt keine externen Laufzeitabhängigkeiten.
+Für Tests und Playwright-Audits werden die Dev-Abhängigkeiten aus dem
+Workspace-Lockfile installiert.
 
 Voraussetzung:
 
@@ -215,7 +240,8 @@ Der Assistent fragt nach dem Projektordner und erzeugt:
 
 - `agent_comms.md`
 - `agent_comms.state.json`
-- eine einfache `ANLEITUNG.md`
+- eine einfache `ANLEITUNG.html` mit rechter Sidebar
+- eine Markdown-Variante als `ANLEITUNG.md`
 - eine universelle `/comm`-Vorlage als `comm-befehl.md`
 - einen fertigen Codex-Einrichtungsbefehl
 - eine Claude-Code-Anleitung
@@ -257,12 +283,20 @@ comm doctor --project-dir /pfad/zum/projekt
 comm status --project-dir /pfad/zum/projekt
 ```
 
-## Lokale macOS-DMG Für Tests
+## macOS-DMG
 
-Für lokale Tests kann aus dem aktuellen Git-Stand ein macOS-DMG gebaut werden.
-Dieses DMG enthält `Claude-Codex-MCP Setup.app`, also ein echtes macOS-
-Programm für den lokalen Setup-Start. Die App ist noch nicht signiert oder
-notarisiert.
+Der aktuelle GitHub-Release enthält eine macOS-DMG mit
+`Claude-Codex-MCP Setup.app`, also ein echtes macOS-Programm für den lokalen
+Setup-Start. Zusätzlich enthält die DMG eine HTML-Startanleitung mit rechter
+Sidebar, die jeden Schritt und wichtige Begriffe erklärt.
+
+Release:
+
+```text
+https://github.com/MichaelGahnDESIGN/Claude-Codex-MCP/releases/tag/v0.2.5
+```
+
+Lokal kann die DMG aus dem aktuellen Git-Stand neu gebaut werden:
 
 ```bash
 npm --prefix PROJEKT/WORKSPACE run build:cli-dmg
@@ -274,9 +308,9 @@ Das Ergebnis liegt lokal hier:
 PROJEKT/WORKSPACE/CLI-DMG/
 ```
 
-Der Ordner wird von Git ignoriert. Die DMG wird aktuell nicht auf GitHub
-veröffentlicht. Sie ist für interne Tests gedacht und kann auf macOS
-Sicherheitswarnungen zeigen, weil sie nicht signiert oder notarisiert ist.
+Der lokale Build-Ordner wird von Git ignoriert. Die veröffentlichte DMG kann
+auf macOS Sicherheitswarnungen zeigen, weil sie noch nicht signiert oder
+notarisiert ist.
 
 Prüfung ausführen:
 

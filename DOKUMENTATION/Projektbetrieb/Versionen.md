@@ -9,6 +9,22 @@ Startversion dieser Vorlage pro neuem Projekt:
 - Betroffene Bereiche: `Grundstruktur`
 - Rücknahme oder Wiederherstellung: `Aus Vorlage erneut erzeugbar`
 
+## 0.2.5 - DMG-Start für Nicht-Programmierer geschärft
+
+- Datum: `2026-06-12`
+- Version: `0.2.5`
+- Beschreibung: README und lokale Wiki-Dokumentation führen normale Nutzer nun
+  zuerst über den GitHub-Release und die DMG. Die DMG enthält zusätzlich
+  `START_HIER.html` mit rechter Sidebar. Der Setup-Assistent erzeugt zusätzlich
+  `ANLEITUNG.html` mit rechter Sidebar.
+- Begründung: Nicht-Programmierer sollen zuerst den Download- und Doppelklick-
+  Weg sehen, nicht Terminal- oder Git-Befehle.
+- Betroffene Bereiche: `README.md`, `CHANGELOG.md`, `VERSION`,
+  `DOKUMENTATION/GitHub-Wiki/`, `PROJEKT/WORKSPACE/src/scripts/buildCliDmg.ts`,
+  `PROJEKT/WORKSPACE/src/setup/`.
+- Rücknahme oder Wiederherstellung: Über Git-Diff nachvollziehbar. Die HTML-
+  Hilfen können entfernt werden, ohne die MCP-Tools zu verändern.
+
 ## 0.2.4 - Einfache comm-CLI und NPM-Vorbereitung
 
 - Datum: `2026-06-11`

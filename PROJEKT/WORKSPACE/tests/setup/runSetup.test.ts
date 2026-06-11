@@ -29,13 +29,14 @@ describe("runSetup", () => {
 
     assert.equal(result.projectDir, projectDir);
     assert.equal(result.outputDir, outputDir);
-    assert.equal(result.generatedFiles.length, 6);
+    assert.equal(result.generatedFiles.length, 7);
 
     const markdown = await readFile(join(projectDir, "agent_comms.md"), "utf8");
     const codexCommand = await readFile(join(outputDir, "codex-einrichten.sh"), "utf8");
     const claudeConfig = await readFile(join(outputDir, "claude-cowork-config.json"), "utf8");
     const commCommand = await readFile(join(outputDir, "comm-befehl.md"), "utf8");
     const guide = await readFile(join(outputDir, "ANLEITUNG.md"), "utf8");
+    const htmlGuide = await readFile(join(outputDir, "ANLEITUNG.html"), "utf8");
 
     assert.match(markdown, /Mein Projekt/);
     assert.match(codexCommand, /codex mcp add claude-codex-mcp/);
@@ -46,6 +47,8 @@ describe("runSetup", () => {
     assert.match(guide, /ohne Programmierkenntnisse/);
     assert.match(guide, /\/comm/);
     assert.match(guide, /AGENT_COMMS_DIR/);
+    assert.match(htmlGuide, /<aside aria-label="Begriffe und Schritte">/);
+    assert.match(htmlGuide, /Safety-Check/);
   });
 
   it("normalisiert relative Setup-Pfade zu absoluten Pfaden", async () => {

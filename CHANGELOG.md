@@ -2,6 +2,18 @@
 
 Alle wichtigen Änderungen dieser öffentlichen Vorlage werden hier dokumentiert.
 
+## 0.2.5 - DMG-Start für Nicht-Programmierer geschärft
+
+Datum: 2026-06-12
+
+- Versionsnummer des GitHub-Projekts auf `0.2.5` erhöht.
+- README beginnt jetzt mit einem einfachen DMG-Download-Weg für normale Nutzer.
+- Veraltete Hinweise korrigiert: Die DMG wird im GitHub-Release bereitgestellt.
+- Lokales Wiki auf DMG-first-Einstieg aktualisiert.
+- DMG enthält zusätzlich `START_HIER.html` mit rechter Sidebar für Schritte und
+  Begriffserklärungen.
+- Setup-Assistent erzeugt zusätzlich `ANLEITUNG.html` mit rechter Sidebar.
+
 ## 0.2.4 - Einfache comm-CLI und NPM-Vorbereitung
 
 Datum: 2026-06-11

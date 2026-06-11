@@ -47,6 +47,7 @@ async function copyRepositorySnapshot(): Promise<void> {
 
 async function writeVolumeFiles(): Promise<void> {
   await writeFile(join(volumeRoot, "START_HIER.md"), renderStartHere(), "utf8");
+  await writeFile(join(volumeRoot, "START_HIER.html"), renderStartHereHtml(), "utf8");
   await mkdir(appMacOsDir, { recursive: true });
   await mkdir(appResourcesDir, { recursive: true });
   await writeFile(join(appContentsDir, "Info.plist"), renderInfoPlist(), "utf8");
@@ -71,7 +72,7 @@ function renderStartHere(): string {
     "3. Gib einen einfachen Projektnamen ein.",
     "4. Wähle den Ordner, in dem die gemeinsame Agenten-Datei liegen soll.",
     "5. Warte, bis die App fertig ist.",
-    "6. Danach öffnet sich automatisch eine deutsche Schritt-für-Schritt-Anleitung.",
+    "6. Danach öffnet sich automatisch eine deutsche Schritt-für-Schritt-Anleitung mit rechter Sidebar.",
     "",
     "## Was Die App Macht",
     "",
@@ -88,6 +89,59 @@ function renderStartHere(): string {
     "- Der MCP läuft lokal.",
     "- GitHub ist nur der Ort für Code und Releases.",
     "- Keine Passwörter, Tokens, `.env`-Inhalte oder personenbezogenen Details in Aufgaben schreiben.",
+    ""
+  ].join("\n");
+}
+
+function renderStartHereHtml(): string {
+  return [
+    "<!doctype html>",
+    '<html lang="de">',
+    "<head>",
+    '  <meta charset="utf-8">',
+    '  <meta name="viewport" content="width=device-width, initial-scale=1">',
+    "  <title>Claude-Codex-MCP Setup Start</title>",
+    "  <style>",
+    "    :root { color-scheme: light dark; --bg: #f6f7f9; --fg: #17191f; --muted: #5f6673; --panel: #ffffff; --border: #d9dde5; --accent: #2463eb; --code: #eef2ff; }",
+    "    @media (prefers-color-scheme: dark) { :root { --bg: #111318; --fg: #f2f4f8; --muted: #aab2c0; --panel: #1b1f29; --border: #333a48; --accent: #7aa2ff; --code: #222a3b; } }",
+    "    * { box-sizing: border-box; }",
+    "    body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.55 -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }",
+    "    .layout { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 28px; max-width: 1180px; margin: 0 auto; padding: 32px 22px; }",
+    "    main, aside { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; }",
+    "    main { padding: 28px; } aside { position: sticky; top: 18px; align-self: start; padding: 20px; }",
+    "    h1 { margin: 0 0 10px; font-size: 2rem; line-height: 1.15; } h2 { margin-top: 30px; font-size: 1.25rem; }",
+    "    .lead, .muted { color: var(--muted); } .step { border-left: 4px solid var(--accent); padding: 12px 0 12px 16px; margin: 14px 0; }",
+    "    code { background: var(--code); border-radius: 6px; padding: 2px 5px; }",
+    "    .term { border-top: 1px solid var(--border); padding-top: 12px; margin-top: 12px; } .term strong { display: block; }",
+    "    @media (max-width: 860px) { .layout { grid-template-columns: 1fr; } aside { position: static; } }",
+    "  </style>",
+    "</head>",
+    "<body>",
+    '  <div class="layout">',
+    "    <main>",
+    "      <h1>Claude-Codex-MCP Setup</h1>",
+    "      <p class=\"lead\">Diese Anleitung erklärt den Installer Schritt für Schritt.</p>",
+    "      <section class=\"step\"><h2>1. App starten</h2><p>Doppelklicke auf <code>Claude-Codex-MCP Setup.app</code>.</p></section>",
+    "      <section class=\"step\"><h2>2. Projektnamen eingeben</h2><p>Der Projektname ist nur eine lesbare Bezeichnung, zum Beispiel <code>Website Relaunch</code>.</p></section>",
+    "      <section class=\"step\"><h2>3. Projektordner wählen</h2><p>Wähle den Ordner, in dem die gemeinsame Datei <code>agent_comms.md</code> entstehen soll.</p></section>",
+    "      <section class=\"step\"><h2>4. Setup abwarten</h2><p>Die App kopiert das lokale MCP-Projekt, installiert Hilfsdateien und erzeugt die Anleitung.</p></section>",
+    "      <section class=\"step\"><h2>5. Danach Anleitung lesen</h2><p>Nach dem Setup öffnet sich automatisch <code>ANLEITUNG.html</code> mit einer rechten Sidebar.</p></section>",
+    "      <h2>Wichtig</h2>",
+    "      <p>Die App ist noch nicht signiert oder notarisiert. macOS kann eine Sicherheitswarnung anzeigen. Der MCP läuft lokal und sendet keine Projektdaten automatisch in eine Cloud.</p>",
+    "    </main>",
+    "    <aside aria-label=\"Begriffe und Schritte\">",
+    "      <h2>Sidebar</h2>",
+    "      <p class=\"muted\">Begriffe kurz erklärt.</p>",
+    "      <div class=\"term\"><strong>DMG</strong><span>Eine macOS-Installationsdatei, die du öffnest wie ein Laufwerk.</span></div>",
+    "      <div class=\"term\"><strong>Setup.app</strong><span>Das Programm, das den lokalen MCP für dein Projekt vorbereitet.</span></div>",
+    "      <div class=\"term\"><strong>MCP</strong><span>Eine lokale Schnittstelle, über die Codex und Claude Aufgaben lesen und schreiben können.</span></div>",
+    "      <div class=\"term\"><strong>Projektordner</strong><span>Der Ordner, in dem die gemeinsame Agenten-Datei liegt.</span></div>",
+    "      <div class=\"term\"><strong>agent_comms.md</strong><span>Die menschenlesbare Aufgaben- und Chat-Datei.</span></div>",
+    "      <div class=\"term\"><strong>/comm</strong><span>Das einfache Startsignal im Agenten-Chat.</span></div>",
+    "    </aside>",
+    "  </div>",
+    "</body>",
+    "</html>",
     ""
   ].join("\n");
 }
@@ -132,6 +186,7 @@ function renderAppExecutable(): string {
     "export PATH=\"/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin\"",
     "APP_MACOS_DIR=\"$(cd \"$(dirname \"$0\")\" && pwd)\"",
     "APP_CONTENTS_DIR=\"$(cd \"$APP_MACOS_DIR/..\" && pwd)\"",
+    "VOLUME_DIR=\"$(cd \"$APP_CONTENTS_DIR/../..\" && pwd)\"",
     "SOURCE_DIR=\"$APP_CONTENTS_DIR/Resources/Claude-Codex-MCP\"",
     "TARGET_BASE=\"$HOME/Claude-Codex-MCP-CLI\"",
     "TARGET_DIR=\"$TARGET_BASE\"",
@@ -148,6 +203,7 @@ function renderAppExecutable(): string {
     "  TARGET_DIR=\"${TARGET_BASE}-$(date +%Y%m%d-%H%M%S)\"",
     "fi",
     "",
+    "open \"$VOLUME_DIR/START_HIER.html\" || true",
     "osascript -e 'display dialog \"Willkommen! Diese App richtet Claude-Codex-MCP lokal auf deinem Mac ein.\\n\\nSie hilft Codex und Claude, über eine gemeinsame Aufgaben-Datei zusammenzuarbeiten.\\n\\nEs werden keine Daten automatisch in eine Cloud übertragen.\" buttons {\"Abbrechen\", \"Weiter\"} default button \"Weiter\" with title \"Claude-Codex-MCP Setup\"'",
     "PROJECT_NAME=$(osascript -e 'text returned of (display dialog \"Schritt 1 von 3\\n\\nWie soll dein Agenten-Projekt heißen?\\n\\nBeispiel: Website Relaunch, Kundenprojekt, App-Test\" default answer \"Mein Agenten-Projekt\" buttons {\"Abbrechen\", \"Weiter\"} default button \"Weiter\" with title \"Claude-Codex-MCP Setup\")')",
     "PROJECT_DIR=$(osascript -e 'POSIX path of (choose folder with prompt \"Schritt 2 von 3: Wähle den Projektordner. Dort wird die gemeinsame Datei agent_comms.md erstellt.\")')",
@@ -172,9 +228,9 @@ function renderAppExecutable(): string {
     "npm --silent --prefix PROJEKT/WORKSPACE run comm -- setup --yes --project-name \"$PROJECT_NAME\" --project-dir \"$PROJECT_DIR\" --output-dir \"$OUTPUT_DIR\"",
     "",
     "open \"$OUTPUT_DIR\"",
-    "open \"$OUTPUT_DIR/ANLEITUNG.md\"",
+    "open \"$OUTPUT_DIR/ANLEITUNG.html\"",
     "osascript -e 'display notification \"Die Anleitung wurde geöffnet.\" with title \"Claude-Codex-MCP Setup\"'",
-    "osascript -e 'display dialog \"Fertig!\\n\\nDie deutsche Schritt-für-Schritt-Anleitung wurde geöffnet. Zusätzlich ist der Hilfe-Ordner im Finder sichtbar.\\n\\nNächster Schritt: Lies ANLEITUNG.md von oben nach unten und folge nur dem Abschnitt für dein Werkzeug: ChatGPT Codex, Claude Code oder Claude Cowork.\" buttons {\"OK\"} default button \"OK\" with title \"Claude-Codex-MCP Setup\"'",
+    "osascript -e 'display dialog \"Fertig!\\n\\nDie deutsche Schritt-für-Schritt-Anleitung mit rechter Sidebar wurde geöffnet. Zusätzlich ist der Hilfe-Ordner im Finder sichtbar.\\n\\nNächster Schritt: Lies ANLEITUNG.html von oben nach unten und folge nur dem Abschnitt für dein Werkzeug: ChatGPT Codex, Claude Code oder Claude Cowork.\" buttons {\"OK\"} default button \"OK\" with title \"Claude-Codex-MCP Setup\"'",
     ""
   ].join("\n");
 }

@@ -17,4 +17,4 @@ const result = await runSetup({
 process.stdout.write(`\nSetup fertig.\n\n`);
 process.stdout.write(`Kommunikationsordner: ${result.projectDir}\n`);
 process.stdout.write(`Hilfe-Dateien: ${result.outputDir}\n\n`);
-process.stdout.write(`Öffne als Nächstes: ${result.outputDir}/ANLEITUNG.md\n`);
+process.stdout.write(`Öffne als Nächstes: ${result.outputDir}/ANLEITUNG.html\n`);

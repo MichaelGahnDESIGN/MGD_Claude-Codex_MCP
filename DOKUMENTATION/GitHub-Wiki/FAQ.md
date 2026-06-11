@@ -12,12 +12,11 @@ MCP-Prozess läuft nicht auf GitHub.
 
 ## Gibt Es Schon Eine DMG Oder EXE?
 
-Es gibt aktuell ein lokales macOS-CLI-DMG-Testpaket. Es wird mit
-`npm --prefix PROJEKT/WORKSPACE run build:cli-dmg` gebaut und liegt danach
-unter `PROJEKT/WORKSPACE/CLI-DMG/`.
+Ja, es gibt eine macOS-DMG im aktuellen GitHub-Release. Sie enthält
+`Claude-Codex-MCP Setup.app` und eine HTML-Startanleitung mit rechter Sidebar.
 
-Dieses DMG ist nicht signiert, nicht notarisiert und wird noch nicht öffentlich
-auf GitHub veröffentlicht. Eine Windows-EXE ist noch nicht umgesetzt.
+Die DMG ist noch nicht signiert und nicht notarisiert. macOS kann deshalb eine
+Sicherheitswarnung anzeigen. Eine Windows-EXE ist noch nicht umgesetzt.
 
 ## Läuft das über all-inkl?
 
