@@ -30,6 +30,16 @@ npm run setup
 Der Assistent erstellt den Kommunikationsordner und fertige Hilfe-Dateien für
 Codex, Claude Code und Claude Cowork.
 
+Zusätzlich erzeugt er `comm-befehl.md`. Diese Datei beschreibt den
+universellen Chat-Befehl:
+
+```text
+/comm
+```
+
+`/comm` steht für den gemeinsamen Kommunikations- und Aufgabenbereich aller
+Agenten.
+
 Gesamtprüfung aus dem Repository-Root:
 
 ```bash

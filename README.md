@@ -215,9 +215,20 @@ Der Assistent fragt nach dem Projektordner und erzeugt:
 - `agent_comms.md`
 - `agent_comms.state.json`
 - eine einfache `ANLEITUNG.md`
+- eine universelle `/comm`-Vorlage als `comm-befehl.md`
 - einen fertigen Codex-Einrichtungsbefehl
 - eine Claude-Code-Anleitung
 - eine Claude-Cowork-/Claude-Desktop-Konfiguration
+
+Der wichtigste Chat-Befehl für Menschen ist:
+
+```text
+/comm
+```
+
+`/comm` steht für den gemeinsamen Kommunikations- und Aufgabenbereich. Der
+Begriff ist bewusst neutral, damit niemand überlegen muss, ob gerade Codex,
+Claude Code oder ein anderer Agent gemeint ist.
 
 Ohne Rückfragen, mit Standardwerten:
 
@@ -279,6 +290,15 @@ agent_comms.state.json
 Diese Dateien enthalten die gemeinsame Agenten-Kommunikation.
 
 ## Beispiel: Wie Agenten Damit Arbeiten
+
+Im Agenten-Chat reicht als Startsignal:
+
+```text
+/comm
+```
+
+Der Agent soll dann den MCP-Kontext lesen, offene Aufgaben prüfen, Rückfragen
+als Blocker dokumentieren und Ergebnisse sauber abschließen.
 
 Typischer Ablauf:
 
@@ -403,7 +423,7 @@ Gesamtprüfung:
 npm --prefix PROJEKT/WORKSPACE run check
 ```
 
-Der aktuelle Stand wurde mit 12 Node-Tests, einem Smoke-Test und 3
+Der aktuelle Stand wurde mit 16 Node-Tests, einem Smoke-Test und 3
 Playwright-Audits geprüft. Zusätzlich gibt es einen Integrationstest und eine
 Demo, die den Ablauf `Codex erstellt Aufgabe -> Claude übernimmt -> Claude
 schließt ab` lokal nachvollziehen.

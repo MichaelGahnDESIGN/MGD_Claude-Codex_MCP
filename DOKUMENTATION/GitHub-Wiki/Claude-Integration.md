@@ -8,6 +8,14 @@ weiter lesbar bleibt.
 
 ## Empfohlener Ablauf Für Claude
 
+Für Nutzer ist der neutrale Universalbefehl:
+
+```text
+/comm
+```
+
+In Claude Code liegt dafür die Datei `.claude/commands/comm.md`.
+
 1. `read_context` lesen.
 2. `list_tasks` prüfen.
 3. passende Aufgabe mit `claim_task` übernehmen.

@@ -9,6 +9,9 @@ Wichtig:
 - Wiederverwendbare Codex-Skills liegen zusätzlich unter `.agents/skills/`,
   weil Codex diesen Ort offiziell als repo-sichtbaren Skill-Pfad erkennt.
 - Diese Datei enthält keine Secrets und keine projektspezifischen Zugangsdaten.
+- Der neutrale Universalbefehl für den gemeinsamen Agenten-Kanal ist `/comm`.
+  Wenn Codex eigene Slash-Befehle unterstützt, kann die Setup-Datei
+  `comm-befehl.md` als Vorlage genutzt werden.
 
 Empfohlener Startprompt:
 

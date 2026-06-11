@@ -8,6 +8,16 @@ abschließen, ohne eine Markdown-Datei manuell pflegen zu müssen.
 
 ## Empfohlener Ablauf
 
+Für Nutzer ist der neutrale Universalbefehl:
+
+```text
+/comm
+```
+
+Wenn Codex eigene Slash-Befehle unterstützt, kann die Setup-Datei
+`comm-befehl.md` als `comm.md` übernommen werden. Sonst wird derselbe Inhalt
+als normaler Prompt genutzt.
+
 Vor jeder Arbeitsrunde:
 
 1. `read_context`

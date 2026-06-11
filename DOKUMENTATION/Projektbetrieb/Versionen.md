@@ -16,13 +16,15 @@ Startversion dieser Vorlage pro neuem Projekt:
 - Beschreibung: Erlaubte Task-Statuswerte, Task-Typen, Prioritäten und
   Chat-Arten werden zentral geführt. Die MCP-Tools validieren diese Werte vor
   dem Schreiben und melden verständliche Fehler, wenn ein Client unbekannte
-  Werte sendet.
+  Werte sendet. Zusätzlich wurde `/comm` als neutraler universeller
+  Agenten-Befehl vorbereitet.
 - Begründung: Das Protokoll soll nicht nur dokumentiert sein, sondern im
   laufenden MCP-Server zuverlässig durchgesetzt werden.
 - Betroffene Bereiche: `VERSION`, `README.md`, `CHANGELOG.md`,
   `PROJEKT/WORKSPACE/package.json`, `PROJEKT/WORKSPACE/package-lock.json`,
   `PROJEKT/WORKSPACE/src/domain/`, `PROJEKT/WORKSPACE/src/tools/`,
-  `PROJEKT/WORKSPACE/tests/tools/`, Wiki-Dokumentation.
+  `PROJEKT/WORKSPACE/src/setup/`, `PROJEKT/WORKSPACE/tests/setup/`,
+  `PROJEKT/WORKSPACE/tests/tools/`, `.claude/commands/`, Wiki-Dokumentation.
 - Rücknahme oder Wiederherstellung: Über Git-Diff nachvollziehbar. Bei Bedarf
   können die Validatoren entfernt werden, dann würden Clients wieder beliebige
   Texte für feste Protokollfelder schreiben.

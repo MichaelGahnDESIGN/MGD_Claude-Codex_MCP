@@ -56,6 +56,15 @@ PROJEKT/WORKSPACE/examples/mcp-configs/claude-desktop.example.json
 
 ## Empfohlener Ablauf
 
+Für die tägliche Arbeit soll Claude denselben neutralen Universalbefehl wie
+Codex nutzen:
+
+```text
+/comm
+```
+
+Für Claude Code liegt im Repository zusätzlich `.claude/commands/comm.md`.
+
 1. `read_context` lesen.
 2. Mit `list_tasks` offene Aufgaben prüfen.
 3. Passende Aufgabe mit `claim_task` übernehmen.

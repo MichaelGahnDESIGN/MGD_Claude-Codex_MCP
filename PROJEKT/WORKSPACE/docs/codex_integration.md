@@ -59,6 +59,16 @@ eine Aufgabe, Claude übernimmt und schließt sie ab.
 
 ## Empfohlene Nutzung
 
+Für die tägliche Arbeit soll ein neutraler Universalbefehl verwendet werden:
+
+```text
+/comm
+```
+
+Wenn Codex eigene Slash-Befehle unterstützt, kann die Vorlage
+`comm-befehl.md` als `comm.md` übernommen werden. Wenn nicht, kann derselbe
+Text als normaler Prompt genutzt werden.
+
 - Vor Arbeit: `read_context`
 - Neue Aufgabe an Claude: `create_task`
 - Eigene Übernahme: `claim_task`

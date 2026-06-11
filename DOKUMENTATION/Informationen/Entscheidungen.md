@@ -252,3 +252,21 @@ Jeder Eintrag soll mindestens enthalten:
   `PROJEKT/WORKSPACE/tests/tools/validateToolInputs.test.ts`.
 - Folgen oder Trade-offs: Clients müssen erlaubte Werte verwenden. Dafür
   werden Fehler früher und verständlicher gemeldet.
+
+## 2026-06-11 - `/comm` wird neutraler Universalbefehl
+
+- Datum: `2026-06-11`
+- Entscheidung: Der neutrale Slash-Befehl `/comm` wird als öffentlicher
+  Universalbegriff für den gemeinsamen Agenten-Kommunikationsbereich
+  verwendet.
+- Begründung: Agentenspezifische Befehle führen dazu, dass Nutzer überlegen
+  müssen, in welchem Werkzeug sie gerade sind. `/comm` beschreibt den
+  Kommunikationskanal selbst und bevorzugt keinen Agenten.
+- Betroffene Bereiche: `.claude/commands/comm.md`,
+  `PROJEKT/WORKSPACE/src/setup/renderCommCommand.ts`,
+  `PROJEKT/WORKSPACE/src/setup/renderSetupGuide.ts`,
+  `PROJEKT/WORKSPACE/src/setup/writeSetupFiles.ts`, Setup-Tests,
+  README und Wiki-Dokumentation.
+- Folgen oder Trade-offs: `/comm` ist zunächst eine Prompt-/Command-Vorlage.
+  Clients ohne eigene Slash-Command-Unterstützung können denselben Inhalt als
+  normalen Prompt nutzen.

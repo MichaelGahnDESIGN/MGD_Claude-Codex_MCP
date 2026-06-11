@@ -8,6 +8,8 @@ Wichtig:
 - Die gemeinsame Agentenlogik steht in `VORLAGE/AI/AGENTEN/AGENTS.md`.
 - Die Projektvorlage ist tool-unabhängig. Claude-spezifische Dateien sollen nur
   den Einstieg erleichtern und keine Regeln duplizieren.
+- Der neutrale Universalbefehl für den gemeinsamen Agenten-Kanal ist `/comm`.
+  Die lokale Vorlage liegt unter `.claude/commands/comm.md`.
 
 Empfohlener Startprompt:
 

@@ -31,7 +31,7 @@ npm --prefix PROJEKT/WORKSPACE run check
 
 Erwartung:
 
-- 12 Node-Tests bestehen
+- 16 Node-Tests bestehen
 - Smoke-Test besteht
 - 3 Playwright-Audits bestehen
 
@@ -47,6 +47,16 @@ npm --prefix PROJEKT/WORKSPACE run setup
 Er fragt nach dem Projektordner und erzeugt dort `agent_comms.md` und
 `agent_comms.state.json`. Zusätzlich schreibt er einfache Hilfe-Dateien für
 Codex, Claude Code und Claude Cowork.
+
+Wichtig für normale Nutzer:
+
+```text
+/comm
+```
+
+`/comm` ist der universelle Startbegriff für den gemeinsamen Kommunikations-
+und Aufgabenbereich. Die passende Vorlage steht nach dem Setup in
+`comm-befehl.md`.
 
 Ohne Rückfragen:
 
@@ -79,6 +89,14 @@ agent_comms.state.json
 ```
 
 ## Minimaler Arbeitsablauf
+
+Starte im Agenten-Chat mit:
+
+```text
+/comm
+```
+
+Danach gilt:
 
 1. `read_context` aufrufen.
 2. Mit `create_task` eine Aufgabe anlegen.
