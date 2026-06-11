@@ -23,10 +23,3 @@ Michael Gahn<br>
 Dr.-Theodor-Brugsch Str. 12<br>
 08529 Plauen<br>
 Deutschland
-
-## Hinweis
-
-Dieses Impressum ist für die Veröffentlichung des Repositorys vorbereitet. Vor
-einer öffentlichen Freischaltung sollte es noch einmal fachlich oder rechtlich
-geprüft werden, besonders wenn sich Anbieterangaben, Kontaktwege,
-Veröffentlichungsform oder gesetzliche Anforderungen ändern.

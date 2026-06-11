@@ -481,11 +481,6 @@ Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br>
 Steuernummer: 223/222/02451<br>
 Ust-ID: DE288143343
 
-Hinweis: Das Impressum ist für die spätere öffentliche Veröffentlichung
-vorbereitet. Vor dem öffentlichen Schalten sollte es fachlich oder rechtlich
-geprüft werden, wenn sich Anbieterangaben, Kontaktwege oder Anforderungen
-ändern.
-
 ## Lizenz
 
 MIT-Lizenz. Siehe:
