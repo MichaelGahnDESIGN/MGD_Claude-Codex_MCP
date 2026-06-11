@@ -15,6 +15,9 @@ Datum: 2026-06-07
 - Tests für den Setup-Assistenten ergänzt.
 - Dokumentation und Wiki-Quellen auf den leichteren Start und das lokale
   CLI-DMG-Testpaket aktualisiert.
+- Ergänzung: Das lokale macOS-Setup öffnet am Ende die deutsche Anleitung und
+  den Hilfe-Ordner. Zusätzlich wurde ein eigenes `Impressum.md` im Root
+  ergänzt und in der README verlinkt.
 
 ## 0.2.0 - GitHub-Projekt README und öffentlicher Projektstand
 

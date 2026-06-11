@@ -171,8 +171,10 @@ function renderAppExecutable(): string {
     "echo \"Erzeuge Anleitung und Konfiguration...\"",
     "npm --prefix PROJEKT/WORKSPACE run setup -- --yes --project-name \"$PROJECT_NAME\" --project-dir \"$PROJECT_DIR\" --output-dir \"$OUTPUT_DIR\"",
     "",
+    "open \"$OUTPUT_DIR\"",
     "open \"$OUTPUT_DIR/ANLEITUNG.md\"",
-    "osascript -e 'display dialog \"Fertig!\\n\\nDie deutsche Schritt-für-Schritt-Anleitung wurde geöffnet.\\n\\nNächster Schritt: Folge der Anleitung für ChatGPT Codex, Claude Code oder Claude Cowork.\" buttons {\"OK\"} default button \"OK\" with title \"Claude-Codex-MCP Setup\"'",
+    "osascript -e 'display notification \"Die Anleitung wurde geöffnet.\" with title \"Claude-Codex-MCP Setup\"'",
+    "osascript -e 'display dialog \"Fertig!\\n\\nDie deutsche Schritt-für-Schritt-Anleitung wurde geöffnet. Zusätzlich ist der Hilfe-Ordner im Finder sichtbar.\\n\\nNächster Schritt: Lies ANLEITUNG.md von oben nach unten und folge nur dem Abschnitt für dein Werkzeug: ChatGPT Codex, Claude Code oder Claude Cowork.\" buttons {\"OK\"} default button \"OK\" with title \"Claude-Codex-MCP Setup\"'",
     ""
   ].join("\n");
 }

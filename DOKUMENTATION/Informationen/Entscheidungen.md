@@ -216,3 +216,22 @@ Jeder Eintrag soll mindestens enthalten:
   `PROJEKT/WORKSPACE/tests/playwright/`, `PROJEKT/WORKSPACE/src/mcp/`.
 - Folgen oder Trade-offs: Die Laufzeit des MCP bleibt schlank. Für
   Entwicklungstests gibt es nun eine kleine Dev-Abhängigkeit mit Lockfile.
+
+## 2026-06-11 - Impressum und sichtbare Abschlussanleitung ergänzt
+
+- Datum: `2026-06-11`
+- Entscheidung: Das Repository erhält zusätzlich zur README ein eigenes
+  `Impressum.md` im Root. Der lokale macOS-DMG-Setup-Start öffnet nach
+  erfolgreicher Einrichtung sichtbar die deutsche Anleitung und den
+  Hilfe-Ordner.
+- Begründung: Vor einer späteren öffentlichen Freigabe müssen die
+  Anbieterangaben leicht auffindbar sein. Nicht-Programmierer sollen nach dem
+  Setup nicht im Finder suchen müssen, sondern direkt sehen, was als Nächstes
+  zu tun ist.
+- Betroffene Bereiche: `README.md`, `Impressum.md`, `CHANGELOG.md`,
+  `DOKUMENTATION/Projektbetrieb/Versionen.md`,
+  `PROJEKT/WORKSPACE/src/scripts/buildCliDmg.ts`.
+- Folgen oder Trade-offs: `Impressum.md` ist eine bewusst erlaubte
+  Root-Ausnahme, weil GitHub-Besucher rechtliche Angaben schnell finden
+  müssen. Eine fachliche oder rechtliche Prüfung vor öffentlicher Freigabe
+  bleibt sinnvoll.

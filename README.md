@@ -459,21 +459,32 @@ Der geplante Veröffentlichungsweg:
 
 ## Impressum
 
+Die vollständigen Anbieterangaben stehen zusätzlich in:
+
+```text
+Impressum.md
+```
+
 Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz)
 
-Michael Gahn DESIGN  
-Michael Gahn  
-Dr.-Theodor-Brugsch Str. 12  
-08529 Plauen  
-Sachsen  
+Michael Gahn DESIGN<br>
+Michael Gahn<br>
+Dr.-Theodor-Brugsch Str. 12<br>
+08529 Plauen<br>
+Sachsen<br>
 Deutschland
 
-Tel.: +49 (0) 176 557 647 48  
+Tel.: +49 (0) 176 557 647 48<br>
 E-Mail: Anfrage@Michael-Gahn.de
 
-Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz:  
-Steuernummer: 223/222/02451  
+Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br>
+Steuernummer: 223/222/02451<br>
 Ust-ID: DE288143343
+
+Hinweis: Das Impressum ist für die spätere öffentliche Veröffentlichung
+vorbereitet. Vor dem öffentlichen Schalten sollte es fachlich oder rechtlich
+geprüft werden, wenn sich Anbieterangaben, Kontaktwege oder Anforderungen
+ändern.
 
 ## Lizenz
 

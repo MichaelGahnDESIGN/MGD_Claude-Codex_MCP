@@ -17,11 +17,14 @@ Startversion dieser Vorlage pro neuem Projekt:
   `npm run setup` gestartet werden, fragt Nicht-Programmierer nach den
   wichtigsten Angaben und erzeugt Kommunikationsdateien sowie fertige
   Einrichtungshilfen für Codex, Claude Code und Claude Cowork. Zusätzlich kann
-  lokal ein macOS-CLI-DMG-Testpaket gebaut werden.
+  lokal ein macOS-CLI-DMG-Testpaket gebaut werden. Der DMG-Setup-Start öffnet
+  am Ende sichtbar die deutsche Anleitung und den Hilfe-Ordner. Ein eigenes
+  `Impressum.md` im Root hält die Anbieterangaben zusätzlich zur README bereit.
 - Begründung: Die bisherige Einrichtung war noch stark terminal- und
   pfadorientiert. Der neue Assistent reduziert manuelle Schritte und macht die
   lokale Nutzung verständlicher.
 - Betroffene Bereiche: `VERSION`, `README.md`, `CHANGELOG.md`,
+  `Impressum.md`,
   `PROJEKT/WORKSPACE/src/setup/`, `PROJEKT/WORKSPACE/tests/setup/`,
   `PROJEKT/WORKSPACE/src/scripts/`, `PROJEKT/WORKSPACE/package.json`, Wiki-
   und Projektbetrieb-Dokumentation.
