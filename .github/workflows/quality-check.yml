@@ -23,7 +23,7 @@ jobs:
       - name: Node.js einrichten
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "24"
 
       - name: Python einrichten
         uses: actions/setup-python@v5
@@ -39,6 +39,7 @@ jobs:
             ! -name 'CHANGELOG.md' \
             ! -name 'VERSION' \
             ! -name 'SECURITY.md' \
+            ! -name 'Impressum.md' \
             ! -name 'index.md' \
             ! -name 'claude.md' \
             ! -name 'CLAUDE.md' \
@@ -100,3 +101,9 @@ jobs:
 
       - name: OpenRouter-Demo syntaktisch prüfen
         run: npm --prefix DEMOS/OPENROUTER run check
+
+      - name: MCP-Workspace-Abhängigkeiten installieren
+        run: npm --prefix PROJEKT/WORKSPACE install
+
+      - name: MCP-Workspace vollständig prüfen
+        run: npm --prefix PROJEKT/WORKSPACE run check

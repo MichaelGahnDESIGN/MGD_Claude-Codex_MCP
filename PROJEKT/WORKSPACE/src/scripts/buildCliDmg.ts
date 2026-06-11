@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import { createReadStream } from "node:fs";
 import { chmod, mkdir, readFile, rm, writeFile } from "node:fs/promises";
-import { dirname, join, resolve } from "node:path";
+import { basename, dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawn } from "node:child_process";
 
@@ -187,7 +187,7 @@ async function writeChecksum(): Promise<void> {
     stream.on("end", () => resolvePromise());
     stream.on("error", reject);
   });
-  await writeFile(checksumPath, `${hash.digest("hex")}  ${dmgPath}\n`, "utf8");
+  await writeFile(checksumPath, `${hash.digest("hex")}  ${basename(dmgPath)}\n`, "utf8");
 }
 
 async function run(command: string, args: string[], options: { cwd?: string } = {}): Promise<void> {
