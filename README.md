@@ -451,6 +451,18 @@ Diese Bereiche sind bewusst noch vorhanden, weil das Projekt aus einer
 KI-Projektvorlage heraus entstanden ist und die Agenten-Regeln weiter nutzbar
 bleiben.
 
+## Verwandtes Projekt
+
+Als passende Projektstruktur für KI-gestützte Arbeit gibt es zusätzlich den
+öffentlichen Basis-Projektordner:
+
+[MichaelGahnDESIGN/AI-Basic-Projektordner](https://github.com/MichaelGahnDESIGN/AI-Basic-Projektordner)
+
+Der Basis-Projektordner stellt eine aufgeräumte Ordner-, Regel- und
+Dokumentationsstruktur bereit. `Claude-Codex-MCP` ergänzt diese Struktur um den
+lokalen Kommunikationskanal, über den Codex, Claude und weitere Agenten Aufgaben,
+Rückfragen, Entscheidungen und Übergaben nachvollziehbar teilen können.
+
 ## Roadmap
 
 Geplante nächste Schritte:
@@ -468,10 +480,11 @@ Geplante nächste Schritte:
 
 ## Öffentliche Nutzung
 
-Das Projekt soll später nicht nur lokal für eine Person nutzbar sein, sondern
-als allgemein verfügbares Werkzeug.
+Das Projekt ist für eine öffentliche Nutzung vorbereitet und bleibt trotzdem
+lokal-first. Nutzer können den Code prüfen, lokal ausführen und das Werkzeug in
+eigene Projektordner integrieren.
 
-Der geplante Veröffentlichungsweg:
+Der Veröffentlichungsweg:
 
 1. GitHub als öffentlicher Quellcode- und Dokumentationsort.
 2. Releases mit klaren Versionen.

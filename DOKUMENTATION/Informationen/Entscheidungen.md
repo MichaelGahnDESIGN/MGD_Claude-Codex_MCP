@@ -270,3 +270,17 @@ Jeder Eintrag soll mindestens enthalten:
 - Folgen oder Trade-offs: `/comm` ist zunächst eine Prompt-/Command-Vorlage.
   Clients ohne eigene Slash-Command-Unterstützung können denselben Inhalt als
   normalen Prompt nutzen.
+
+## 2026-06-11 - Basis-Projektordner als verwandtes Projekt verlinkt
+
+- Datum: `2026-06-11`
+- Entscheidung: Die öffentliche README verweist auf
+  `MichaelGahnDESIGN/AI-Basic-Projektordner` als passenden Basisordner für
+  KI-gestützte Projektarbeit.
+- Begründung: `Claude-Codex-MCP` ist der lokale Kommunikationskanal für Agenten.
+  Der Basis-Projektordner liefert dazu die aufgeräumte Projektstruktur, Regeln
+  und Dokumentationsorte.
+- Betroffene Bereiche: `README.md`,
+  `DOKUMENTATION/Informationen/Entscheidungen.md`.
+- Folgen oder Trade-offs: Externe Nutzer sehen schneller, wie MCP-Kommunikation
+  und Projektstruktur zusammenpassen. Das MCP bleibt trotzdem unabhängig nutzbar.
