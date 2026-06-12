@@ -2,6 +2,16 @@
 
 Alle wichtigen Änderungen dieser öffentlichen Vorlage werden hier dokumentiert.
 
+## Unveröffentlicht - ChatGPT-Codex-Skills für MCP
+
+Datum: 2026-06-13
+
+- Repo-Skills `.agents/skills/codex/` und `.agents/skills/claude/` ergänzt.
+- Lokale persönliche Codex-Skills `/codex` und `/claude` auf
+  Claude-Codex-MCP, `/comm` und MCP-Tools umgestellt.
+- Alte manuelle `AI_COMMS.md`-Arbeitsweise durch strukturierte MCP-Nutzung
+  ersetzt.
+
 ## 0.2.5 - DMG-Start für Nicht-Programmierer geschärft
 
 Datum: 2026-06-12

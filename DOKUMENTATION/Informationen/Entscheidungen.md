@@ -300,3 +300,20 @@ Jeder Eintrag soll mindestens enthalten:
   vorbereitet, wird aber in diesem Schritt noch nicht veröffentlicht. Bis dahin
   bleibt der lokale Start über `npm --silent --prefix PROJEKT/WORKSPACE run comm -- ...`
   der dokumentierte Weg.
+
+## 2026-06-13 - /codex und /claude Skills auf MCP umgestellt
+
+- Datum: `2026-06-13`
+- Entscheidung: Die ChatGPT-Codex-Skills `/codex` und `/claude` nutzen nun
+  Claude-Codex-MCP und `/comm` statt der alten manuellen `AI_COMMS.md`-
+  Arbeitsweise.
+- Begründung: Aufgaben, Blocker, Entscheidungen und Übergaben sollen über
+  strukturierte MCP-Tools laufen. Markdown bleibt lesbar, aber nicht mehr die
+  primäre Schreibschnittstelle.
+- Betroffene Bereiche: `.agents/skills/codex/SKILL.md`,
+  `.agents/skills/claude/SKILL.md`, lokale persönliche Codex-Skills unter
+  `~/.codex/skills/`.
+- Folgen oder Trade-offs: Codex kann die Skills projektbezogen aus dem Repo
+  laden. Wenn die MCP-Tools nicht verbunden sind, sollen die Skills nicht auf
+  manuelle State-Bearbeitung ausweichen, sondern die fehlende Verbindung
+  melden.
