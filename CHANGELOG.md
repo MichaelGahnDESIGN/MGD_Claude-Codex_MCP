@@ -2,6 +2,16 @@
 
 Alle wichtigen Änderungen dieser öffentlichen Vorlage werden hier dokumentiert.
 
+## 0.2.7 - Versionshardcoding behoben und Dokumentation bereinigt
+
+Datum: 2026-06-14
+
+- `createServer.ts`: hardcoded Versionsnummer durch dynamischen Import aus
+  `package.json` ersetzt; `resolveJsonModule` in `tsconfig.json` ergänzt.
+- `escapeMarkdown.ts`: Kommentar ergänzt, der klarstellt, dass die Funktion
+  nur normalisiert und kein Markdown-Escaping durchführt.
+- `CHANGELOG.md`: Hinweis zur Versionsreset von `1.x` auf `0.2.x` ergänzt.
+
 ## 0.2.6 - ChatGPT-Codex-Skills und Comm-Befehle
 
 Datum: 2026-06-14

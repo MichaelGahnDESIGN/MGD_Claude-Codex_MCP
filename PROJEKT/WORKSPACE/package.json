@@ -1,6 +1,6 @@
 {
   "name": "claude-codex-mcp",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "private": false,
   "type": "module",
   "description": "Lokaler MCP-Server für menschenlesbare Agenten-Kommunikation zwischen Codex, Claude und weiteren KI-Agenten.",
