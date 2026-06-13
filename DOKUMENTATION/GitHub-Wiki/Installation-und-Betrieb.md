@@ -148,8 +148,13 @@ aussehen:
 
 ```bash
 npx claude-codex-mcp setup
-comm doctor --project-dir /pfad/zum/projekt
+claude-codex-mcp doctor --project-dir /pfad/zum/projekt
 ```
 
 Bis dahin wird lokal der Befehl `npm --silent --prefix PROJEKT/WORKSPACE run comm -- ...`
 verwendet.
+
+Hinweis: Der kurze Name `comm` ist als Chat-Befehl weiterhin richtig. Im
+macOS-Terminal existiert aber schon ein Systembefehl mit diesem Namen. Für
+Terminal-Anleitungen ist deshalb `claude-codex-mcp` der klarere öffentliche
+Name.

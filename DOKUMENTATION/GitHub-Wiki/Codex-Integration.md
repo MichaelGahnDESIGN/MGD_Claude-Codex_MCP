@@ -18,6 +18,10 @@ Wenn Codex eigene Slash-Befehle unterstützt, kann die Setup-Datei
 `comm-befehl.md` als `comm.md` übernommen werden. Sonst wird derselbe Inhalt
 als normaler Prompt genutzt.
 
+In ChatGPT Codex liegt zusätzlich ein Repo-Skill unter
+`.agents/skills/comm/SKILL.md`. Wenn Codex die Projekt-Skills neu geladen hat,
+kann `/comm` direkt als neutraler Einstieg genutzt werden.
+
 Vor jeder Arbeitsrunde:
 
 1. `read_context`

@@ -317,3 +317,19 @@ Jeder Eintrag soll mindestens enthalten:
   laden. Wenn die MCP-Tools nicht verbunden sind, sollen die Skills nicht auf
   manuelle State-Bearbeitung ausweichen, sondern die fehlende Verbindung
   melden.
+
+## 2026-06-13 - `/comm` bekommt eigenen Codex-Skill
+
+- Datum: `2026-06-13`
+- Entscheidung: `/comm` wird nicht nur als Claude-Code-Command und
+  Setup-Vorlage geführt, sondern zusätzlich als Codex-Skill unter
+  `.agents/skills/comm/` und lokal unter `~/.codex/skills/comm/`.
+- Begründung: ChatGPT Codex lädt Skills über Skill-Namen. Ohne eigenen
+  `comm`-Skill konnten `/codex` und `/claude` funktionieren, während `/comm`
+  in Codex nicht zuverlässig ausgelöst wurde.
+- Betroffene Bereiche: `.agents/skills/comm/`, lokale persönliche Codex-Skills,
+  CLI-Hilfe, README und lokale Wiki-Quellen.
+- Folgen oder Trade-offs: Im Terminal bleibt der kurze Name `comm` wegen des
+  macOS-Systembefehls mehrdeutig. Öffentliche Terminal-Anleitungen sollen
+  bevorzugt `claude-codex-mcp` oder den vollständigen lokalen NPM-Befehl
+  zeigen.

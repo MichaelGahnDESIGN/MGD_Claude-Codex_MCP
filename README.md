@@ -257,6 +257,12 @@ Der wichtigste Chat-Befehl für Menschen ist:
 Begriff ist bewusst neutral, damit niemand überlegen muss, ob gerade Codex,
 Claude Code oder ein anderer Agent gemeint ist.
 
+Wichtig: `/comm` ist der Chat- beziehungsweise Skill-Befehl. Im macOS-Terminal
+gibt es bereits einen Systembefehl namens `comm`. Wenn dort
+`usage: comm [-123i] file1 file2` erscheint, wurde nicht Claude-Codex-MCP
+gestartet. Nutze lokal deshalb immer den vollständigen Projektbefehl mit
+`npm --silent --prefix PROJEKT/WORKSPACE run comm -- ...`.
+
 Ohne Rückfragen, mit Standardwerten:
 
 ```bash
@@ -278,10 +284,13 @@ npm --silent --prefix PROJEKT/WORKSPACE run comm -- status --project-dir /pfad/z
 Später, nach einem NPM-Release, soll daraus werden:
 
 ```bash
-comm setup
-comm doctor --project-dir /pfad/zum/projekt
-comm status --project-dir /pfad/zum/projekt
+claude-codex-mcp setup
+claude-codex-mcp doctor --project-dir /pfad/zum/projekt
+claude-codex-mcp status --project-dir /pfad/zum/projekt
 ```
+
+Der kurze Bin-Name `comm` bleibt technisch vorbereitet, ist wegen des
+gleichnamigen macOS-Systembefehls aber nicht der empfohlene Terminal-Befehl.
 
 ## macOS-DMG
 

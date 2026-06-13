@@ -76,6 +76,15 @@ Wichtig für normale Nutzer:
 und Aufgabenbereich. Die passende Vorlage steht nach dem Setup in
 `comm-befehl.md`.
 
+Wichtig: `/comm` ist der Chat- oder Skill-Befehl. Im macOS-Terminal gibt es
+bereits einen Systembefehl namens `comm`. Wenn dort
+`usage: comm [-123i] file1 file2` erscheint, wurde der falsche Befehl
+gestartet. Nutze im Terminal den vollständigen Projektbefehl:
+
+```bash
+npm --silent --prefix PROJEKT/WORKSPACE run comm -- help
+```
+
 Ohne Rückfragen:
 
 ```bash
