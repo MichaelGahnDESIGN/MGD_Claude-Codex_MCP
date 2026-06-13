@@ -113,6 +113,13 @@ Datum: 2026-06-07
 - Fehler behoben: fehlerhaftes JSON oder ungültige JSON-RPC-Requests beenden
   den MCP-Prozess nicht mehr, sondern erzeugen Protokollfehler.
 
+---
+
+> **Hinweis zur Versionierung:** Die Versionen `1.0.0` und `1.0.1` unten
+> entstanden am selben Tag wie `0.2.0`. Das Projekt wurde danach bewusst auf
+> `0.x`-Versionierung zurückgestellt, weil die API noch nicht stabil genug für
+> eine 1.0-Freigabe war. `0.2.x` und höher sind die aktuellen Versionen.
+
 ## 1.0.1 - Öffentliche GitHub-Vorlage
 
 Datum: 2026-06-07
