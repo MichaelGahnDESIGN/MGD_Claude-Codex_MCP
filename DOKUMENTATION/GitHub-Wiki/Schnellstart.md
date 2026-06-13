@@ -85,6 +85,15 @@ gestartet. Nutze im Terminal den vollständigen Projektbefehl:
 npm --silent --prefix PROJEKT/WORKSPACE run comm -- help
 ```
 
+Weitere einfache Chat-Befehle:
+
+| Befehl | Erklärung |
+| --- | --- |
+| `/comm-help` | Erklärt Claude-Codex-MCP allgemein. |
+| `/comm-info` | Zeigt alle Befehle mit kurzer Erklärung. |
+| `/comm-clear` | Setzt die Kommunikationsdateien nach Backup zurück. |
+| `/comm-clear-backup` | Löscht alte Backups und behält nur das neueste. |
+
 Ohne Rückfragen:
 
 ```bash
@@ -104,6 +113,21 @@ Wenn du nur den aktuellen Stand sehen möchtest:
 ```bash
 npm --silent --prefix PROJEKT/WORKSPACE run comm -- status --project-dir /pfad/zum/projekt
 ```
+
+Wenn du die Befehle erklärt bekommen möchtest:
+
+```bash
+npm --silent --prefix PROJEKT/WORKSPACE run comm -- info
+```
+
+Wenn du die Kommunikationsdateien zurücksetzen möchtest:
+
+```bash
+npm --silent --prefix PROJEKT/WORKSPACE run comm -- clear --project-dir /pfad/zum/projekt
+```
+
+Der Clear-Befehl legt vorher automatisch ein Backup unter
+`agent_comms.backups/` an.
 
 ## Server Manuell Starten
 

@@ -1,6 +1,6 @@
 import type { CliCommand, CliCommandName, CliOptions } from "./cliTypes.ts";
 
-const COMMANDS = new Set<CliCommandName>(["help", "setup", "start", "doctor", "status"]);
+const COMMANDS = new Set<CliCommandName>(["help", "setup", "start", "doctor", "status", "clear", "clear-backup", "info"]);
 
 export function parseCliArgs(args: string[]): CliCommand {
   const first = args[0];

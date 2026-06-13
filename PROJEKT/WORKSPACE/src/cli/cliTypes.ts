@@ -1,4 +1,4 @@
-export type CliCommandName = "help" | "setup" | "start" | "doctor" | "status";
+export type CliCommandName = "help" | "setup" | "start" | "doctor" | "status" | "clear" | "clear-backup" | "info";
 
 export interface CliCommand {
   command: CliCommandName;

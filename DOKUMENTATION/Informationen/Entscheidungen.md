@@ -333,3 +333,17 @@ Jeder Eintrag soll mindestens enthalten:
   macOS-Systembefehls mehrdeutig. Öffentliche Terminal-Anleitungen sollen
   bevorzugt `claude-codex-mcp` oder den vollständigen lokalen NPM-Befehl
   zeigen.
+
+## 2026-06-14 - Comm-Befehlsfamilie für Hilfe, Info und Reset
+
+- Datum: `2026-06-14`
+- Entscheidung: Neben `/comm` werden `/comm-help`, `/comm-info`,
+  `/comm-clear` und `/comm-clear-backup` als klare Slash-Befehle ergänzt.
+- Begründung: Nicht-Programmierer sollen den gemeinsamen Agenten-Kanal
+  verstehen, Befehle nachschlagen, Kommunikationsdateien sicher zurücksetzen
+  und alte Backups aufräumen können.
+- Betroffene Bereiche: `.agents/skills/`, `.claude/commands/`, lokale
+  persönliche Codex-Skills, CLI-Module, Tests, README und lokale Wiki-Seiten.
+- Folgen oder Trade-offs: `/comm-clear` löscht nicht still. Es legt vorher ein
+  Datei-Backup unter `agent_comms.backups/` an. `/comm-clear-backup` entfernt
+  alte Backups und behält nur das neueste Backup.

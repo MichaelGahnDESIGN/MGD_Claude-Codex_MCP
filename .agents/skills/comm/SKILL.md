@@ -53,6 +53,13 @@ nutzen:
 npm --silent --prefix PROJEKT/WORKSPACE run comm -- help
 ```
 
+## Weitere Comm-Befehle
+
+- `/comm-help`: erklärt Claude-Codex-MCP allgemein.
+- `/comm-info`: zeigt alle Befehle mit Erklärung.
+- `/comm-clear`: setzt die Kommunikationsdateien nach Backup zurück.
+- `/comm-clear-backup`: löscht alte Backups und behält nur das neueste.
+
 ## Antwort
 
 Antworte kurz:

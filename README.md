@@ -111,7 +111,10 @@ Enthalten sind:
 - 12 MCP-Tools
 - Safety-Check vor Schreibvorgängen
 - strukturierte Eingabevalidierung für Task-Typen, Prioritäten und Chat-Arten
-- einfache `comm`-CLI mit `setup`, `doctor`, `status`, `start` und `help`
+- einfache `comm`-CLI mit `setup`, `doctor`, `status`, `clear`,
+  `clear-backup`, `info`, `start` und `help`
+- Slash-Befehle `/comm`, `/comm-help`, `/comm-info`, `/comm-clear` und
+  `/comm-clear-backup`
 - Tests für Safety, Tool-Eingaben, Task-Statuswechsel, Markdown und Storage
 - Smoke-Test für Tool-Registrierung
 - deutschsprachige Dokumentation
@@ -263,6 +266,27 @@ gibt es bereits einen Systembefehl namens `comm`. Wenn dort
 gestartet. Nutze lokal deshalb immer den vollständigen Projektbefehl mit
 `npm --silent --prefix PROJEKT/WORKSPACE run comm -- ...`.
 
+## Die Wichtigsten `/comm`-Befehle
+
+| Befehl | Zweck |
+| --- | --- |
+| `/comm` | Öffnet den gemeinsamen Agenten-Kanal. |
+| `/comm-help` | Erklärt Claude-Codex-MCP allgemein und einfach. |
+| `/comm-info` | Zeigt alle wichtigen Befehle mit Erklärung. |
+| `/comm-clear` | Legt ein Backup an und setzt `agent_comms.md` sowie `agent_comms.state.json` zurück. |
+| `/comm-clear-backup` | Löscht alte Backups und behält nur das neueste Backup. |
+
+Die passenden lokalen Terminal-Befehle lauten:
+
+```bash
+npm --silent --prefix PROJEKT/WORKSPACE run comm -- info
+npm --silent --prefix PROJEKT/WORKSPACE run comm -- clear --project-dir /pfad/zum/projekt
+npm --silent --prefix PROJEKT/WORKSPACE run comm -- clear-backup --project-dir /pfad/zum/projekt
+```
+
+`/comm-clear` ist bewusst vorsichtig: Vor dem Zurücksetzen entsteht ein Ordner
+`agent_comms.backups/` mit einer Zeitstempel-Sicherung der alten Dateien.
+
 Ohne Rückfragen, mit Standardwerten:
 
 ```bash
@@ -287,6 +311,9 @@ Später, nach einem NPM-Release, soll daraus werden:
 claude-codex-mcp setup
 claude-codex-mcp doctor --project-dir /pfad/zum/projekt
 claude-codex-mcp status --project-dir /pfad/zum/projekt
+claude-codex-mcp clear --project-dir /pfad/zum/projekt
+claude-codex-mcp clear-backup --project-dir /pfad/zum/projekt
+claude-codex-mcp info
 ```
 
 Der kurze Bin-Name `comm` bleibt technisch vorbereitet, ist wegen des

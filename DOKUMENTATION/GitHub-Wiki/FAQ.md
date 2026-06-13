@@ -62,6 +62,27 @@ Der Schreibvorgang wird blockiert und es wird ein Fehler zurückgegeben. Der
 Inhalt wird nicht in `agent_comms.md` oder `agent_comms.state.json`
 geschrieben.
 
+## Wie Setze Ich Den Kommunikationsstand Zurück?
+
+Nutze `/comm-clear` im Agenten-Chat oder lokal:
+
+```bash
+npm --silent --prefix PROJEKT/WORKSPACE run comm -- clear --project-dir /pfad/zum/projekt
+```
+
+Der Befehl legt vorher ein Backup unter `agent_comms.backups/` an und erzeugt
+danach frische `agent_comms.md`- und `agent_comms.state.json`-Dateien.
+
+## Wie Räume Ich Alte Backups Auf?
+
+Nutze `/comm-clear-backup` oder lokal:
+
+```bash
+npm --silent --prefix PROJEKT/WORKSPACE run comm -- clear-backup --project-dir /pfad/zum/projekt
+```
+
+Dabei bleibt nur das neueste Backup erhalten.
+
 ## Braucht Phase 1 NPM-Abhängigkeiten?
 
 Der MCP-Server selbst nutzt keine externen Laufzeitabhängigkeiten.

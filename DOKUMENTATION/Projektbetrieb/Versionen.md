@@ -9,6 +9,21 @@ Startversion dieser Vorlage pro neuem Projekt:
 - Betroffene Bereiche: `Grundstruktur`
 - Rücknahme oder Wiederherstellung: `Aus Vorlage erneut erzeugbar`
 
+## Unveröffentlicht - Comm-Wartungsbefehle
+
+- Datum: `2026-06-14`
+- Version: `unveröffentlicht`
+- Beschreibung: `/comm-clear`, `/comm-info`, `/comm-help` und
+  `/comm-clear-backup` wurden als Skills und Claude-Code-Commands ergänzt. Die
+  lokale CLI unterstützt zusätzlich `clear`, `clear-backup` und `info`.
+- Begründung: Nutzer sollen den gemeinsamen Agenten-Kanal leichter erklären,
+  prüfen, zurücksetzen und alte Backups aufräumen können.
+- Betroffene Bereiche: `.agents/skills/`, `.claude/commands/`,
+  `~/.codex/skills/`, `PROJEKT/WORKSPACE/src/cli/`, Tests, README und lokale
+  Wiki-Dokumentation.
+- Rücknahme oder Wiederherstellung: Über Git-Diff nachvollziehbar. Backups
+  liegen bei Nutzung unter `agent_comms.backups/` im jeweiligen Zielprojekt.
+
 ## 0.2.5 - DMG-Start für Nicht-Programmierer geschärft
 
 - Datum: `2026-06-12`

@@ -120,6 +120,19 @@ agent_comms.md
 agent_comms.state.json
 ```
 
+Zusätzlich können bei `/comm-clear` oder `comm -- clear` Backup-Ordner
+entstehen:
+
+```text
+agent_comms.backups/
+```
+
+Alte Backups lassen sich mit diesem Befehl aufräumen:
+
+```bash
+npm --silent --prefix PROJEKT/WORKSPACE run comm -- clear-backup --project-dir /pfad/zum/projekt
+```
+
 ## Betrieb In Einem Echten Projekt
 
 Empfohlen:
@@ -149,6 +162,9 @@ aussehen:
 ```bash
 npx claude-codex-mcp setup
 claude-codex-mcp doctor --project-dir /pfad/zum/projekt
+claude-codex-mcp clear --project-dir /pfad/zum/projekt
+claude-codex-mcp clear-backup --project-dir /pfad/zum/projekt
+claude-codex-mcp info
 ```
 
 Bis dahin wird lokal der Befehl `npm --silent --prefix PROJEKT/WORKSPACE run comm -- ...`

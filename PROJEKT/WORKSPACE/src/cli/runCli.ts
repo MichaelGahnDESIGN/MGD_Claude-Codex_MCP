@@ -6,8 +6,11 @@ import { promptSetupOptions } from "../setup/promptSetupOptions.ts";
 import { runSetup } from "../setup/runSetup.ts";
 import { shellQuote } from "../setup/shellQuote.ts";
 import type { ParsedSetupArgs } from "../setup/parseSetupArgs.ts";
+import { runCliClear } from "./clear/runCliClear.ts";
+import { runCliClearBackup } from "./clear/runCliClearBackup.ts";
 import { collectDoctorReport } from "./doctor/collectDoctorReport.ts";
 import { renderDoctorReport } from "./doctor/renderDoctorReport.ts";
+import { renderCommInfo } from "./info/renderCommInfo.ts";
 import type { CliIo } from "./cliTypes.ts";
 import { parseCliArgs } from "./parseCliArgs.ts";
 import { renderCliHelp } from "./renderCliHelp.ts";
@@ -21,6 +24,11 @@ export async function runCli(args: string[], io: CliIo): Promise<number> {
 
     if (parsed.command === "help") {
       io.stdout.write(renderCliHelp());
+      return 0;
+    }
+
+    if (parsed.command === "info") {
+      io.stdout.write(renderCommInfo());
       return 0;
     }
 
@@ -46,6 +54,16 @@ export async function runCli(args: string[], io: CliIo): Promise<number> {
 
     if (parsed.command === "status") {
       io.stdout.write(await runCliStatus(projectDir));
+      return 0;
+    }
+
+    if (parsed.command === "clear") {
+      io.stdout.write(await runCliClear({ projectDir }));
+      return 0;
+    }
+
+    if (parsed.command === "clear-backup") {
+      io.stdout.write(await runCliClearBackup({ projectDir }));
       return 0;
     }
 

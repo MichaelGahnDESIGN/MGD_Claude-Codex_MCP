@@ -1,6 +1,6 @@
 window.DOKU_DATA = {
   "schemaVersion": 4,
-  "generatedAt": "2026-06-11T18:50:50+02:00",
+  "generatedAt": "2026-06-14T00:24:24+02:00",
   "projectRoot": ".",
   "documentationRoot": "DOKUMENTATION",
   "tabs": {
@@ -598,7 +598,7 @@ window.DOKU_DATA = {
             "counts": {
               "subareas": 6,
               "directories": 7,
-              "files": 31
+              "files": 32
             },
             "primaryLinks": [
               {
@@ -679,6 +679,13 @@ window.DOKU_DATA = {
                     "path": "DOKUMENTATION/GitHub-Wiki/Codex-Integration.md",
                     "sourceHref": "GitHub-Wiki/Codex-Integration.md",
                     "href": "GitHub-Wiki/Codex-Integration.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "Comm-Befehle.md",
+                    "path": "DOKUMENTATION/GitHub-Wiki/Comm-Befehle.md",
+                    "sourceHref": "GitHub-Wiki/Comm-Befehle.md",
+                    "href": "GitHub-Wiki/Comm-Befehle.md",
                     "type": "file"
                   },
                   {

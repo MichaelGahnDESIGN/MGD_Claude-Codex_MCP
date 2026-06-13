@@ -48,6 +48,7 @@ Claude-Codex-MCP verwaltet dafür lokal:
 - [Konzept und Architektur](Konzept-und-Architektur)
 - [Installation und Betrieb](Installation-und-Betrieb)
 - [CLI-DMG](CLI-DMG)
+- [Comm-Befehle](Comm-Befehle)
 - [MCP Tools](MCP-Tools)
 - [Agenten Workflows](Agenten-Workflows)
 - [Codex Integration](Codex-Integration)
@@ -73,7 +74,9 @@ Verfügbar sind:
 - Tests für Safety, Statuswechsel, Markdown und Storage
 - Smoke-Test für Tool-Registrierung
 - GitHub-Release-DMG für macOS plus lokaler DMG-Build
-- einfache `comm`-CLI mit Setup, Diagnose, Status und Start
+- einfache `comm`-CLI mit Setup, Diagnose, Status, Info, Clear und Start
+- Slash-Befehle `/comm`, `/comm-help`, `/comm-info`, `/comm-clear` und
+  `/comm-clear-backup`
 - DMG-Startanleitung mit rechter Sidebar für Schritte und Begriffe
 
 Noch offen sind:

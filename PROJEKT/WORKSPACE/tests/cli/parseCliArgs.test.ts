@@ -47,6 +47,23 @@ describe("parseCliArgs", () => {
     });
   });
 
+  it("liest neue comm-Wartungsbefehle", () => {
+    assert.deepEqual(parseCliArgs(["clear", "--project-dir", "projekt"]), {
+      command: "clear",
+      options: { projectDir: "projekt" }
+    });
+
+    assert.deepEqual(parseCliArgs(["clear-backup", "--project-dir", "projekt"]), {
+      command: "clear-backup",
+      options: { projectDir: "projekt" }
+    });
+
+    assert.deepEqual(parseCliArgs(["info"]), {
+      command: "info",
+      options: {}
+    });
+  });
+
   it("meldet unbekannte Befehle verständlich", () => {
     assert.throws(
       () => parseCliArgs(["install"]),

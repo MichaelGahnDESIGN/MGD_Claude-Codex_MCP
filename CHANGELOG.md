@@ -2,16 +2,23 @@
 
 Alle wichtigen Änderungen dieser öffentlichen Vorlage werden hier dokumentiert.
 
-## Unveröffentlicht - ChatGPT-Codex-Skills für MCP
+## Unveröffentlicht - ChatGPT-Codex-Skills und Comm-Befehle
 
-Datum: 2026-06-13
+Datum: 2026-06-13 bis 2026-06-14
 
 - Repo-Skills `.agents/skills/codex/` und `.agents/skills/claude/` ergänzt.
 - Repo-Skill `.agents/skills/comm/` ergänzt, damit `/comm` in ChatGPT Codex
   direkt als neutraler gemeinsamer Agenten-Kanal geladen werden kann.
+- Repo-Skills und Claude-Code-Commands für `/comm-clear`, `/comm-info`,
+  `/comm-help` und `/comm-clear-backup` ergänzt.
 - Lokale persönliche Codex-Skills `/codex` und `/claude` auf
   Claude-Codex-MCP, `/comm` und MCP-Tools umgestellt.
 - Lokalen persönlichen Codex-Skill `/comm` ergänzt.
+- Lokale persönliche Codex-Skills für `/comm-clear`, `/comm-info`,
+  `/comm-help` und `/comm-clear-backup` ergänzt.
+- CLI-Befehle `clear`, `clear-backup` und `info` ergänzt.
+- `clear` legt vor dem Zurücksetzen automatisch ein Backup von
+  `agent_comms.md` und `agent_comms.state.json` an.
 - CLI-Hilfe und Dokumentation erklären nun die macOS-Kollision mit dem
   gleichnamigen Systembefehl `comm`.
 - Alte manuelle `AI_COMMS.md`-Arbeitsweise durch strukturierte MCP-Nutzung

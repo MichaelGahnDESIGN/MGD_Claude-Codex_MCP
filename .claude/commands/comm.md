@@ -32,3 +32,10 @@ Fasse kurz zusammen:
 - welche Aufgabe bearbeitet oder erstellt wurde
 - welche Blocker oder Entscheidungen neu sind
 - was als Nächstes passieren soll
+
+## Weitere Befehle
+
+- `/comm-help`: erklärt Claude-Codex-MCP allgemein.
+- `/comm-info`: zeigt alle Befehle mit Erklärung.
+- `/comm-clear`: setzt die Kommunikationsdateien nach Backup zurück.
+- `/comm-clear-backup`: löscht alte Backups und behält nur das neueste.
