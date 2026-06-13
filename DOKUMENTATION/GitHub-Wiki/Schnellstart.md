@@ -7,8 +7,8 @@ Diese Seite erklärt den schnellsten lokalen Start von Claude-Codex-MCP.
 Für normale Nutzer ist die DMG aus dem aktuellen GitHub-Release der einfachste
 Start:
 
-1. Öffne den Release `v0.2.5`.
-2. Lade `Claude-Codex-MCP-CLI_v0.2.5.dmg` herunter.
+1. Öffne den Release `v0.2.6`.
+2. Lade `Claude-Codex-MCP-CLI_v0.2.6.dmg` herunter.
 3. Öffne die DMG.
 4. Lies `START_HIER.html`.
 5. Starte `Claude-Codex-MCP Setup.app`.

@@ -9,10 +9,10 @@ Startversion dieser Vorlage pro neuem Projekt:
 - Betroffene Bereiche: `Grundstruktur`
 - Rücknahme oder Wiederherstellung: `Aus Vorlage erneut erzeugbar`
 
-## Unveröffentlicht - Comm-Wartungsbefehle
+## 0.2.6 - Comm-Wartungsbefehle
 
 - Datum: `2026-06-14`
-- Version: `unveröffentlicht`
+- Version: `0.2.6`
 - Beschreibung: `/comm-clear`, `/comm-info`, `/comm-help` und
   `/comm-clear-backup` wurden als Skills und Claude-Code-Commands ergänzt. Die
   lokale CLI unterstützt zusätzlich `clear`, `clear-backup` und `info`.

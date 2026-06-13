@@ -1,6 +1,6 @@
 # Claude-Codex-MCP
 
-**Version:** `0.2.5`
+**Version:** `0.2.6`
 
 Ein lokales MCP-System, mit dem mehrere KI-Agenten wie ChatGPT Codex, Claude
 Code, Claude Cowork und weitere Werkzeuge über ein gemeinsames Aufgaben-,
@@ -22,8 +22,8 @@ Der einfachste Weg für normale Nutzerinnen und Nutzer ist die macOS-DMG aus
 dem aktuellen GitHub-Release:
 
 1. Öffne den aktuellen Release:
-   [Claude-Codex-MCP 0.2.5](https://github.com/MichaelGahnDESIGN/Claude-Codex-MCP/releases/tag/v0.2.5)
-2. Lade `Claude-Codex-MCP-CLI_v0.2.5.dmg` herunter.
+   [Claude-Codex-MCP 0.2.6](https://github.com/MichaelGahnDESIGN/Claude-Codex-MCP/releases/tag/v0.2.6)
+2. Lade `Claude-Codex-MCP-CLI_v0.2.6.dmg` herunter.
 3. Öffne die DMG-Datei.
 4. Lies `START_HIER.html` oder `START_HIER.md`.
 5. Starte `Claude-Codex-MCP Setup.app`.
@@ -329,7 +329,7 @@ Sidebar, die jeden Schritt und wichtige Begriffe erklärt.
 Release:
 
 ```text
-https://github.com/MichaelGahnDESIGN/Claude-Codex-MCP/releases/tag/v0.2.5
+https://github.com/MichaelGahnDESIGN/Claude-Codex-MCP/releases/tag/v0.2.6
 ```
 
 Lokal kann die DMG aus dem aktuellen Git-Stand neu gebaut werden:

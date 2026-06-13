@@ -2,10 +2,11 @@
 
 Alle wichtigen Änderungen dieser öffentlichen Vorlage werden hier dokumentiert.
 
-## Unveröffentlicht - ChatGPT-Codex-Skills und Comm-Befehle
+## 0.2.6 - ChatGPT-Codex-Skills und Comm-Befehle
 
-Datum: 2026-06-13 bis 2026-06-14
+Datum: 2026-06-14
 
+- Versionsnummer des GitHub-Projekts auf `0.2.6` erhöht.
 - Repo-Skills `.agents/skills/codex/` und `.agents/skills/claude/` ergänzt.
 - Repo-Skill `.agents/skills/comm/` ergänzt, damit `/comm` in ChatGPT Codex
   direkt als neutraler gemeinsamer Agenten-Kanal geladen werden kann.

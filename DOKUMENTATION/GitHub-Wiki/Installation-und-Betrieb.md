@@ -37,7 +37,7 @@ Für Menschen ohne Programmierhintergrund ist die DMG aus dem aktuellen Release
 der empfohlene Weg:
 
 ```text
-https://github.com/MichaelGahnDESIGN/Claude-Codex-MCP/releases/tag/v0.2.5
+https://github.com/MichaelGahnDESIGN/Claude-Codex-MCP/releases/tag/v0.2.6
 ```
 
 Die DMG enthält:
