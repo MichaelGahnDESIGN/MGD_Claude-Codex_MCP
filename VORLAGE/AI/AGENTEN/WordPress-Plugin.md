@@ -25,4 +25,4 @@ Nutze diesen Agenten für neue Plugins, Plugin-Erweiterungen, Admin-Seiten, REST
 - [`Programmierer.md`](Programmierer.md)
 - [`Debug.md`](Debug.md)
 - [`Tester.md`](Tester.md)
-- [`../SKILLS/WordPress/wordpress-plugin-skill.md`](wordpress-plugin-skill.md)
+- [`../SKILLS/WordPress/wordpress-plugin-skill.md`](../SKILLS/WordPress/wordpress-plugin-skill.md)

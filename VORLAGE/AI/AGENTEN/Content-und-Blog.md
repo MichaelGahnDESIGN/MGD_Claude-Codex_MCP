@@ -25,4 +25,4 @@ Nutze diesen Agenten für Blogbeiträge, Leistungsseiten, SEO-nahe Textarbeit, r
 - [`Recherche.md`](Recherche.md)
 - [`UX-Design.md`](UX-Design.md)
 - [`Social-Media.md`](Social-Media.md)
-- [`../SKILLS/Content/blog-skill.md`](blog-skill.md)
+- [`../SKILLS/Content/blog-skill.md`](../SKILLS/Content/blog-skill.md)

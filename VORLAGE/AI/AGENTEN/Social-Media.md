@@ -25,4 +25,4 @@ Nutze diesen Agenten für Redaktionsplaene, Post-Serien, Hook-Varianten, Formatl
 - [`Designer.md`](Designer.md)
 - [`Recherche.md`](Recherche.md)
 - [`Content-und-Blog.md`](Content-und-Blog.md)
-- [`../SKILLS/Content/social-media-skill.md`](social-media-skill.md)
+- [`../SKILLS/Content/social-media-skill.md`](../SKILLS/Content/social-media-skill.md)

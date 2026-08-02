@@ -25,4 +25,4 @@ Nutze diesen Agenten für Storefront-Anpassungen, Admin-Erweiterungen, Plugin-St
 - [`Programmierer.md`](Programmierer.md)
 - [`Tester.md`](Tester.md)
 - [`Kundenprojekt.md`](Kundenprojekt.md)
-- [`../SKILLS/Shopsysteme/shopware-6-plugin-skill.md`](shopware-6-plugin-skill.md)
+- [`../SKILLS/Shopsysteme/shopware-6-plugin-skill.md`](../SKILLS/Shopsysteme/shopware-6-plugin-skill.md)

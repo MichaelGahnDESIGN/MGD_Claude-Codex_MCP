@@ -298,17 +298,17 @@ Dokumentationsprüfung oder Struktur-Review:
 Folgende Skills decken die wichtigsten typischen Arbeitsfelder dieser Vorlage ab:
 
 - [`../SKILLS/Allgemein/DESIGN-Skill.md`](DESIGN-Skill.md)
-- [`../SKILLS/Allgemein/release-skill.md`](release-skill.md)
-- [`../SKILLS/Allgemein/website-skill.md`](website-skill.md)
-- [`../SKILLS/Allgemein/recherche-skill.md`](recherche-skill.md)
-- [`../SKILLS/WordPress/wordpress-divi5-skill.md`](wordpress-divi5-skill.md)
-- [`../SKILLS/WordPress/wordpress-plugin-skill.md`](wordpress-plugin-skill.md)
-- [`../SKILLS/Shopsysteme/shopware-6-plugin-skill.md`](shopware-6-plugin-skill.md)
-- [`../SKILLS/Shopsysteme/jtl-shop-5-skill.md`](jtl-shop-5-skill.md)
-- [`../SKILLS/Shopsysteme/shopify-skill.md`](shopify-skill.md)
-- [`../SKILLS/Content/social-media-skill.md`](social-media-skill.md)
-- [`../SKILLS/Content/blog-skill.md`](blog-skill.md)
-- [`../SKILLS/Allgemein/kundenprojekt-skill.md`](kundenprojekt-skill.md)
+- [`../SKILLS/Allgemein/release-skill.md`](../SKILLS/Allgemein/release-skill.md)
+- [`../SKILLS/Allgemein/website-skill.md`](../SKILLS/Allgemein/website-skill.md)
+- [`../SKILLS/Allgemein/recherche-skill.md`](../SKILLS/Allgemein/recherche-skill.md)
+- [`../SKILLS/WordPress/wordpress-divi5-skill.md`](../SKILLS/WordPress/wordpress-divi5-skill.md)
+- [`../SKILLS/WordPress/wordpress-plugin-skill.md`](../SKILLS/WordPress/wordpress-plugin-skill.md)
+- [`../SKILLS/Shopsysteme/shopware-6-plugin-skill.md`](../SKILLS/Shopsysteme/shopware-6-plugin-skill.md)
+- [`../SKILLS/Shopsysteme/jtl-shop-5-skill.md`](../SKILLS/Shopsysteme/jtl-shop-5-skill.md)
+- [`../SKILLS/Shopsysteme/shopify-skill.md`](../SKILLS/Shopsysteme/shopify-skill.md)
+- [`../SKILLS/Content/social-media-skill.md`](../SKILLS/Content/social-media-skill.md)
+- [`../SKILLS/Content/blog-skill.md`](../SKILLS/Content/blog-skill.md)
+- [`../SKILLS/Allgemein/kundenprojekt-skill.md`](../SKILLS/Allgemein/kundenprojekt-skill.md)
 
 Skills sollen nur geladen oder genutzt werden, wenn sie der Aufgabe konkret helfen.
 

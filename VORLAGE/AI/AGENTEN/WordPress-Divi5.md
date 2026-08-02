@@ -25,4 +25,4 @@ Nutze diesen Agenten für Theme-Struktur, Modulkonzepte, Template-Logik, respons
 - [`Designer.md`](Designer.md)
 - [`UX-Design.md`](UX-Design.md)
 - [`Kundenprojekt.md`](Kundenprojekt.md)
-- [`../SKILLS/WordPress/wordpress-divi5-skill.md`](wordpress-divi5-skill.md)
+- [`../SKILLS/WordPress/wordpress-divi5-skill.md`](../SKILLS/WordPress/wordpress-divi5-skill.md)

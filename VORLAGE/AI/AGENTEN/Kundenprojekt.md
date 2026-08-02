@@ -24,4 +24,4 @@ Nutze diesen Agenten bei Kundenprojekten, Live-Systemen, abgestimmten Designs, v
 
 - [`Projektmanager.md`](Projektmanager.md)
 - [`Controller.md`](Controller.md)
-- [`../SKILLS/Allgemein/kundenprojekt-skill.md`](kundenprojekt-skill.md)
+- [`../SKILLS/Allgemein/kundenprojekt-skill.md`](../SKILLS/Allgemein/kundenprojekt-skill.md)

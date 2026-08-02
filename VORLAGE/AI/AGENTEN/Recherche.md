@@ -24,4 +24,4 @@ Nutze diesen Agenten bei Wettbewerbsanalyse, Toolvergleich, Themenrecherche, Zie
 
 - [`Projektmanager.md`](Projektmanager.md)
 - [`Content-und-Blog.md`](Content-und-Blog.md)
-- [`../SKILLS/Allgemein/recherche-skill.md`](recherche-skill.md)
+- [`../SKILLS/Allgemein/recherche-skill.md`](../SKILLS/Allgemein/recherche-skill.md)

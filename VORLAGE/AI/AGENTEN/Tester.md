@@ -24,4 +24,4 @@ Nutze diesen Agenten vor Abschluss relevanter Änderungen, bei Regressionen, bei
 
 - [`Debug.md`](Debug.md)
 - [`Controller.md`](Controller.md)
-- [`../SKILLS/Allgemein/release-skill.md`](release-skill.md)
+- [`../SKILLS/Allgemein/release-skill.md`](../SKILLS/Allgemein/release-skill.md)

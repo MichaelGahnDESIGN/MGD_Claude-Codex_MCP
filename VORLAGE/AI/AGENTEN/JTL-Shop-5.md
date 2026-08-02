@@ -25,4 +25,4 @@ Nutze diesen Agenten für Template-Anpassungen, Plugin-Erweiterungen, Checkout-n
 - [`Programmierer.md`](Programmierer.md)
 - [`Tester.md`](Tester.md)
 - [`Kundenprojekt.md`](Kundenprojekt.md)
-- [`../SKILLS/Shopsysteme/jtl-shop-5-skill.md`](jtl-shop-5-skill.md)
+- [`../SKILLS/Shopsysteme/jtl-shop-5-skill.md`](../SKILLS/Shopsysteme/jtl-shop-5-skill.md)

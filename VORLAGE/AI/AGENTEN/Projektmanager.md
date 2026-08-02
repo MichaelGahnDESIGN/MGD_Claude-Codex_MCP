@@ -24,5 +24,5 @@ Nutze diesen Agenten, wenn Anforderungen unklar sind, mehrere Arbeitspakete koor
 
 - [`Kundenprojekt.md`](Kundenprojekt.md)
 - [`Recherche.md`](Recherche.md)
-- [`../SKILLS/Allgemein/kundenprojekt-skill.md`](kundenprojekt-skill.md)
-- [`../SKILLS/Allgemein/recherche-skill.md`](recherche-skill.md)
+- [`../SKILLS/Allgemein/kundenprojekt-skill.md`](../SKILLS/Allgemein/kundenprojekt-skill.md)
+- [`../SKILLS/Allgemein/recherche-skill.md`](../SKILLS/Allgemein/recherche-skill.md)

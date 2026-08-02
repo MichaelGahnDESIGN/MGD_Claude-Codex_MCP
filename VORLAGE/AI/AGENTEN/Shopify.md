@@ -25,4 +25,4 @@ Nutze diesen Agenten für Theme-Weiterentwicklung, Section-Architektur, Content-
 - [`Designer.md`](Designer.md)
 - [`UX-Design.md`](UX-Design.md)
 - [`Kundenprojekt.md`](Kundenprojekt.md)
-- [`../SKILLS/Shopsysteme/shopify-skill.md`](shopify-skill.md)
+- [`../SKILLS/Shopsysteme/shopify-skill.md`](../SKILLS/Shopsysteme/shopify-skill.md)

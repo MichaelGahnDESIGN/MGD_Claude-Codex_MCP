@@ -115,7 +115,7 @@ Alle wichtigen Entscheidungen, offenen Punkte, Risiken, Änderungen und Besonder
 
 Im Root von `DOKUMENTATION/` sollen nur diese Dateien direkt liegen:
 
-- [`DOKUMENTATION/index.html`](index.html)
+- [`DOKUMENTATION/index.html`](../../DOKUMENTATION/index.html)
 - [`DOKUMENTATION/SKILL.md`](DOKUMENTATION/SKILL.md)
 
 Die eigentlichen Inhalte sollen in sinnvolle Unterordner einsortiert werden.

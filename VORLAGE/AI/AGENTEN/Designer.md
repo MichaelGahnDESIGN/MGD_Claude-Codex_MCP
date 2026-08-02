@@ -28,4 +28,4 @@ Vor jeder gestalterischen Arbeit ist [`../SKILLS/Allgemein/DESIGN-Skill.md`](DES
 - [`UX-Design.md`](UX-Design.md)
 - [`Social-Media.md`](Social-Media.md)
 - [`../SKILLS/Allgemein/DESIGN-Skill.md`](DESIGN-Skill.md)
-- [`../SKILLS/Allgemein/website-skill.md`](website-skill.md)
+- [`../SKILLS/Allgemein/website-skill.md`](../SKILLS/Allgemein/website-skill.md)
