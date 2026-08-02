@@ -20,7 +20,7 @@ Das bedeutet:
 ## Klonen
 
 ```bash
-git clone https://github.com/MichaelGahnDESIGN/Claude-Codex-MCP.git
+git clone https://github.com/MichaelGahnDESIGN/MGD_Claude-Codex_MCP.git
 cd Claude-Codex-MCP
 ```
 
@@ -37,7 +37,7 @@ Für Menschen ohne Programmierhintergrund ist die DMG aus dem aktuellen Release
 der empfohlene Weg:
 
 ```text
-https://github.com/MichaelGahnDESIGN/Claude-Codex-MCP/releases/tag/v0.2.6
+https://github.com/MichaelGahnDESIGN/MGD_Claude-Codex_MCP/releases/tag/v0.2.6
 ```
 
 Die DMG enthält:

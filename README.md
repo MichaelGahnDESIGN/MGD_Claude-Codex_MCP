@@ -22,7 +22,7 @@ Der einfachste Weg für normale Nutzerinnen und Nutzer ist die macOS-DMG aus
 dem aktuellen GitHub-Release:
 
 1. Öffne den aktuellen Release:
-   [Claude-Codex-MCP 0.2.6](https://github.com/MichaelGahnDESIGN/Claude-Codex-MCP/releases/tag/v0.2.6)
+   [Claude-Codex-MCP 0.2.6](https://github.com/MichaelGahnDESIGN/MGD_Claude-Codex_MCP/releases/tag/v0.2.6)
 2. Lade `Claude-Codex-MCP-CLI_v0.2.6.dmg` herunter.
 3. Öffne die DMG-Datei.
 4. Lies `START_HIER.html` oder `START_HIER.md`.
@@ -223,7 +223,7 @@ Voraussetzung:
 Repository klonen:
 
 ```bash
-git clone https://github.com/MichaelGahnDESIGN/Claude-Codex-MCP.git
+git clone https://github.com/MichaelGahnDESIGN/MGD_Claude-Codex_MCP.git
 cd Claude-Codex-MCP
 ```
 
@@ -329,7 +329,7 @@ Sidebar, die jeden Schritt und wichtige Begriffe erklärt.
 Release:
 
 ```text
-https://github.com/MichaelGahnDESIGN/Claude-Codex-MCP/releases/tag/v0.2.6
+https://github.com/MichaelGahnDESIGN/MGD_Claude-Codex_MCP/releases/tag/v0.2.6
 ```
 
 Lokal kann die DMG aus dem aktuellen Git-Stand neu gebaut werden:
@@ -547,7 +547,7 @@ bleiben.
 Als passende Projektstruktur für KI-gestützte Arbeit gibt es zusätzlich den
 öffentlichen Basis-Projektordner:
 
-[MichaelGahnDESIGN/AI-Basic-Projektordner](https://github.com/MichaelGahnDESIGN/AI-Basic-Projektordner)
+[MichaelGahnDESIGN/MGD_AI-Basic-Projektordner_TOOL](https://github.com/MichaelGahnDESIGN/MGD_AI-Basic-Projektordner_TOOL)
 
 Der Basis-Projektordner stellt eine aufgeräumte Ordner-, Regel- und
 Dokumentationsstruktur bereit. `Claude-Codex-MCP` ergänzt diese Struktur um den

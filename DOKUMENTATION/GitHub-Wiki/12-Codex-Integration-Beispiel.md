@@ -1,3 +1,14 @@
+> [!CAUTION]
+> **Dieser Entwurf ist nicht belegt und teilweise falsch.**
+>
+> Er beschreibt eine HTTP-Schnittstelle (Port 3001, `curl .../health`) und eine
+> Datei `.claude/TASKS.md`. Nichts davon existiert im Quelltext dieses
+> Projekts — das Werkzeug arbeitet ueber stdio. Wer den Angaben hier folgt,
+> laeuft ins Leere.
+>
+> Verbindlich ist das veroeffentlichte Wiki:
+> https://github.com/MichaelGahnDESIGN/MGD_Claude-Codex_MCP/wiki
+
 # Codex Integration — Schritt-für-Schritt Anleitung
 
 **Zielgruppe:** Entwickler, die Codex mit Claude-Codex-MCP verwenden

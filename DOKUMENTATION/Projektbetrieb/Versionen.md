@@ -219,7 +219,7 @@ Startversion dieser Vorlage pro neuem Projekt:
 - Datum: `2026-06-07`
 - Version: `0.2.0`
 - Beschreibung: Das Repository wurde für das GitHub-Projekt
-  `MichaelGahnDESIGN/Claude-Codex-MCP` vorbereitet. Die Root-README erklärt nun
+  `MichaelGahnDESIGN/MGD_Claude-Codex_MCP` vorbereitet. Die Root-README erklärt nun
   ausführlich Zweck, lokale Nutzung, MCP-Tools, Sicherheit, Tests,
   Dokumentation, Roadmap und geplanten Veröffentlichungsweg.
 - Begründung: Das Projekt soll für weitere Nutzer verständlich werden und nicht

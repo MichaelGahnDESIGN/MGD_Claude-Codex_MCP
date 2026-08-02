@@ -1,3 +1,14 @@
+> [!CAUTION]
+> **Dieser Entwurf ist nicht belegt und teilweise falsch.**
+>
+> Er beschreibt eine HTTP-Schnittstelle (Port 3001, `curl .../health`) und eine
+> Datei `.claude/TASKS.md`. Nichts davon existiert im Quelltext dieses
+> Projekts — das Werkzeug arbeitet ueber stdio. Wer den Angaben hier folgt,
+> laeuft ins Leere.
+>
+> Verbindlich ist das veroeffentlichte Wiki:
+> https://github.com/MichaelGahnDESIGN/MGD_Claude-Codex_MCP/wiki
+
 # Multi-Agent Workflow — Realistisches Szenario
 
 **Szenario:** React Component Library aufbauen mit Claude + Codex

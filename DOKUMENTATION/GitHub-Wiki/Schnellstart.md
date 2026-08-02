@@ -32,7 +32,7 @@ versionierten NPM-Dev-Abhängigkeiten installiert.
 ## Repository Klonen
 
 ```bash
-git clone https://github.com/MichaelGahnDESIGN/Claude-Codex-MCP.git
+git clone https://github.com/MichaelGahnDESIGN/MGD_Claude-Codex_MCP.git
 cd Claude-Codex-MCP
 ```
 

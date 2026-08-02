@@ -83,7 +83,7 @@ ist.
 GitHub-CLI-Befehl für später:
 
 ```bash
-gh repo edit MichaelGahnDESIGN/Claude-Codex-MCP \
+gh repo edit MichaelGahnDESIGN/MGD_Claude-Codex_MCP \
   --visibility public \
   --accept-visibility-change-consequences
 ```

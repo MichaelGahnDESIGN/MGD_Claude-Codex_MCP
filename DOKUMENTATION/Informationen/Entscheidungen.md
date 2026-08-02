@@ -145,7 +145,7 @@ Jeder Eintrag soll mindestens enthalten:
 
 - Datum: `2026-06-07`
 - Entscheidung: Das GitHub-Zielprojekt
-  `MichaelGahnDESIGN/Claude-Codex-MCP` erhält eine eigene ausführliche
+  `MichaelGahnDESIGN/MGD_Claude-Codex_MCP` erhält eine eigene ausführliche
   Projekt-README und die Versionsnummer `0.2.0`.
 - Begründung: Das Projekt soll nicht nur als private lokale Arbeitsgrundlage
   dienen, sondern für weitere Nutzer verständlich und später öffentlich
@@ -275,7 +275,7 @@ Jeder Eintrag soll mindestens enthalten:
 
 - Datum: `2026-06-11`
 - Entscheidung: Die öffentliche README verweist auf
-  `MichaelGahnDESIGN/AI-Basic-Projektordner` als passenden Basisordner für
+  `MichaelGahnDESIGN/MGD_AI-Basic-Projektordner_TOOL` als passenden Basisordner für
   KI-gestützte Projektarbeit.
 - Begründung: `Claude-Codex-MCP` ist der lokale Kommunikationskanal für Agenten.
   Der Basis-Projektordner liefert dazu die aufgeräumte Projektstruktur, Regeln
