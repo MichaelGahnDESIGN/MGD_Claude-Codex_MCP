@@ -6,7 +6,7 @@ Der Designer-Agent verantwortet visuelle Richtung, Markenwirkung und gestalteris
 
 Nutze diesen Agenten bei Websites, Landingpages, Themes, Social Creatives, UI-Komponenten und gestalterischen Konzepten.
 
-Vor jeder gestalterischen Arbeit ist [`../SKILLS/Allgemein/DESIGN-Skill.md`](DESIGN-Skill.md) verbindlich zu beachten.
+Vor jeder gestalterischen Arbeit ist [`../SKILLS/Allgemein/DESIGN-Skill.md`](../SKILLS/Allgemein/DESIGN-Skill.md) verbindlich zu beachten.
 
 ## Aufgaben
 
@@ -27,5 +27,5 @@ Vor jeder gestalterischen Arbeit ist [`../SKILLS/Allgemein/DESIGN-Skill.md`](DES
 
 - [`UX-Design.md`](UX-Design.md)
 - [`Social-Media.md`](Social-Media.md)
-- [`../SKILLS/Allgemein/DESIGN-Skill.md`](DESIGN-Skill.md)
+- [`../SKILLS/Allgemein/DESIGN-Skill.md`](../SKILLS/Allgemein/DESIGN-Skill.md)
 - [`../SKILLS/Allgemein/website-skill.md`](../SKILLS/Allgemein/website-skill.md)

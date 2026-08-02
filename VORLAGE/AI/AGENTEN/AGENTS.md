@@ -70,7 +70,7 @@ Wenn HTML, Frontend oder UI betroffen ist, gelten standardmäßig diese Qualitä
 - zurückhaltende, angemessene Typografie
 - keine unnötig großen Schriftgrößen
 
-Für alle Design-Agenten ist [`../SKILLS/Allgemein/DESIGN-Skill.md`](DESIGN-Skill.md) verpflichtende Arbeitsgrundlage.
+Für alle Design-Agenten ist [`../SKILLS/Allgemein/DESIGN-Skill.md`](../SKILLS/Allgemein/DESIGN-Skill.md) verpflichtende Arbeitsgrundlage.
 
 Das gilt insbesondere für:
 
@@ -297,7 +297,7 @@ Dokumentationsprüfung oder Struktur-Review:
 
 Folgende Skills decken die wichtigsten typischen Arbeitsfelder dieser Vorlage ab:
 
-- [`../SKILLS/Allgemein/DESIGN-Skill.md`](DESIGN-Skill.md)
+- [`../SKILLS/Allgemein/DESIGN-Skill.md`](../SKILLS/Allgemein/DESIGN-Skill.md)
 - [`../SKILLS/Allgemein/release-skill.md`](../SKILLS/Allgemein/release-skill.md)
 - [`../SKILLS/Allgemein/website-skill.md`](../SKILLS/Allgemein/website-skill.md)
 - [`../SKILLS/Allgemein/recherche-skill.md`](../SKILLS/Allgemein/recherche-skill.md)

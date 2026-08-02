@@ -28,7 +28,7 @@ Nutze diesen Agenten bei:
 
 ## Verbindliche Grundlage
 
-- [`../SKILLS/Allgemein/DESIGN-Skill.md`](DESIGN-Skill.md)
+- [`../SKILLS/Allgemein/DESIGN-Skill.md`](../SKILLS/Allgemein/DESIGN-Skill.md)
 
 ## Sinnvolle Verknüpfungen
 

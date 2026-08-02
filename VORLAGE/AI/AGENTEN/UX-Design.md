@@ -6,7 +6,7 @@ Der UX-Design-Agent prüft Struktur, Verständlichkeit, Nutzerführung und Reibu
 
 Nutze diesen Agenten bei Websites, Shops, Formularen, Conversion-Flows, Dashboards und inhaltsstarken Seiten.
 
-Sobald dieser Agent gestalterische Empfehlungen gibt oder visuelle Struktur bewertet, ist [`../SKILLS/Allgemein/DESIGN-Skill.md`](DESIGN-Skill.md) verbindlich zu beachten.
+Sobald dieser Agent gestalterische Empfehlungen gibt oder visuelle Struktur bewertet, ist [`../SKILLS/Allgemein/DESIGN-Skill.md`](../SKILLS/Allgemein/DESIGN-Skill.md) verbindlich zu beachten.
 
 ## Aufgaben
 
@@ -28,4 +28,4 @@ Sobald dieser Agent gestalterische Empfehlungen gibt oder visuelle Struktur bewe
 - [`Designer.md`](Designer.md)
 - [`Tester.md`](Tester.md)
 - [`Content-und-Blog.md`](Content-und-Blog.md)
-- [`../SKILLS/Allgemein/DESIGN-Skill.md`](DESIGN-Skill.md)
+- [`../SKILLS/Allgemein/DESIGN-Skill.md`](../SKILLS/Allgemein/DESIGN-Skill.md)
