@@ -551,7 +551,7 @@ Wichtige Design-Entscheidungen sollten geloggt werden:
 
 ### 8.4 Best Practices lernen
 
-Lese die [Best Practices Guide](12-Best-Practices.md):
+Lese die [Best Practices Guide](https://github.com/MichaelGahnDESIGN/MGD_Claude-Codex_MCP/wiki):
 - Wie man gute Tasks schreibt
 - Task-Abhängigkeiten richtig nutzen
 - Chat effektiv einsetzen

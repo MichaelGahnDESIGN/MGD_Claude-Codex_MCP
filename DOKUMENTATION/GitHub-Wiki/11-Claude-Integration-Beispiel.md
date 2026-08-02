@@ -1196,4 +1196,4 @@ module.exports = {
 **Version:** 1.0  
 **Status:** ✅ Für Entwickler fertig
 
-**Nächste Lektüre:** [12-Best-Practices.md](12-Best-Practices.md) für Production-Ready Setups
+**Nächste Lektüre:** [12-Best-Practices.md](https://github.com/MichaelGahnDESIGN/MGD_Claude-Codex_MCP/wiki) für Production-Ready Setups
