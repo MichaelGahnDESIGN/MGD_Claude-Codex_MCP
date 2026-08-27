@@ -9,7 +9,7 @@ Dr.-Theodor-Brugsch Str. 12<br>
 Sachsen<br>
 Deutschland
 
-Tel.: +49 (0) 176 557 647 48<br>
+Tel.: +49 (0) 151 59156639<br>
 E-Mail: Anfrage@Michael-Gahn.de
 
 Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br>
