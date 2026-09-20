@@ -12,7 +12,7 @@ on:
 jobs:
   quality-check:
     name: Vorlage prüfen
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, Linux]
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
 
