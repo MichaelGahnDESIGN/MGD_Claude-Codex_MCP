@@ -24,6 +24,12 @@ In Claude Code liegt dafür die Datei `.claude/commands/comm.md`.
 6. Aufgabe mit `complete_task` abschließen.
 7. Übergabe mit `write_handoff` schreiben.
 
+Wenn Claude als Reviewer eingesetzt wird, prüft es die Anfrage über
+`list_reviews` oder `read_context` und reicht seine Befunde mit
+`submit_review_feedback` ein. Die Review ist einem Reviewer zugewiesen; nur
+dieser kann Feedback ergänzen. Der anfragende Agent beantwortet es anschließend
+mit `respond_to_review`.
+
 ## Gemeinsamer Speicher Mit Codex
 
 Claude muss denselben `AGENT_COMMS_DIR` nutzen wie Codex. Nur dann lesen und

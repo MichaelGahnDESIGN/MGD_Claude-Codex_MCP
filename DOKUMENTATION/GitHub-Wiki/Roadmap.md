@@ -7,7 +7,7 @@ Status: umgesetzt.
 Enthalten:
 
 - lokaler MCP-Server
-- 12 Tools
+- 16 Tools einschließlich Review-Anfrage, Feedback, Antwort und Review-Liste
 - dateibasierter Speicher
 - Markdown-Ausgabe
 - JSON-State
@@ -26,12 +26,18 @@ Teilweise umgesetzt:
 Weiter geplant:
 
 - echte Codex-/Claude-Integration testen
-- atomare Schreibvorgänge
 - strengere Eingabevalidierung
 - bessere Fehlerausgaben
 - beschädigte State-Dateien sicher behandeln
 - Reset-Round weiter testen
 - interne Wiki-Dokumentation und README gegenlesen
+
+Abgeschlossen:
+
+- strukturierter Review- und Feedbackablauf mit Berechtigungsprüfung
+- prozessübergreifende Serialisierung schreibender Dateioperationen
+- atomarer Austausch der State- und Markdown-Dateien
+- Rückwärtskompatibilität für State-Dateien ohne Review-Felder
 
 ## Phase 1.2
 
@@ -50,7 +56,7 @@ Mögliche Erweiterungen:
 - NPM-Paket
 - signierte macOS-DMG oder Desktop-App
 - Windows-EXE/Installer
-- optionale SQLite-Speicherung
+- transaktionsfähiges SQLite-Backend für größere oder remote genutzte Setups
 - Skill-/Prompt-Generator für Codex und Claude
 - Multi-Projekt-Unterstützung
 - bessere History und Archivierung

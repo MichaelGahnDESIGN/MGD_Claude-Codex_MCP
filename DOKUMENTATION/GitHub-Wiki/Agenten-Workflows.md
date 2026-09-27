@@ -72,6 +72,27 @@ Eine gute Übergabe beantwortet:
 - Welche Risiken gibt es?
 - Was soll der nächste Agent zuerst lesen?
 
+## Workflow: Review mit Feedback und Antwort
+
+1. Der anfragende Agent erstellt mit `create_review` eine konkrete Prüffrage.
+2. Er verknüpft die Anfrage nach Möglichkeit mit Task-ID, Commit und betroffenen
+   Dateien und nennt prüfbare Kriterien.
+3. Der zugewiesene Reviewer liest `list_reviews` oder `read_context` und prüft
+   genau diesen Stand.
+4. Der Reviewer sendet `submit_review_feedback` mit einer Bewertung und
+   konkreten Befunden. Zulässige Bewertungen sind `APPROVE`,
+   `CHANGES_REQUESTED` und `COMMENT`.
+5. Der Anfragesteller dokumentiert mit `respond_to_review`, welche Punkte er
+   angenommen, teilweise angenommen oder begründet abgelehnt hat.
+6. Die Review-Historie bleibt im gemeinsamen State und in `agent_comms.md`.
+
+Nur der zugewiesene Reviewer kann Feedback einreichen. Nur der Anfragesteller
+kann auf das Feedback antworten und die Review abschließen. Der Ablauf startet
+keinen Agenten automatisch; beide Clients müssen aktiv sein und den MCP
+aufrufen. Die Namensprüfung verhindert versehentliche Fehlzuordnungen, ist
+aber keine Authentifizierung: Der aktuelle MCP-Client kann den gemeldeten Namen
+selbst setzen.
+
 ## Rollen
 
 Typische Rollen:
@@ -82,3 +103,10 @@ Typische Rollen:
 
 Die Rollen sind nicht fest. Wichtig ist, dass alle denselben lokalen Kontext
 nutzen.
+
+## Parallele lokale Nutzung
+
+Schreibende MCP-Operationen serialisieren ihre State-Änderungen mit einem
+prozessübergreifenden Lock. Dadurch werden konkurrierende Read-Modify-Write-
+Zyklen lokaler MCP-Prozesse nacheinander ausgeführt. Der Lock ersetzt weder
+Remote-Synchronisierung noch ein transaktionsfähiges Mehrbenutzer-Backend.

@@ -60,6 +60,23 @@ Pro Eintrag festhalten:
   Datenminimierung. Sensible Details sollen als neutraler Blocker beschrieben
   statt gespeichert werden.
 
+## Lokale State-Dateien und parallele MCP-Prozesse
+
+- Risiko: Mehrere MCP-Prozesse könnten denselben State gleichzeitig ändern;
+  Prozessabbruch oder Dateisystemfehler können außerdem die Aktualisierung der
+  beiden abgeleiteten Dateien unterbrechen.
+- Eintrittswahrscheinlichkeit: Niedrig nach Einführung des prozessübergreifenden
+  Locks; bei atypischen Dateisystemen weiterhin zu prüfen.
+- Auswirkung: Review-, Aufgaben- oder Chat-Änderungen könnten fehlen oder die
+  Markdown-Datei könnte bis zum nächsten Speichern hinter dem JSON-State liegen.
+- Betroffene Bereiche: `agent_comms.state.json`, `agent_comms.md`,
+  `PROJEKT/WORKSPACE/src/storage/FileStorage.ts`.
+- Absicherung oder nächste Maßnahme: Read-Modify-Write wird mit einem exklusiven
+  Lock serialisiert. Verwaiste Locks werden über die Prozess-ID behandelt;
+  Dateien werden per temporärer Datei und Rename ersetzt. Tests prüfen
+  konkurrierende Updates über mehrere Storage-Instanzen. Für Remote- und
+  Mehrbenutzerbetrieb bleibt ein transaktionsfähiges Backend erforderlich.
+
 ## GitHub-Wiki ist im privaten Repository nicht verfügbar
 
 - Risiko: GitHub stellt Wikis für dieses private Repository im aktuellen Setup

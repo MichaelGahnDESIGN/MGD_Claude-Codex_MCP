@@ -7,13 +7,14 @@ export function createInitialState(projectName = "Claude-Codex-MCP"): AgentComms
     version: 1,
     projectName,
     updatedAt: now,
-    counters: { task: 0, chat: 0, blocker: 0, decision: 0, handoff: 0, log: 0, history: 0 },
+    counters: { task: 0, chat: 0, blocker: 0, decision: 0, handoff: 0, log: 0, history: 0, review: 0 },
     tasks: [],
     done: [],
     chat: [],
     blockers: [],
     decisions: [],
     handoffs: [],
+    reviews: [],
     logs: [],
     history: []
   };

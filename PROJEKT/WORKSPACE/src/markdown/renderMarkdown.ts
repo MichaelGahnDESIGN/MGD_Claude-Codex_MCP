@@ -1,6 +1,6 @@
 import { normalizeMarkdownText } from "./escapeMarkdown.ts";
 import { renderList } from "./renderList.ts";
-import type { AgentCommsState, Blocker, Decision, Handoff, Task } from "../domain/types.ts";
+import type { AgentCommsState, Blocker, Decision, Handoff, ReviewThread, Task } from "../domain/types.ts";
 
 export function renderMarkdown(state: AgentCommsState): string {
   return [
@@ -24,12 +24,42 @@ export function renderMarkdown(state: AgentCommsState): string {
     "## Übergaben",
     renderHandoffs(state.handoffs),
     "",
+    "## Reviews",
+    renderReviews(state.reviews),
+    "",
     "## Chat",
     renderChat(state),
     "",
     "## Log / History",
     renderLogs(state)
   ].join("\n");
+}
+
+function renderReviews(reviews: ReviewThread[]): string {
+  if (reviews.length === 0) return "Keine Review-Anfragen vorhanden.";
+  return reviews.map((review) => {
+    const lines = [
+      `### ${review.id} - ${review.status}`,
+      `- Angefragt von: ${normalizeMarkdownText(review.requester)}`,
+      `- Reviewer: ${normalizeMarkdownText(review.reviewer)}`,
+      review.taskId ? `- Aufgabe: ${review.taskId}` : "- Aufgabe: -",
+      review.commit ? `- Commit: ${review.commit}` : "- Commit: -",
+      `- Dateien: ${review.files.map(normalizeMarkdownText).join(", ") || "-"}`,
+      "",
+      "**Prüffrage:**",
+      normalizeMarkdownText(review.question),
+      "",
+      "**Prüfkriterien:**",
+      renderList(review.acceptanceCriteria)
+    ];
+    for (const [index, feedback] of review.feedback.entries()) {
+      lines.push("", `**Feedback ${index + 1} von ${normalizeMarkdownText(feedback.reviewer)} (${feedback.assessment}):**`, normalizeMarkdownText(feedback.summary), "", "Befunde:", renderList(feedback.findings));
+    }
+    for (const [index, response] of review.responses.entries()) {
+      lines.push("", `**Antwort ${index + 1} von ${normalizeMarkdownText(response.author)} (${response.disposition}):**`, normalizeMarkdownText(response.rationale));
+    }
+    return lines.join("\n");
+  }).join("\n\n");
 }
 
 function renderTasks(tasks: Task[]): string {

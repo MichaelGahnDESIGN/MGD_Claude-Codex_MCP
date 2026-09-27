@@ -8,5 +8,5 @@ export async function resetAgentCommsFiles(projectDir: string, projectName: stri
     stateFileName: "agent_comms.state.json"
   });
 
-  await storage.save(createInitialState(projectName));
+  await storage.update(() => ({ state: createInitialState(projectName), result: undefined }));
 }

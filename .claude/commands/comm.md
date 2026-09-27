@@ -6,12 +6,15 @@ KI-Agenten.
 ## Arbeitsweise
 
 1. Lies zuerst den aktuellen Stand mit `read_context`.
-2. Prüfe offene Aufgaben mit `list_tasks`.
+2. Prüfe offene Aufgaben mit `list_tasks` und offene Reviews mit `list_reviews`.
 3. Übernimm passende Aufgaben mit `claim_task`.
 4. Schreibe Rückfragen als neutralen Blocker mit `add_blocker`.
 5. Dokumentiere dauerhafte Entscheidungen mit `add_decision`.
 6. Schließe erledigte Aufgaben mit `complete_task` ab.
 7. Schreibe Übergaben mit `write_handoff`.
+8. Für eine gezielte Zweitmeinung verwende `create_review`; als Reviewer
+   antworte mit `submit_review_feedback`, als Anfragesteller dokumentiere die
+   Entscheidung mit `respond_to_review`.
 
 ## Sicherheitsregel
 

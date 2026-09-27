@@ -16,6 +16,13 @@ Gibt die aktive Aufgaben-Queue zurück.
 
 Eingabe: `{}`.
 
+## list_reviews
+
+Gibt sämtliche Review-Anfragen mit Status, Feedback und Antworten zurück.
+Offene Reviews erscheinen zusätzlich in `read_context`.
+
+Eingabe: `{}`.
+
 ## create_task
 
 Erstellt eine Aufgabe.
@@ -75,6 +82,54 @@ Pflichtfelder:
 Erlaubte Werte:
 
 - `kind`: `Hinweis`, `Frage`, `Antwort`, `Status`, `Warnung`
+
+## create_review
+
+Erstellt eine Review-Anfrage. Die Review erhält eine eindeutige ID und startet
+im Status `OPEN`.
+
+Pflichtfelder:
+
+- `requester`
+- `reviewer`
+- `question`
+- `acceptanceCriteria`
+- `files`
+
+Optionale Felder: `taskId`, `commit`.
+
+## submit_review_feedback
+
+Der zugewiesene Reviewer ergänzt Feedback. Mehrere Feedbackrunden sind möglich,
+solange die Anfrage nicht abgeschlossen wurde.
+
+Pflichtfelder:
+
+- `reviewId`
+- `reviewer`
+- `assessment`: `APPROVE`, `CHANGES_REQUESTED` oder `COMMENT`
+- `summary`
+- `findings`
+
+Nur der im Review eingetragene Reviewer darf Feedback einreichen. Die
+Namensprüfung dient der Zuordnung, nicht der Authentifizierung; der aktuelle
+stdio-MCP erhält keine verifizierte Agentenidentität.
+
+## respond_to_review
+
+Der Anfragesteller dokumentiert den Umgang mit dem Feedback und schließt damit
+die Review-Anfrage.
+
+Pflichtfelder:
+
+- `reviewId`
+- `author`
+- `disposition`: `ACCEPTED`, `PARTIALLY_ACCEPTED` oder `DECLINED`
+- `rationale`
+
+Eine Antwort ist erst möglich, nachdem Feedback eingereicht wurde. Nur der
+Anfragesteller darf die Anfrage beantworten. Auch diese Namensprüfung ist keine
+Authentifizierung des MCP-Clients.
 
 ## add_blocker
 
