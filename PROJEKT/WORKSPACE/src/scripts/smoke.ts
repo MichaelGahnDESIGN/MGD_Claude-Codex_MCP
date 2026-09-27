@@ -11,8 +11,9 @@ try {
   const response = await server.handle({ jsonrpc: "2.0", id: 1, method: "tools/list", params: {} });
   assert.ok(response && "result" in response);
   const result = response.result as { tools: Array<{ name: string }> };
-  assert.equal(result.tools.length, 12);
+  assert.equal(result.tools.length, 16);
   assert.ok(result.tools.some((tool) => tool.name === "create_task"));
+  assert.ok(result.tools.some((tool) => tool.name === "create_review"));
 } finally {
   await rm(tempDir, { recursive: true, force: true });
 }

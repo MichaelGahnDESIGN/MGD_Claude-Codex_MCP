@@ -2,6 +2,8 @@ export type TaskStatus = "PENDING" | "IN_PROGRESS" | "DONE" | "BLOCKED" | "CANCE
 export type TaskType = "CODE" | "REVIEW" | "PIXEL_ART" | "IMAGE_GENERATION" | "UI_CONCEPT" | "DOCS" | "BRAINSTORM" | "DEPLOY" | "QA" | "SECURITY";
 export type TaskPriority = "LOW" | "NORMAL" | "HIGH" | "URGENT";
 export type ChatKind = "Hinweis" | "Frage" | "Antwort" | "Status" | "Warnung";
+export type ReviewAssessment = "APPROVE" | "CHANGES_REQUESTED" | "COMMENT";
+export type ReviewDisposition = "ACCEPTED" | "PARTIALLY_ACCEPTED" | "DECLINED";
 
 export interface Task {
   id: string;
@@ -66,6 +68,37 @@ export interface Handoff {
   relatedTaskIds: string[];
 }
 
+export interface ReviewFeedback {
+  createdAt: string;
+  reviewer: string;
+  assessment: ReviewAssessment;
+  summary: string;
+  findings: string[];
+}
+
+export interface ReviewResponse {
+  createdAt: string;
+  author: string;
+  disposition: ReviewDisposition;
+  rationale: string;
+}
+
+export interface ReviewThread {
+  id: string;
+  createdAt: string;
+  updatedAt: string;
+  requester: string;
+  reviewer: string;
+  question: string;
+  acceptanceCriteria: string[];
+  files: string[];
+  taskId?: string;
+  commit?: string;
+  status: "OPEN" | "FEEDBACK_GIVEN" | "RESOLVED";
+  feedback: ReviewFeedback[];
+  responses: ReviewResponse[];
+}
+
 export interface LogEntry {
   id: string;
   createdAt: string;
@@ -94,6 +127,7 @@ export interface AgentCommsState {
     handoff: number;
     log: number;
     history: number;
+    review: number;
   };
   tasks: Task[];
   done: Task[];
@@ -101,6 +135,7 @@ export interface AgentCommsState {
   blockers: Blocker[];
   decisions: Decision[];
   handoffs: Handoff[];
+  reviews: ReviewThread[];
   logs: LogEntry[];
   history: HistoryEntry[];
 }

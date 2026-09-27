@@ -1,4 +1,4 @@
-type CounterName = "task" | "chat" | "blocker" | "decision" | "handoff" | "log" | "history";
+type CounterName = "task" | "chat" | "blocker" | "decision" | "handoff" | "log" | "history" | "review";
 
 const prefixes: Record<CounterName, string> = {
   task: "TASK",
@@ -7,7 +7,8 @@ const prefixes: Record<CounterName, string> = {
   decision: "DECISION",
   handoff: "HANDOFF",
   log: "LOG",
-  history: "HISTORY"
+  history: "HISTORY",
+  review: "REVIEW"
 };
 
 export function nextId(counters: Record<CounterName, number>, name: CounterName): string {

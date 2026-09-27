@@ -19,16 +19,21 @@ personenbezogenen Details oder privaten Logs in Aufgaben, Chats oder Blocker.
 
 1. Rufe `read_context` auf.
 2. Rufe `list_tasks` auf.
-3. Fasse aktive Aufgaben, offene Blocker und letzte relevante Einträge kurz
+3. Rufe `list_reviews` auf und prüfe offene Review-Anfragen.
+4. Fasse aktive Aufgaben, offene Blocker, Reviews und letzte relevante Einträge kurz
    zusammen.
-4. Wenn eine passende Aufgabe für `Codex` oder `Team` offen ist, übernimm sie
+5. Wenn eine passende Aufgabe für `Codex` oder `Team` offen ist, übernimm sie
    mit `claim_task`.
-5. Wenn Arbeit an Claude gehen soll, erstelle mit `create_task` eine klare
+6. Wenn Arbeit an Claude gehen soll, erstelle mit `create_task` eine klare
    Aufgabe an `Claude`.
-6. Bei Rückfragen oder fehlenden lokalen Zugängen nutze `add_blocker`.
-7. Dokumentiere dauerhafte Entscheidungen mit `add_decision`.
-8. Schließe erledigte Aufgaben mit `complete_task` ab.
-9. Schreibe Übergaben mit `write_handoff`.
+7. Für eine gezielte Zweitmeinung erstelle mit `create_review` eine konkrete
+   Prüffrage mit Kriterien und betroffenen Dateien oder Commit.
+8. Reiche Reviews mit `submit_review_feedback` ein. Der Anfragesteller hält
+   mit `respond_to_review` fest, was er übernommen oder begründet abgelehnt hat.
+9. Bei Rückfragen oder fehlenden lokalen Zugängen nutze `add_blocker`.
+10. Dokumentiere dauerhafte Entscheidungen mit `add_decision`.
+11. Schließe erledigte Aufgaben mit `complete_task` ab.
+12. Schreibe Übergaben mit `write_handoff`.
 
 ## Wenn Keine MCP-Tools Sichtbar Sind
 

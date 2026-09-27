@@ -13,7 +13,9 @@ Phase 1 konzentriert sich auf:
 - maschinenlesbaren JSON-State
 - Aufgaben-Queue mit Statuswechseln
 - Chat, Blocker, Entscheidungen und Übergaben
+- strukturierte Review-Anfragen, Feedback und nachvollziehbare Antworten
 - Safety-Check vor Schreibvorgängen
+- serialisierte Schreibzugriffe über mehrere lokale MCP-Prozesse
 
 Phase 2 ergänzt den nutzerfreundlichen Einstieg:
 
@@ -31,6 +33,31 @@ Der Server nutzt zwei Dateien:
 
 Beide Dateien werden aus demselben State geschrieben. Dadurch bleibt Markdown
 lesbar, während Tools zuverlässig mit strukturierten Daten arbeiten.
+
+Schreibende Änderungen laufen über `FileStorage.update()`. Ein exklusiver
+prozessübergreifender Lock schützt den Read-Modify-Write-Ablauf; temporäre
+Dateien werden atomar an ihre Zielpfade verschoben. Ältere State-Dateien ohne
+Review-Daten werden beim Laden mit leeren Review-Listen und Zählern ergänzt.
+Der JSON-State bleibt die maßgebliche Quelle, Markdown wird daraus erzeugt.
+
+## Review-Ablauf
+
+Ein Agent erstellt mit `create_review` eine Anfrage mit Empfänger, Frage,
+Prüfkriterien und Datei-, Task- oder Commit-Bezug. Der zugewiesene Reviewer
+liest sie über `list_reviews` oder `read_context` und reicht mit
+`submit_review_feedback` eine Bewertung sowie konkrete Befunde ein. Nur der
+Anfragesteller kann dieses Feedback mit `respond_to_review` annehmen, teilweise
+annehmen oder begründet ablehnen. Die gesamte Review-Historie bleibt im State
+und im Markdown erhalten.
+
+Dieser Ablauf vermittelt Arbeit zwischen bereits laufenden Agenten. Er startet
+keine Modellaufrufe und weckt keinen anderen Client automatisch.
+
+Die Reviewer- und Autor-Prüfung vergleicht die vom Client mitgesendeten Namen
+mit der Anfrage. Das ist eine Zuordnungs- und Bedienungssicherung, keine
+Authentifizierung: Ein MCP-Client kann im aktuellen stdio-Protokoll einen
+anderen Namen angeben. Die Prüfung ersetzt daher keine verifizierte Identität
+oder Zugriffskontrolle.
 
 ## Architektur
 

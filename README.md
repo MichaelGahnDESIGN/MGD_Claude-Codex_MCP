@@ -111,6 +111,13 @@ Die Tools verändern den State kontrolliert. Danach wird Markdown neu gerendert.
 Dadurch kann ein Agent strukturiert arbeiten, während Menschen weiterhin eine
 normale Markdown-Datei lesen können.
 
+Schreiboperationen lesen, ändern und speichern den JSON-State innerhalb eines
+prozessübergreifenden Locks. JSON und Markdown werden über temporäre Dateien
+atomar ersetzt. Ältere State-Dateien ohne Review-Felder bleiben lesbar und
+werden beim Laden um die neuen leeren Felder ergänzt. Der Review-Ablauf
+vermittelt zwischen aktiven MCP-Clients, ruft aber keine Modelle auf und startet
+keinen anderen Agenten automatisch.
+
 ## Aktueller Stand
 
 Phase 1 ist umgesetzt.
@@ -121,7 +128,8 @@ Enthalten sind:
 - dateibasierter Speicher
 - menschenlesbare Markdown-Ausgabe
 - strukturierter JSON-State
-- 12 MCP-Tools
+- 16 MCP-Tools einschließlich strukturierter Reviews
+- prozessübergreifender Schreib-Lock gegen verlorene Updates bei parallelen lokalen MCP-Prozessen
 - Safety-Check vor Schreibvorgängen
 - strukturierte Eingabevalidierung für Task-Typen, Prioritäten und Chat-Arten
 - einfache `comm`-CLI mit `setup`, `doctor`, `status`, `clear`,
@@ -150,10 +158,14 @@ Phase 1 registriert diese Tools:
 | --- | --- |
 | `read_context` | Liest Projektkontext, aktive Tasks, letzte Logs und offene Blocker. |
 | `list_tasks` | Gibt Aufgaben aus der Queue mit Status, Ziel-Agent und Priorität zurück. |
+| `list_reviews` | Gibt offene und abgeschlossene Reviews mit Feedback und Antworten zurück. |
 | `create_task` | Erstellt eine neue Aufgabe mit Kontext und Akzeptanzkriterien. |
 | `claim_task` | Setzt eine Aufgabe auf `IN_PROGRESS`. |
 | `complete_task` | Verschiebt eine Aufgabe nach `DONE`. |
 | `append_chat` | Fügt eine Chat-, Hinweis- oder Frage-Nachricht hinzu. |
+| `create_review` | Erstellt eine Review-Anfrage mit Prüffrage und Datei-, Task- oder Commit-Bezug. |
+| `submit_review_feedback` | Erfasst die Bewertung und konkreten Befunde des zugewiesenen Reviewers. |
+| `respond_to_review` | Dokumentiert die begründete Annahme, teilweise Annahme oder Ablehnung des Feedbacks. |
 | `add_blocker` | Dokumentiert eine Blockade oder Rückfrage. |
 | `resolve_blocker` | Markiert eine Blockade als gelöst. |
 | `add_decision` | Dokumentiert eine dauerhafte Entscheidung. |
@@ -576,7 +588,7 @@ Geplante nächste Schritte:
 - NPM-Paket vorbereiten.
 - NPM-Veröffentlichung vorbereiten, sobald Name und Paketumfang final sind.
 - Import bestehender `AI_COMMS.md`-Dateien bauen.
-- atomare Schreibvorgänge für Storage ergänzen.
+- SQLite-Backend für transaktionale und remote genutzte Setups evaluieren.
 - Eingabevalidierung weiter härten.
 - optional SQLite-Backend vorbereiten.
 - Skills/Prompts für Codex und Claude automatisch erzeugen.

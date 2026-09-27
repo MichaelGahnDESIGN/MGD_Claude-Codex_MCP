@@ -10,6 +10,22 @@ Jeder Eintrag soll mindestens enthalten:
 - betroffene Bereiche
 - mögliche Folgen oder Trade-offs
 
+## 2026-09-27 - Reviews und lokale Schreibzugriffe werden abgesichert
+
+- Datum: `2026-09-27`
+- Entscheidung: Review-Anfragen, Feedback und Antworten werden als verknüpfte
+  Review-Threads im JSON-State geführt. Änderungen am gemeinsamen lokalen State
+  werden über einen prozessübergreifenden Lock serialisiert.
+- Begründung: Agenten brauchen eine klare Zuordnung von Prüffrage, Empfänger,
+  Feedback und Entscheidung. Parallele lokale MCP-Prozesse dürfen dabei keine
+  Änderungen aus veraltetem State überschreiben.
+- Betroffene Bereiche: `PROJEKT/WORKSPACE/src/domain/`,
+  `PROJEKT/WORKSPACE/src/storage/`, MCP-Tools, Markdown-Protokoll und Tests.
+- Folgen oder Trade-offs: Der Ablauf ermöglicht nachvollziehbare Reviews
+  zwischen bereits laufenden Clients, startet aber keine Modelle automatisch.
+  Der lokale Lock schützt lokale Dateizugriffe, ist kein Ersatz für
+  Remote-Synchronisierung oder transaktionales Multi-User-Storage.
+
 ## 2026-06-07 - OpenRouter bleibt separat
 
 - Datum: `2026-06-07`

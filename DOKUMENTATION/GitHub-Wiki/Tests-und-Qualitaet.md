@@ -34,9 +34,9 @@ npm run playwright:audit
 
 Aktueller Stand:
 
-- 23 Tests
-- 13 Test-Suites
-- Smoke-Test für 12 Tools
+- 32 Tests
+- 18 Test-Suites
+- Smoke-Test für 16 Tools
 - 3 Playwright-Audits für MCP-Prozessverhalten
 
 ## Zwei-Agenten-Demo
@@ -63,7 +63,7 @@ Vor öffentlicher Freigabe:
 - Reset-Runde
 - Safety-Blockaden mit verschiedenen Mustern
 - Verhalten bei beschädigter JSON-Datei
-- parallele Schreibzugriffe
+- parallele Schreibzugriffe über mehrere Storage-Instanzen
 - große Markdown-Dateien
 
 ## Qualitätsregeln

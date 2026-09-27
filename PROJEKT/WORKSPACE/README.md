@@ -2,8 +2,8 @@
 
 Dieses Projekt ist Phase 1 eines lokalen MCP-Systems für die Zusammenarbeit von
 KI-Agenten wie Codex und Claude. Es verwaltet Aufgaben, Chat-Nachrichten,
-Übergaben, Blocker, Entscheidungen und eine kleine History in gut lesbaren
-Dateien.
+Übergaben, Blocker, Entscheidungen, strukturierte Reviews und eine kleine
+History in gut lesbaren Dateien.
 
 Der Arbeitstitel ist noch vorläufig. Das System bleibt lokal-first: keine
 Cloud-Pflicht, keine externen Dienste und keine Speicherung sensibler Daten.
@@ -74,10 +74,14 @@ Phase 1 registriert diese Tools:
 
 - `read_context`
 - `list_tasks`
+- `list_reviews`
 - `create_task`
 - `claim_task`
 - `complete_task`
 - `append_chat`
+- `create_review`
+- `submit_review_feedback`
+- `respond_to_review`
 - `add_blocker`
 - `resolve_blocker`
 - `add_decision`
@@ -86,6 +90,15 @@ Phase 1 registriert diese Tools:
 - `reset_round`
 
 Details stehen in [docs/mcp_tools.md](docs/mcp_tools.md).
+
+Reviews laufen als nachvollziehbarer Ablauf: Anfrage, Feedback des zugewiesenen
+Reviewers und begründete Antwort des Anfragestellers. Dieser Mechanismus
+vermittelt zwischen aktiven Clients, startet aber keine Modellaufrufe.
+
+Schreibzugriffe auf den gemeinsamen JSON-State werden über einen
+prozessübergreifenden Lock serialisiert. So können mehrere lokale MCP-Prozesse
+Updates nacheinander schreiben, ohne Änderungen aus einem veralteten State zu
+verlieren.
 
 ## Sicherheitsgrundsatz
 

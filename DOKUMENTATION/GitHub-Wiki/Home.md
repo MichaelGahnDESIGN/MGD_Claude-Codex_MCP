@@ -23,6 +23,7 @@ Claude-Codex-MCP ist lokal-first:
 - keine sensiblen Daten in Aufgaben, Chats, Logs oder Übergaben
 - menschenlesbares Markdown bleibt erhalten
 - strukturierte MCP-Tools ergänzen die Markdown-Kommunikation
+- Review-Anfragen, Feedback und Antworten sind nachvollziehbar und der zugewiesene Name wird geprüft
 
 ## Was Das System Löst
 
@@ -69,7 +70,7 @@ Verfügbar sind:
 - dateibasierter Speicher
 - `agent_comms.md` als menschenlesbares Protokoll
 - `agent_comms.state.json` als strukturierter Zustand
-- 12 MCP-Tools
+- 16 MCP-Tools
 - Safety-Check vor Schreibvorgängen
 - Tests für Safety, Statuswechsel, Markdown und Storage
 - Smoke-Test für Tool-Registrierung

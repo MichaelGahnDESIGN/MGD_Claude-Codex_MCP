@@ -1,4 +1,4 @@
-import type { ChatKind, TaskPriority, TaskStatus, TaskType } from "./types.ts";
+import type { ChatKind, ReviewAssessment, ReviewDisposition, TaskPriority, TaskStatus, TaskType } from "./types.ts";
 
 // Diese Listen sind die zentrale Wahrheit fuer alle festen Protokollwerte.
 // Sie werden von Tool-Validierung, Dokumentation und spaeteren CLIs genutzt.
@@ -20,3 +20,5 @@ export const taskTypes = [
 export const taskPriorities = ["LOW", "NORMAL", "HIGH", "URGENT"] as const satisfies readonly TaskPriority[];
 
 export const chatKinds = ["Hinweis", "Frage", "Antwort", "Status", "Warnung"] as const satisfies readonly ChatKind[];
+export const reviewAssessments = ["APPROVE", "CHANGES_REQUESTED", "COMMENT"] as const satisfies readonly ReviewAssessment[];
+export const reviewDispositions = ["ACCEPTED", "PARTIALLY_ACCEPTED", "DECLINED"] as const satisfies readonly ReviewDisposition[];

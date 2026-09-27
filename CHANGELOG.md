@@ -2,6 +2,22 @@
 
 Alle wichtigen Änderungen dieser öffentlichen Vorlage werden hier dokumentiert.
 
+## Unreleased
+
+- Strukturierte Reviews mit `create_review`, `submit_review_feedback` und
+  `respond_to_review` ergänzt. Anfragen verknüpfen Prüffrage, Kriterien,
+  betroffene Dateien und optional Task oder Commit. Feedback ist dem
+  zugewiesenen Reviewer zugeordnet; nur der Anfragesteller kann antworten und
+  abschließen. Die Namensprüfung ist keine Authentifizierung.
+- Offene Reviews werden in `read_context` angezeigt und mit `list_reviews`
+  vollständig abrufbar.
+- Schreiboperationen lesen, ändern und speichern den neuesten State unter
+  einem prozessübergreifenden Lock. JSON und Markdown werden über temporäre
+  Dateien atomar ersetzt.
+- Bisherige State-Dateien ohne Review-Felder werden beim Laden ergänzt.
+- Tests für den Review-Workflow, unberechtigtes Feedback, State-Migration und
+  konkurrierende Updates ergänzt.
+
 ## 0.2.7 - Versionshardcoding behoben und Dokumentation bereinigt
 
 Datum: 2026-06-14

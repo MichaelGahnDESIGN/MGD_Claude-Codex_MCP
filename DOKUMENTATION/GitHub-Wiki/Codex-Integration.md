@@ -47,6 +47,11 @@ Bei Unklarheiten:
 2. keine sensiblen Details speichern
 3. auf Klärung warten
 
+Für eine gezielte Zweitmeinung kann Codex zusätzlich `create_review` mit der
+konkreten Prüffrage, Kriterien sowie Datei- oder Commit-Bezug aufrufen. Nach
+`submit_review_feedback` durch den Reviewer dokumentiert Codex mit
+`respond_to_review`, welche Punkte übernommen oder begründet abgelehnt wurden.
+
 ## Lokale Registrierung
 
 Codex kann den MCP-Server über `codex mcp add` registrieren:

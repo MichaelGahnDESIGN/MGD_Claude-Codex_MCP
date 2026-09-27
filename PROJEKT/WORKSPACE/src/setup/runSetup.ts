@@ -15,9 +15,11 @@ export async function runSetup(options: SetupOptions): Promise<SetupResult> {
     markdownFileName: "agent_comms.md",
     stateFileName: "agent_comms.state.json"
   });
-  const state = await storage.load();
-  state.projectName = options.projectName;
-  await storage.save(state);
+  await storage.update((state) => {
+    state.projectName = options.projectName;
+    state.updatedAt = new Date().toISOString();
+    return { state, result: undefined };
+  });
 
   const generatedFiles = await writeSetupFiles({
     outputDir,

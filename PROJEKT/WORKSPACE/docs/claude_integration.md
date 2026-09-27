@@ -73,6 +73,12 @@ Für Claude Code liegt im Repository zusätzlich `.claude/commands/comm.md`.
 6. Bei dauerhaften Entscheidungen `add_decision` nutzen.
 7. Am Ende bei Bedarf `write_handoff` an Codex oder das Team schreiben.
 
+Bei einer gezielten Review-Anfrage prüft Claude `list_reviews` oder
+`read_context`, reicht seine Bewertung und konkrete Befunde mit
+`submit_review_feedback` ein und wartet auf die dokumentierte Antwort des
+Anfragestellers. Die eingetragenen Agentennamen werden abgeglichen, aber nicht
+authentifiziert.
+
 ## Sicherheitsverhalten
 
 Claude soll sensible Inhalte nicht in Chat, Aufgaben, Blocker oder Logs

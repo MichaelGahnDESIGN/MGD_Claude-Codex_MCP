@@ -76,6 +76,12 @@ Text als normaler Prompt genutzt werden.
 - Rückfragen: `add_blocker`
 - Übergabe: `write_handoff`
 
+Für eine gezielte Zweitmeinung kann Codex mit `create_review` eine Prüffrage,
+Akzeptanzkriterien und den Datei- oder Commit-Bezug festhalten. Der Reviewer
+liest offene Reviews mit `list_reviews` und reicht Befunde über
+`submit_review_feedback` ein. Codex dokumentiert mit `respond_to_review`, ob
+das Feedback übernommen oder begründet abgelehnt wurde.
+
 ## Sicherheit
 
 Codex soll niemals echte Secrets, `.env`-Inhalte, private Logauszüge oder

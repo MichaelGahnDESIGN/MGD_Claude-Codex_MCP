@@ -26,6 +26,15 @@ Eingabe:
 {}
 ```
 
+## list_reviews
+
+Liefert Review-Anfragen, Status, Feedbackrunden und Antworten. Offene Reviews
+stehen zusätzlich im Kontext.
+
+```json
+{}
+```
+
 ## create_task
 
 Erstellt eine neue Aufgabe.
@@ -100,6 +109,23 @@ Pflichtfelder:
 Erlaubte Werte:
 
 - `kind`: `Hinweis`, `Frage`, `Antwort`, `Status`, `Warnung`
+
+## create_review
+
+Pflichtfelder: `requester`, `reviewer`, `question`, `acceptanceCriteria`,
+`files`. Optional sind `taskId` und `commit`.
+
+## submit_review_feedback
+
+Pflichtfelder: `reviewId`, `reviewer`, `assessment`, `summary`, `findings`.
+`assessment` ist `APPROVE`, `CHANGES_REQUESTED` oder `COMMENT`. Nur der
+zugewiesene Reviewer kann Feedback schreiben.
+
+## respond_to_review
+
+Pflichtfelder: `reviewId`, `author`, `disposition`, `rationale`.
+`disposition` ist `ACCEPTED`, `PARTIALLY_ACCEPTED` oder `DECLINED`. Nur der
+Anfragesteller kann auf vorhandenes Feedback antworten und die Review schließen.
 
 ## add_blocker
 

@@ -1,6 +1,6 @@
 window.DOKU_DATA = {
   "schemaVersion": 4,
-  "generatedAt": "2026-06-14T00:24:24+02:00",
+  "generatedAt": "2026-09-27T03:17:13+03:00",
   "projectRoot": ".",
   "documentationRoot": "DOKUMENTATION",
   "tabs": {
@@ -598,7 +598,7 @@ window.DOKU_DATA = {
             "counts": {
               "subareas": 6,
               "directories": 7,
-              "files": 32
+              "files": 35
             },
             "primaryLinks": [
               {
@@ -646,6 +646,20 @@ window.DOKU_DATA = {
                 "href": "GitHub-Wiki",
                 "type": "dir",
                 "children": [
+                  {
+                    "name": "10-Getting-Started-Guide.md",
+                    "path": "DOKUMENTATION/GitHub-Wiki/10-Getting-Started-Guide.md",
+                    "sourceHref": "GitHub-Wiki/10-Getting-Started-Guide.md",
+                    "href": "GitHub-Wiki/10-Getting-Started-Guide.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "11-Claude-Integration-Beispiel.md",
+                    "path": "DOKUMENTATION/GitHub-Wiki/11-Claude-Integration-Beispiel.md",
+                    "sourceHref": "GitHub-Wiki/11-Claude-Integration-Beispiel.md",
+                    "href": "GitHub-Wiki/11-Claude-Integration-Beispiel.md",
+                    "type": "file"
+                  },
                   {
                     "name": "_Sidebar.md",
                     "path": "DOKUMENTATION/GitHub-Wiki/_Sidebar.md",
@@ -721,6 +735,13 @@ window.DOKU_DATA = {
                     "path": "DOKUMENTATION/GitHub-Wiki/Konzept-und-Architektur.md",
                     "sourceHref": "GitHub-Wiki/Konzept-und-Architektur.md",
                     "href": "GitHub-Wiki/Konzept-und-Architektur.md",
+                    "type": "file"
+                  },
+                  {
+                    "name": "LIESMICH.md",
+                    "path": "DOKUMENTATION/GitHub-Wiki/LIESMICH.md",
+                    "sourceHref": "GitHub-Wiki/LIESMICH.md",
+                    "href": "GitHub-Wiki/LIESMICH.md",
                     "type": "file"
                   },
                   {
